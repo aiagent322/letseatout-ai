@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Scottsdale — 142 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="Your complete free guide to every restaurant, bar, and chain in Scottsdale, AZ. 142 listings. No reviews, no pay-to-play — just where to eat.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Scottsdale — 142 Restaurants, Bars &amp; Chains">
+<meta property="og:description" content="Every restaurant, bar, and chain in Scottsdale, AZ. Free directory. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai/scottsdale">
+<meta property="og:image" content="https://letseatout.ai/og-scottsdale.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai/scottsdale">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A;--red-dark:#9E1830;--red-light:#F9E8EC;
+  --gold:#C8973E;--gold-light:#F7F0E3;
+  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#555;--text-light:#888;
+  --cream:#FFFBF5;--white:#FFFFFF;
+  --border:#E8E0D8;--border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px;--r-lg:12px;--hdr-h:61px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;}
+.skip-nav{position:absolute;left:-9999px;}
+.skip-nav:focus{position:fixed;top:0;left:0;padding:10px 18px;background:var(--red);color:white;font-size:14px;font-weight:700;z-index:9999;}
+
+/* TOP BAR */
+.top-bar{background:var(--dark);color:white;padding:6px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;gap:8px;}
+.top-bar-text{display:none;}
+.market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;overflow-x:auto;scrollbar-width:none;}
+.market-pills::-webkit-scrollbar{display:none;}
+.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.market-pill.active{background:var(--red);color:white;}
+.market-pill:not(.active):hover{color:white;}
+
+/* HEADER */
+header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-mark{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:21px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.search-icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.mobile-search-bar{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--red);padding:10px 16px;box-shadow:var(--shadow-m);z-index:99;}
+.mobile-search-bar.open{display:flex;gap:8px;}
+.mobile-search-bar input{flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;}
+.mobile-search-bar input:focus{border-color:var(--red);}
+.mobile-search-bar button{padding:10px 18px;background:var(--red);color:white;border:none;border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+.header-search{display:none;}
+.submit-btn{padding:8px 14px;background:var(--dark);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.submit-btn:hover{background:var(--red);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#0a1a14 50%,#0d2e1e 100%);color:white;padding:28px 0 22px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.15;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;}
+.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;color:white;letter-spacing:.3px;}
+.hero-stats{display:flex;gap:20px;justify-content:center;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.coming-soon-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;justify-content:center;margin-top:4px;}
+.coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
+.coming-soon-badge{background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.hero-banner-wrap{margin-top:16px;width:100%;}
+
+/* AD ZONES */
+.ad-zone{background:linear-gradient(135deg,#f5ede3,#ebe3d8);border:2px dashed var(--gold);border-radius:var(--r);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ad-zone::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;}
+.ad-inline{width:100%;height:50px;}
+.ad-sidebar{display:none;}
+
+/* CUISINE NAV */
+.cuisine-nav{background:var(--white);padding:10px 0;border-bottom:1px solid var(--border);position:sticky;top:var(--hdr-h);z-index:90;}
+.cuisine-slider-wrap{display:flex;align-items:center;gap:6px;}
+.cuisine-scroll{display:flex;gap:6px;overflow-x:auto;padding:2px;scrollbar-width:none;scroll-behavior:smooth;flex:1;-webkit-overflow-scrolling:touch;}
+.cuisine-scroll::-webkit-scrollbar{display:none;}
+.cuisine-chip{padding:7px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;min-height:36px;}
+.cuisine-chip:active,.cuisine-chip.active{background:var(--red);color:white;border-color:var(--red);}
+.slider-arrow{display:none;}
+
+/* NEAR ME */
+.near-me-chip{padding:7px 14px;border-radius:20px;border:1.5px solid #1D6CE0;background:#1D6CE0;font-size:12px;font-weight:700;color:white;cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;min-height:36px;}
+.near-me-chip.active{background:#0D3D80;border-color:#0D3D80;}
+.near-me-chip.loading{opacity:.75;pointer-events:none;}
+.near-me-chip .nm-spinner{width:12px;height:12px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none;}
+.near-me-chip.loading .nm-spinner{display:block;}
+.near-me-chip.loading .nm-icon{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.dist-badge{font-size:10px;font-weight:700;color:var(--red);background:var(--red-light);padding:2px 7px;border-radius:10px;margin-left:4px;}
+.near-me-error{background:#fff3cd;border:1.5px solid #ffc107;border-radius:var(--r);padding:10px 14px;font-size:12px;color:#856404;margin-bottom:10px;}
+
+/* MAIN LAYOUT */
+.main-layout{display:flex;flex-direction:column;gap:20px;padding:16px 0 32px;}
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;}
+.results-count{font-size:12px;color:var(--text-light);font-weight:500;}
+.results-count strong{color:var(--text);font-weight:700;}
+.sort-sel{padding:6px 10px;border:1.5px solid var(--border);border-radius:var(--r);font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:var(--text-mid);background:var(--white);cursor:pointer;}
+.filter-bar{display:none;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 0 4px;}
+.filter-bar.visible{display:flex;}
+.filter-pill{display:inline-flex;align-items:center;gap:5px;background:var(--red-light);border:1.5px solid var(--red);color:var(--red);border-radius:16px;font-size:11px;font-weight:700;padding:4px 10px;}
+.filter-pill .fp-x{cursor:pointer;font-size:13px;line-height:1;margin-left:2px;}
+.filter-bar-clear{font-size:11px;font-weight:700;color:var(--text-light);cursor:pointer;text-decoration:underline;padding:4px 2px;}
+
+/* LISTING CARDS — now real <a> tags */
+.listing-grid{display:flex;flex-direction:column;gap:8px;}
+.listing-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  transition:border-color .2s;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;color:inherit;
+}
+.listing-card:hover,.listing-card:active{border-color:var(--red);background:var(--red-light);}
+.card-tag{display:none;}
+.card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}
+.card-body h3{font-size:14px;font-weight:700;margin-bottom:1px;color:var(--text);line-height:1.3;}
+.card-chain{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px;}
+.card-desc{font-size:12px;color:var(--text-mid);line-height:1.55;margin:5px 0 6px;}
+.card-body .meta{font-size:11px;color:var(--text-light);display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
+.card-body .meta span{display:flex;align-items:center;gap:3px;}
+.inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:44px 20px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);}
+.no-results .nr-icon{font-size:38px;margin-bottom:10px;}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px;}
+.no-results p{font-size:13px;color:var(--text-light);margin-bottom:16px;}
+.no-results button{padding:10px 22px;background:var(--red);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* LOAD MORE */
+.load-more-wrap{text-align:center;padding:12px 0 4px;}
+.load-more-btn{padding:12px 30px;background:var(--white);border:2px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text-mid);cursor:pointer;transition:all .2s;}
+.load-more-btn:hover{border-color:var(--red);color:var(--red);}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;}
+.sidebar-box h4{font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--red);}
+.zone-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.zone-list li{font-size:12px;color:var(--text-mid);padding:8px 10px;border-radius:var(--r);cursor:pointer;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent;outline:none;}
+.zone-list li:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.zone-list li:hover,.zone-list li:active{background:var(--red-light);color:var(--red);}
+.zone-list li.z-active{background:var(--red-light);color:var(--red);font-weight:700;}
+.zone-list li .ct{background:var(--cream);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;color:var(--text-light);min-width:26px;text-align:center;}
+.zone-list li.z-active .ct{background:var(--red);color:white;}
+.zone-list li.z-counts-stale .ct{opacity:.4;}
+.quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.quick-links li a{font-size:12px;color:var(--red);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px;}
+.quick-links li a:hover{color:var(--red-dark);}
+
+/* SUBMIT */
+.submit-section{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px 16px;margin:0 0 32px;text-align:center;}
+.submit-section h2{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px;}
+.submit-section .sub{color:var(--text-light);font-size:13px;margin-bottom:18px;line-height:1.5;}
+.submit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px;}
+.submit-card{background:var(--cream);border:2px dashed var(--border);border-radius:var(--r-lg);padding:18px 14px;text-align:center;}
+.submit-card .ico{font-size:28px;margin-bottom:6px;}
+.submit-card h3{font-size:13px;font-weight:700;margin-bottom:3px;}
+.submit-card p{font-size:11px;color:var(--text-light);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:24px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:18px;}
+footer .brand span{color:var(--red);}
+footer a{color:var(--gold);text-decoration:none;}
+footer .legal{line-height:1.6;}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--red);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(196,30,58,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(8px);}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--red-dark);}
+
+/* TABLET */
+@media(min-width:600px){
+  :root{--hdr-h:69px;}
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:space-between;}
+  .top-bar-text{display:block;}
+  .header-inner{padding:12px 0;}
+  .logo-mark{width:42px;height:42px;font-size:20px;}
+  .logo-text{font-size:24px;}
+  .search-icon-btn{display:none;}
+  .header-search{display:flex;align-items:center;background:var(--cream);border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .2s;}
+  .header-search:focus-within{border-color:var(--red);}
+  .header-search input{padding:8px 4px 8px 14px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;width:160px;outline:none;}
+  .header-search input::placeholder{color:var(--text-light);}
+  .header-search button{padding:7px 12px;border:none;background:var(--red);color:white;font-size:12px;cursor:pointer;border-radius:0 22px 22px 0;}
+  .hero{padding:36px 0 28px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-stat .num{font-size:34px;}
+  .ad-leaderboard{height:60px;}
+  .ad-inline{height:60px;}
+  .ad-sidebar{display:flex;width:100%;height:180px;}
+  .slider-arrow{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text-mid);flex-shrink:0;transition:all .2s;}
+  .slider-arrow:hover{border-color:var(--red);color:var(--red);}
+  .cuisine-nav{padding:12px 0;}
+  .main-layout{padding:20px 0 40px;gap:24px;}
+  .listing-card{grid-template-columns:48px 1fr auto;padding:16px 18px;gap:16px;}
+  .card-tag{display:block;padding:4px 11px;border-radius:16px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;color:white;}
+  .tag-chain{background:#1E293B;}
+  .tag-local{background:#C2410C;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-section{padding:28px 24px;margin:0 0 40px;}
+  .submit-grid{grid-template-columns:repeat(3,1fr);}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  footer .legal{text-align:right;max-width:400px;}
+}
+@media(min-width:960px){
+  :root{--hdr-h:75px;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .header-inner{padding:14px 0;}
+  .logo-mark{width:44px;height:44px;font-size:22px;}
+  .logo-text{font-size:26px;}
+  .header-search input{width:200px;}
+  .header-search button{padding:8px 14px;font-size:13px;}
+  .hero{padding:44px 0 36px;}
+  .hero h1{font-size:42px;}
+  .hero-sub{font-size:16px;max-width:580px;margin:0 auto;}
+  .hero-stats{gap:28px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:0 auto;}
+  .ad-inline{height:90px;max-width:728px;margin:0 auto;}
+  .ad-sidebar{height:250px;}
+  .cuisine-nav{padding:14px 0;}
+  .slider-arrow{width:32px;height:32px;font-size:14px;}
+  .main-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 0 48px;}
+  .sidebar{display:flex;flex-direction:column;position:sticky;top:calc(var(--hdr-h) + 58px);}
+  .listing-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-1px);}
+  .listing-card:active{transform:none;}
+  .zone-list li:hover{background:var(--red-light);color:var(--red);}
+  .submit-section{max-width:800px;margin:0 auto 48px;padding:36px;}
+  footer{padding:32px 0;}
+  .back-to-top{right:32px;bottom:32px;}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Scottsdale","description":"Free restaurant directory for Scottsdale, AZ. 142 listings.","url":"https://letseatout.ai/scottsdale","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+</script>
+</head>
+<body>
+
+<a class="skip-nav" href="#listingGrid">Skip to listings</a>
+
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at no cost</span>
+    <div class="market-pills">
+      <button type="button" class="market-pill" onclick="location.href='/indio'">Indio</button>
+      <button type="button" class="market-pill active" onclick="location.href='/scottsdale'">Scottsdale</button>
+      <button type="button" class="market-pill" onclick="location.href='/sedona'">Sedona</button>
+      <button type="button" class="market-pill" onclick="location.href='/prescott'">Prescott</button>
+      <button type="button" class="market-pill" onclick="location.href='/cave-creek'">Cave Creek</button>
+      <button type="button" class="market-pill" onclick="location.href='/wickenburg'">Wickenburg</button>
+      <button type="button" class="market-pill" onclick="location.href='/peoria'">Peoria</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Scottsdale, AZ</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button type="button" class="search-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">🔍</button>
+        <div class="header-search">
+          <input type="search" id="headerSearch" placeholder="Search restaurants…" oninput="syncSearch(this.value)" autocomplete="off">
+          <button type="button" onclick="syncSearch(document.getElementById('headerSearch').value)">Search</button>
+        </div>
+        <button type="button" class="submit-btn" onclick="document.getElementById('submitArea').scrollIntoView({behavior:'smooth'})">+ Add Your Business</button>
+      </div>
+    </div>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="search" id="mobileSearch" placeholder="Restaurant, cuisine, area…" oninput="syncSearch(this.value)" autocomplete="off">
+      <button type="button" onclick="closeMobileSearch()">Done</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Where to Eat in <em>Scottsdale</em></h1>
+        <p class="hero-sub">Your complete guide to every restaurant, bar, and chain in Scottsdale, AZ. Old Town to North Scottsdale — every table, no pay-to-play.</p>
+        <div class="hero-promise">✦ No reviews &nbsp;·&nbsp; No pay-to-play &nbsp;·&nbsp; No fake ratings &nbsp;·&nbsp; Always free</div>
+        <div class="coming-soon-row">
+          <div class="coming-soon-label">Also coming soon:</div>
+          <span class="coming-soon-badge">Cave Creek</span>
+          <span class="coming-soon-badge">Carefree</span>
+          <span class="coming-soon-badge">Anthem</span>
+          <span class="coming-soon-badge">Paradise Valley</span>
+          <span class="coming-soon-badge">Tempe</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">142</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
+        <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Premium hero placement</div><div class="ad-price">$150/mo</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cuisine-nav" role="navigation" aria-label="Filter by cuisine">
+  <div class="container">
+    <div class="cuisine-slider-wrap">
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:-200,behavior:'smooth'})" aria-label="Scroll left">◀</button>
+      <div class="cuisine-scroll" id="cuisineScroll">
+        <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
+        <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Mexican')">🌮 Mexican</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'American')">🍔 American</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Steakhouse')">🥩 Steakhouse</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sushi')">🍣 Sushi</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Pizza')">🍕 Pizza</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bar')">🍺 Bars</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Coffee')">☕ Coffee</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fast Food')">🍟 Fast Food</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Italian')">🍝 Italian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Asian')">🍜 Asian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Seafood')">🦞 Seafood</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'BBQ')">🔥 BBQ</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sandwiches')">🥪 Sandwiches</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Indian')">🫕 Indian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Thai')">🍲 Thai</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'French')">🥖 French</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bakery')">🧁 Bakery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Brewery')">🍻 Brewery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Wine Bar')">🍷 Wine Bar</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Ice Cream')">🍦 Ice Cream</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Wings')">🫘 Wings</button>
+      </div>
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="main-layout">
+    <div>
+      <div class="results-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
+        <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
+          <option value="distance" disabled style="display:none">📍 Near Me</option>
+          <option value="zone">By Area</option>
+          <option value="name">A–Z</option>
+          <option value="name-desc">Z–A</option>
+          <option value="cuisine">By Cuisine</option>
+          <option value="local">Locals First</option>
+          <option value="chain">Chains First</option>
+        </select>
+      </div>
+      <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
+      <div id="nearMeError"></div>
+      <div class="listing-grid" id="listingGrid"></div>
+      <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+        <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
+      </div>
+      <div class="inline-ad-wrap" style="margin-top:20px">
+        <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Bottom placement</div><div class="ad-price">$100/mo</div></div></div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Premium sidebar</div><div class="ad-price">$125/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Scottsdale</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('oldtown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('oldtown',this)"><span>Old Town</span><span class="ct" id="zc-oldtown">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('n-scotts',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('n-scotts',this)"><span>North Scottsdale</span><span class="ct" id="zc-nscotts">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('quarter',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('quarter',this)"><span>Scottsdale Quarter</span><span class="ct" id="zc-quarter">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('s-scotts',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('s-scotts',this)"><span>South Scottsdale</span><span class="ct" id="zc-sscotts">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('dc-ranch',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('dc-ranch',this)"><span>DC Ranch / Silverleaf</span><span class="ct" id="zc-dcranch">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('gainey',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('gainey',this)"><span>Gainey Ranch</span><span class="ct" id="zc-gainey">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('mccorm',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('mccorm',this)"><span>McCormick Ranch</span><span class="ct" id="zc-mccorm">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Sidebar #2</div><div class="ad-price">$100/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="javascript:void(0)">→ Date Night Spots</a></li>
+          <li><a href="javascript:void(0)">→ Best Happy Hours</a></li>
+          <li><a href="javascript:void(0)">→ Family Friendly</a></li>
+          <li><a href="javascript:void(0)">→ Late Night Eats</a></li>
+          <li><a href="javascript:void(0)">→ Patio Dining</a></li>
+          <li><a href="javascript:void(0)">→ New Openings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="submitArea">
+  <div class="submit-section">
+    <h2>Get Listed — It's Free</h2>
+    <p class="sub">Every restaurant, bar, and chain in Scottsdale is listed at no cost. Send us your info any way that's easy for you.</p>
+    <div class="submit-grid">
+      <div class="submit-card"><div class="ico">🖼️</div><h3>Upload a Flyer</h3><p>PDF, JPG, or PNG of your menu or business card</p></div>
+      <div class="submit-card"><div class="ico">📱</div><h3>Snap a Photo</h3><p>Photo of your storefront, sign, or menu board</p></div>
+      <div class="submit-card"><div class="ico">📝</div><h3>Fill Out Form</h3><p>Name, address, cuisine, hours — takes 60 seconds</p></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-light)">We review submissions daily and add listings within 24–48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px">Scottsdale's complete dining guide · <a href="/">letseatout.ai</a></div>
+      <div style="margin-top:4px">Advertise: <a href="/cdn-cgi/l/email-protection#95fcfbf3fad5f9f0e1e6f0f4e1fae0e1bbf4fc"><span class="__cf_email__" data-cfemail="a0c9cec6cfe0ccc5d4d3c5c1d4cfd5d48ec1c9">[email&#160;protected]</span></a></div>
+    </div>
+    <div class="legal">
+      Every restaurant and bar in Scottsdale is listed free. We sell banner advertising only — no paid placement, no paid rankings.<br>
+      <span style="color:rgba(255,255,255,.3)">© 2026 LetsEatOut.ai — All rights reserved</span>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// DATA
+const DATA = [
+{"id": "RB-SCOTT-00001", "name": "FnB Restaurant", "address": "7125 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 284-4777", "lat": 33.497901, "lng": -111.927256, "quality": 1, "zone": "Old Town", "description": "James Beard Award-winning chef Charleen Badman's veggie-forward farm-to-table restaurant. Known as 'The Veggie Whisperer' with wine-centric menu featuring Arizona wines."},
+{"id": "RB-SCOTT-00002", "name": "Cafe Monarch", "address": "6934 E 1st Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 970-7682", "lat": 33.494182, "lng": -111.931507, "quality": 1, "zone": "Old Town", "description": "Intimate fine dining with sommelier-trained servers. Prix fixe menus with perfect wine pairings. Black Widow cocktail and seasonal tasting menus."},
+{"id": "RB-PARAD-00001", "name": "Elements at Sanctuary", "address": "5700 E McDonald Dr", "city": "Paradise Valley", "state": "AZ", "zip": "85253", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 607-2300", "lat": 33.522385, "lng": -111.959554, "quality": 1, "zone": "North Scottsdale", "description": "Seasonal farm-to-table cuisine at Sanctuary Camelback Mountain Resort. Sustainable seafood and stunning mountain views. Raw bar standout."},
+{"id": "RB-SCOTT-00003", "name": "Talavera", "address": "10600 E Crescent Moon Dr", "city": "Scottsdale", "state": "AZ", "zip": "85262", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 513-5085", "lat": 33.731384, "lng": -111.852757, "quality": 1, "zone": "Scottsdale", "description": "Four Seasons signature Spanish steakhouse with Pinnacle Peak views. Classic preparations and elegant atmosphere."},
+{"id": "RB-SCOTT-00004", "name": "J&G Steakhouse", "address": "6000 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 214-8000", "lat": 33.507824, "lng": -111.947456, "quality": 1, "zone": "Old Town", "description": "Jean-Georges Vongerichten's steakhouse at The Phoenician. Nightly craft cocktails and Grey Goose specialties."},
+{"id": "RB-SCOTT-00005", "name": "FRANCINE", "address": "7014 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 269-4700", "lat": 33.50294, "lng": -111.9294, "quality": 1, "zone": "Old Town", "description": "Best Phoenix Restaurant and Best Fine Dining in Scottsdale. French Riviera Mediterranean cuisine by celebrity chef Laurent Halasz in Fashion Square luxury wing."},
+{"id": "RB-SCOTT-00006", "name": "Bourbon Steak", "address": "7575 E Princess Dr", "city": "Scottsdale", "state": "AZ", "zip": "85255", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 513-6002", "lat": 33.646001, "lng": -111.917168, "quality": 1, "zone": "North Scottsdale", "description": "Michael Mina's steakhouse at Fairmont Scottsdale Princess. Premium cuts and upscale atmosphere."},
+{"id": "RB-SCOTT-00007", "name": "Virtù Honest Craft", "address": "3701 N Marshall Way", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 946-3477", "lat": 33.490637, "lng": -111.928185, "quality": 1, "zone": "Old Town", "description": "Intimate Mediterranean at Bespoke Inn. Chef Gio Osso combines traditional Italian/Mediterranean cuisine with fresh local ingredients."},
+{"id": "RB-SCOTT-00008", "name": "Course Restaurant", "address": "7575 E Indian Bend Rd", "city": "Scottsdale", "state": "AZ", "zip": "85250", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 699-2525", "lat": 33.537667, "lng": -111.918146, "quality": 1, "zone": "Scottsdale Quarter", "description": "Chef Cory Oppold's 5/10-course tasting menus. Seasonal and local ingredients in original farmhouse setting."},
+{"id": "RB-PARAD-00002", "name": "LON's at The Hermosa", "address": "5532 N Palo Cristi Rd", "city": "Paradise Valley", "state": "AZ", "zip": "85253", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(602) 955-7878", "lat": 33.518414, "lng": -112.004724, "quality": 1, "zone": "North Scottsdale", "description": "Arizonian fusion at The Hermosa Inn. Age-old roasting and smoking techniques with fresh regional ingredients. Himalayan Salt Seared Ahi Tuna."},
+{"id": "RB-SCOTT-00009", "name": "Olive & Ivy", "address": "7135 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 751-2200", "lat": 33.501841, "lng": -111.927079, "quality": 2, "zone": "Old Town", "description": "Popular Mediterranean restaurant in downtown Scottsdale Waterfront. Great patio dining and marketplace."},
+{"id": "RB-SCOTT-00010", "name": "De Babel", "address": "8989 E Via Linda", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 535-8100", "lat": 33.568337, "lng": -111.888132, "quality": 2, "zone": "McCormick Ranch", "description": "Top-rated halal Middle Eastern and Mediterranean. Modern takes on traditional Lebanese dishes. Yelp Top 100 Southwest. Hummus trio and creative menu."},
+{"id": "RB-SCOTT-00011", "name": "Saba's Mediterranean Kitchen", "address": "15045 N Hayden Rd", "city": "Scottsdale", "state": "AZ", "zip": "85260", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 948-5900", "lat": 33.621577, "lng": -111.906233, "quality": 2, "zone": "North Scottsdale", "description": "Hidden gem Mediterranean in North Scottsdale. Family-owned with authentic Lebanese flavors. Best Mediterranean in Arizona per many reviews."},
+{"id": "RB-SCOTT-00012", "name": "Pita Jungle", "address": "7366 E Shea Blvd", "city": "Scottsdale", "state": "AZ", "zip": "85260", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 948-8585", "lat": 33.583197, "lng": -111.922266, "quality": 2, "zone": "Scottsdale", "description": "Healthy Mediterranean with Greek and Lebanese influences. Vegan and vegetarian friendly. Multiple Scottsdale locations."},
+{"id": "RB-SCOTT-00013", "name": "Tash Restaurant", "address": "7505 E Main St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 374-0100", "lat": 33.493021, "lng": -111.918517, "quality": 2, "zone": "Scottsdale", "description": "Mediterranean-inspired dishes with multicultural influences. Courses designed to be shared."},
+{"id": "RB-SCOTT-00014", "name": "Tapas Papa Frita", "address": "7051 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 990-9026", "lat": 33.497495, "lng": -111.929615, "quality": 2, "zone": "Old Town", "description": "Spanish tapas with Catalonian Basque and Andalusian influences by award-winning Chef Joseph Gutierrez. Live Flamenco shows and Spanish Guitar."},
+{"id": "RB-SCOTT-00015", "name": "Persian Room", "address": "17040 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85255", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 614-1414", "lat": 33.640981, "lng": -111.925813, "quality": 2, "zone": "North Scottsdale", "description": "28 years of superb traditional Persian cuisine. Koobideh kebab signature dish. Clay oven bread and 30+ entrees. Large banquet room available."},
+{"id": "RB-SCOTT-00016", "name": "Pars Persian Cuisine", "address": "14884 N Pima Rd", "city": "Scottsdale", "state": "AZ", "zip": "85260", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 948-1886", "lat": 33.619759, "lng": -111.89225, "quality": 2, "zone": "North Scottsdale", "description": "Family-owned cozy Persian restaurant. 98% gluten-free dishes. Lamb shanks and tadig appetizers. Senator McCain favorite."},
+{"id": "RB-SCOTT-00017", "name": "Jewel of the Crown", "address": "7373 E Scottsdale Mall", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Indian", "is_chain": false, "chain_name": "", "phone": "(480) 949-8000", "lat": 33.651477, "lng": -111.925858, "quality": 2, "zone": "Old Town", "description": "Scottsdale staple since 1986. Traditional Northern Indian fare and tandoori. Art-adorned space attracting celebrities like Rolling Stones and Alice Cooper."},
+{"id": "RB-SCOTT-00018", "name": "Namaste Indian Restaurant", "address": "16495 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Indian", "is_chain": false, "chain_name": "", "phone": "(480) 553-7676", "lat": 33.636076, "lng": -111.921259, "quality": 2, "zone": "North Scottsdale", "description": "Vibrant atmosphere with rich curries and fragrant biryanis. Tandoori delights and attentive service. Top-rated palak paneer."},
+{"id": "RB-SCOTT-00019", "name": "The India Kitchen", "address": "14884 N Pima Rd", "city": "Scottsdale", "state": "AZ", "zip": "85260", "cuisine": "Indian", "is_chain": false, "chain_name": "", "phone": "(480) 203-2699", "lat": 33.619759, "lng": -111.89225, "quality": 2, "zone": "North Scottsdale", "description": "Authentic Indian with modern twist by Chef Mastan. Chicken tandoori and daily lunch buffet."},
+{"id": "RB-SCOTT-00020", "name": "Indibar", "address": "7001 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85253", "cuisine": "Indian", "is_chain": false, "chain_name": "", "phone": "(480) 428-6800", "lat": 33.53942, "lng": -111.925138, "quality": 2, "zone": "Old Town", "description": "Modern Indian with tandoor oven. Indian-inspired flavors and craft cocktails by Chefs Nigel Lobo and Ajay Singh."},
+{"id": "RB-SCOTT-00021", "name": "Hyderabad House Arizona", "address": "16495 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85260", "cuisine": "Indian", "is_chain": false, "chain_name": "", "phone": "(480) 922-9333", "lat": 33.636076, "lng": -111.921259, "quality": 2, "zone": "North Scottsdale", "description": "North and South Indian dishes. Named after famous Nawabi Hyderabadi Biryani. Authentic flavors."},
+{"id": "RB-SCOTT-00022", "name": "Twisted Curry", "address": "8989 E Talking Stick Way", "city": "Scottsdale", "state": "AZ", "zip": "85250", "cuisine": "Indian", "is_chain": false, "chain_name": "", "phone": "(480) 478-6000", "lat": 33.536256, "lng": -111.887294, "quality": 2, "zone": "Scottsdale", "description": "Fast-casual Indian fusion. Chipotle-style build your own bowls. Fresh made-to-order naans and kebabs."},
+{"id": "RB-SCOTT-00023", "name": "Malee's Thai Bistro", "address": "7131 E Main St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(480) 947-6042", "lat": 33.492946, "lng": -111.927772, "quality": 2, "zone": "Scottsdale", "description": "37-year Old Town institution. Authentic traditional Thai cuisine."},
+{"id": "RB-SCOTT-00024", "name": "Soi4 Bangkok Eatery", "address": "8787 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85253", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(480) 237-2664", "lat": 33.565664, "lng": -111.924471, "quality": 2, "zone": "Scottsdale", "description": "Siri Group's modern traditional Thai. Authentic Bangkok street food flavors."},
+{"id": "RB-SCOTT-00025", "name": "Saigon Bowl", "address": "7019 E Indian School Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Vietnamese", "is_chain": false, "chain_name": "", "phone": "(480) 945-8802", "lat": 33.49478, "lng": -111.930058, "quality": 2, "zone": "Scottsdale", "description": "Clean atmosphere with efficient service. Grilled sausage banh mi and chicken pho. Bean sprouts and fresh herbs."},
+{"id": "RB-SCOTT-00026", "name": "Hello Vietnam Pho & Roll", "address": "8989 E Via Linda", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "Vietnamese", "is_chain": false, "chain_name": "", "phone": "(480) 614-8989", "lat": 33.568337, "lng": -111.888132, "quality": 2, "zone": "McCormick Ranch", "description": "Fast-casual Vietnamese. Large pork vermicelli bowls and fresh smoothies. Authentic atmosphere."},
+{"id": "RB-SCOTT-00027", "name": "Slanted Rice Vietnamese Bistro", "address": "15425 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Vietnamese", "is_chain": false, "chain_name": "", "phone": "(480) 538-6888", "lat": 33.626306, "lng": -111.924849, "quality": 2, "zone": "North Scottsdale", "description": "Vietnamese bistro with generous portions. Fresh spring rolls and flavorful pho."},
+{"id": "RB-FOUNT-00001", "name": "Jade Palace - East Shea", "address": "15426 E Shea Blvd", "city": "Fountain Hills", "state": "AZ", "zip": "85268", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "(480) 837-4588", "lat": 33.581084, "lng": -111.731951, "quality": 2, "zone": "North Scottsdale", "description": "Best Chinese in Scottsdale area. 27 years of NY-style egg rolls and authentic Cantonese."},
+{"id": "RB-SCOTT-00028", "name": "OBON Sushi + Bar + Ramen", "address": "15147 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Sushi", "is_chain": false, "chain_name": "", "phone": "(480) 771-6336", "lat": 33.623702, "lng": -111.924508, "quality": 2, "zone": "North Scottsdale", "description": "Japanese at Scottsdale Quarter. Sushi ramen and Asian fusion."},
+{"id": "RB-SCOTT-00029", "name": "SumoMaya", "address": "6560 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85253", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(480) 588-8890", "lat": 33.536893, "lng": -111.925727, "quality": 2, "zone": "Old Town", "description": "Mexican-Asian fusion with live DJ. Creative combinations and vibrant atmosphere."},
+{"id": "RB-SCOTT-00030", "name": "Hula's Modern Tiki", "address": "7213 E 1st Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(480) 970-4852", "lat": 33.493951, "lng": -111.925814, "quality": 2, "zone": "Old Town", "description": "Polynesian-American with Korean kalbi and island vibes. 50s/60s tiki-inspired decor and cocktails."},
+{"id": "RB-SCOTT-00031", "name": "Zinc Bistro", "address": "15034 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(480) 603-0922", "lat": 33.606815, "lng": -111.925858, "quality": 2, "zone": "North Scottsdale", "description": "World-class French bistro at Kierland Commons since 2001. Oyster bar and fruit de mer platters. Parisian ambiance."},
+{"id": "RB-SCOTT-00032", "name": "Voila French Bistro", "address": "10135 E Via Linda", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(480) 614-5600", "lat": 33.573886, "lng": -111.864592, "quality": 2, "zone": "McCormick Ranch", "description": "Family-owned classic French bistro. Salmon Koulibiac and sole meunière. 20+ years culinary experience from France."},
+{"id": "RB-SCOTT-00033", "name": "The Mick Brasserie", "address": "7120 E Indian School Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(480) 947-6425", "lat": 33.49528, "lng": -111.927489, "quality": 2, "zone": "Scottsdale", "description": "Contemporary French and American. Wine Spectator Award-winning list. Live music and vibrant atmosphere."},
+{"id": "RB-SCOTT-00034", "name": "Cafe Paris French Bistro", "address": "7119 E Shea Blvd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(480) 998-4999", "lat": 33.581741, "lng": -111.927781, "quality": 2, "zone": "Scottsdale", "description": "Authentic French cuisine in Scottsdale. Great for groups. Cool Parisian vibe."},
+{"id": "RB-SCOTT-00035", "name": "Merci French Cafe & Patisserie", "address": "15147 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(480) 245-1155", "lat": 33.623702, "lng": -111.924508, "quality": 2, "zone": "North Scottsdale", "description": "Flaky croissants and cream puffs. Authentic French pastries."},
+{"id": "RB-SCOTT-00036", "name": "Arcadia Farms Cafe", "address": "7014 E 1st Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(480) 941-5665", "lat": 33.494082, "lng": -111.930043, "quality": 2, "zone": "Old Town", "description": "Farm-to-table French-American. Blue Zones friendly menu with organic local ingredients. Friday/Saturday dinner reservations."},
+{"id": "RB-SCOTT-00037", "name": "Grimaldi's Pizzeria", "address": "15147 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 556-1270", "lat": 33.623702, "lng": -111.924508, "quality": 2, "zone": "North Scottsdale", "description": "Brooklyn-style coal-fired pizza. Classic New York pizzeria atmosphere."},
+{"id": "RB-SCOTT-00038", "name": "Local Bistro + Bar", "address": "15125 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 245-0202", "lat": 33.624371, "lng": -111.922522, "quality": 2, "zone": "North Scottsdale", "description": "Italian and French cuisine in North Scottsdale. Chicken parm and halibut favorites. Fantastic wine list."},
+{"id": "RB-SCOTT-00039", "name": "Sexy Roman", "address": "7277 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 630-2131", "lat": 33.501984, "lng": -111.924087, "quality": 2, "zone": "Old Town", "description": "W Scottsdale. James Beard-nominated Chef Jason Franey. Theatrical Italian dining."},
+{"id": "RB-SCOTT-00040", "name": "Bourbon & Bones", "address": "8877 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85253", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(480) 922-5200", "lat": 33.566117, "lng": -111.925482, "quality": 2, "zone": "Scottsdale", "description": "Upscale steakhouse with premium spirits. Reserve whiskeys and expertly prepared steaks."},
+{"id": "RB-SCOTT-00041", "name": "Dominick's Steakhouse", "address": "15169 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(480) 272-7271", "lat": 33.624105, "lng": -111.925148, "quality": 2, "zone": "North Scottsdale", "description": "Scottsdale Quarter. Classic steakhouse fare with modern touches."},
+{"id": "RB-SCOTT-00042", "name": "Mastro's City Hall", "address": "6991 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(480) 941-4700", "lat": 33.501763, "lng": -111.931372, "quality": 2, "zone": "Old Town", "description": "Upscale chain steakhouse known for seafood tower and live entertainment."},
+{"id": "RB-SCOTT-00043", "name": "The Mission", "address": "3815 N Brown Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 636-5005", "lat": 33.491861, "lng": -111.924258, "quality": 2, "zone": "Old Town", "description": "Modern Latin cuisine by Chef Matt Carter. Handmade tortillas and local farm ingredients. Latin-inspired with soul."},
+{"id": "RB-SCOTT-00044", "name": "La Hacienda", "address": "7575 E Princess Dr", "city": "Scottsdale", "state": "AZ", "zip": "85255", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 585-2730", "lat": 33.646001, "lng": -111.917168, "quality": 2, "zone": "North Scottsdale", "description": "Fairmont Princess top-rated Mexican. Recently renovated. Authentic regional cuisine."},
+{"id": "RB-SCOTT-00045", "name": "Toro Latin Restaurant", "address": "7575 E Princess Dr", "city": "Scottsdale", "state": "AZ", "zip": "85255", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 585-4848", "lat": 33.646001, "lng": -111.917168, "quality": 2, "zone": "North Scottsdale", "description": "Fairmont Princess. Chef Richard Sandoval's Latin American cuisine."},
+{"id": "RB-SCOTT-00046", "name": "Casa Amigos", "address": "7320 E Indian Plaza", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 941-5656", "lat": 33.501655, "lng": -111.923034, "quality": 2, "zone": "Scottsdale", "description": "Tacos margaritas and rooftop bar. Fun vibrant spot in Entertainment District."},
+{"id": "RB-SCOTT-00047", "name": "Barrio Queen", "address": "7114 E Stetson Dr", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 656-4197", "lat": 33.498875, "lng": -111.928331, "quality": 2, "zone": "Scottsdale", "description": "Elevated Mexican street food. Multiple Scottsdale locations."},
+{"id": "RB-SCOTT-00048", "name": "Diego Pops", "address": "4338 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 478-0303", "lat": 33.499374, "lng": -111.926589, "quality": 2, "zone": "Old Town", "description": "Modern Mexican with creative tacos and patio dining."},
+{"id": "RB-SCOTT-00049", "name": "Ocean 44", "address": "7205 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(480) 622-2400", "lat": 33.50232, "lng": -111.92426, "quality": 2, "zone": "Old Town", "description": "Upscale seafood and steaks. Raw bar and premium catches."},
+{"id": "RB-SCOTT-00050", "name": "Catch Scottsdale", "address": "7175 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(480) 710-7070", "lat": 33.500902, "lng": -111.927845, "quality": 2, "zone": "Old Town", "description": "Fashion Square 2025 opening. NY/LA seafood import. Coastal cuisine."},
+{"id": "RB-SCOTT-00051", "name": "The Americano", "address": "7335 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 347-5600", "lat": 33.502136, "lng": -111.921983, "quality": 2, "zone": "Old Town", "description": "Chef Beau MacMillan's contemporary American. Tell Your Friends speakeasy below."},
+{"id": "RB-SCOTT-00052", "name": "Citizen Public House", "address": "7111 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 398-4208", "lat": 33.498167, "lng": -111.928113, "quality": 2, "zone": "Old Town", "description": "Craft cocktails and happy hour creativity. The 'Ol Razzle Dazzle and barrel-aged cocktails."},
+{"id": "RB-SCOTT-00053", "name": "Hash Kitchen", "address": "7120 E Indian School Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 400-2280", "lat": 33.49528, "lng": -111.927489, "quality": 2, "zone": "Scottsdale", "description": "Brunch hotspot with build-your-own Bloody Mary bar. Creative breakfast dishes."},
+{"id": "RB-SCOTT-00054", "name": "The Greene House", "address": "15044 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 513-6868", "lat": 33.606815, "lng": -111.925858, "quality": 2, "zone": "North Scottsdale", "description": "Coastal cottage escape at Kierland Commons. Sea bass and tuna tartare tacos. Breezy patio."},
+{"id": "RB-SCOTT-00055", "name": "Hush Public House", "address": "4321 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 524-4874", "lat": 33.499097, "lng": -111.925974, "quality": 2, "zone": "Old Town", "description": "Best restaurant in Scottsdale per locals. Chef Dom Ruggiero's creative cuisine."},
+{"id": "RB-SCOTT-00056", "name": "The Ends", "address": "7014 E 1st Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 624-2000", "lat": 33.494082, "lng": -111.930043, "quality": 2, "zone": "Old Town", "description": "2024 favorite with creative menu. Reservations recommended for cocktails and small plates."},
+{"id": "RB-SCOTT-00057", "name": "The Thumb", "address": "7125 E Pinnacle Peak Rd", "city": "Scottsdale", "state": "AZ", "zip": "85255", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(480) 502-4200", "lat": 33.699845, "lng": -111.850406, "quality": 2, "zone": "Scottsdale", "description": "Gas station BBQ by former surgeon. Authentic smokehouse favorites."},
+{"id": "RB-SCOTT-00058", "name": "Original Breakfast House", "address": "6151 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85250", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 945-4811", "lat": 33.525939, "lng": -111.925742, "quality": 2, "zone": "Old Town", "description": "Since 1983. Top-rated homemade biscuits and classic breakfast. Local institution."},
+{"id": "RB-SCOTT-00059", "name": "OEB Breakfast Co.", "address": "15147 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 626-0606", "lat": 33.623702, "lng": -111.924508, "quality": 2, "zone": "North Scottsdale", "description": "Canadian import with elevated breakfast. Gourmet morning fare."},
+{"id": "RB-SCOTT-00060", "name": "The Eleanor", "address": "7501 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 948-1411", "lat": 33.501654, "lng": -111.919839, "quality": 2, "zone": "Old Town", "description": "New favorite for egg benedicts and lavender honey latte. Stylish brunch spot."},
+{"id": "RB-SCOTT-00061", "name": "Prep & Pastry", "address": "7508 E Monterey Way", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 946-3344", "lat": 33.485887, "lng": -111.919378, "quality": 2, "zone": "Scottsdale", "description": "Elevated brunch with mile-high cinnamon buns. Waterfront patio."},
+{"id": "RB-SCOTT-00062", "name": "JOJO Coffeehouse", "address": "3712 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 621-4200", "lat": 33.49071, "lng": -111.926411, "quality": 2, "zone": "Old Town", "description": "Arts District cold brew flight and cinnamon roll pancakes. Waits out the door."},
+{"id": "RB-SCOTT-00063", "name": "Matt's Big Breakfast", "address": "4118 N Marshall Way", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 621-8300", "lat": 33.495385, "lng": -111.929026, "quality": 2, "zone": "Old Town", "description": "Farm-fresh with hand-squeezed OJ. Quality breakfast ingredients."},
+{"id": "RB-SCOTT-00064", "name": "Scramble", "address": "4246 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 946-1111", "lat": 33.497943, "lng": -111.926589, "quality": 2, "zone": "Old Town", "description": "Quick-casual locally sourced. Dog-friendly patio."},
+{"id": "RB-SCOTT-00065", "name": "Los Olivos", "address": "7328 E 2nd St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 946-2256", "lat": 33.491557, "lng": -111.923548, "quality": 2, "zone": "Scottsdale", "description": "Legendary patio and huevos rancheros. Old Town breakfast institution."},
+{"id": "RB-SCOTT-00066", "name": "Farm & Craft", "address": "4302 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 568-8980", "lat": 33.498689, "lng": -111.926427, "quality": 2, "zone": "Old Town", "description": "Healthy sustainable fast-casual. Gluten-free organic hormone-free. Wellness menu with anti-inflammatory focus."},
+{"id": "RB-SCOTT-00067", "name": "The Herb Box", "address": "7105 E 1st Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 289-6160", "lat": 33.493756, "lng": -111.928116, "quality": 2, "zone": "Old Town", "description": "Three-location powerhouse. Organic veggies and cage-free eggs. Vegan nosh board and sharing plates."},
+{"id": "RB-SCOTT-00068", "name": "Grassroots Kitchen & Tap", "address": "8120 N Hayden Rd", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 699-0699", "lat": 33.555085, "lng": -111.899149, "quality": 2, "zone": "Scottsdale", "description": "Farm-to-table with daily social hour 3-6pm. Fresh local ingredients."},
+{"id": "RB-SCOTT-00069", "name": "George & Gather", "address": "7018 E Main St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 690-6480", "lat": 33.493177, "lng": -111.929956, "quality": 2, "zone": "Scottsdale", "description": "Counter-order breakfast full-service lunch/dinner. Market with grab-and-go meals and wine wall."},
+{"id": "RB-SCOTT-00070", "name": "Press Coffee Roasters", "address": "7134 E Stetson Dr", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(480) 424-5601", "lat": 33.499461, "lng": -111.927961, "quality": 3, "zone": "Scottsdale", "description": "Local roaster with multiple locations. Quality craft coffee."},
+{"id": "RB-SCOTT-00071", "name": "Cartel Coffee Lab", "address": "4216 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(480) 355-0000", "lat": 33.497441, "lng": -111.92619, "quality": 3, "zone": "Old Town", "description": "Craft coffee in Old Town. Serious coffee program."},
+{"id": "RB-SCOTT-00072", "name": "Berdena's", "address": "4360 N Miller Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(480) 699-9399", "lat": 33.499126, "lng": -111.917575, "quality": 3, "zone": "South Scottsdale", "description": "Award-winning avocado toast and Cardamom Rose Latte. Stylish cafe."},
+{"id": "RB-SCOTT-00073", "name": "Sweet Dee's Bakeshop", "address": "7350 E Stetson Dr", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(480) 994-6733", "lat": 33.500038, "lng": -111.922231, "quality": 3, "zone": "Scottsdale", "description": "Phoenix Magazine Best Bakery. Bright colors seasonal themes. Custom orders specialty."},
+{"id": "RB-SCOTT-00074", "name": "Růže Cake House", "address": "7014 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(480) 968-9900", "lat": 33.50294, "lng": -111.9294, "quality": 3, "zone": "Old Town", "description": "Mother/daughter collaboration. Colorful macarons and boba tea. Instagrammable aesthetic with local ingredients."},
+{"id": "RB-SCOTT-00075", "name": "Paris Baguette", "address": "16495 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(480) 656-9270", "lat": 33.636076, "lng": -111.921259, "quality": 3, "zone": "North Scottsdale", "description": "Korean bakery chain. Handcrafted cakes fresh pastries and Lavazza coffee."},
+{"id": "RB-SCOTT-00076", "name": "Sprinkles Scottsdale", "address": "4502 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(480) 970-4293", "lat": 33.502426, "lng": -111.926235, "quality": 3, "zone": "Old Town", "description": "Famous cupcakes with 24-hour ATM. Salted caramel standout."},
+{"id": "RB-SCOTT-00077", "name": "Sweet Scape Bakery", "address": "7201 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(480) 946-6488", "lat": 33.501968, "lng": -111.925115, "quality": 3, "zone": "Old Town", "description": "Afternoon tea parlor across from Railroad Park. Scratch-baked daily. Custom cakes and macarons."},
+{"id": "RB-SCOTT-00078", "name": "Local Donut", "address": "4020 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(480) 696-5077", "lat": 33.494314, "lng": -111.926511, "quality": 3, "zone": "Old Town", "description": "Best local donuts including creme brulee and cronuts. Sells out daily."},
+{"id": "RB-SCOTT-00079", "name": "Jeni's Splendid Ice Creams", "address": "4302 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(480) 659-7545", "lat": 33.498689, "lng": -111.926427, "quality": 3, "zone": "Old Town", "description": "Artisan ice cream from Columbus. Old Town location."},
+{"id": "RB-SCOTT-00080", "name": "Yellow Spruce", "address": "7025 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(480) 946-1810", "lat": 33.497295, "lng": -111.929954, "quality": 3, "zone": "Old Town", "description": "Gelato and affogato. Italian-style frozen treats."},
+{"id": "RB-SCOTT-00081", "name": "Outrider Rooftop Lounge", "address": "7142 E 1st St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 496-6900", "lat": 33.492458, "lng": -111.9277, "quality": 2, "zone": "Scottsdale", "description": "7th floor Canopy by Hilton. 360-degree views and Camelback Mountain sunsets. Craft cocktails and fire pits."},
+{"id": "RB-SCOTT-00082", "name": "Orange Sky Lounge", "address": "9800 Talking Stick Way", "city": "Scottsdale", "state": "AZ", "zip": "85256", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 850-7777", "lat": 33.540814, "lng": -111.869667, "quality": 2, "zone": "Scottsdale", "description": "15th floor Talking Stick Resort. 300+ wines and spectacular sunset views. Live weekend music."},
+{"id": "RB-SCOTT-00083", "name": "Allegra Rooftop Pool & Bar", "address": "7101 E Indian School Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 425-9463", "lat": 33.494822, "lng": -111.928774, "quality": 2, "zone": "Scottsdale", "description": "Pool vibes by day DJ energy by night. Quintessential Scottsdale rooftop."},
+{"id": "RB-SCOTT-00084", "name": "The Balcony at Social Tap", "address": "4312 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 945-0393", "lat": 33.498924, "lng": -111.92617, "quality": 2, "zone": "Old Town", "description": "Weekend brunch and late-night cocktails. Old Town rooftop."},
+{"id": "RB-SCOTT-00085", "name": "Thirsty Camel Lounge", "address": "6000 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 941-8200", "lat": 33.507824, "lng": -111.947456, "quality": 2, "zone": "Old Town", "description": "The Phoenician elevated terrace. Fodor's World's Best Hotel Bars. Refined cocktails and desert views."},
+{"id": "RB-PARAD-00003", "name": "Jade Bar", "address": "5700 E McDonald Dr", "city": "Paradise Valley", "state": "AZ", "zip": "85253", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 607-2300", "lat": 33.522385, "lng": -111.959554, "quality": 2, "zone": "North Scottsdale", "description": "Sanctuary Resort with Camelback Mountain views. Backlit jade onyx bar. Premium spirits and farm-fresh cocktails."},
+{"id": "RB-SCOTT-00086", "name": "Onyx Bar & Lounge", "address": "10600 E Crescent Moon Dr", "city": "Scottsdale", "state": "AZ", "zip": "85262", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 515-5700", "lat": 33.731384, "lng": -111.852757, "quality": 2, "zone": "Scottsdale", "description": "Four Seasons Troon North. Sophisticated small plates and smoked cocktails."},
+{"id": "RB-SCOTT-00087", "name": "Cottontail Lounge", "address": "4925 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 947-5400", "lat": 33.508464, "lng": -111.924934, "quality": 2, "zone": "Old Town", "description": "Hotel Adeline retro aesthetic. Poolside views and small plates."},
+{"id": "RB-SCOTT-00088", "name": "The Beverly", "address": "7018 E Main St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 387-5768", "lat": 33.493177, "lng": -111.929956, "quality": 2, "zone": "Scottsdale", "description": "Sass meets sophistication in Old Town. Creative craft cocktails."},
+{"id": "RB-SCOTT-00089", "name": "AZ/88", "address": "7353 Scottsdale Mall", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 994-5576", "lat": 33.634486, "lng": -111.91266, "quality": 2, "zone": "Old Town", "description": "35+ years Old Town icon. 15 martini styles including best Espresso Martini. Rotating art installations."},
+{"id": "RB-SCOTT-00090", "name": "One Handsome Bastard", "address": "7126 E Stetson Dr", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 656-5575", "lat": 33.499227, "lng": -111.927796, "quality": 2, "zone": "Scottsdale", "description": "Old Town distillery. Blue Clover gin and vodka made on-site. Craft spirits."},
+{"id": "RB-SCOTT-00091", "name": "Tell Your Friends", "address": "7335 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 347-5600", "lat": 33.502136, "lng": -111.921983, "quality": 2, "zone": "Old Town", "description": "Speakeasy under The Americano. Great Gatsby theme. Jumbo shrimp and craft cocktails."},
+{"id": "RB-SCOTT-00092", "name": "Sorso Wine Room", "address": "15147 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 248-7822", "lat": 33.623702, "lng": -111.924508, "quality": 2, "zone": "North Scottsdale", "description": "Scottsdale Quarter self-serve wine system. Dozens of wines by the ounce."},
+{"id": "RB-SCOTT-00093", "name": "The Wine Collective of Scottsdale", "address": "4020 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 656-0999", "lat": 33.494314, "lng": -111.926511, "quality": 2, "zone": "Old Town", "description": "Boutique tasting room with 30+ Arizona wines. Curated flights and bottle shop."},
+{"id": "RB-SCOTT-00094", "name": "Jamie's Wine Bar + Bottle Shop", "address": "4231 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 699-8999", "lat": 33.497745, "lng": -111.925985, "quality": 2, "zone": "Old Town", "description": "700+ bottles. Elevated Old Town wine experience."},
+{"id": "RB-SCOTT-00095", "name": "Rift Wine & Beer Bar", "address": "8120 N Hayden Rd", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 699-0199", "lat": 33.555085, "lng": -111.899149, "quality": 2, "zone": "Scottsdale", "description": "25 rotating taps and 150+ wines. Arizona breweries and wineries focus."},
+{"id": "RB-SCOTT-00096", "name": "FnB Wine Bar", "address": "7125 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 284-4777", "lat": 33.497901, "lng": -111.927256, "quality": 2, "zone": "Old Town", "description": "James Beard Award-winning wine program. Arizona wine focus with Los Milics and Dos Cabezas."},
+{"id": "RB-SCOTT-00097", "name": "LDV Winery Tasting Room", "address": "7134 E Stetson Dr", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 664-4822", "lat": 33.499461, "lng": -111.927961, "quality": 2, "zone": "Scottsdale", "description": "Award-winning Arizona estate wines. Wine flights and shaded patio."},
+{"id": "RB-SCOTT-00098", "name": "Carlson Creek Tasting Room", "address": "4142 N Marshall Way", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 947-0636", "lat": 33.49577, "lng": -111.9294, "quality": 2, "zone": "Old Town", "description": "Family-owned Willcox wines. 13+ varietals and artisan cheese boards. Art deco tin ceiling."},
+{"id": "RB-SCOTT-00099", "name": "Aridus Wine Company", "address": "7173 E Main St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(520) 954-2676", "lat": 33.492929, "lng": -111.926769, "quality": 2, "zone": "Scottsdale", "description": "Willcox wines in rustic sophisticated setting. Live music and wine flights."},
+{"id": "RB-SCOTT-00100", "name": "Arizona Stronghold Vineyards", "address": "4225 N Marshall Way", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 779-1600", "lat": 33.497423, "lng": -111.9285, "quality": 2, "zone": "Old Town", "description": "Bonita Springs vineyard wines. Chardonnay rosé and Tannat."},
+{"id": "RB-SCOTT-00101", "name": "Los Milics Vineyards", "address": "4151 N Marshall Way", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 390-1668", "lat": 33.495928, "lng": -111.928764, "quality": 2, "zone": "Old Town", "description": "Newest Scottsdale Wine Trail addition. Spanish French Italian varietals from Elgin AZ."},
+{"id": "RB-SCOTT-00102", "name": "Salvatore Vineyards", "address": "7064 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 423-2901", "lat": 33.49825, "lng": -111.9292, "quality": 2, "zone": "Old Town", "description": "Italian varietals in small batches. Crystal chandeliers and art-filled tasting room."},
+{"id": "RB-SCOTT-00103", "name": "Maya Day + Nightclub", "address": "7333 E Indian Plaza", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 947-7311", "lat": 33.501275, "lng": -111.922821, "quality": 2, "zone": "Scottsdale", "description": "Vegas-style pool party and nightclub. Celebrity DJs."},
+{"id": "RB-SCOTT-00104", "name": "Riot House", "address": "4425 N Saddlebag Trail", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 590-9221", "lat": 33.501411, "lng": -111.922019, "quality": 2, "zone": "South Scottsdale", "description": "South Beach vibes rooftop bar. Bottle service and VIP events."},
+{"id": "RB-SCOTT-00105", "name": "Bottled Blonde", "address": "7340 E Indian Plaza", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 621-5775", "lat": 33.501713, "lng": -111.922724, "quality": 2, "zone": "Scottsdale", "description": "VIP nightclub open until 2AM. Ohio State bar by day."},
+{"id": "RB-SCOTT-00106", "name": "Cake Nightclub", "address": "7419 E Indian Plaza", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 947-2253", "lat": 33.501326, "lng": -111.921127, "quality": 2, "zone": "Scottsdale", "description": "VIP bottle service experience. Premium nightlife."},
+{"id": "RB-SCOTT-00107", "name": "Hi Fi Kitchen & Cocktails", "address": "4420 N Saddlebag Trail", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 970-4443", "lat": 33.501038, "lng": -111.922454, "quality": 2, "zone": "South Scottsdale", "description": "Retro vibes dance club. DJ after 10pm with dance floor energy."},
+{"id": "RB-SCOTT-00108", "name": "K O'Donnell's Sports Bar", "address": "7373 E Scottsdale Mall", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 675-9700", "lat": 33.651477, "lng": -111.925858, "quality": 3, "zone": "Old Town", "description": "Founded by poker legend Kevin O'Donnell. Sports viewing destination."},
+{"id": "RB-SCOTT-00109", "name": "R.T. O'Sullivan's", "address": "7120 E Shea Blvd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 948-5577", "lat": 33.582254, "lng": -111.927345, "quality": 3, "zone": "Scottsdale", "description": "Sand volleyball and off-track betting. 25oz Guinness."},
+{"id": "RB-SCOTT-00110", "name": "CAZ Sports Bar", "address": "7117 E 6th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 275-1750", "lat": 33.49873, "lng": -111.9275, "quality": 3, "zone": "Old Town", "description": "46 screens and sportsbook. Monday Night Tailgate."},
+{"id": "RB-SCOTT-00111", "name": "Zipps Sports Grill", "address": "8320 N Hayden Rd", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 607-0500", "lat": 33.557328, "lng": -111.898437, "quality": 3, "zone": "Scottsdale", "description": "15 Valley locations. Neighborhood vibe sports bar."},
+{"id": "RB-SCOTT-00112", "name": "Clancy's Pub", "address": "7128 E Becker Ln", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 429-8899", "lat": 33.583045, "lng": -111.92705, "quality": 3, "zone": "Scottsdale", "description": "Midwest roots Nebraska/Packers bar. Irish charm."},
+{"id": "RB-SCOTT-00113", "name": "Cornish Pasty Co", "address": "7166 E Indian School Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 894-6261", "lat": 33.495064, "lng": -111.926812, "quality": 3, "zone": "Scottsdale", "description": "British pub with authentic Cornish pasties. UK comfort food."},
+{"id": "RB-SCOTT-00114", "name": "Skeptical Chymist", "address": "7125 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 275-1661", "lat": 33.497901, "lng": -111.927256, "quality": 3, "zone": "Old Town", "description": "British pub with fish and chips. UK pub atmosphere."},
+{"id": "RB-SCOTT-00115", "name": "Tim Finnegan's Irish Restaurant", "address": "7151 E 6th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 621-5600", "lat": 33.498694, "lng": -111.926664, "quality": 3, "zone": "Old Town", "description": "Authentic Irish restaurant and pub."},
+{"id": "RB-SCOTT-00116", "name": "Four Peaks Brewing", "address": "15745 N Hayden Rd", "city": "Scottsdale", "state": "AZ", "zip": "85260", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(480) 991-1795", "lat": 33.6275, "lng": -111.895157, "quality": 2, "zone": "North Scottsdale", "description": "Arizona craft beer pioneer. Kilt Lifter and Hop Knot favorites."},
+{"id": "RB-SCOTT-00117", "name": "Goldwater Brewing Co", "address": "3608 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(480) 696-5253", "lat": 33.490356, "lng": -111.926215, "quality": 2, "zone": "Old Town", "description": "Old Town craft brewery. Local Arizona beers."},
+{"id": "RB-SCOTT-00118", "name": "Grimaldi's Pizzeria", "address": "15147 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85254", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(480) 556-1270", "lat": 33.623702, "lng": -111.924508, "quality": 3, "zone": "North Scottsdale", "description": "Brooklyn-style coal-fired pizza. Multiple Scottsdale locations."},
+{"id": "RB-SCOTT-00119", "name": "Craft 64", "address": "6922 E Main St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(480) 946-0542", "lat": 33.49332, "lng": -111.9317, "quality": 3, "zone": "Scottsdale", "description": "Wood-fired pizza with local ingredients. Craft beer selection."},
+{"id": "RB-SCOTT-00120", "name": "Pomo Pizzeria", "address": "8977 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85253", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(480) 998-1366", "lat": 33.57625, "lng": -111.926161, "quality": 3, "zone": "Scottsdale", "description": "Neapolitan pizza certified by Italian standards. Authentic imports."},
+{"id": "RB-SCOTT-00121", "name": "Aioli Gourmet Burgers", "address": "4248 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 946-3400", "lat": 33.498099, "lng": -111.926176, "quality": 3, "zone": "Old Town", "description": "White Truffle Swiss and creative gourmet burgers. Food truck and restaurant."},
+{"id": "RB-SCOTT-00122", "name": "Rehab Burger Therapy", "address": "7210 E 2nd St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 621-5358", "lat": 33.49153, "lng": -111.9256, "quality": 3, "zone": "Scottsdale", "description": "Wild creative burger combinations. Therapy for burger cravings."},
+{"id": "RB-SCOTT-00123", "name": "Proof An American Canteen", "address": "10600 E Crescent Moon Dr", "city": "Scottsdale", "state": "AZ", "zip": "85262", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 513-5085", "lat": 33.731384, "lng": -111.852757, "quality": 2, "zone": "Scottsdale", "description": "Four Seasons Route 66-themed American cuisine."},
+{"id": "RB-SCOTT-00124", "name": "Desert Orchard Café", "address": "10600 E Crescent Moon Dr", "city": "Scottsdale", "state": "AZ", "zip": "85262", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 515-5700", "lat": 33.731384, "lng": -111.852757, "quality": 2, "zone": "Scottsdale", "description": "Four Seasons pastry café. Executive Pastry Chef Christina Kaelberer."},
+{"id": "RB-SCOTT-00125", "name": "Mowry & Cotton", "address": "6000 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 423-2530", "lat": 33.507824, "lng": -111.947456, "quality": 2, "zone": "Old Town", "description": "The Phoenician casual dining. Contemporary American."},
+{"id": "RB-SCOTT-00126", "name": "La Fogata Kitchen & Bar", "address": "7700 E McCormick Pkwy", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 991-3388", "lat": 33.547114, "lng": -111.913621, "quality": 2, "zone": "McCormick Ranch", "description": "Scottsdale Resort modern Sonoran cuisine."},
+{"id": "RB-SCOTT-00127", "name": "The Madam", "address": "7700 E McCormick Pkwy", "city": "Scottsdale", "state": "AZ", "zip": "85258", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 991-3388", "lat": 33.547114, "lng": -111.913621, "quality": 2, "zone": "McCormick Ranch", "description": "Scottsdale Resort speakeasy. Hidden craft cocktail lounge."},
+{"id": "RB-SCOTT-00128", "name": "Wolf by Vanderpump", "address": "7401 E Indian Plaza", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 361-9653", "lat": 33.50144, "lng": -111.921177, "quality": 2, "zone": "Scottsdale", "description": "Lisa Vanderpump's restaurant at Caesars Republic hotel. Glamorous dining."},
+{"id": "RB-SCOTT-00129", "name": "Giada", "address": "7401 E Indian Plaza", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 361-8883", "lat": 33.50144, "lng": -111.921177, "quality": 2, "zone": "Scottsdale", "description": "Giada De Laurentiis at Caesars Republic. Italian celebrity chef cuisine."},
+{"id": "RB-SCOTT-00130", "name": "Pinyon", "address": "7175 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 922-1010", "lat": 33.500902, "lng": -111.927845, "quality": 2, "zone": "Old Town", "description": "Hi Noon Hospitality October 2025. Mediterranean at Scottsdale Mall."},
+{"id": "RB-SCOTT-00131", "name": "Élephante", "address": "7335 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 922-1125", "lat": 33.502136, "lng": -111.921983, "quality": 2, "zone": "Old Town", "description": "December 2024 coastal Italian. Wish You Were Here Group."},
+{"id": "RB-SCOTT-00132", "name": "Society Swan", "address": "7021 E 5th Ave", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 289-6160", "lat": 33.497354, "lng": -111.929919, "quality": 2, "zone": "Old Town", "description": "Sam Fox Fashion Square October 2025. Latest Fox Restaurant Concepts."},
+{"id": "RB-SCOTT-00133", "name": "SHIV Supper Club", "address": "7170 E Stetson Dr", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 922-1155", "lat": 33.500196, "lng": -111.926872, "quality": 2, "zone": "Scottsdale", "description": "Arizona's first vibe dining. Entertainment after 10pm."},
+{"id": "RB-SCOTT-00134", "name": "Belmont Kitchen & Cocktails", "address": "7077 E Main St", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 922-1200", "lat": 33.493028, "lng": -111.928849, "quality": 2, "zone": "Scottsdale", "description": "Michelin Chef Alex Stratta. Seed-oil free menu."},
+{"id": "RB-SCOTT-00135", "name": "Telefèric Barcelona", "address": "7175 E Camelback Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 922-1177", "lat": 33.500902, "lng": -111.927845, "quality": 2, "zone": "Old Town", "description": "Fashion Square 2025. Catalonian tapas and Spanish cuisine."},
+{"id": "RB-SCOTT-00136", "name": "Heritage Kitchen + Cocktails", "address": "18679 E McDowell Mountain Pkwy", "city": "Scottsdale", "state": "AZ", "zip": "85255", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 922-1188", "lat": 33.677945, "lng": -111.916071, "quality": 2, "zone": "North Scottsdale", "description": "Chef Christopher Brugman. McDowell Mountain Marketplace."},
+{"id": "RB-SCOTT-00137", "name": "Z's Greek", "address": "4520 N Scottsdale Rd", "city": "Scottsdale", "state": "AZ", "zip": "85251", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 946-7233", "lat": 33.502767, "lng": -111.926226, "quality": 3, "zone": "Old Town", "description": "Greek favorites including gyros and Mediterranean plates."},
+{"id": "RB-SCOTT-00138", "name": "Gyros Plus", "address": "14884 N Pima Rd", "city": "Scottsdale", "state": "AZ", "zip": "85260", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 998-8585", "lat": 33.619759, "lng": -111.89225, "quality": 3, "zone": "North Scottsdale", "description": "Best gyros in North Scottsdale. Authentic Greek owners."}
+];
+
+// ZONE MAP
+const ZONE_MAP = {
+  "oldtown": ["Old Town", "Old Town Scottsdale", "5th Ave"],
+  "n-scotts": ["North Scottsdale", "Kierland", "Scottsdale 101"],
+  "quarter": ["Scottsdale Quarter", "Waterfront"],
+  "s-scotts": ["South Scottsdale", "Papago"],
+  "dc-ranch": ["DC Ranch", "Silverleaf", "Desert Mountain"],
+  "gainey": ["Gainey Ranch", "Indian Bend"],
+  "mccorm": ["McCormick Ranch", "Chaparral"],
+  "other": ["Shea Corridor", "Bell Road", "Camelback", "Fashion Square", "Raintree", "Scottsdale"]
+};
+
+function inZone(zone, key) {
+  if (key === 'All') return true;
+  return (ZONE_MAP[key] || []).includes(zone);
+}
+
+// CUISINE COLORS
+const CC = {
+  "Mexican":"#7C3AED","Italian":"#15803D","American":"#1D4ED8",
+  "Chinese":"#B91C1C","Pizza":"#DC2626","Coffee":"#92400E",
+  "Bar":"#334155","Fast Food":"#EA580C","Chicken":"#DB2777",
+  "Bakery":"#2563EB","Sandwiches":"#16A34A","Asian":"#0D9488",
+  "Korean":"#6D28D9","French":"#4338CA","BBQ":"#C2410C",
+  "Brewery":"#B45309","Ice Cream":"#BE185D","Donuts":"#EC4899",
+  "Wings":"#B91C1C","Steakhouse":"#991B1B","Deli":"#16A34A",
+  "Seafood":"#0369A1","Indian":"#D97706","Thai":"#0D9488",
+  "Vietnamese":"#0891B2","Mediterranean":"#0369A1","Sushi":"#0891B2",
+  "Southwestern":"#C2410C","Fine Dining":"#6D28D9","Wine Bar":"#9333EA",
+  "Breakfast":"#EA580C","Diner":"#78716C","Cafe":"#92400E",
+  "Greek":"#0369A1","Japanese":"#B91C1C","Pub":"#334155",
+  "Tacos":"#7C3AED","Sports Bar":"#1D4ED8","Lounge":"#334155"
+};
+function tileColor(c) { return CC[c] || CC[c.split('/')[0].trim()] || '#475569'; }
+function tileAbbr(c)  { return c.split('/')[0].trim().substring(0,2).toUpperCase(); }
+
+// ESC
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// STATE
+let cuisine = 'All', zone = 'All', sort = 'zone', q = '', show = 30;
+const PAGE = 30;
+let nmActive = false, nmLat = null, nmLng = null;
+
+function haversine(a, b, c, d) {
+  const R=3958.8, dL=(c-a)*Math.PI/180, dG=(d-b)*Math.PI/180;
+  const x=Math.sin(dL/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dG/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+
+// FILTER + SORT
+function filtered() {
+  let r = [...DATA];
+  if (cuisine !== 'All') r = r.filter(x => x.cuisine.toLowerCase().includes(cuisine.toLowerCase()));
+  if (zone    !== 'All') r = r.filter(x => inZone(x.zone, zone));
+  if (q) r = r.filter(x =>
+    x.name.toLowerCase().includes(q) || x.cuisine.toLowerCase().includes(q) ||
+    x.address.toLowerCase().includes(q) || x.zone.toLowerCase().includes(q) ||
+    (x.description||'').toLowerCase().includes(q) || (x.chain_name||'').toLowerCase().includes(q)
+  );
+  if      (sort==='name')     r.sort((a,b)=>a.name.localeCompare(b.name));
+  else if (sort==='name-desc')r.sort((a,b)=>b.name.localeCompare(a.name));
+  else if (sort==='cuisine')  r.sort((a,b)=>a.cuisine.localeCompare(b.cuisine)||a.name.localeCompare(b.name));
+  else if (sort==='chain')    r.sort((a,b)=>(b.is_chain?1:0)-(a.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='local')    r.sort((a,b)=>(a.is_chain?1:0)-(b.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='distance' && nmActive) r.sort((a,b)=>haversine(nmLat,nmLng,a.lat,a.lng)-haversine(nmLat,nmLng,b.lat,b.lng));
+  else                        r.sort((a,b)=>a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name));
+  return r;
+}
+
+// RENDER
+function render() {
+  const items = filtered();
+  const grid  = document.getElementById('listingGrid');
+  const lm    = document.getElementById('loadMoreWrap');
+
+  document.getElementById('totalCount').textContent   = DATA.length;
+  document.getElementById('resultsCount').textContent = items.length;
+  updateFilterBar();
+  updateZoneCounts();
+
+  if (!items.length) {
+    grid.innerHTML = '<div class="no-results"><div class="nr-icon">🔍</div><h3>No restaurants found</h3><p>Try a different cuisine, area, or search term.</p><button onclick="clearAll()">Clear All Filters</button></div>';
+    lm.style.display='none'; return;
+  }
+
+  let h = '';
+  items.slice(0, show).forEach((r, i) => {
+    if (i > 0 && i % 12 === 0) {
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><div class="ad-label"><div class="ad-size">In-Feed Banner</div><div class="ad-price">$75/mo</div></div></div></div>';
+    }
+
+    const mapUrl  = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address + ' ' + r.city + ' ' + r.state);
+    const dist    = (nmActive && r.lat && r.lng) ? ' <span class="dist-badge">' + haversine(nmLat,nmLng,r.lat,r.lng).toFixed(1) + ' mi</span>' : '';
+    const tag     = r.is_chain ? '<span class="card-tag tag-chain">Chain</span>' : '<span class="card-tag tag-local">Local</span>';
+    const sub     = (r.is_chain && r.chain_name && r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase())
+                    ? '<div class="card-chain">' + esc(r.chain_name) + '</div>' : '';
+    const phone   = r.phone ? '<span>📞 ' + esc(r.phone) + '</span>' : '';
+    const desc    = r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : '';
+    const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
+    const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';
+
+    h += '<a href="' + mapUrl + '" target="_blank" rel="noopener" class="listing-card">'
+       + ico
+       + '<div class="card-body">'
+       +   '<h3>' + esc(r.name) + dist + '</h3>'
+       +   sub + desc
+       +   '<div class="meta">'
+       +     '<span>📍 ' + addr + '</span>'
+       +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
+       +     phone
+       +     '<span>🗺️ ' + esc(r.zone) + '</span>'
+       +   '</div>'
+       + '</div>'
+       + tag
+       + '</a>';
+  });
+
+  grid.innerHTML = h;
+  const left = items.length - show;
+  if (left > 0) {
+    lm.style.display = 'block';
+    lm.querySelector('.load-more-btn').textContent = 'Show ' + Math.min(PAGE,left) + ' More (' + left + ' remaining)';
+  } else lm.style.display = 'none';
+}
+
+// FILTER BAR
+function updateFilterBar() {
+  const bar = document.getElementById('filterBar');
+  const pills = [];
+  if (nmActive)       pills.push('<span class="filter-pill">📍 Near Me <span class="fp-x" onclick="toggleNearMe()">✕</span></span>');
+  if (cuisine!=='All')pills.push('<span class="filter-pill">🍴 ' + esc(cuisine) + ' <span class="fp-x" onclick="removeCuisineFilter()">✕</span></span>');
+  if (zone!=='All') {
+    const zl = document.querySelector('#zoneList li.z-active span:first-child');
+    pills.push('<span class="filter-pill">🗺️ ' + esc(zl ? zl.textContent : zone) + ' <span class="fp-x" onclick="removeZoneFilter()">✕</span></span>');
+  }
+  if (q) pills.push('<span class="filter-pill">🔍 &ldquo;' + esc(q) + '&rdquo; <span class="fp-x" onclick="removeSearchFilter()">✕</span></span>');
+  if (pills.length) {
+    bar.innerHTML = pills.join('') + '<span class="filter-bar-clear" onclick="clearAll()">Clear all</span>';
+    bar.classList.add('visible');
+  } else { bar.innerHTML = ''; bar.classList.remove('visible'); }
+}
+
+function updateZoneCounts() {
+  const stale = cuisine !== 'All' || q !== '';
+  document.querySelectorAll('#zoneList li').forEach(li =>
+    stale ? li.classList.add('z-counts-stale') : li.classList.remove('z-counts-stale')
+  );
+}
+
+function loadMore() { show += PAGE; render(); }
+
+// FILTER ACTIONS
+function filterByCuisine(el, c) {
+  cuisine = c; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  el.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  render();
+}
+function filterByZone(key, el) {
+  zone = key; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  el.classList.add('z-active'); el.setAttribute('aria-selected','true');
+  render();
+}
+function syncSearch(v) {
+  q = v.toLowerCase().trim(); show = PAGE;
+  document.getElementById('headerSearch').value = v;
+  document.getElementById('mobileSearch').value = v;
+  render();
+}
+function doSort() { sort = document.getElementById('sortSelect').value; show = PAGE; render(); }
+
+function removeCuisineFilter() {
+  cuisine = 'All'; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  render();
+}
+function removeZoneFilter() {
+  zone = 'All'; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  const f = document.querySelector('#zoneList li');
+  f.classList.add('z-active'); f.setAttribute('aria-selected','true');
+  render();
+}
+function removeSearchFilter() {
+  q = ''; show = PAGE;
+  document.getElementById('headerSearch').value = '';
+  document.getElementById('mobileSearch').value = '';
+  render();
+}
+function clearAll() {
+  if (nmActive) toggleNearMe();
+  cuisine='All'; zone='All'; sort='zone'; q=''; show=PAGE;
+  document.getElementById('headerSearch').value='';
+  document.getElementById('mobileSearch').value='';
+  document.getElementById('sortSelect').value='zone';
+  document.querySelectorAll('.cuisine-chip').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  document.querySelectorAll('#zoneList li').forEach(li=>{li.classList.remove('z-active');li.setAttribute('aria-selected','false');});
+  const f=document.querySelector('#zoneList li');
+  f.classList.add('z-active');f.setAttribute('aria-selected','true');
+  render();
+}
+
+// SEARCH UI
+function toggleMobileSearch() {
+  const b = document.getElementById('mobileSearchBar');
+  if (b.classList.toggle('open')) document.getElementById('mobileSearch').focus();
+}
+function closeMobileSearch() { document.getElementById('mobileSearchBar').classList.remove('open'); }
+
+// BACK TO TOP
+window.addEventListener('scroll', () => {
+  const b = document.getElementById('backToTop');
+  window.scrollY > 400 ? b.classList.add('visible') : b.classList.remove('visible');
+}, {passive:true});
+
+// NEAR ME
+function toggleNearMe() {
+  if (nmActive) {
+    nmActive=false; nmLat=nmLng=null;
+    document.getElementById('nearMeBtn').classList.remove('active','loading');
+    document.getElementById('nearMeError').innerHTML='';
+    document.getElementById('sortSelect').disabled=false;
+    render(); return;
+  }
+  if (!navigator.geolocation) { showNMError('Location not supported by your browser.'); return; }
+  const btn = document.getElementById('nearMeBtn');
+  btn.classList.add('loading');
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      nmLat=pos.coords.latitude; nmLng=pos.coords.longitude;
+      nmActive=true; btn.classList.remove('loading'); btn.classList.add('active');
+      document.getElementById('sortSelect').value='distance';
+      document.getElementById('sortSelect').disabled=true;
+      sort='distance'; show=PAGE; render();
+    },
+    err => {
+      btn.classList.remove('loading');
+      showNMError({1:'Location access denied.',2:'Could not determine location.',3:'Request timed out.'}[err.code]||'Location unavailable.');
+    },
+    {timeout:8000,maximumAge:60000}
+  );
+}
+function showNMError(msg) {
+  document.getElementById('nearMeError').innerHTML = '<div class="near-me-error">⚠️ ' + esc(msg) + '</div>';
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim

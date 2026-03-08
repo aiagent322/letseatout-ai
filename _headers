@@ -1,0 +1,11 @@
+# Cloudflare Pages _headers file
+# Cache static pages for 1 hour, allow instant revalidation
+/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/index.html
+  Cache-Control: public, max-age=1800
+

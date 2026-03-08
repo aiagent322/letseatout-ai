@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Indio</title>
+<meta name="description" content="Your complete free guide to every restaurant, bar, and chain in Indio, CA. No reviews, no pay-to-play — just where to eat. Coming soon to all of Coachella Valley.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Indio — 171 Restaurants, Bars &amp; Chains">
+<meta property="og:description" content="Every restaurant, bar, and chain in Indio, CA. Free directory. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai/indio">
+<meta property="og:image" content="https://letseatout.ai/og-indio.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Let's Eat Out · Indio — 171 Restaurants, Bars &amp; Chains">
+<meta name="twitter:description" content="Every restaurant, bar, and chain in Indio, CA. Free directory. No pay-to-play, no fake ratings.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai/indio">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A; --red-dark:#9E1830; --red-light:#F9E8EC;
+  --gold:#C8973E; --gold-light:#F7F0E3;
+  --dark:#1A1A1A; --text:#1A1A1A; --text-mid:#555; --text-light:#888;
+  --cream:#FFFBF5; --white:#FFFFFF;
+  --border:#E8E0D8; --border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px; --r-lg:12px;
+  /* Computed header heights used for sticky offsets.
+     mobile  = pad(10)+logo(38)+pad(10)+border(3) = 61px
+     tablet  = pad(12)+logo(42)+pad(12)+border(3) = 69px
+     desktop = pad(14)+logo(44)+pad(14)+border(3) = 75px */
+  --hdr-h:61px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;}
+
+/* ── AD ZONES ─────────────────────────────────────────── */
+.ad-zone{
+  background:linear-gradient(135deg,#f5ede3,#ebe3d8);
+  border:2px dashed var(--gold);border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.ad-zone::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);
+}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:1px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;}
+.ad-inline{width:100%;height:50px;}
+.ad-sidebar{display:none;}
+
+/* ── TOP BAR ──────────────────────────────────────────── */
+.top-bar{background:var(--dark);color:white;padding:6px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;gap:8px;}
+.top-bar-text{display:none;}
+.market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;}
+.market-pill{
+  padding:4px 12px;border:none;background:transparent;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;
+  color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;
+}
+.market-pill.active{background:var(--red);color:white;}
+.market-pill:not(.active):hover{color:rgba(255,255,255,.8);}
+
+/* ── HEADER ───────────────────────────────────────────── */
+header{
+  background:var(--white);border-bottom:3px solid var(--red);
+  position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-mark{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:21px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.search-icon-btn{
+  width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);
+  background:var(--cream);display:flex;align-items:center;justify-content:center;
+  font-size:16px;cursor:pointer;flex-shrink:0;transition:border-color .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.search-icon-btn:active{border-color:var(--red);}
+.mobile-search-bar{
+  display:none;position:absolute;top:100%;left:0;right:0;
+  background:var(--white);border-bottom:2px solid var(--red);
+  padding:10px 16px;box-shadow:var(--shadow-m);z-index:99;
+}
+.mobile-search-bar.open{display:flex;gap:8px;}
+.mobile-search-bar input{
+  flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:24px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;color:var(--text);
+}
+.mobile-search-bar input:focus{border-color:var(--red);}
+.mobile-search-bar button{
+  padding:10px 18px;background:var(--red);color:white;border:none;border-radius:24px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;
+}
+.header-search{display:none;}
+.submit-btn{
+  padding:8px 14px;background:var(--dark);color:white;border:none;border-radius:20px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;
+  transition:background .2s;white-space:nowrap;-webkit-tap-highlight-color:transparent;
+}
+.submit-btn:hover{background:var(--red);}
+
+/* ── HERO ─────────────────────────────────────────────── */
+.hero{
+  background:linear-gradient(135deg,var(--dark) 0%,#2a1a0e 50%,#3d2215 100%);
+  color:white;padding:28px 0 22px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.15;margin-bottom:10px;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:6px;}
+.hero-promise{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;color:white;
+  margin-top:10px;letter-spacing:.3px;
+}
+.hero-stats{display:flex;gap:20px;justify-content:center;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.hero-banner-wrap{margin-top:18px;width:100%;}
+.coming-soon-row{margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;align-items:center;justify-content:center;}
+.coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
+.coming-soon-badge{
+  background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);
+  font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;
+}
+
+/* ── CUISINE NAV  (FIX 2: correct sticky top) ─────────── */
+.cuisine-nav{
+  background:var(--white);padding:10px 0;border-bottom:1px solid var(--border);
+  position:sticky;top:var(--hdr-h);z-index:90;
+}
+.cuisine-slider-wrap{display:flex;align-items:center;gap:6px;}
+.cuisine-scroll{
+  display:flex;gap:6px;overflow-x:auto;padding:2px;
+  scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth;flex:1;
+  -webkit-overflow-scrolling:touch;
+}
+.cuisine-scroll::-webkit-scrollbar{display:none;}
+.cuisine-chip{
+  padding:7px 14px;border-radius:20px;border:1.5px solid var(--border);
+  background:var(--white);font-size:12px;font-weight:600;color:var(--text-mid);
+  cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;min-height:36px;
+}
+.cuisine-chip:active{background:var(--red-light);}
+.cuisine-chip.active{background:var(--red);color:white;border-color:var(--red);}
+.slider-arrow{display:none;}
+
+/* ── MAIN LAYOUT ──────────────────────────────────────── */
+.main-layout{display:flex;flex-direction:column;gap:20px;padding:16px 0 32px;}
+
+/* ── RESULTS BAR ──────────────────────────────────────── */
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;}
+.results-count{font-size:12px;color:var(--text-light);font-weight:500;flex-shrink:0;}
+.results-count strong{color:var(--text);font-weight:700;}
+.sort-sel{
+  padding:6px 10px;border:1.5px solid var(--border);border-radius:var(--r);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;
+  color:var(--text-mid);background:var(--white);cursor:pointer;
+}
+
+/* FIX 9: Active filter strip ──────────────────────────── */
+.filter-bar{
+  display:none;flex-wrap:wrap;gap:6px;align-items:center;
+  padding:8px 0 4px;
+}
+.filter-bar.visible{display:flex;}
+.filter-pill{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--red-light);border:1.5px solid var(--red);
+  color:var(--red);border-radius:16px;font-size:11px;font-weight:700;
+  padding:4px 10px;
+}
+.filter-pill .fp-x{
+  cursor:pointer;font-size:13px;line-height:1;margin-left:2px;
+  -webkit-tap-highlight-color:transparent;
+}
+.filter-pill .fp-x:hover{color:var(--red-dark);}
+.filter-bar-clear{
+  font-size:11px;font-weight:700;color:var(--text-light);
+  cursor:pointer;text-decoration:underline;padding:4px 2px;
+}
+.filter-bar-clear:hover{color:var(--red);}
+
+/* ── LISTING GRID / CARDS ─────────────────────────────── */
+.listing-grid{display:flex;flex-direction:column;gap:8px;}
+.listing-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  transition:border-color .2s;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;color:inherit;
+  cursor:pointer;
+}
+.listing-card:active{border-color:var(--red);background:var(--red-light);}
+.card-tag{display:none;}
+.card-ico{
+  width:48px;height:48px;border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px;font-weight:800;color:white;
+  letter-spacing:0.5px;
+  box-shadow:0 2px 6px rgba(0,0,0,.18);
+}
+.card-body h3{font-size:14px;font-weight:700;margin-bottom:1px;color:var(--text);line-height:1.3;}
+.card-chain{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px;}
+.card-desc{
+  font-size:12px;color:var(--text-mid);line-height:1.5;
+  margin:4px 0 5px;display:-webkit-box;-webkit-line-clamp:3;
+  -webkit-box-orient:vertical;overflow:hidden;
+}
+.card-body .meta{font-size:11px;color:var(--text-light);display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
+.card-body .meta span{display:flex;align-items:center;gap:3px;}
+.card-body .meta a.tel-link{color:var(--text-light);text-decoration:none;}
+.card-body .meta a.tel-link:hover{color:var(--red);}
+.inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
+
+/* ── NO RESULTS ───────────────────────────────────────── */
+.no-results{
+  text-align:center;padding:44px 20px;
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+}
+.no-results .nr-icon{font-size:38px;margin-bottom:10px;}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px;}
+.no-results p{font-size:13px;color:var(--text-light);margin-bottom:16px;}
+.no-results button{
+  padding:10px 22px;background:var(--red);color:white;border:none;border-radius:20px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;
+}
+
+/* ── LOAD MORE ────────────────────────────────────────── */
+.load-more-wrap{text-align:center;padding:12px 0 4px;}
+.load-more-btn{
+  padding:12px 30px;background:var(--white);border:2px solid var(--border);border-radius:24px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;
+  color:var(--text-mid);cursor:pointer;transition:all .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.load-more-btn:hover,.load-more-btn:active{border-color:var(--red);color:var(--red);}
+
+/* ── EDITOR REVIEW ────────────────────────────────────── */
+.editor-review{
+  margin-top:8px;padding:8px 10px;
+  background:linear-gradient(135deg,#fffbf0,#fff8e8);
+  border:1.5px solid var(--gold);border-radius:6px;
+}
+.editor-stars{font-size:13px;color:#F59E0B;line-height:1;margin-bottom:3px;}
+.editor-byline{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:800;margin-bottom:3px;}
+.editor-review-text{font-size:11px;color:var(--text-mid);line-height:1.5;font-style:italic;}
+
+/* ── SIDEBAR ──────────────────────────────────────────── */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;overflow:hidden;}
+.sidebar-box h4{
+  font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:10px;
+  padding-bottom:8px;border-bottom:2px solid var(--red);
+}
+.zone-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.zone-list li{
+  font-size:12px;color:var(--text-mid);padding:8px 10px;border-radius:var(--r);
+  cursor:pointer;transition:background .15s;display:flex;justify-content:space-between;align-items:center;
+  -webkit-tap-highlight-color:transparent;
+  /* FIX 11: keyboard accessibility */
+  outline:none;
+}
+.zone-list li:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.zone-list li:active{background:var(--red-light);color:var(--red);}
+.zone-list li.z-active{background:var(--red-light);color:var(--red);font-weight:700;}
+.zone-list li .ct{
+  background:var(--cream);padding:2px 8px;border-radius:10px;
+  font-size:10px;font-weight:700;color:var(--text-light);min-width:26px;text-align:center;transition:all .15s;
+}
+.zone-list li.z-active .ct{background:var(--red);color:white;}
+.zone-list li.z-counts-stale .ct{opacity:.45;}
+.quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.quick-links li a{font-size:12px;color:var(--red);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px;}
+.quick-links li a:hover{color:var(--red-dark);}
+
+/* ── SUBMIT SECTION ───────────────────────────────────── */
+.submit-section{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:24px 16px;margin:0 0 32px;text-align:center;
+}
+.submit-section h2{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px;}
+.submit-section .sub{color:var(--text-light);font-size:13px;margin-bottom:18px;line-height:1.5;}
+.submit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px;}
+.submit-card{background:var(--cream);border:2px dashed var(--border);border-radius:var(--r-lg);padding:18px 14px;text-align:center;}
+.submit-card .ico{font-size:28px;margin-bottom:6px;}
+.submit-card h3{font-size:13px;font-weight:700;margin-bottom:3px;}
+.submit-card p{font-size:11px;color:var(--text-light);}
+
+/* ── FOOTER ───────────────────────────────────────────── */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:24px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:18px;}
+footer .brand span{color:var(--red);}
+footer a{color:var(--gold);text-decoration:none;}
+footer .legal{line-height:1.6;}
+
+/* FIX 10: Back-to-top button ──────────────────────────── */
+.back-to-top{
+  position:fixed;bottom:20px;right:16px;z-index:200;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--red);color:white;border:none;
+  font-size:20px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(196,30,58,.4);
+  opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .25s;
+  transform:translateY(8px);
+  -webkit-tap-highlight-color:transparent;
+}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--red-dark);}
+
+/* ═══════════════════════════════════════════════════════
+   TABLET  600px+
+═══════════════════════════════════════════════════════ */
+@media(min-width:600px){
+  :root{--hdr-h:69px;}   /* 12+42+12+3 = 69 */
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:space-between;}
+  .top-bar-text{display:block;}
+  .header-inner{padding:12px 0;}
+  .logo-mark{width:42px;height:42px;font-size:20px;}
+  .logo-text{font-size:24px;}
+  .search-icon-btn{display:none;}
+  .header-search{
+    display:flex;align-items:center;
+    background:var(--cream);border:1.5px solid var(--border);border-radius:24px;overflow:hidden;
+    transition:border-color .2s;
+  }
+  .header-search:focus-within{border-color:var(--red);}
+  .header-search input{
+    padding:8px 4px 8px 14px;border:none;background:transparent;
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;width:160px;outline:none;color:var(--text);
+  }
+  .header-search input::placeholder{color:var(--text-light);}
+  .header-search button{
+    padding:7px 12px;border:none;background:var(--red);color:white;
+    font-size:12px;cursor:pointer;border-radius:0 22px 22px 0;transition:background .2s;
+  }
+  .hero{padding:36px 0 28px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-stat .num{font-size:34px;}
+  .ad-leaderboard{height:60px;}
+  .ad-inline{height:60px;}
+  .ad-sidebar{display:flex;width:100%;height:180px;}
+  .slider-arrow{
+    width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);
+    background:var(--white);display:flex;align-items:center;justify-content:center;
+    cursor:pointer;font-size:12px;color:var(--text-mid);flex-shrink:0;transition:all .2s;
+  }
+  .slider-arrow:hover{border-color:var(--red);color:var(--red);}
+  .cuisine-nav{padding:12px 0;}
+  .main-layout{padding:20px 0 40px;gap:24px;}
+  .listing-card{grid-template-columns:48px 1fr auto;padding:16px 18px;gap:16px;align-items:center;}
+  .card-tag{
+    display:block;padding:4px 11px;border-radius:16px;font-size:10px;font-weight:800;
+    text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;color:white;
+  }
+  .tag-chain{background:#1E293B;}
+  .tag-local{background:#C2410C;}
+  .card-desc{-webkit-line-clamp:3;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-section{padding:28px 24px;margin:0 0 40px;}
+  .submit-grid{grid-template-columns:repeat(3,1fr);}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  footer .legal{text-align:right;max-width:400px;}
+  .back-to-top{right:24px;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   DESKTOP  960px+
+═══════════════════════════════════════════════════════ */
+@media(min-width:960px){
+  :root{--hdr-h:75px;}   /* 14+44+14+3 = 75 */
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .header-inner{padding:14px 0;}
+  .logo-mark{width:44px;height:44px;font-size:22px;}
+  .logo-text{font-size:26px;}
+  .header-search input{width:200px;}
+  .header-search button{padding:8px 14px;font-size:13px;}
+  .hero{padding:44px 0 36px;}
+  .hero h1{font-size:42px;}
+  .hero-sub{font-size:16px;max-width:580px;margin-left:auto;margin-right:auto;}
+  .hero-stats{gap:28px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:0 auto;}
+  .ad-inline{height:90px;max-width:728px;margin:0 auto;}
+  .ad-sidebar{height:250px;}
+  .cuisine-nav{padding:14px 0;}
+  .slider-arrow{width:32px;height:32px;font-size:14px;}
+  .main-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 0 48px;}
+  .sidebar{display:flex;flex-direction:column;position:sticky;top:calc(var(--hdr-h) + 58px);}
+  .listing-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-1px);}
+  .listing-card:active{transform:none;}
+  .zone-list li:hover{background:var(--red-light);color:var(--red);}
+  .zone-list li:hover .ct{background:var(--red);color:white;}
+  .submit-section{max-width:800px;margin:0 auto 48px;padding:36px;}
+  footer{padding:32px 0;}
+  footer .legal{max-width:480px;}
+  .back-to-top{right:32px;bottom:32px;}
+}
+
+/* ── NEAR ME CHIP ─────────────────────────────────────── */
+.near-me-chip{
+  padding:7px 14px;border-radius:20px;border:1.5px solid #1D6CE0;
+  background:#1D6CE0;font-size:12px;font-weight:700;color:white;
+  cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;
+  display:flex;align-items:center;gap:5px;min-height:36px;
+  -webkit-tap-highlight-color:transparent;
+}
+.near-me-chip:hover{background:#1558C0;border-color:#1558C0;}
+.near-me-chip:active{background:#1045A0;border-color:#1045A0;}
+.near-me-chip.active{background:#0D3D80;border-color:#0D3D80;box-shadow:0 0 0 2px rgba(29,108,224,.35);}
+.near-me-chip.loading{opacity:.75;pointer-events:none;}
+.near-me-chip .nm-spinner{
+  width:12px;height:12px;border:2px solid rgba(255,255,255,.4);
+  border-top-color:white;border-radius:50%;
+  animation:spin .6s linear infinite;display:none;
+}
+.near-me-chip.loading .nm-spinner{display:block;}
+.near-me-chip.loading .nm-icon{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.dist-badge{
+  font-size:10px;font-weight:700;color:var(--red);
+  background:var(--red-light);padding:2px 7px;border-radius:10px;
+  margin-left:4px;white-space:nowrap;
+}
+.near-me-error{
+  background:#fff3cd;border:1.5px solid #ffc107;border-radius:var(--r);
+  padding:10px 14px;font-size:12px;color:#856404;margin-bottom:10px;
+  display:flex;align-items:center;gap:8px;
+}
+
+/* ── SKIP NAV ─────────────────────────────────────────── */
+.skip-nav{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-nav:focus{
+  position:fixed;top:0;left:0;width:auto;height:auto;
+  padding:10px 18px;background:var(--red);color:white;
+  font-size:14px;font-weight:700;text-decoration:none;
+  z-index:9999;border-radius:0 0 var(--r) 0;
+  outline:none;
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Let's Eat Out · Indio Restaurant Directory",
+  "description": "Complete free guide to every restaurant, bar, and chain in Indio, CA.",
+  "url": "https://letseatout.ai/indio",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Let's Eat Out",
+    "url": "https://letseatout.ai"
+  },
+  "about": {
+    "@type": "ItemList",
+    "name": "Indio Restaurants, Bars & Chains",
+    "description": "171 restaurants, bars, and chains in Indio, California",
+    "numberOfItems": 171,
+    "itemListOrder": "https://schema.org/ItemListUnordered",
+    "url": "https://letseatout.ai/indio"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Let's Eat Out",
+        "item": "https://letseatout.ai"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Indio",
+        "item": "https://letseatout.ai/indio"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-nav" href="#listingGrid">Skip to listings</a>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at no cost</span>
+    <div class="market-pills">
+      <button type="button" class="market-pill active">Indio</button>
+      <button type="button" class="market-pill">Coachella Valley</button>
+      <button type="button" class="market-pill">Prescott Area</button>
+      <button type="button" class="market-pill">Las Vegas</button>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Indio, CA</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button type="button" class="search-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">🔍</button>
+        <div class="header-search">
+          <input type="search" id="headerSearch" placeholder="Search restaurants…" oninput="syncSearch(this.value)" autocomplete="off" inputmode="search">
+          <button type="button" onclick="syncSearch(document.getElementById('headerSearch').value)">Search</button>
+        </div>
+        <button type="button" class="submit-btn" onclick="document.getElementById('submitArea').scrollIntoView({behavior:'smooth'})">+ Add Your Business</button>
+      </div>
+    </div>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="search" id="mobileSearch" placeholder="Restaurant, cuisine, zone…" oninput="syncSearch(this.value)" autocomplete="off" inputmode="search">
+      <button type="button" onclick="closeMobileSearch()">Done</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Where to Eat in <em>Indio</em></h1>
+        <p class="hero-sub">Your complete guide to every restaurant, bar, and chain in Indio, CA.<br>Soon serving the entire Coachella Valley.</p>
+        <div class="hero-promise">✦ No reviews. No pay-to-play. No fake ratings. Just where to eat.</div>
+        <div class="coming-soon-row">
+          <div class="coming-soon-label">Coming Soon:</div>
+          <span class="coming-soon-badge">Palm Springs</span>
+          <span class="coming-soon-badge">Palm Desert</span>
+          <span class="coming-soon-badge">La Quinta</span>
+          <span class="coming-soon-badge">Cathedral City</span>
+          <span class="coming-soon-badge">Coachella</span>
+          <span class="coming-soon-badge">Rancho Mirage</span>
+          <span class="coming-soon-badge">Desert Hot Springs</span>
+          <span class="coming-soon-badge">Indian Wells</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num" id="statTotal">—</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num">1</div><div class="lbl">City</div></div>
+        <div class="hero-stat"><div class="num">24</div><div class="lbl">Cuisines</div></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <div class="ad-zone ad-leaderboard">
+        <div class="ad-label">
+          <div class="ad-size">Leaderboard — 320×50 mobile / 728×90 desktop</div>
+          <div class="ad-desc">Premium hero placement</div>
+          <div class="ad-price">$150/mo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CUISINE FILTER NAV -->
+<div class="cuisine-nav" role="navigation" aria-label="Filter by cuisine">
+  <div class="container">
+    <div class="cuisine-slider-wrap">
+      <button type="button" class="slider-arrow" onclick="slideCuisine(-1)" aria-label="Scroll left">◀</button>
+      <div class="cuisine-scroll" id="cuisineScroll">
+        <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
+        <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Mexican')">🌮 Mexican</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'American')">🍔 American</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Coffee')">☕ Coffee</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fast Food')">🍟 Fast Food</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bar')">🍺 Bars</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Pizza')">🍕 Pizza</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Chinese')">🥡 Chinese</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Chicken')">🍗 Chicken</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sandwiches')">🥪 Sandwiches</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bakery')">🧁 Bakery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Italian')">🍝 Italian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Asian')">🍜 Asian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Donuts')">🍩 Donuts</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'BBQ')">🔥 BBQ</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Korean')">🥢 Korean</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Filipino')">🍚 Filipino</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'French')">🥖 French</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Brewery')">🍻 Brewery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Juice')">🥤 Juice</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Boba')">🧋 Boba Tea</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Wings')">🫘 Wings</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Ice Cream')">🍦 Ice Cream</button>
+      </div>
+      <button type="button" class="slider-arrow" onclick="slideCuisine(1)" aria-label="Scroll right">▶</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="main-layout">
+
+    <!-- LISTINGS COLUMN -->
+    <div>
+      <div class="results-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
+        <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort listings">
+          <option value="distance" disabled style="display:none">📍 Near Me</option>
+          <option value="zone">By Area</option>
+          <option value="name">A–Z</option>
+          <option value="name-desc">Z–A</option>
+          <option value="cuisine">By Cuisine</option>
+          <option value="local">Locals First</option>
+          <option value="chain">Chains First</option>
+        </select>
+      </div>
+      <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
+
+      <div id="nearMeError" style="display:none;"></div>
+      <div class="listing-grid" id="listingGrid"></div>
+
+      <div class="load-more-wrap" id="loadMoreWrap" style="display:none;">
+        <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
+      </div>
+
+      <div class="inline-ad-wrap" style="margin-top:20px;">
+        <div class="ad-zone ad-leaderboard">
+          <div class="ad-label">
+            <div class="ad-size">Leaderboard — 320×50 mobile / 728×90 desktop</div>
+            <div class="ad-desc">Bottom placement</div>
+            <div class="ad-price">$100/mo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="ad-zone ad-sidebar">
+        <div class="ad-label">
+          <div class="ad-size">Medium Rectangle — 300×250</div>
+          <div class="ad-desc">Sidebar premium</div>
+          <div class="ad-price">$125/mo</div>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <h4>Browse by Zone</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by zone">
+          <li class="z-active" role="option" aria-selected="true"  tabindex="0" onclick="filterByZone('All',this)"    onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Indio</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('hwy111',this)"    onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('hwy111',this)"><span>Highway 111</span><span class="ct" id="zc-hwy111">53</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('northindio',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('northindio',this)"><span>North Indio</span><span class="ct" id="zc-northindio">19</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('oldtown',this)"    onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('oldtown',this)"><span>Old Town</span><span class="ct" id="zc-oldtown">17</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('downtown',this)"   onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('downtown',this)"><span>Downtown</span><span class="ct" id="zc-downtown">16</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('jackson',this)"    onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('jackson',this)"><span>Jackson St</span><span class="ct" id="zc-jackson">15</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('monroe',this)"     onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('monroe',this)"><span>Monroe</span><span class="ct" id="zc-monroe">11</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('southindio',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('southindio',this)"><span>South Indio</span><span class="ct" id="zc-southindio">9</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('jefferson',this)"  onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('jefferson',this)"><span>Jefferson St</span><span class="ct" id="zc-jefferson">8</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('fantasy',this)"    onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('fantasy',this)"><span>Fantasy Springs</span><span class="ct" id="zc-fantasy">7</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)"      onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">16</span></li>
+        </ul>
+      </div>
+
+      <div class="ad-zone ad-sidebar">
+        <div class="ad-label">
+          <div class="ad-size">Medium Rectangle — 300×250</div>
+          <div class="ad-desc">Sidebar #2</div>
+          <div class="ad-price">$100/mo</div>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="javascript:void(0)">→ Date Night Restaurants</a></li>
+          <li><a href="javascript:void(0)">→ Best Happy Hours</a></li>
+          <li><a href="javascript:void(0)">→ Family Friendly</a></li>
+          <li><a href="javascript:void(0)">→ Late Night Eats</a></li>
+          <li><a href="javascript:void(0)">→ Outdoor Patio Dining</a></li>
+          <li><a href="javascript:void(0)">→ New Openings</a></li>
+        </ul>
+      </div>
+
+      <div class="ad-zone ad-sidebar">
+        <div class="ad-label">
+          <div class="ad-size">Medium Rectangle — 300×250</div>
+          <div class="ad-desc">Sidebar #3</div>
+          <div class="ad-price">$75/mo</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="container" id="submitArea">
+  <div class="submit-section">
+    <h2>Get Listed — It's Free</h2>
+    <p class="sub">Every restaurant, bar, and chain in Indio is listed at no cost. Coachella Valley expansion coming soon — send us your info any way that's easy for you.</p>
+    <div class="submit-grid">
+      <div class="submit-card">
+        <div class="ico">🖼️</div>
+        <h3>Upload a Flyer</h3>
+        <p>PDF, JPG, or PNG of your menu, flyer, or business card</p>
+      </div>
+      <div class="submit-card">
+        <div class="ico">📱</div>
+        <h3>Snap a Photo</h3>
+        <p>Take a picture of your storefront, sign, or menu board</p>
+      </div>
+      <div class="submit-card">
+        <div class="ico">📝</div>
+        <h3>Fill Out Form</h3>
+        <p>Name, address, cuisine, hours — takes 60 seconds</p>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--text-light);">We review submissions daily and add listings within 24–48 hours.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px;">Indio's complete dining guide — expanding to all of Coachella Valley</div>
+      <div style="margin-top:4px;">Advertise: <a href="/cdn-cgi/l/email-protection#bbdadfcddec9cfd2c8defbd7decfc8dedacfd4cecf95dad2"><span class="__cf_email__" data-cfemail="4f2e2b392a3d3b263c2a0f232a3b3c2a2e3b203a3b612e26">[email&#160;protected]</span></a></div>
+    </div>
+    <div class="legal">
+      Every restaurant and bar in Indio is listed free. We sell banner advertising only — no paid placement, no paid rankings. Details may change; verify directly before visiting.<br>
+      <span style="color:rgba(255,255,255,.3);">© 2026 LetsEatOut.ai — All rights reserved</span>
+    </div>
+  </div>
+</footer>
+<button type="button" class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ===== DATA =====
+const DATA = [
+{"id": "RB-INDIO-00001", "name": "TKB Bakery & Deli", "address": "45334 Golf Center Pkwy", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bakery/Deli", "is_chain": false, "chain_name": "", "phone": "(760) 775-8330", "lat": 33.720637, "lng": -116.20965, "quality": 8, "zone": "Golf Center", "description": "TKB Bakery & Deli in Indio's Golf Center neighborhood has been a morning institution for locals who know good food. Fresh-baked pastries, hearty deli sandwiches, and a welcoming counter make it the ideal stop before a round of golf or a full day ahead."},
+{"id": "RB-INDIO-00002", "name": "El Mexicali Cafe", "address": "82720 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-1280", "lat": 33.7229, "lng": -116.22, "quality": 8, "zone": "Old Town", "description": "El Mexicali Cafe is a beloved Old Town Indio fixture, serving authentic Mexican cuisine with the kind of warmth that only comes from decades of cooking for the community. Bold salsas, handmade tortillas, and generous plates keep regulars coming back week after week."},
+{"id": "RB-INDIO-00003", "name": "El Mexicali Cafe II", "address": "43-430 Monroe St Suite A", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.7344, "lng": -116.2333, "quality": 8, "zone": "Monroe Corridor", "description": "The second location of the beloved El Mexicali Cafe brings the same family recipes to the Monroe Corridor. Expect the same hearty chile verde, birria, and street-style tacos that made the original an Indio institution, now conveniently located on Monroe Street."},
+{"id": "RB-INDIO-00004", "name": "Rincon Norteno Mexican Restaurant", "address": "83011 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.71395, "lng": -116.218661, "quality": 8, "zone": "Old Town", "description": "Rincon Norteno is a no-frills Old Town Indio gem serving authentic northern Mexican cooking. The kind of neighborhood spot where the food speaks for itself \u2014 carne asada, menudo on weekends, and house-made tortillas that remind you why simple done right always wins."},
+{"id": "RB-INDIO-00005", "name": "El Tapatio Restaurant", "address": "83161 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718563, "lng": -116.213747, "quality": 8, "zone": "Old Town", "description": "El Tapatio has earned its loyal following on Indio Boulevard with consistent, home-style Mexican cooking that never cuts corners. From enchiladas smothered in red sauce to slow-cooked stews, this Old Town staple delivers true Mexican comfort food at honest prices."},
+{"id": "RB-INDIO-00006", "name": "Pueblo Viejo Grill", "address": "81931 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-7700", "lat": 33.721419, "lng": -116.21394, "quality": 8, "zone": "Highway 111", "description": "Pueblo Viejo Grill brings vibrant Mexican flavors to the Highway 111 corridor with a menu that spans all the classics \u2014 grilled meats, fresh salsas, and cold margaritas that hit especially well on a warm desert afternoon. A local favorite worth the stop."},
+{"id": "RB-INDIO-00007", "name": "El Campanario Restaurant", "address": "44185 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.717353, "lng": -116.219478, "quality": 8, "zone": "Monroe Corridor", "description": "Tucked along Monroe Street, El Campanario is the kind of authentic Mexican restaurant that locals keep to themselves. Traditional recipes, made-from-scratch sauces, and a dining room that feels like someone's abuela took over the kitchen and never looked back."},
+{"id": "RB-INDIO-00008", "name": "Macarios Grill", "address": "82347 CA-111 B", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-1285", "lat": 33.719532, "lng": -116.217821, "quality": 8, "zone": "Highway 111", "description": "Macarios Grill on Highway 111 has been feeding Indio with reliable, flavorful Mexican cooking since its early days as a neighborhood staple. Generous portions of carne asada, chile colorado, and freshly made tortillas make every visit feel like a proper meal."},
+{"id": "RB-INDIO-00009", "name": "La Hacienda Restaurant", "address": "45765 Towne St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.7165, "lng": -116.2196, "quality": 8, "zone": "Old Town", "description": "La Hacienda Restaurant is an Old Town Indio classic that has served generations of local families with authentic Mexican cuisine. The menu is broad, the portions are generous, and the atmosphere is warm \u2014 everything a neighborhood Mexican restaurant should be."},
+{"id": "RB-INDIO-00010", "name": "Isla Mujeres Modern Mexican Cuisine", "address": "83085 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.7192, "lng": -116.2153, "quality": 8, "zone": "Old Town", "description": "Isla Mujeres brings a modern Mexican sensibility to Old Town Indio, elevating coastal and regional Mexican dishes with fresh ingredients and creative flair. From fish tacos to mole-sauced entrees, this is Mexican cuisine that goes beyond the expected."},
+{"id": "RB-INDIO-00011", "name": "Taqueria El Guero Bar & Grill", "address": "82204 CA-111 STE F", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.716, "lng": -116.2311, "quality": 8, "zone": "Highway 111", "description": "Taqueria El Guero Bar & Grill on Highway 111 combines the best of a taqueria and a neighborhood bar. Come for the tacos \u2014 al pastor, carne asada, barbacoa \u2014 and stay for the cold cerveza and lively atmosphere that makes this spot a local gathering place."},
+{"id": "RB-INDIO-00012", "name": "Dino Restaurant", "address": "82231 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.721212, "lng": -116.219968, "quality": 8, "zone": "Indio Blvd", "description": "Dino Restaurant on Indio Boulevard is a reliable neighborhood spot for Mexican favorites served fast and fresh. A family-friendly atmosphere, affordable prices, and a menu full of classics make it the kind of place that fills up at lunch for good reason."},
+{"id": "RB-INDIO-00013", "name": "Italica", "address": "82867 Miles Ave Unit 2", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(442) 400-3479", "lat": 33.717859, "lng": -116.217307, "quality": 8, "zone": "Downtown Miles Ave", "description": "Italica brings genuine Italian cooking to Downtown Indio's Miles Avenue corridor with a menu rooted in tradition. House-made pastas, wood-fired preparations, and imported ingredients create an authentic dining experience that stands out as one of the valley's most dedicated Italian kitchens."},
+{"id": "RB-INDIO-00014", "name": "Mario's Italian Cafe", "address": "81939 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(760) 342-1160", "lat": 33.720899, "lng": -116.21473, "quality": 8, "zone": "Highway 111", "description": "Mario's Italian Cafe on Highway 111 is a cozy red-sauce Italian classic that has been satisfying Indio's craving for lasagna, veal piccata, and tiramisu for years. A true neighborhood Italian with recipes that feel inherited and a dining room that feels like home."},
+{"id": "RB-INDIO-00015", "name": "Ciro's Ristorante & Pizzeria", "address": "81963 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718323, "lng": -116.214464, "quality": 8, "zone": "Highway 111", "description": "Ciro's Ristorante & Pizzeria is a Highway 111 institution delivering Italian-American favorites with genuine passion. Thin-crust pizzas, house-made pasta dishes, and a full Italian menu served in a welcoming, family-run atmosphere that keeps diners returning for decades."},
+{"id": "RB-INDIO-00016", "name": "Indio Taphouse", "address": "82867 Miles Ave Unit 1", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 831-0180", "lat": 33.722557, "lng": -116.218461, "quality": 8, "zone": "Downtown Miles Ave", "description": "Indio Taphouse on Miles Avenue is a craft beer-forward American bar and grill with rotating tap handles and a serious food menu to match. Burgers, wings, and shareable plates pair perfectly with local and regional pours in a laid-back downtown setting."},
+{"id": "RB-INDIO-00017", "name": "The Local on 50th", "address": "49990 Jefferson St #110", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 776-7030", "lat": 33.721835, "lng": -116.213811, "quality": 8, "zone": "Terra Lago", "description": "The Local on 50th at Terra Lago is exactly what its name promises \u2014 a neighborhood gathering spot with American comfort food, cold drinks, and a welcoming vibe. A go-to for residents of the Terra Lago community and anyone in the area looking for a reliable meal."},
+{"id": "RB-INDIO-00018", "name": "Unique Bite Eatery", "address": "82900 Ave 42", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 608-5263", "lat": 33.743042, "lng": -116.212067, "quality": 8, "zone": "North Indio", "description": "Unique Bite Eatery in North Indio lives up to its name by offering an American menu with unexpected twists and creative preparations that break from the ordinary. A fresh-forward approach to casual dining that makes every visit feel a little different."},
+{"id": "RB-INDIO-00019", "name": "Dune Room", "address": "82707 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee/Cafe", "is_chain": false, "chain_name": "", "phone": "(760) 342-5000", "lat": 33.723443, "lng": -116.21648, "quality": 8, "zone": "Downtown Miles Ave", "description": "Dune Room on Miles Avenue is Downtown Indio's coolest coffee and caf\u00e9 concept, blending specialty espresso drinks with a relaxed, design-forward environment. Remote workers, creatives, and coffee lovers have made it a daytime hub in the heart of the revitalized downtown corridor."},
+{"id": "RB-INDIO-00020", "name": "Gabino's Creperie East", "address": "82868 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718256, "lng": -116.21792, "quality": 8, "zone": "Downtown Miles Ave", "description": "Gabino's Creperie East brings French-inspired cooking to Downtown Indio with a menu of sweet and savory crepes made fresh to order. From classic Nutella folds to ham and gruyere savories, this charming creperie adds a touch of Parisian caf\u00e9 culture to the desert."},
+{"id": "RB-INDIO-00021", "name": "Papa Headz", "address": "82868 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 775-3277", "lat": 33.722785, "lng": -116.214878, "quality": 8, "zone": "Downtown Miles Ave", "description": "Papa Headz on Miles Avenue is a Downtown Indio original with a personality as big as its portions. Bold American comfort food with its own creative spin, served in an atmosphere that's as lively and colorful as the neighborhood it anchors."},
+{"id": "RB-INDIO-00022", "name": "Heirloom Craft Kitchen", "address": "82111 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 775-9306", "lat": 33.721843, "lng": -116.213622, "quality": 8, "zone": "Highway 111", "description": "Heirloom Craft Kitchen on Highway 111 takes the farm-to-table philosophy seriously, sourcing quality ingredients for a rotating American menu built around seasonal flavors. The kind of restaurant that makes you appreciate what locally inspired, carefully prepared food can actually taste like."},
+{"id": "RB-INDIO-00023", "name": "Jackalope Ranch", "address": "80400 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(760) 342-1999", "lat": 33.705, "lng": -116.258, "quality": 8, "zone": "South Indio", "description": "Jackalope Ranch in South Indio is a sprawling Southwestern destination unlike anything else in the valley. Mesquite-grilled steaks, chile-forward dishes, and an outdoor ranch atmosphere that celebrates the desert West. A bucket-list dining experience for locals and visitors alike."},
+{"id": "RB-INDIO-00024", "name": "Sloan's", "address": "82909 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 347-7077", "lat": 33.720217, "lng": -116.212161, "quality": 8, "zone": "Highway 111", "description": "Sloan's on Highway 111 is a dependable American kitchen with a menu that covers all the classics \u2014 burgers, sandwiches, breakfast favorites, and daily specials that keep the regulars happy. Comfortable, unpretentious, and reliably good across every visit."},
+{"id": "RB-INDIO-00025", "name": "Cork & Fork", "address": "82921 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 399-9463", "lat": 33.714571, "lng": -116.216688, "quality": 8, "zone": "Old Town", "description": "Cork & Fork in Old Town Indio pairs a thoughtful wine and craft beer selection with an American menu built for lingering. Small plates, shareable boards, and a curated drink list make it Indio's best bet for a relaxed evening that doesn't require driving to the west valley."},
+{"id": "RB-INDIO-00026", "name": "Kitchen Ten Eleven", "address": "45480 Smurr St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 250-7505", "lat": 33.717276, "lng": -116.216289, "quality": 8, "zone": "Old Town", "description": "Kitchen Ten Eleven brings an elevated American dining experience to Old Town Indio with a chef-driven menu of seasonal dishes and house-crafted cocktails. A refined yet approachable spot that proves Indio's dining scene is more sophisticated than most people realize."},
+{"id": "RB-INDIO-00027", "name": "Art Alkobar Grill", "address": "82590 CA-111 #104", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Filipino", "is_chain": false, "chain_name": "", "phone": "(760) 289-5555", "lat": 33.72217, "lng": -116.214536, "quality": 8, "zone": "Highway 111", "description": "Art Alkobar Grill on Highway 111 is one of the Coachella Valley's few dedicated Filipino restaurants, bringing the rich flavors of adobo, sinigang, lechon kawali, and kare-kare to Indio. A warm, family-run spot that draws a loyal following and offers a genuine taste of Filipino home cooking."},
+{"id": "RB-INDIO-00028", "name": "Babe's Smokehouse & Tavern", "address": "81905 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(760) 347-1888", "lat": 33.721227, "lng": -116.217725, "quality": 8, "zone": "Highway 111", "description": "Babe's Smokehouse & Tavern on Highway 111 is Indio's serious BBQ contender, with slow-smoked brisket, fall-off-the-bone ribs, and pulled pork that earns every hour it spends in the pit. Cold beers, outdoor seating, and a no-pretense vibe complete the experience."},
+{"id": "RB-INDIO-00029", "name": "Bob's Twin Kitchen", "address": "44325 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 347-3888", "lat": 33.727162, "lng": -116.216418, "quality": 8, "zone": "Jackson Corridor", "description": "Bob's Twin Kitchen on Jackson Street is a beloved local breakfast and lunch spot with the kind of unpretentious American cooking that built the diner tradition. Counter seating, daily specials, and plates piled high with the good stuff draw a loyal crowd of regulars."},
+{"id": "RB-INDIO-00030", "name": "Burger Box", "address": "81201 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.736, "lng": -116.2475, "quality": 8, "zone": "Indio Blvd", "description": "Burger Box on Indio Boulevard is a local burger stand that proves you don't need a fancy setup to make a great hamburger. Fresh-pressed patties, crispy fries, and the kind of straightforward burger experience that reminds you why the classic will never go out of style."},
+{"id": "RB-INDIO-00031", "name": "Andy's No 4 Burgers", "address": "83699 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.712887, "lng": -116.203635, "quality": 8, "zone": "East Indio", "description": "Andy's No. 4 Burgers in East Indio is a legacy local burger spot with decades of satisfied customers behind it. Smash-style or traditional, the burgers here are grilled to order with care \u2014 a no-frills, all-flavor experience that East Indio residents know and love."},
+{"id": "RB-INDIO-00032", "name": "Sumo Dog", "address": "82861 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 578-8368", "lat": 33.719067, "lng": -116.216764, "quality": 8, "zone": "Downtown Miles Ave", "description": "Sumo Dog on Miles Avenue in Downtown Indio puts a creative twist on the classic American hot dog, building a menu of globally inspired dogs with inventive toppings and house-made sauces. Fast, fun, and surprisingly satisfying \u2014 a great fit for the downtown Indio scene."},
+{"id": "RB-INDIO-00033", "name": "The Bistro", "address": "82859 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.717479, "lng": -116.216603, "quality": 8, "zone": "Highway 111", "description": "The Bistro on Highway 111 delivers upscale-casual American dining with a menu that rotates seasonally and a dining room that sets the mood for a proper evening out. Reliable, well-executed, and a notch above the surrounding competition in both food and atmosphere."},
+{"id": "RB-INDIO-00034", "name": "Neil's Lounge", "address": "80956 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.693606, "lng": -116.211332, "quality": 8, "zone": "South Indio", "description": "Neil's Lounge in South Indio is a longtime neighborhood bar that has been a community anchor for years. Cold drinks, friendly faces, darts and pool \u2014 the kind of honest local watering hole that you can count on any night of the week."},
+{"id": "RB-INDIO-00035", "name": "Club 5 Bar", "address": "82971 Bliss Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.7192, "lng": -116.2174, "quality": 8, "zone": "Old Town", "description": "Club 5 Bar in Old Town Indio is a neighborhood bar that captures the social energy of a community gathering spot. A full bar, regular events, and a welcoming crowd make it a night-out destination in the heart of Indio's most walkable district."},
+{"id": "RB-INDIO-00036", "name": "LIT", "address": "84-245 Indio Springs Pkwy", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.714814, "lng": -116.243811, "quality": 8, "zone": "Fantasy Springs", "description": "LIT at Fantasy Springs Resort is an elevated bar experience with a curated cocktail menu, premium spirits, and the polished ambiance of the resort complex. A great spot to start or end an evening out, with drinks crafted to impress and an atmosphere to match."},
+{"id": "RB-INDIO-00037", "name": "La Terraza VIP Sports Bar", "address": "44731 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.711721, "lng": -116.221743, "quality": 8, "zone": "Jackson Corridor", "description": "La Terraza VIP Sports Bar on Jackson Corridor blends sports bar energy with Mexican hospitality \u2014 flat screens, cold Modelos, and a bar menu of wings, nachos, and antojitos that keeps the crowd fueled through every quarter of every game."},
+{"id": "RB-INDIO-00038", "name": "The Pub - Big Rock", "address": "79940 Westward Ho Dr Suite 1", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.742602, "lng": -116.24738, "quality": 8, "zone": "Big Rock", "description": "The Pub at Big Rock is a classic neighborhood pub in Indio's Big Rock area with a full bar, a rotating selection of draft beers, and a menu of American pub favorites. Reliably fun, low-key, and the kind of bar that becomes a regular Tuesday habit."},
+{"id": "RB-INDIO-00039", "name": "Lunas Bar & Grill", "address": "49830 Jefferson St Suite 100", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.6887, "lng": -116.2676, "quality": 8, "zone": "Terra Lago", "description": "Lunas Bar & Grill at Terra Lago is a neighborhood gathering spot that combines a full bar with a casual American menu. Proximity to the Terra Lago community makes it a natural after-round stop for golfers and a go-to dinner option for local residents."},
+{"id": "RB-INDIO-00040", "name": "Desert Beer Company Pizza & Pints", "address": "82921 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.716188, "lng": -116.216345, "quality": 8, "zone": "Old Town", "description": "Desert Beer Company Pizza & Pints in Old Town Indio is a locally owned craft brewery and pizza joint doing justice to both crafts. House-brewed beers on rotating taps pair beautifully with hand-tossed pies in a taproom setting that feels like the best of the craft beer era."},
+{"id": "RB-INDIO-00041", "name": "Your Pie Pizza", "address": "42250 Jackson St Suite B105", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Pizza", "is_chain": true, "chain_name": "Your Pie Pizza", "phone": "", "lat": 33.742027, "lng": -116.208625, "quality": 8, "zone": "North Indio", "description": "Part of the Your Pie Pizza family. Your Pie in North Indio brings the fast-casual pizza revolution to the Coachella Valley \u2014 build your own 10-inch pie at the counter with an arsenal of fresh toppings, house-made sauces, and freshly rolled dough ready in minutes."},
+{"id": "RB-INDIO-00042", "name": "Round Table Pizza", "address": "81637 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Round Table Pizza", "phone": "", "lat": 33.69398, "lng": -116.210723, "quality": 8, "zone": "South Indio", "description": "Part of the Round Table Pizza family. Round Table Pizza in South Indio has been a family pizza night staple for generations. Thick-crust pies loaded with toppings, pasta, and salad bar options in a dine-in setting that works for kids, groups, and anyone who likes serious pizza."},
+{"id": "RB-INDIO-00043", "name": "Leonardi's Pizza Co.", "address": "42600 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.746937, "lng": -116.20916, "quality": 8, "zone": "North Indio", "description": "Leonardi's Pizza Co. in North Indio is a locally owned pizza operation serving hand-crafted pies with quality toppings and an attention to the craft that separates it from the chains. A neighborhood pizza shop worth making your regular order."},
+{"id": "RB-INDIO-00044", "name": "Kowloon Chinese Restaurant", "address": "44221 Jackson St C", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.712842, "lng": -116.218892, "quality": 8, "zone": "Jackson Corridor", "description": "Kowloon Chinese Restaurant on Jackson Corridor is a full-menu Cantonese and American-Chinese kitchen that covers all the classics \u2014 kung pao, lo mein, fried rice, and family-style plates for groups. Reliable, generous, and an Indio neighborhood favorite for Chinese takeout."},
+{"id": "RB-INDIO-00045", "name": "Mulan Chinese Restaurant", "address": "82005 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722057, "lng": -116.213344, "quality": 8, "zone": "Highway 111", "description": "Mulan Chinese Restaurant on Highway 111 serves a broad Chinese menu with both traditional and American-Chinese dishes to satisfy every table. Dim sum selections, wok-fired entrees, and family combo plates make it a reliable destination for Chinese food in central Indio."},
+{"id": "RB-INDIO-00046", "name": "PAK INN (China Star)", "address": "81-022 CA-111 STE B", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.694374, "lng": -116.212807, "quality": 8, "zone": "South Indio", "description": "PAK INN, also known as China Star, serves South Indio with generous Chinese-American plates at prices that make lunch a no-brainer. The fried rice alone justifies the trip \u2014 a neighborhood staple that locals have quietly loved for years without much fanfare."},
+{"id": "RB-INDIO-00047", "name": "Cie Sichuan Cuisine", "address": "45682 Towne St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.7171, "lng": -116.2193, "quality": 8, "zone": "Old Town", "description": "Cie Sichuan Cuisine brings authentic Sichuan cooking to Old Town Indio, an unexpected and welcome arrival in the desert. Numbing peppercorns, fiery chili oils, and complex broths define a menu built for diners who want real regional Chinese flavors far beyond the typical."},
+{"id": "RB-INDIO-00048", "name": "Joy Asian Cuisine", "address": "84-245 Indio Springs Pkwy", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(760) 342-5000", "lat": 33.712893, "lng": -116.244394, "quality": 8, "zone": "Fantasy Springs", "description": "Joy Asian Cuisine at Fantasy Springs Resort brings a polished pan-Asian menu to Indio's premier resort complex. From sushi to wok dishes and Southeast Asian-inspired entrees, Joy delivers a broad Asian dining experience in an elevated setting perfect for resort guests and locals alike."},
+{"id": "RB-INDIO-00049", "name": "Everbloom Coffee - Midtown", "address": "81730 CA-111 Suite 14", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718266, "lng": -116.212343, "quality": 8, "zone": "Highway 111", "description": "Everbloom Coffee Midtown on Highway 111 is one of Indio's most celebrated local coffee roasters, bringing precision espresso and thoughtfully sourced beans to the midtown corridor. A beautiful space with serious coffee craft \u2014 the kind of caf\u00e9 that makes you stay longer than planned."},
+{"id": "RB-INDIO-00050", "name": "Everbloom Coffee - Downtown", "address": "45125 Smurr St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.717558, "lng": -116.218112, "quality": 8, "zone": "Old Town", "description": "Everbloom Coffee Downtown in Old Town is the original Everbloom location and the heart of Indio's local coffee culture. Specialty espresso drinks, rotating single-origin beans, and a welcoming Old Town space that has helped define what independent coffee can look like in the Coachella Valley."},
+{"id": "RB-INDIO-00051", "name": "Saguaro Coffee", "address": "45151 Oasis St Suite A", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.716233, "lng": -116.217626, "quality": 8, "zone": "Old Town", "description": "Saguaro Coffee in Old Town Indio is a desert-inspired neighborhood caf\u00e9 with specialty espresso, house-made syrups, and a vibe that captures the relaxed spirit of Indio's revitalized downtown. The kind of local coffee shop worth choosing over every chain within ten miles."},
+{"id": "RB-INDIO-00052", "name": "The Vintage Coffee House", "address": "49990 Jefferson St #130", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722487, "lng": -116.215247, "quality": 8, "zone": "Terra Lago", "description": "The Vintage Coffee House at Terra Lago is a cozy neighborhood caf\u00e9 serving quality coffee drinks in a warm, unhurried setting. A perfect morning destination for Terra Lago residents and anyone nearby who appreciates good espresso in a comfortable, lived-in atmosphere."},
+{"id": "RB-INDIO-00053", "name": "Mi Tierra Bakery #2", "address": "45228 Oasis St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.713889, "lng": -116.21852, "quality": 8, "zone": "Old Town", "description": "Mi Tierra Bakery #2 in Old Town continues the tradition of its sister location with fresh Mexican baked goods made daily. Pan dulce, tres leches cake, and traditional pastries fill the cases every morning \u2014 a sweet stop that's become an Old Town Indio ritual."},
+{"id": "RB-INDIO-00054", "name": "Panaderia Del Pueblo", "address": "46-900 Monroe St Suite C301", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.696368, "lng": -116.211424, "quality": 8, "zone": "South Indio", "description": "Panaderia Del Pueblo in South Indio serves the community with authentic Mexican bakery staples baked fresh every day. Conchas, cuernos, polvorones, and seasonal pan dulce at prices that make it impossible to leave with just one bag of pastries."},
+{"id": "RB-INDIO-00055", "name": "Panaderia y Tortilleria Guerrero", "address": "81582 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.696508, "lng": -116.207613, "quality": 8, "zone": "South Indio", "description": "Panaderia y Tortilleria Guerrero in South Indio is the real deal \u2014 a working tortilleria and Mexican bakery producing hand-pressed tortillas and fresh pan dulce daily. The corn tortillas alone are worth the drive, and the baked goods are among the best in the valley."},
+{"id": "RB-INDIO-00056", "name": "Dave's Hot Chicken", "address": "42213 Jackson St Ste 100", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Chicken", "is_chain": true, "chain_name": "Dave's Hot Chicken", "phone": "", "lat": 33.743396, "lng": -116.211684, "quality": 8, "zone": "North Indio", "description": "Part of the Dave's Hot Chicken family. Dave's Hot Chicken brings its nationally acclaimed Nashville-style hot chicken to North Indio. Choose your heat level from No Spice to Reaper, and prepare for a spicy, crispy, juicy chicken sandwich or tender plate that lives up to every bit of the hype."},
+{"id": "RB-INDIO-00057", "name": "Shields Date Garden", "address": "80225 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 347-0996", "lat": 33.706, "lng": -116.26, "quality": 8, "zone": "South Indio", "description": "Shields Date Garden in South Indio is a true Coachella Valley landmark with roots going back to 1924. Beyond the famous Medjool dates and date shakes, the caf\u00e9 serves American comfort food in a setting that captures the heritage and agricultural soul of the desert region."},
+{"id": "RB-INDIO-00058", "name": "La Paloma Mexican Food", "address": "44181 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-4122", "lat": 33.7295, "lng": -116.234, "quality": 8, "zone": "Monroe Corridor", "description": "La Paloma Mexican Food on Monroe Corridor is a neighborhood staple for home-style Mexican cooking that hasn't changed much \u2014 and doesn't need to. Loyal regulars come for the enchiladas, tamales, and pozole, and leave the kind of satisfied that only proper comfort food delivers."},
+{"id": "RB-INDIO-00059", "name": "Juan Pollo", "address": "82216 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": true, "chain_name": "Juan Pollo", "phone": "(760) 342-5222", "lat": 33.722985, "lng": -116.214943, "quality": 8, "zone": "Highway 111", "description": "Part of the Juan Pollo family. Juan Pollo on Highway 111 brings its famous slow-cooked rotisserie chicken to Indio, paired with the chain's beloved black beans, rice, and salsa bar. A Coachella Valley staple that has earned its cult following with consistently flavorful birds at every location."},
+{"id": "RB-INDIO-00060", "name": "Birrieria Sinaloa", "address": "45461 Oasis St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.712845, "lng": -116.219717, "quality": 8, "zone": "Old Town", "description": "Birrieria Sinaloa in Old Town Indio is the destination for true Sinaloa-style birria \u2014 rich, deeply spiced braised beef served in consomme with fresh onion, cilantro, and handmade tortillas for dipping. Weekend lines tell you everything you need to know about how good this is."},
+{"id": "RB-INDIO-00061", "name": "Magilla's Grill", "address": "44200 Jefferson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.710158, "lng": -116.219235, "quality": 8, "zone": "Jackson Corridor", "description": "Magilla's Grill on Jackson Corridor is a casual American grill with a menu built for big appetites and modest budgets. Burgers, steaks, and American classics served in a comfortable setting that keeps the Jackson Street neighborhood well-fed without any unnecessary fuss."},
+{"id": "RB-INDIO-00062", "name": "Claudio's Italian Deli", "address": "82881 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722452, "lng": -116.215967, "quality": 8, "zone": "Downtown Miles Ave", "description": "Claudio's Italian Deli on Miles Avenue brings old-school Italian deli culture to Downtown Indio with imported meats, aged cheeses, and sandwiches built the right way. A lunch destination for anyone who takes their Italian cold cuts seriously and wants something above chain-deli quality."},
+{"id": "RB-INDIO-00063", "name": "Curry Pizza House", "address": "42100 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Pizza", "is_chain": true, "chain_name": "Curry Pizza House", "phone": "", "lat": 33.741258, "lng": -116.21497, "quality": 8, "zone": "North Indio", "description": "Part of the Curry Pizza House family. Curry Pizza House in North Indio is a Bay Area import that combines Indian-inspired flavors with the pizza format in genuinely delicious ways. Chicken tikka pizza, paneer pies, and traditional options give this chain a unique angle that always surprises first-timers."},
+{"id": "RB-INDIO-00064", "name": "Lola's at the Cove", "address": "43950 Golf Center Pkwy", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(760) 848-8765", "lat": 33.730557, "lng": -116.199306, "quality": 8, "zone": "Golf Center", "description": "Lola's at the Cove in the Golf Center area is a relaxed American eatery with an inviting patio and a menu that spans breakfast through dinner. Popular with the golf and residential community nearby, Lola's delivers consistent, crowd-pleasing food in a comfortable neighborhood setting."},
+{"id": "RB-INDIO-00065", "name": "Big Juice Bar", "address": "83200 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Juice", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.712681, "lng": -116.21771, "quality": 8, "zone": "Old Town", "description": "Big Juice Bar in Old Town Indio is a fresh-pressed juice and smoothie destination for health-conscious diners in the heart of downtown. Cold-pressed blends, acai bowls, and wellness shots made from quality produce give you the clean fuel you need for a Coachella Valley day."},
+{"id": "RB-INDIO-00066", "name": "El Reaper Chicken", "address": "42500 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Chicken", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.746977, "lng": -116.209825, "quality": 8, "zone": "North Indio", "description": "El Reaper Chicken in North Indio delivers bold, unapologetically spicy fried chicken with a personality as fiery as its menu. House-made heat sauces, crispy preparation, and a menu built for those who believe chicken is better when it bites back."},
+{"id": "RB-INDIO-00067", "name": "Sonic Drive-In", "address": "42540 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Sonic Drive-In", "phone": "(760) 775-1019", "lat": 33.740913, "lng": -116.216555, "quality": 8, "zone": "North Indio", "description": "Part of the Sonic Drive-In family. Sonic in North Indio delivers its classic drive-in experience with tots, slushies, and a customizable menu served curbside. The cherry limeade alone justifies pulling in, and the full menu covers breakfast, lunch, and late-night snack runs with ease."},
+{"id": "RB-INDIO-00068", "name": "Let's Eat Rice & Grill", "address": "78530 CA-111", "city": "La Quinta", "state": "CA", "zip": "92253", "cuisine": "Korean", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722826, "lng": -116.212835, "quality": 8, "zone": "La Quinta Border", "description": "Let's Eat Rice & Grill on the La Quinta border brings authentic Korean flavors to southern Indio with a menu of bibimbap, bulgogi, japchae, and Korean-inspired rice bowls. A rare Korean kitchen in the area that serves the community with genuine recipes and generous portions."},
+{"id": "RB-INDIO-00069", "name": "In-N-Out Burger", "address": "82043 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "In-N-Out Burger", "phone": "(800) 786-1000", "lat": 33.717069, "lng": -116.213676, "quality": 8, "zone": "Highway 111", "description": "Part of the In-N-Out Burger family. The In-N-Out on Highway 111 is an Indio landmark with lines that don't lie. Fresh never-frozen beef, hand-leafed lettuce, and the secret menu that everyone knows \u2014 Animal Style fries, protein style, the Neapolitan shake \u2014 all at prices that feel frozen in time."},
+{"id": "RB-INDIO-00070", "name": "In-N-Out Burger", "address": "82177 Ave 42", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Fast Food", "is_chain": true, "chain_name": "In-N-Out Burger", "phone": "(800) 786-1000", "lat": 33.7409, "lng": -116.2335, "quality": 8, "zone": "North Indio", "description": "Part of the In-N-Out Burger family. Indio's second In-N-Out in North Indio keeps the same legendary standard \u2014 fresh beef ground daily, real potatoes fried in pure vegetable oil, and milkshakes made with real ice cream. The line moves faster than you think and the burger is always worth it."},
+{"id": "RB-INDIO-00071", "name": "Raising Cane's Chicken Fingers", "address": "82-171 Ave 42", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Chicken", "is_chain": true, "chain_name": "Raising Cane's Chicken Fingers", "phone": "", "lat": 33.74509, "lng": -116.209778, "quality": 8, "zone": "North Indio", "description": "Part of the Raising Cane's Chicken Fingers family. Raising Cane's in North Indio does one thing and does it better than anyone \u2014 chicken fingers. Golden, crispy, and perfectly tender, served with Cane's sauce that has its own cult following. A fast-food concept that earns genuine loyalty."},
+{"id": "RB-INDIO-00072", "name": "Farmer Boys", "address": "81959 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": true, "chain_name": "Farmer Boys", "phone": "(760) 863-5050", "lat": 33.718601, "lng": -116.214154, "quality": 8, "zone": "Highway 111", "description": "Part of the Farmer Boys family. Farmer Boys on Highway 111 is a California-born burger chain that takes quality seriously. Big burgers built with farm-fresh produce, breakfast served all day, and a menu broad enough to satisfy every member of the family on any visit."},
+{"id": "RB-INDIO-00073", "name": "McDonald's", "address": "81-544 Highway 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "McDonald's", "phone": "(760) 347-8862", "lat": 33.71, "lng": -116.245, "quality": 8, "zone": "Highway 111", "description": "Part of the McDonald's family. The McDonald's on Highway 111 is a reliable quick-stop in the heart of Indio's commercial corridor. Classic burgers, breakfast sandwiches, McNuggets, and McCaf\u00e9 drinks keep the drive-through moving fast and the familiar favorites flowing all day long."},
+{"id": "RB-INDIO-00074", "name": "Taco Bell", "address": "42750 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Taco Bell", "phone": "(760) 342-4413", "lat": 33.738, "lng": -116.213, "quality": 8, "zone": "North Indio", "description": "Part of the Taco Bell family. Taco Bell in North Indio brings its creative fast-food Mexican menu to the northern corridor \u2014 Crunchwraps, Doritos Locos Tacos, loaded nachos, and perpetual limited-time offerings that keep regulars checking the app. Open late for those inevitable late-night cravings."},
+{"id": "RB-INDIO-00075", "name": "Del Taco", "address": "82040 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Del Taco", "phone": "(760) 342-2854", "lat": 33.717669, "lng": -116.215391, "quality": 8, "zone": "Highway 111", "description": "Part of the Del Taco family. Del Taco on Highway 111 is the California-born taco chain that earned its reputation on fresh, never-frozen beef and made-in-house guacamole. Tacos, burritos, and surprisingly solid burgers served fast at prices that still make sense in 2025."},
+{"id": "RB-INDIO-00076", "name": "Burger King", "address": "81-779 Highway 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Burger King", "phone": "(760) 342-2811", "lat": 33.719722, "lng": -116.212277, "quality": 8, "zone": "Highway 111", "description": "Part of the Burger King family. Burger King on Highway 111 brings its flame-grilled Whopper to Indio's main commercial strip. Customizable burgers, crispy chicken sandwiches, and a value menu that holds its own \u2014 the flame-grilling still makes a difference you can actually taste."},
+{"id": "RB-INDIO-00077", "name": "Carl's Jr", "address": "82200 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Carl's Jr", "phone": "(760) 347-5540", "lat": 33.722255, "lng": -116.21642, "quality": 8, "zone": "Highway 111", "description": "Part of the Carl's Jr family. Carl's Jr on Highway 111 serves thick, charbroiled burgers built for serious appetites. The Western Bacon Cheeseburger and Famous Star are highway corridor staples, and the breakfast menu is a legitimate reason to make a morning stop on the way through."},
+{"id": "RB-INDIO-00078", "name": "Panda Express", "address": "42200 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Chinese", "is_chain": true, "chain_name": "Panda Express", "phone": "(760) 863-2033", "lat": 33.744004, "lng": -116.211928, "quality": 8, "zone": "North Indio", "description": "Part of the Panda Express family. Panda Express in North Indio delivers its signature American-Chinese fast food with the consistency that has made it a national institution. Orange Chicken, Broccoli Beef, and the rotating Wok Smart selections give every visit enough options to keep things interesting."},
+{"id": "RB-INDIO-00079", "name": "Popeyes Louisiana Kitchen", "address": "42801 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Chicken", "is_chain": true, "chain_name": "Popeyes Louisiana Kitchen", "phone": "", "lat": 33.737, "lng": -116.212, "quality": 8, "zone": "North Indio", "description": "Part of the Popeyes Louisiana Kitchen family. Popeyes in North Indio brings Louisiana-style fried chicken to the Coachella Valley with a spicy, crunchy recipe that turned the chicken sandwich world upside down. Bone-in chicken, Cajun fries, and buttermilk biscuits that legitimately compete with the best."},
+{"id": "RB-INDIO-00080", "name": "Wienerschnitzel", "address": "82-350 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Wienerschnitzel", "phone": "", "lat": 33.722476, "lng": -116.212777, "quality": 8, "zone": "Highway 111", "description": "Part of the Wienerschnitzel family. Wienerschnitzel on Highway 111 is a California fast-food classic built around the hot dog. Chili dogs, corn dogs, and a full menu of franks served with the chain's signature chili sauce make this a nostalgic pit stop worth pulling over for."},
+{"id": "RB-INDIO-00081", "name": "El Pollo Loco", "address": "82-364 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": true, "chain_name": "El Pollo Loco", "phone": "(760) 342-6061", "lat": 33.718791, "lng": -116.214166, "quality": 8, "zone": "Highway 111", "description": "Part of the El Pollo Loco family. El Pollo Loco on Highway 111 delivers its citrus-marinated, fire-grilled chicken to Indio's main corridor. The pollo is genuinely good \u2014 crispy skin, juicy meat, and real salsas at a fast-casual price point that makes it a legitimate lunch destination."},
+{"id": "RB-INDIO-00082", "name": "Chipotle Mexican Grill", "address": "42174 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Mexican", "is_chain": true, "chain_name": "Chipotle Mexican Grill", "phone": "", "lat": 33.744654, "lng": -116.212083, "quality": 8, "zone": "North Indio", "description": "Part of the Chipotle Mexican Grill family. Chipotle in North Indio brings its build-your-own Mexican bowl formula to the northern commercial strip. Fresh ingredients assembled to order, responsibly sourced proteins, and a customization model that consistently hits \u2014 especially the barbacoa and the honey vinaigrette salad dressing."},
+{"id": "RB-INDIO-00083", "name": "Five Guys", "address": "78-447 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": true, "chain_name": "Five Guys", "phone": "", "lat": 33.71, "lng": -116.25, "quality": 8, "zone": "South Indio", "description": "Part of the Five Guys family. Five Guys in South Indio hand-crafts every burger to order with fresh, never-frozen beef and a menu of toppings so long it's printed on a board. The Cajun fries are piled absurdly high in the bag. Reliably one of the best burger chains operating today."},
+{"id": "RB-INDIO-00084", "name": "Starbucks", "address": "42101 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(760) 863-2070", "lat": 33.745575, "lng": -116.209764, "quality": 8, "zone": "North Indio", "description": "Part of the Starbucks family. Starbucks in North Indio provides the familiar coffee ritual millions depend on daily \u2014 espresso drinks in every variation, cold brews, Frappuccinos, and a rotating food menu in a consistently comfortable, Wi-Fi-equipped environment when you need that reliable cup."},
+{"id": "RB-INDIO-00085", "name": "Starbucks", "address": "81-830 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(760) 863-2070", "lat": 33.721672, "lng": -116.214818, "quality": 8, "zone": "Highway 111", "description": "Part of the Starbucks family. The Highway 111 Starbucks keeps the drive-through moving fast for Indio commuters and shoppers needing a reliable caffeine fix. Seasonal specials, the full Starbucks customization menu, and the consistency that makes the chain a built-in stop on any busy corridor."},
+{"id": "RB-INDIO-00086", "name": "Domino's Pizza", "address": "44200 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Domino's Pizza", "phone": "(760) 347-7878", "lat": 33.712003, "lng": -116.218055, "quality": 8, "zone": "Monroe Corridor", "description": "Part of the Domino's Pizza family. Domino's on Monroe Corridor covers Indio's Monroe Street neighborhood with fast pizza delivery and carryout. Online ordering, tracker app, and an extensive menu including hand-tossed, thin crust, and pan pizzas make it an easy call when the group can't agree on anything else."},
+{"id": "RB-INDIO-00087", "name": "Pizza Hut", "address": "81680 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Pizza Hut", "phone": "(760) 342-4575", "lat": 33.693117, "lng": -116.207425, "quality": 8, "zone": "South Indio", "description": "Part of the Pizza Hut family. Pizza Hut in South Indio is a classic pizza night destination with dine-in buffet, delivery, and carryout options. Pan pizza, stuffed crust, and Tuscani pasta round out a menu that's been feeding families in Indio for generations."},
+{"id": "RB-INDIO-00088", "name": "Arby's", "address": "82525 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Arby's", "phone": "(760) 342-4777", "lat": 33.722272, "lng": -116.21301, "quality": 8, "zone": "Highway 111", "description": "Part of the Arby's family. Arby's on Highway 111 is the roast beef authority in Indio's fast-food landscape. The classic Beef and Cheddar, Market Fresh sandwiches, and curly fries continue to make Arby's a uniquely satisfying fast-food stop for anyone who wants something other than a burger."},
+{"id": "RB-INDIO-00089", "name": "Subway", "address": "42210 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Subway", "phone": "(760) 342-1188", "lat": 33.742845, "lng": -116.212652, "quality": 8, "zone": "North Indio", "description": "Part of the Subway family. Subway in North Indio builds your sandwich fresh at the counter with your choice of bread, protein, vegetables, and sauces. A quick, customizable lunch that hits the mark when you want something fast, familiar, and slightly less guilty than a burger."},
+{"id": "RB-INDIO-00090", "name": "Jack in the Box", "address": "82-161 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Jack in the Box", "phone": "(760) 342-4445", "lat": 33.722268, "lng": -116.212318, "quality": 8, "zone": "Highway 111", "description": "Part of the Jack in the Box family. Jack in the Box on Highway 111 is the late-night lifeline for Indio's night owls. Tacos, Jumbo Jacks, and loaded curly fries are available at 2am when everything else is closed \u2014 a highway corridor staple that never shuts down."},
+{"id": "RB-INDIO-00091", "name": "Denny's", "address": "82-050 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": true, "chain_name": "Denny's", "phone": "(760) 342-4114", "lat": 33.717514, "lng": -116.215084, "quality": 8, "zone": "Highway 111", "description": "Part of the Denny's family. Denny's on Highway 111 keeps the all-day breakfast tradition alive in Indio with Grand Slams, pancakes, and omelets available any hour. A dependable stop for travelers on the 111, families after a late movie, or anyone whose breakfast clock runs on a different schedule."},
+{"id": "RB-INDIO-00092", "name": "IHOP", "address": "82105 CA-111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": true, "chain_name": "IHOP", "phone": "(760) 347-0299", "lat": 33.717415, "lng": -116.213436, "quality": 8, "zone": "Highway 111", "description": "Part of the IHOP family. IHOP on Highway 111 is Indio's pancake headquarters, serving the full International House of Pancakes experience around the clock. Stacked buttermilk pancakes, egg combos, and seasonal specials make it a go-to for family breakfasts and anyone with a serious sweet tooth in the morning."},
+{"id": "RB-INDIO-00093", "name": "Auntie Anne's", "address": "84-245 Indio Springs Pkwy", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Bakery", "is_chain": true, "chain_name": "Auntie Anne's", "phone": "", "lat": 33.715595, "lng": -116.24523, "quality": 8, "zone": "Fantasy Springs", "description": "Part of the Auntie Anne's family. Auntie Anne's at Fantasy Springs delivers freshly baked soft pretzels in the classic mall-style format that has made it a nationwide institution. Original, cinnamon sugar, and almond variations served hot from the oven with dipping sauces make them impossible to walk past."},
+{"id": "RB-INDIO-00094", "name": "Jersey Mike's Subs", "address": "42170 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Deli", "is_chain": true, "chain_name": "Jersey Mike's Subs", "phone": "(760) 848-2640", "lat": 33.743852, "lng": -116.209701, "quality": 8, "zone": "North Indio", "description": "Part of the Jersey Mike's Subs family. Jersey Mike's in North Indio serves sub sandwiches the authentic Jersey Shore way \u2014 sliced to order at the counter on fresh bread, then dressed Mike's Way with oil, vinegar, and seasonings. A fast-casual sub experience that consistently outperforms the competition."},
+{"id": "RB-INDIO-00095", "name": "Chick-fil-A", "address": "42150 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Chicken", "is_chain": true, "chain_name": "Chick-fil-A", "phone": "(760) 848-8383", "lat": 33.74259, "lng": -116.207765, "quality": 8, "zone": "North Indio", "description": "Part of the Chick-fil-A family. Chick-fil-A in North Indio brings its perfectly seasoned, pressure-cooked chicken sandwich to the Coachella Valley. Waffle fries, hand-spun milkshakes, and the famously polite service have made this location one of the busiest fast-food stops in the northern Indio corridor."},
+{"id": "RB-INDIO-00096", "name": "Wingstop", "address": "42165 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "Chicken", "is_chain": true, "chain_name": "Wingstop", "phone": "(760) 848-9464", "lat": 33.743539, "lng": -116.211729, "quality": 8, "zone": "North Indio", "description": "Part of the Wingstop family. Wingstop in North Indio is a wing specialist with a rotating lineup of flavors from mild Mild to face-scorching Atomic. Bone-in and boneless options, seasoned fries, and a build-your-own flavor combo system make it the go-to wing destination in Indio."},
+{"id": "RB-INDIO-00097", "name": "The Broken Yolk Cafe", "address": "42260 Jackson St", "city": "Indio", "state": "CA", "zip": "92203", "cuisine": "American", "is_chain": true, "chain_name": "The Broken Yolk Cafe", "phone": "(760) 848-2760", "lat": 33.744236, "lng": -116.20862, "quality": 8, "zone": "North Indio", "description": "Part of The Broken Yolk Cafe family. The Broken Yolk Cafe in North Indio brings its San Diego-born breakfast and brunch concept to the Coachella Valley. Giant omelets, creative egg dishes, and a full brunch menu in a bright, upbeat setting that makes weekend mornings worth waking up for."},
+{"id": "RB-INDIO-00098", "name": "Bonitas Coffee", "address": "81944 Hwy 111 Ste C", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718207, "lng": -116.21613, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Bonitas Coffee along the Highway 111 corridor serves Indio with specialty espresso drinks and fresh caf\u00e9 items in a cheerful, welcoming setting. A locally-owned coffee stop that earns its loyal morning regulars through consistent quality and a warmth that the chain stores simply can't replicate."},
+{"id": "RB-INDIO-00099", "name": "Varraco Coffee + Roasters", "address": "82100 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722971, "lng": -116.214101, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Varraco Coffee + Roasters on the Highway 111 corridor is a serious local roastery and caf\u00e9 bringing precision coffee craft to Indio. House-roasted beans, expert espresso technique, and a rotating single-origin menu make this a destination for coffee enthusiasts who want more than the standard cup."},
+{"id": "RB-INDIO-00100", "name": "YES PLEASE Coffee", "address": "82879 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.720329, "lng": -116.215395, "quality": 8, "zone": "Downtown Indio", "description": "YES PLEASE Coffee in Downtown Indio is exactly what it sounds like \u2014 a bright, inviting coffee spot that makes saying yes to another cup feel completely natural. Specialty lattes, cold brews, and a downtown vibe make it one of Indio's most photographable caf\u00e9 experiences."},
+{"id": "RB-INDIO-00101", "name": "Sinfull Sweets", "address": "82800 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee/Desserts", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718426, "lng": -116.217152, "quality": 8, "zone": "Downtown Indio", "description": "Sinfull Sweets in Downtown Indio combines artisan coffee with decadent desserts in a sweet-shop caf\u00e9 concept that rewards every visit. Specialty espresso drinks, custom cakes, pastries, and confections that lean into the sinful side of sugar in the best possible way."},
+{"id": "RB-INDIO-00102", "name": "D' Coffee Bouteaque", "address": "81730 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.719029, "lng": -116.21447, "quality": 8, "zone": "Hwy 111 Corridor", "description": "D' Coffee Bouteaque on the Highway 111 corridor brings a boutique coffee shop experience to Indio's commercial strip \u2014 specialty drinks with creative flair, a thoughtfully curated menu, and an atmosphere that invites you to slow down and enjoy the cup rather than rush through it."},
+{"id": "RB-INDIO-00103", "name": "Ernest Coffee", "address": "82710 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.719081, "lng": -116.217179, "quality": 8, "zone": "Downtown Indio", "description": "Ernest Coffee in Downtown Indio is a neighborhood caf\u00e9 with a straightforward mission: make great coffee and create a space worth spending time in. Expertly pulled espresso, clean brewing techniques, and a downtown location that makes it the natural start to any day in Indio."},
+{"id": "RB-INDIO-00104", "name": "Everbloom Coffee Downtown", "address": "45125 Smurr St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(442) 274-1316", "lat": 33.712726, "lng": -116.216213, "quality": 8, "zone": "Old Town Indio", "description": "Everbloom Coffee Downtown in Old Town Indio represents the heart of Indio's independent coffee culture. As part of the beloved Everbloom roasting family, this location brings the same quality beans, skilled baristas, and community-first atmosphere that have made Everbloom a Coachella Valley institution."},
+{"id": "RB-INDIO-00105", "name": "Encore Coffee", "address": "82707 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee/Music", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.719074, "lng": -116.213067, "quality": 8, "zone": "Downtown Indio", "description": "Encore Coffee in Downtown Indio combines live music programming with quality specialty coffee in a creative caf\u00e9 format that's rare to find in the desert. A cultural hub as much as a coffee shop, Encore hosts performances and community events alongside its espresso program."},
+{"id": "RB-INDIO-00106", "name": "The Vintage Coffee House", "address": "49990 Jefferson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.715158, "lng": -116.215575, "quality": 8, "zone": "Jefferson St", "description": "The Vintage Coffee House on Jefferson Street is a cozy, timeless caf\u00e9 serving quality espresso drinks in a warm, unhurried setting that lives up to its name. Comfortable seating, familiar flavors, and a neighborhood feel make it a reliable daily destination for Jefferson Street regulars."},
+{"id": "RB-INDIO-00107", "name": "Tea Be Honest", "address": "81944 Hwy 111 Ste F", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Boba Tea", "is_chain": false, "chain_name": "", "phone": "(760) 775-1800", "lat": 33.718428, "lng": -116.213986, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Tea Be Honest on the Highway 111 corridor is Indio's dedicated boba tea destination \u2014 a shop that takes its bubble tea craft seriously with freshly brewed teas, real tapioca pearls, and a menu of milk teas and fruit teas customizable to your exact sweetness and ice level."},
+{"id": "RB-INDIO-00108", "name": "LIT Lounge", "address": "84245 Indio Springs Pkwy", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Nightclub", "is_chain": false, "chain_name": "", "phone": "(760) 342-5000", "lat": 33.712285, "lng": -116.245206, "quality": 8, "zone": "Fantasy Springs", "description": "LIT Lounge at Fantasy Springs Resort Casino is a sleek nightclub and lounge concept bringing big-city nightlife energy to the Indio desert. DJ nights, bottle service, a full craft cocktail program, and an electric atmosphere make this the go-to after-dark destination in the resort complex."},
+{"id": "RB-INDIO-00109", "name": "Twelve", "address": "84245 Indio Springs Pkwy", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Lounge", "is_chain": false, "chain_name": "", "phone": "(760) 342-5000", "lat": 33.716613, "lng": -116.242574, "quality": 8, "zone": "Fantasy Springs", "description": "Twelve at Fantasy Springs Resort Casino is an upscale lounge with a sophisticated cocktail menu and resort-caliber ambiance. A curated drink list, elegant seating, and the polished environment of one of the valley's premier casino resorts make Twelve the perfect evening start or nightcap destination."},
+{"id": "RB-INDIO-00110", "name": "The Nest", "address": "84245 Indio Springs Pkwy", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Lounge", "is_chain": false, "chain_name": "", "phone": "(760) 342-5000", "lat": 33.713836, "lng": -116.241292, "quality": 8, "zone": "Fantasy Springs", "description": "The Nest at Fantasy Springs Resort is a comfortable, welcoming lounge space within the resort complex. Cocktails, wine, craft beers, and a relaxed atmosphere make it the natural gathering point for resort guests looking for a low-key evening of good drinks without the full nightclub experience."},
+{"id": "RB-INDIO-00111", "name": "Rosemary HiFi", "address": "82730 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Wine Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722545, "lng": -116.217358, "quality": 8, "zone": "Downtown Indio", "description": "Rosemary HiFi in Downtown Indio is a wine bar with genuine character \u2014 a curated selection of bottles and pours by the glass in a music-loving, design-forward space. Charcuterie, small plates, and thoughtfully chosen wines make it the best reason to spend a weeknight in downtown Indio."},
+{"id": "RB-INDIO-00112", "name": "Libation Room", "address": "82879 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Cocktails", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718282, "lng": -116.215914, "quality": 8, "zone": "Downtown Indio", "description": "Libation Room in Downtown Indio is a cocktail bar that takes the craft seriously, serving creative, seasonally inspired drinks in a stylish downtown setting. A rotating menu of original cocktails, a strong whiskey and spirits selection, and an atmosphere that rewards slowing down and sipping properly."},
+{"id": "RB-INDIO-00113", "name": "JD's Sports Bar & Grill", "address": "81770 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Sports Bar", "is_chain": false, "chain_name": "", "phone": "(760) 342-2898", "lat": 33.719541, "lng": -116.215198, "quality": 8, "zone": "Hwy 111 Corridor", "description": "JD's Sports Bar & Grill on the Highway 111 corridor is the area's dedicated sports bar, loaded with flat screens tuned to every game that matters. Cold beers on tap, a full bar menu of wings, nachos, and burgers, and a crowd that knows how to enjoy a game day."},
+{"id": "RB-INDIO-00114", "name": "Pinz and Pints", "address": "82220 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Bowling", "is_chain": false, "chain_name": "", "phone": "(760) 342-5000", "lat": 33.721374, "lng": -116.21396, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Pinz and Pints on the Highway 111 corridor combines bowling lanes with a full bar and food menu in a family-friendly entertainment format. Strike nights, cold pints, and a menu of bar favorites make it a great group option when you want more than just dinner."},
+{"id": "RB-INDIO-00115", "name": "Big Rock Pub", "address": "79940 Westward Ho Dr", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/American", "is_chain": false, "chain_name": "", "phone": "(760) 969-5550", "lat": 33.67409, "lng": -116.245, "quality": 8, "zone": "Indian Springs", "description": "Big Rock Pub in the Indian Springs neighborhood is a true community local \u2014 cold beers, friendly regulars, darts, pool, and a welcoming atmosphere that makes every visitor feel like a regular by the second round. The kind of honest pub that makes a neighborhood feel like a neighborhood."},
+{"id": "RB-INDIO-00116", "name": "Club 5 Bar", "address": "81896 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/BBQ", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722905, "lng": -116.217409, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Club 5 Bar on the Highway 111 corridor doubles as a BBQ joint and neighborhood bar \u2014 smoked meats, cold beers, and a laid-back outdoor-friendly atmosphere that comes together as one of Indio's more satisfying dual-concept spots. BBQ and bar rarely work this well under one roof."},
+{"id": "RB-INDIO-00117", "name": "Indio Taphouse", "address": "82921 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Gastropub", "is_chain": false, "chain_name": "", "phone": "(760) 831-0180", "lat": 33.661118, "lng": -116.22, "quality": 8, "zone": "Indio Blvd", "description": "Indio Taphouse on Indio Boulevard brings the gastropub experience to a local setting, with rotating craft beer taps, an elevated pub food menu, and a casual atmosphere that draws both beer enthusiasts and anyone who wants something better than typical bar food with their pint."},
+{"id": "RB-INDIO-00118", "name": "Sayulita Tap Room", "address": "82879 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bar/Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 848-8989", "lat": 33.720116, "lng": -116.216464, "quality": 8, "zone": "Downtown Indio", "description": "Sayulita Tap Room in Downtown Indio is a Mexican-inspired bar and taproom drawing from the relaxed spirit of the Nayarit beach town. Craft beers, agave spirits, and Mexican bar bites in a downtown setting that brings coastal cantina energy to the desert."},
+{"id": "RB-INDIO-00119", "name": "Keedy's - A Modern Twist", "address": "49890 Jefferson St Ste 108", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American/Diner", "is_chain": false, "chain_name": "", "phone": "(442) 372-2269", "lat": 33.713165, "lng": -116.213, "quality": 8, "zone": "Jefferson St", "description": "Keedy's on Jefferson Street brings the art of the American diner into a more refined era with its modern twist on classic breakfast and lunch. Elevated diner staples, scratch-made sauces, and quality ingredients give every booth visit the comfort of nostalgia with the quality of intention."},
+{"id": "RB-INDIO-00120", "name": "Charli Marrone's Italian Bar & Grill", "address": "42250 Jackson St Ste 101", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(760) 973-4346", "lat": 33.71467, "lng": -116.221508, "quality": 8, "zone": "Jackson St", "description": "Charli Marrone's Italian Bar & Grill on Jackson Street is a full-service Italian restaurant and bar serving the eastern Indio corridor with house-made pastas, classic Italian entrees, and an extensive cocktail list. A neighborhood gathering spot where Italian-American hospitality runs through every plate and pour."},
+{"id": "RB-INDIO-00121", "name": "The Flame Broiler", "address": "82170 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Asian/Rice Bowls", "is_chain": false, "chain_name": "", "phone": "(760) 863-2388", "lat": 33.718141, "lng": -116.215308, "quality": 8, "zone": "Hwy 111 Corridor", "description": "The Flame Broiler on the Highway 111 corridor brings its clean, customizable Korean-inspired rice bowl concept to Indio. Choose your base, protein, and sauce for a fast, flavorful bowl built around the philosophy that healthy fast food doesn't have to sacrifice flavor or satisfaction."},
+{"id": "RB-INDIO-00122", "name": "Los Molcajetes", "address": "81096 Hwy 111 Ste G", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-5339", "lat": 33.719531, "lng": -116.216329, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Los Molcajetes on the Highway 111 corridor serves Mexican cuisine the traditional way \u2014 bold sauces ground in volcanic stone molcajetes, slow-cooked meats, and a full menu of regional dishes that go well beyond the typical taqueria. One of the more complete Mexican menus in Indio."},
+{"id": "RB-INDIO-00123", "name": "Taco Jalisco", "address": "43501 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-1262", "lat": 33.734068, "lng": -116.23385, "quality": 8, "zone": "Monroe St", "description": "Taco Jalisco on Monroe Street is a neighborhood taqueria bringing the flavors of Jalisco to Indio with authentic tacos, tortas, and combination plates made from family recipes. The kind of local taco spot that regulars keep to themselves until someone asks for a good recommendation."},
+{"id": "RB-INDIO-00124", "name": "Perfecto Pizza", "address": "44250 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(760) 342-0778", "lat": 33.713499, "lng": -116.21446, "quality": 8, "zone": "Monroe St", "description": "Perfecto Pizza on Monroe Street is a local pizza shop with scratch-made pies and a neighborhood following built one slice at a time. Quality ingredients, honest prices, and the kind of pizza that comes out of an oven tended by someone who genuinely cares how it turns out."},
+{"id": "RB-INDIO-00125", "name": "The Local on 50th", "address": "49990 Jefferson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American/Bar", "is_chain": false, "chain_name": "", "phone": "(760) 776-7030", "lat": 33.712659, "lng": -116.210832, "quality": 8, "zone": "Jefferson St", "description": "The Local on 50th on Jefferson Street is an American bar and grill that earns its neighborhood-staple status through consistent food, a well-stocked bar, and an atmosphere that welcomes everyone equally. Burgers, sandwiches, and cold drinks in a Jefferson Street setting built for lingering."},
+{"id": "RB-INDIO-00126", "name": "Starbucks", "address": "81952 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(760) 863-1420", "lat": 33.720302, "lng": -116.217696, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Starbucks family. Starbucks on the Highway 111 corridor brings the familiar green apron experience to one of Indio's busiest commercial stretches. Espresso drinks in every configuration, cold brews, Refreshers, and the drive-through speed that keeps Highway 111 commuters well-caffeinated."},
+{"id": "RB-INDIO-00127", "name": "Starbucks", "address": "49908 Jefferson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(760) 771-4373", "lat": 33.686711, "lng": -116.267113, "quality": 8, "zone": "Jefferson St", "description": "Part of the Starbucks family. This Jefferson Street Starbucks location serves the residential and commercial neighborhoods along one of Indio's main north-south arteries. The full Starbucks menu \u2014 seasonal drinks, food items, and the customization culture that has made the chain a daily ritual for millions."},
+{"id": "RB-INDIO-00128", "name": "Starbucks", "address": "42290 Jefferson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(442) 300-0523", "lat": 33.724565, "lng": -116.213, "quality": 8, "zone": "Jefferson St", "description": "Part of the Starbucks family. A second Jefferson Street Starbucks location serving a busy stretch of Indio's Jefferson corridor with the consistent quality and full menu that Starbucks delivers at every location. Reliable espresso, drive-through convenience, and the seasonal menu rotations that keep regulars engaged."},
+{"id": "RB-INDIO-00129", "name": "Starbucks", "address": "82041 Ave 42", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(760) 863-2070", "lat": 33.715496, "lng": -116.219984, "quality": 8, "zone": "Ave 42", "description": "Part of the Starbucks family. The Avenue 42 Starbucks brings dependable coffee service to Indio's eastern residential corridors. A full espresso and cold beverage menu in a conveniently located drive-through format that keeps the morning commute running for the neighborhoods along Avenue 42."},
+{"id": "RB-INDIO-00130", "name": "Starbucks", "address": "84245 Indio Springs Pkwy", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(760) 342-5000", "lat": 33.716814, "lng": -116.240442, "quality": 8, "zone": "Fantasy Springs", "description": "Part of the Starbucks family. The Fantasy Springs Starbucks puts reliable coffee inside one of Indio's most-visited entertainment destinations. Resort guests, casino visitors, and event attendees can count on the full Starbucks menu in a high-traffic location that keeps the caffeine flowing around the clock."},
+{"id": "RB-INDIO-00131", "name": "McDonald's", "address": "42550 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "McDonald's", "phone": "(760) 347-8862", "lat": 33.714592, "lng": -116.222002, "quality": 8, "zone": "Jackson St", "description": "Part of the McDonald's family. The Jackson Street McDonald's brings the familiar Golden Arches to Indio's eastern residential corridor, serving the full McDonald's menu from early breakfast through late night. Big Macs, McFlurries, and McCaf\u00e9 drinks at the drive-through speed the brand has perfected over decades."},
+{"id": "RB-INDIO-00132", "name": "Jack in the Box", "address": "82210 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Jack in the Box", "phone": "(760) 347-2188", "lat": 33.719914, "lng": -116.216718, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Jack in the Box family. Jack in the Box on Highway 111 corridor keeps the late-night tradition alive with a menu that covers everything from tacos to full burgers to loaded fries well past midnight. A consistent fast-food stop serving Indio's night owls and early risers alike."},
+{"id": "RB-INDIO-00133", "name": "Jack in the Box", "address": "42550 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Jack in the Box", "phone": "(760) 342-9201", "lat": 33.711906, "lng": -116.222648, "quality": 8, "zone": "Jackson St", "description": "Part of the Jack in the Box family. The Jackson Street Jack in the Box is a neighborhood fast-food anchor with extended hours and the full menu of burgers, tacos, and late-night favorites that have made Jack in the Box a California institution across multiple generations of regulars."},
+{"id": "RB-INDIO-00134", "name": "Carl's Jr", "address": "42225 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Carl's Jr", "phone": "(760) 347-5540", "lat": 33.711774, "lng": -116.217088, "quality": 8, "zone": "Jackson St", "description": "Part of the Carl's Jr family. Carl's Jr on Jackson Street delivers its charbroiled burgers and hand-breaded chicken sandwiches to the eastern Indio corridor. The Famous Star, Spicy Western Bacon Cheeseburger, and Monster Biscuit breakfast make it worth the drive-through line on any day of the week."},
+{"id": "RB-INDIO-00135", "name": "Panda Express", "address": "42550 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chinese", "is_chain": true, "chain_name": "Panda Express", "phone": "(760) 863-2033", "lat": 33.711091, "lng": -116.218296, "quality": 8, "zone": "Jackson St", "description": "Part of the Panda Express family. Panda Express on Jackson Street serves the eastern Indio neighborhoods with its classic American-Chinese menu. Orange Chicken, Mushroom Chicken, and the Beijing Beef deliver familiar flavors at a fast-casual pace that works perfectly as a lunch stop or family dinner pickup."},
+{"id": "RB-INDIO-00136", "name": "Del Taco", "address": "42250 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": true, "chain_name": "Del Taco", "phone": "(760) 342-2854", "lat": 33.71223, "lng": -116.220462, "quality": 8, "zone": "Jackson St", "description": "Part of the Del Taco family. Del Taco on Jackson Street serves up the California taco chain's fresh, never-frozen menu to the eastern Indio corridor. Breakfast burritos in the morning, tacos and quesadillas for lunch, and a value menu that continues to make Del Taco a desert staple."},
+{"id": "RB-INDIO-00137", "name": "Pizza Hut", "address": "42600 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Pizza Hut", "phone": "(760) 342-4575", "lat": 33.715244, "lng": -116.217027, "quality": 8, "zone": "Jackson St", "description": "Part of the Pizza Hut family. Pizza Hut on Jackson Street brings the classic pizza chain's full menu to eastern Indio with delivery, carryout, and dine-in options. Stuffed crust, hand-tossed, and thin-and-crispy pies served with the familiar breadsticks and pasta that make it a go-to family night option."},
+{"id": "RB-INDIO-00138", "name": "Papa John's", "address": "82555 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Papa John's", "phone": "(760) 775-7272", "lat": 33.720335, "lng": -116.21369, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Papa John's family. Papa John's on the Highway 111 corridor delivers the chain's better-ingredients-better-pizza promise to Indio with online ordering, the signature garlic dipping sauce, and a full menu of hand-tossed pies that arrive at your door faster than you'd expect."},
+{"id": "RB-INDIO-00139", "name": "Krispy Krunchy Chicken", "address": "82050 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chicken", "is_chain": true, "chain_name": "Krispy Krunchy", "phone": "", "lat": 33.717929, "lng": -116.21622, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Krispy Krunchy Chicken family. Krispy Krunchy Chicken on the Highway 111 corridor brings its Louisiana-seasoned fried chicken to a Indio quick-service location. Crispy, well-seasoned pieces, tenders, and sandwiches at a price point that makes it one of the best value fried chicken stops in the area."},
+{"id": "RB-INDIO-00140", "name": "Dairy Queen", "address": "81500 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Ice Cream/Fast Food", "is_chain": true, "chain_name": "Dairy Queen", "phone": "(760) 347-7982", "lat": 33.722812, "lng": -116.214525, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Dairy Queen family. Dairy Queen on the Highway 111 corridor is Indio's go-to for Blizzards, Dilly Bars, and the iconic soft-serve cone. The full DQ menu of burgers and hot dogs handles the savory side, but let's be honest \u2014 everyone's really here for the dessert."},
+{"id": "RB-INDIO-00141", "name": "Wingstop", "address": "42600 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Wings", "is_chain": true, "chain_name": "Wingstop", "phone": "(760) 848-9464", "lat": 33.712753, "lng": -116.218512, "quality": 8, "zone": "Jackson St", "description": "Part of the Wingstop family. Wingstop on Jackson Street serves up its full lineup of wing flavors \u2014 from Mild to Louisiana Rub to Mango Habanero \u2014 alongside seasoned fries and tenders. The Jackson Street location covers the eastern Indio corridor with fast, flavorful wings ready for carryout or delivery."},
+{"id": "RB-INDIO-00142", "name": "Denny's", "address": "42400 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": true, "chain_name": "Denny's", "phone": "(760) 342-4114", "lat": 33.709843, "lng": -116.219495, "quality": 8, "zone": "Jackson St", "description": "Part of the Denny's family. Denny's on Jackson Street keeps the all-day breakfast flag flying for the eastern Indio neighborhoods. Pancake stacks, loaded omelettes, and the full Denny's menu served by the same welcoming staff around the clock \u2014 because breakfast at 11pm is sometimes the right call."},
+{"id": "RB-INDIO-00143", "name": "Taco Bell", "address": "81920 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": true, "chain_name": "Taco Bell", "phone": "(760) 342-4413", "lat": 33.720017, "lng": -116.212884, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Taco Bell family. Taco Bell on the Highway 111 corridor brings its eclectic fast-food Mexican menu to a busy stretch of Indio's commercial district. Beefy 5-Layer Burritos, Crunchwraps, and the late-night menu that has fueled generations of Californians long past normal dinner hours."},
+{"id": "RB-INDIO-00144", "name": "El Pollo Loco", "address": "42700 Jackson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican/Chicken", "is_chain": true, "chain_name": "El Pollo Loco", "phone": "(760) 342-6061", "lat": 33.710445, "lng": -116.217235, "quality": 8, "zone": "Jackson St", "description": "Part of the El Pollo Loco family. El Pollo Loco on Jackson Street brings its signature citrus-marinated fire-grilled chicken to eastern Indio. The chicken here is genuinely good \u2014 carved off the bone, served with fresh tortillas, black beans, and a salsa bar that elevates every single plate."},
+{"id": "RB-INDIO-00145", "name": "The Lunch Spot", "address": "82300 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Sandwiches", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.65705, "lng": -116.2145, "quality": 8, "zone": "Downtown Indio", "description": "The Lunch Spot in Downtown Indio is exactly what Indio's daytime dining scene needed \u2014 a focused, well-executed sandwich and lunch destination in the heart of downtown. Fresh-made sandwiches, daily specials, and a menu built for the working lunch crowd that keeps downtown Indio fed between 11 and 2."},
+{"id": "RB-INDIO-00146", "name": "Disco Rabbit", "address": "82879 Miles Ave", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Sandwiches", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718181, "lng": -116.217385, "quality": 8, "zone": "Downtown Indio", "description": "Disco Rabbit in Downtown Indio brings personality and creative flair to the sandwich game with a menu of inventive builds that go well beyond the standard sub. A downtown lunch destination with quirky charm, quality ingredients, and the kind of creative energy that makes Indio's food scene more interesting."},
+{"id": "RB-INDIO-00147", "name": "Jersey Mike's Subs", "address": "44100 Jefferson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Sandwiches", "is_chain": true, "chain_name": "Jersey Mike's", "phone": "(760) 848-2640", "lat": 33.72185, "lng": -116.213, "quality": 8, "zone": "Jefferson St", "description": "Part of the Jersey Mike's family. Jersey Mike's on Jefferson Street brings the authentic East Coast sub experience to Indio's Jefferson corridor. Fresh-sliced meats at the counter, real bread baked in-house daily, and the Mike's Way seasoning that makes their subs consistently better than the competition."},
+{"id": "RB-INDIO-00148", "name": "Subway", "address": "82162 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Sandwiches", "is_chain": true, "chain_name": "Subway", "phone": "(760) 775-1225", "lat": 33.72057, "lng": -116.213949, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Subway family. Subway on the Highway 111 corridor builds your sub to order with fresh vegetables and your choice from a broad protein menu. A quick, customizable option on one of Indio's busiest stretches when you need a reasonably healthy lunch at a fast-food pace."},
+{"id": "RB-INDIO-00149", "name": "Subway", "address": "42250 Jackson St Ste 105", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Sandwiches", "is_chain": true, "chain_name": "Subway", "phone": "(760) 775-1492", "lat": 33.710911, "lng": -116.222281, "quality": 8, "zone": "Jackson St", "description": "Part of the Subway family. The Jackson Street Subway serves eastern Indio neighborhoods with the full Subway menu \u2014 made-to-order footlongs, salads, and wrap options assembled fresh at the counter. A reliable fast-food sub stop in a well-located corridor serving a dense residential community."},
+{"id": "RB-INDIO-00150", "name": "Subway", "address": "44100 Jefferson St Ste C303", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Sandwiches", "is_chain": true, "chain_name": "Subway", "phone": "(760) 342-1188", "lat": 33.72185, "lng": -116.213, "quality": 8, "zone": "Jefferson St", "description": "Part of the Subway family. Subway on Jefferson Street covers Indio's Jefferson corridor with fresh-made subs, salads, and wraps built to your specifications. Convenient for the residential and business communities along Jefferson, with the full Subway menu available for dine-in, carryout, and delivery."},
+{"id": "RB-INDIO-00151", "name": "Subway", "address": "43430 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Sandwiches", "is_chain": true, "chain_name": "Subway", "phone": "(760) 775-0140", "lat": 33.736045, "lng": -116.233652, "quality": 8, "zone": "Monroe St", "description": "Part of the Subway family. The Monroe Street Subway brings Subway's made-to-order sub experience to the residential Monroe corridor. Footlongs, six-inch subs, and salad bowls built fresh from a broad selection of meats, vegetables, and house-made sauces for a quick, customizable meal any time of day."},
+{"id": "RB-INDIO-00152", "name": "Jelly Donut", "address": "82184 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Donuts/Bakery", "is_chain": false, "chain_name": "", "phone": "(760) 342-5040", "lat": 33.722342, "lng": -116.216523, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Jelly Donut on the Highway 111 corridor is an independently owned donut shop baking fresh rings, filled donuts, and specialty pastries every morning before sunrise. The kind of local donut spot that regulars stop at on their way to work because the glazed are simply better here than anywhere else."},
+{"id": "RB-INDIO-00153", "name": "Winchell's Donut House", "address": "45995 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Donuts", "is_chain": true, "chain_name": "Winchell's", "phone": "(760) 342-3287", "lat": 33.715567, "lng": -116.216284, "quality": 8, "zone": "Monroe St", "description": "Part of the Winchell's Donut House family. Winchell's on Monroe Street is a California donut institution serving fresh-made donuts around the clock. From classic glazed and chocolate cake to apple fritters and bear claws, Winchell's has been the reliable 24-hour donut destination for Californians since 1948."},
+{"id": "RB-INDIO-00154", "name": "Casillas Bakery", "address": "45228 Oasis St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Bakery/Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-8341", "lat": 33.714815, "lng": -116.216498, "quality": 8, "zone": "Old Town Indio", "description": "Casillas Bakery in Old Town Indio is a community treasure baking authentic Mexican pastries, cakes, and breads from traditional recipes. Pan dulce, quincea\u00f1era cakes, and handmade tamales during the holidays keep this family-owned Old Town bakery at the heart of Indio's Mexican culinary heritage."},
+{"id": "RB-INDIO-00155", "name": "KFC", "address": "81769 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chicken", "is_chain": true, "chain_name": "KFC", "phone": "(760) 347-7019", "lat": 33.720137, "lng": -116.212392, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the KFC family. KFC on the Highway 111 corridor serves the Colonel's famous Original Recipe and Extra Crispy chicken to Indio's main commercial strip. Buckets for the family, chicken sandwiches, Famous Bowls, and the biscuits that remain one of fast food's most underrated side items."},
+{"id": "RB-INDIO-00156", "name": "Little Caesars Pizza", "address": "82360 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Little Caesars", "phone": "(760) 342-8020", "lat": 33.718226, "lng": -116.213703, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Little Caesars Pizza family. Little Caesars on the Highway 111 corridor offers Hot-N-Ready pizzas at prices that have made the chain a family pizza night staple. The $5 pepperoni and cheese pies available without a wait remain one of fast food's most impressive value propositions."},
+{"id": "RB-INDIO-00157", "name": "Burger King", "address": "81779 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Burger King", "phone": "(760) 342-2811", "lat": 33.718432, "lng": -116.215625, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Burger King family. Burger King on the Highway 111 corridor brings its flame-grilled Whopper to a second Indio location along the main commercial strip. The signature char-grilling method, customizable burger menu, and the value offerings keep the drive-through busy at all hours."},
+{"id": "RB-INDIO-00158", "name": "Domino's Pizza", "address": "81942 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Domino's", "phone": "(760) 342-0028", "lat": 33.72103, "lng": -116.2162, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Domino's Pizza family. Domino's on the Highway 111 corridor delivers throughout central Indio with its app-tracked pizza service and an extensive menu of hand-tossed, thin crust, and specialty pies. The online customization system makes ordering easy, and the Tracker makes waiting less painful."},
+{"id": "RB-INDIO-00159", "name": "Domino's Pizza", "address": "82900 Ave 42 Ste F101", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Pizza", "is_chain": true, "chain_name": "Domino's", "phone": "(760) 972-4766", "lat": 33.7125, "lng": -116.22, "quality": 8, "zone": "Ave 42", "description": "Part of the Domino's Pizza family. The Avenue 42 Domino's serves Indio's eastern residential neighborhoods with delivery and carryout pizza built to order. Specialty pies, pasta, sandwiches, and the beloved Parmesan Bread Bites make it a complete fast-food destination beyond just the pizza."},
+{"id": "RB-INDIO-00160", "name": "Sonic Drive-In", "address": "42350 Jefferson St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Sonic", "phone": "(760) 775-1019", "lat": 33.711897, "lng": -116.211489, "quality": 8, "zone": "Jefferson St", "description": "Part of the Sonic Drive-In family. Sonic on Jefferson Street brings the classic American drive-in experience to Indio's Jefferson corridor with carhop service, slushies, tots, and the full Sonic menu. The happy hour half-price drink deals between 2 and 4pm remain one of fast food's best daily rituals."},
+{"id": "RB-INDIO-00161", "name": "El Pollo Loco", "address": "81901 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican/Chicken", "is_chain": true, "chain_name": "El Pollo Loco", "phone": "(760) 342-6061", "lat": 33.717435, "lng": -116.21525, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the El Pollo Loco family. El Pollo Loco on the Highway 111 corridor keeps the fire-grilled chicken tradition rolling along Indio's main strip. Fresh salsas, handmade guacamole, and citrus-marinated birds carved and served with warm tortillas \u2014 a fast-casual Mexican concept that genuinely delivers on quality."},
+{"id": "RB-INDIO-00162", "name": "Carl's Jr", "address": "81770 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Carl's Jr", "phone": "(760) 347-5540", "lat": 33.722991, "lng": -116.212023, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Part of the Carl's Jr family. Carl's Jr on the Highway 111 corridor serves thick, charbroiled burgers and hand-breaded chicken to one of Indio's busiest commercial stretches. The Famous Star remains a highway staple, and the all-day breakfast menu handles the morning crowd with the same serious approach."},
+{"id": "RB-INDIO-00163", "name": "Allende Restaurante", "address": "82915 Ave 44", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 342-0194", "lat": 33.703, "lng": -116.22, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Allende Restaurante on the Highway 111 corridor is an authentic Mexican restaurant serving traditional recipes with regional depth and genuine care. A full menu spanning from mole-sauced entrees to coastal seafood dishes shows a kitchen operating well beyond the typical Indio Mexican dining expectation."},
+{"id": "RB-INDIO-00164", "name": "Allende Restaurante", "address": "46900 Monroe St Ste 402", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-9903", "lat": 33.72265, "lng": -116.2355, "quality": 8, "zone": "Monroe St", "description": "Allende Restaurante on Monroe Street brings traditional Mexican cooking to the residential Monroe corridor with the same regional recipes and carefully sourced ingredients as the original location. A neighborhood Mexican restaurant that rewards loyal regulars with consistent quality and genuinely prepared food."},
+{"id": "RB-INDIO-00165", "name": "California Meat Market & Taqueria", "address": "45941 Monroe St", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican/Tacos", "is_chain": false, "chain_name": "", "phone": "(760) 342-4788", "lat": 33.71244, "lng": -116.218721, "quality": 8, "zone": "Monroe St", "description": "California Meat Market & Taqueria on Monroe Street is Indio's taqueria and carniceria combination \u2014 a butcher shop and taco stand under one roof. Street-style tacos made from freshly cut meats served alongside prime cuts to take home. The carne asada taco here is among the best in the valley."},
+{"id": "RB-INDIO-00166", "name": "El Mexicali Cafe II", "address": "43430 Monroe St Ste A", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 342-2333", "lat": 33.736045, "lng": -116.233652, "quality": 8, "zone": "Monroe St", "description": "El Mexicali Cafe II on Monroe Street brings the beloved family recipes from Indio's most storied Mexican restaurant to the Monroe corridor. Authentic flavors, generous portions, and the kind of neighborhood restaurant consistency that has made the El Mexicali name synonymous with quality Mexican dining in Indio."},
+{"id": "RB-INDIO-00167", "name": "Dogos & Burgers Inc", "address": "82360 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican/Hot Dogs", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.718591, "lng": -116.2124, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Dogos & Burgers Inc on the Highway 111 corridor is Indio's dedicated Sonoran hot dog destination \u2014 bacon-wrapped franks topped with pinto beans, tomatoes, onions, jalape\u00f1o sauce, and mustard in a bolillo roll. A desert tradition done right, alongside a burger menu that earns equal attention."},
+{"id": "RB-INDIO-00168", "name": "Pueblo Viejo Grill", "address": "82920 Indio Blvd", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(760) 347-7700", "lat": 33.66112, "lng": -116.22, "quality": 8, "zone": "Indio Blvd", "description": "Pueblo Viejo Grill on Indio Boulevard is the second location of this popular local Mexican kitchen, bringing the same grilled meats, handmade salsas, and lively atmosphere to a new part of Indio. Margaritas, fajitas, and a full Mexican menu that keeps the dining room moving every night."},
+{"id": "RB-INDIO-00169", "name": "Wok Around", "address": "82100 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.722285, "lng": -116.212724, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Wok Around on the Highway 111 corridor serves a broad Chinese-American menu with the kind of quick, reliable takeout operation that the lunch and dinner crowd depends on. Generous combination plates, fried rice, and classic wok preparations at honest prices make it a dependable neighborhood standby."},
+{"id": "RB-INDIO-00170", "name": "Mulan Chinese Restaurant", "address": "82219 Hwy 111", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.719217, "lng": -116.217054, "quality": 8, "zone": "Hwy 111 Corridor", "description": "Mulan Chinese Restaurant on the Highway 111 corridor extends the trusted Mulan name to a second Indio location, serving the same extensive Chinese menu of Cantonese and American-Chinese favorites. A reliable option for Chinese food along one of the valley's most-traveled commercial stretches."},
+{"id": "RB-INDIO-00171", "name": "Maxcy's Grill", "address": "82900 Ave 42", "city": "Indio", "state": "CA", "zip": "92201", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.714502, "lng": -116.220779, "quality": 8, "zone": "Ave 42", "description": "Maxcy's Grill on Avenue 42 is a neighborhood American grill anchoring the residential eastern Indio corridor with reliable cooking and a welcoming local atmosphere. A menu of burgers, steaks, and American comfort food served in a no-fuss setting that earns the loyalty of its Avenue 42 regulars."}
+];
+
+// ===== HELPERS =====
+
+// FIX 13: XSS-safe HTML escaping
+function esc(s) {
+  return String(s)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#39;");
+}
+
+// ===== STATE =====
+let currentCuisine = "All";
+let currentZone    = "All";
+let currentSort    = "zone";
+let searchTerm     = "";
+let visibleCount   = 30;
+const PAGE_SIZE    = 30;
+
+// ===== ZONE GROUPS =====
+const ZONE_MAP = {
+  hwy111:     ["Highway 111","Hwy 111 Corridor"],
+  oldtown:    ["Old Town","Old Town Indio"],
+  downtown:   ["Downtown Indio","Downtown Miles Ave"],
+  northindio: ["North Indio"],
+  jackson:    ["Jackson St","Jackson Corridor"],
+  monroe:     ["Monroe St","Monroe Corridor"],
+  jefferson:  ["Jefferson St"],
+  fantasy:    ["Fantasy Springs"],
+  southindio: ["South Indio"],
+  other:      ["Terra Lago","Ave 42","Golf Center","East Indio","Big Rock",
+               "La Quinta Border","Indian Springs","Indio Blvd"]
+};
+const ZONE_KEYS = ["all","hwy111","northindio","oldtown","downtown","jackson","monroe","southindio","jefferson","fantasy","other"];
+
+function inZone(zone, key) {
+  if (key === "All") return true;
+  return (ZONE_MAP[key] || []).includes(zone);
+}
+
+// ===== CUISINE EMOJI =====
+// Cuisine → tile color
+const CUISINE_COLORS = {
+  "Mexican":      "#7C3AED",
+  "Mexican/Tacos":"#7C3AED",
+  "Italian":      "#15803D",
+  "American":     "#1D4ED8",
+  "Chinese":      "#B91C1C",
+  "Pizza":        "#DC2626",
+  "Coffee":       "#92400E",
+  "Bar":          "#334155",
+  "Fast Food":    "#EA580C",
+  "Chicken":      "#DB2777",
+  "Bakery":       "#2563EB",
+  "Bakery/Deli":  "#2563EB",
+  "Bakery/Mexican":"#2563EB",
+  "Sandwiches":   "#16A34A",
+  "Sandwich":     "#16A34A",
+  "Asian":        "#0D9488",
+  "Korean":       "#6D28D9",
+  "Filipino":     "#0891B2",
+  "French":       "#4338CA",
+  "BBQ":          "#C2410C",
+  "Brewery":      "#B45309",
+  "Juice":        "#16A34A",
+  "Boba Tea":     "#7C3AED",
+  "Boba":         "#7C3AED",
+  "Ice Cream":    "#BE185D",
+  "Donuts":       "#EC4899",
+  "Wings":        "#B91C1C",
+  "Steakhouse":   "#991B1B",
+  "Deli":         "#16A34A",
+  "Seafood":      "#0369A1",
+  "Indian":       "#D97706",
+  "Thai":         "#0D9488",
+  "Vietnamese":   "#0891B2",
+  "Mediterranean":"#0369A1",
+  "Tacos":        "#7C3AED",
+};
+function getCuisineColor(cuisine) {
+  if (CUISINE_COLORS[cuisine]) return CUISINE_COLORS[cuisine];
+  const base = cuisine.split("/")[0].trim();
+  return CUISINE_COLORS[base] || "#475569";
+}
+function getCuisineAbbr(cuisine) {
+  const base = cuisine.split("/")[0].trim();
+  return base.substring(0, 2).toUpperCase();
+}
+
+// ===== FILTER LOGIC =====
+function getFiltered() {
+  let items = [...DATA];
+  if (currentCuisine !== "All")
+    items = items.filter(r => r.cuisine.toLowerCase().includes(currentCuisine.toLowerCase()));
+  if (currentZone !== "All")
+    items = items.filter(r => inZone(r.zone, currentZone));
+  if (searchTerm)
+    items = items.filter(r =>
+      r.name.toLowerCase().includes(searchTerm) ||
+      r.cuisine.toLowerCase().includes(searchTerm) ||
+      r.address.toLowerCase().includes(searchTerm) ||
+      r.zone.toLowerCase().includes(searchTerm) ||
+      (r.description && r.description.toLowerCase().includes(searchTerm)) ||
+      (r.chain_name && r.chain_name.toLowerCase().includes(searchTerm))
+    );
+  if      (currentSort === "name")      items.sort((a,b)=>a.name.localeCompare(b.name));
+  else if (currentSort === "name-desc") items.sort((a,b)=>b.name.localeCompare(a.name));
+  else if (currentSort === "cuisine")   items.sort((a,b)=>a.cuisine.localeCompare(b.cuisine)||a.name.localeCompare(b.name));
+  else if (currentSort === "chain")     items.sort((a,b)=>(b.is_chain?1:0)-(a.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (currentSort === "local")     items.sort((a,b)=>(a.is_chain?1:0)-(b.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (currentSort==="distance" && nearMeActive) items.sort((a,b)=>haversine(userLat,userLng,a.lat,a.lng)-haversine(userLat,userLng,b.lat,b.lng));
+  else                                  items.sort((a,b)=>a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name));
+  return items;
+}
+
+// ===== RENDER =====
+function renderListings() {
+  const items  = getFiltered();
+  const grid   = document.getElementById("listingGrid");
+  const lmWrap = document.getElementById("loadMoreWrap");
+
+  // FIX 4: update total count from DATA.length
+  document.getElementById("totalCount").textContent = DATA.length;
+
+  // FIX 9: update active filter strip
+  updateFilterBar();
+
+  // FIX 5: update zone sidebar counts (dim when a second filter narrows them)
+  updateZoneCounts();
+
+  // No results state
+  if (items.length === 0) {
+    grid.innerHTML = '<div class="no-results"><div class="nr-icon">🔍</div><h3>No restaurants found</h3><p>Try a different cuisine, zone, or search term.</p><button type="button" onclick="clearAll()">Clear All Filters</button></div>';
+    document.getElementById("resultsCount").textContent = "0";
+    lmWrap.style.display = "none";
+    return;
+  }
+
+  const toShow = items.slice(0, visibleCount);
+  let h = "";
+
+  toShow.forEach((r, i) => {
+    if (i > 0 && i % 12 === 0) {
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><div class="ad-label"><div class="ad-size">In-Feed Banner</div><div class="ad-desc">Placement #' + (i/12) + '</div><div class="ad-price">$75/mo</div></div></div></div>';
+    }
+
+    // FIX 8: chain sub-label only when chain_name differs from name
+    const diffChain = r.is_chain && r.chain_name &&
+                      r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase();
+    const chainSub  = diffChain
+      ? '<div class="card-chain">' + esc(r.chain_name) + '</div>'
+      : "";
+    const tag = r.is_chain
+      ? '<span class="card-tag tag-chain">Chain</span>'
+      : '<span class="card-tag tag-local">Local</span>';
+
+    // FIX 4 (phone): tap-to-call
+    const phone = r.phone
+      ? '<span>📞 <a class="tel-link" href="tel:' + r.phone.replace(/\D/g,"") + '">' + esc(r.phone) + '</a></span>'
+      : "";
+
+    const edRev = (r.stars && r.review)
+      ? '<div class="editor-review"><div class="editor-byline">Editor\'s Review</div>' +
+        '<div class="editor-stars">' + "★".repeat(r.stars) + "☆".repeat(5-r.stars) + '</div>' +
+        '<div class="editor-review-text">' + esc(r.review) + '</div></div>'
+      : "";
+
+    const mapUrl = "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(r.name + " " + r.address + " Indio CA");
+
+    // Near Me distance badge
+    const distBadge = (nearMeActive && r.lat && r.lng)
+      ? ' <span class="dist-badge">' + haversine(userLat, userLng, r.lat, r.lng).toFixed(1) + ' mi</span>'
+      : "";
+
+    // Cuisine abbreviation tile
+    const tileColor = getCuisineColor(r.cuisine);
+    const tileAbbr  = getCuisineAbbr(r.cuisine);
+    const tile = '<div class="card-ico" style="background:' + tileColor + '">' + tileAbbr + '</div>';
+
+    // Full address: street, city, state zip
+    const fullAddr = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
+
+    // Card is a div+onclick so phone <a> tags are never nested inside an <a>
+    const safeMapUrl = mapUrl.replace(/'/g, "%27");
+    h += '<div class="listing-card" role="link" tabindex="0"' +
+      ' onclick="window.open(\'' + safeMapUrl + '\',\'_blank\',\'noopener\')"' +
+      ' onkeydown="if(event.key===\'Enter\')window.open(\'' + safeMapUrl + '\',\'_blank\',\'noopener\')">' +
+      tile +
+      '<div class="card-body">' +
+        '<h3>' + esc(r.name) + distBadge + '</h3>' +
+        chainSub +
+        (r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : "") +
+        edRev +
+        '<div class="meta">' +
+          '<span>📍 ' + fullAddr + '</span>' +
+          '<span>🍴 ' + esc(r.cuisine) + '</span>' +
+          phone +
+          '<span>🗺️ ' + esc(r.zone) + '</span>' +
+        '</div>' +
+      '</div>' +
+      tag +
+    '</div>';
+  });
+
+  grid.innerHTML = h;
+  document.getElementById("resultsCount").textContent = items.length;
+
+  const remaining = items.length - visibleCount;
+  if (remaining > 0) {
+    lmWrap.style.display = "block";
+    lmWrap.querySelector(".load-more-btn").textContent =
+      "Show " + Math.min(PAGE_SIZE, remaining) + " More  (" + remaining + " remaining)";
+  } else {
+    lmWrap.style.display = "none";
+  }
+}
+
+// FIX 9: Active filter indicator strip
+function updateFilterBar() {
+  const bar = document.getElementById("filterBar");
+  const pills = [];
+
+  if (nearMeActive) {
+    pills.push(
+      '<span class="filter-pill">📍 Near Me' +
+      ' <span class="fp-x" onclick="toggleNearMe()" title="Remove">✕</span></span>'
+    );
+  }
+  if (currentCuisine !== "All") {
+    pills.push(
+      '<span class="filter-pill">🍴 ' + esc(currentCuisine) +
+      ' <span class="fp-x" onclick="removeCuisineFilter()" title="Remove">✕</span></span>'
+    );
+  }
+  if (currentZone !== "All") {
+    const zoneLabel = document.querySelector('#zoneList li.z-active span:first-child');
+    const zLabel = zoneLabel ? zoneLabel.textContent : currentZone;
+    pills.push(
+      '<span class="filter-pill">🗺️ ' + esc(zLabel) +
+      ' <span class="fp-x" onclick="removeZoneFilter()" title="Remove">✕</span></span>'
+    );
+  }
+  if (searchTerm) {
+    pills.push(
+      '<span class="filter-pill">🔍 &ldquo;' + esc(searchTerm) + '&rdquo; ' +
+      ' <span class="fp-x" onclick="removeSearchFilter()" title="Remove">✕</span></span>'
+    );
+  }
+
+  if (pills.length > 0) {
+    bar.innerHTML = pills.join("") +
+      '<span class="filter-bar-clear" onclick="clearAll()">Clear all</span>';
+    bar.classList.add("visible");
+  } else {
+    bar.innerHTML = "";
+    bar.classList.remove("visible");
+  }
+}
+
+// FIX 5: Zone counts dim when another filter is active (counts no longer accurate)
+function updateZoneCounts() {
+  const hasOtherFilter = currentCuisine !== "All" || searchTerm !== "";
+  document.querySelectorAll("#zoneList li").forEach(li => {
+    if (hasOtherFilter) {
+      li.classList.add("z-counts-stale");
+    } else {
+      li.classList.remove("z-counts-stale");
+    }
+  });
+}
+
+function loadMore() {
+  visibleCount += PAGE_SIZE;
+  renderListings();
+}
+
+// ===== FILTER ACTIONS =====
+function filterByCuisine(el, cuisine) {
+  currentCuisine = cuisine;
+  visibleCount   = PAGE_SIZE;
+  document.querySelectorAll(".cuisine-chip").forEach(c => c.classList.remove("active"));
+  el.classList.add("active");
+  el.scrollIntoView({behavior:"smooth", block:"nearest", inline:"center"});
+  renderListings();
+}
+
+function filterByZone(key, el) {
+  currentZone  = key;
+  visibleCount = PAGE_SIZE;
+  // FIX 11: update aria-selected
+  document.querySelectorAll("#zoneList li").forEach(li => {
+    li.classList.remove("z-active");
+    li.setAttribute("aria-selected","false");
+  });
+  el.classList.add("z-active");
+  el.setAttribute("aria-selected","true");
+  renderListings();
+}
+
+function syncSearch(val) {
+  searchTerm   = val.toLowerCase().trim();
+  visibleCount = PAGE_SIZE;
+  document.getElementById("headerSearch").value = val;
+  document.getElementById("mobileSearch").value = val;
+  renderListings();
+}
+
+function doSort() {
+  currentSort  = document.getElementById("sortSelect").value;
+  visibleCount = PAGE_SIZE;
+  renderListings();
+}
+
+// Individual filter removers (used by filter pills)
+function removeCuisineFilter() {
+  currentCuisine = "All";
+  visibleCount   = PAGE_SIZE;
+  document.querySelectorAll(".cuisine-chip").forEach(c => c.classList.remove("active"));
+  document.querySelector(".cuisine-chip").classList.add("active");
+  renderListings();
+}
+function removeZoneFilter() {
+  currentZone  = "All";
+  visibleCount = PAGE_SIZE;
+  document.querySelectorAll("#zoneList li").forEach(li => {
+    li.classList.remove("z-active");
+    li.setAttribute("aria-selected","false");
+  });
+  const first = document.querySelector("#zoneList li");
+  first.classList.add("z-active");
+  first.setAttribute("aria-selected","true");
+  renderListings();
+}
+function removeSearchFilter() {
+  searchTerm   = "";
+  visibleCount = PAGE_SIZE;
+  document.getElementById("headerSearch").value = "";
+  document.getElementById("mobileSearch").value  = "";
+  renderListings();
+}
+
+// FIX 1: clearAll() — correct order: remove first, then add
+function clearAll() {
+  // Reset Near Me state if active
+  if (nearMeActive) {
+    nearMeActive = false;
+    userLat = userLng = null;
+    document.getElementById("nearMeBtn").classList.remove("active", "loading");
+    document.getElementById("nearMeError").style.display = "none";
+    document.getElementById("sortSelect").disabled = false;
+  }
+  currentCuisine = "All";
+  currentZone    = "All";
+  currentSort    = "zone";
+  searchTerm     = "";
+  visibleCount   = PAGE_SIZE;
+  document.getElementById("headerSearch").value = "";
+  document.getElementById("mobileSearch").value  = "";
+  document.getElementById("sortSelect").value = "zone";
+  // cuisine chips: remove all, then activate first
+  document.querySelectorAll(".cuisine-chip").forEach(c => c.classList.remove("active"));
+  document.querySelector(".cuisine-chip").classList.add("active");
+  // zone list: remove all, then activate first
+  document.querySelectorAll("#zoneList li").forEach(li => {
+    li.classList.remove("z-active");
+    li.setAttribute("aria-selected", "false");
+  });
+  const firstZone = document.querySelector("#zoneList li");
+  firstZone.classList.add("z-active");
+  firstZone.setAttribute("aria-selected", "true");
+  renderListings();
+}
+
+// ===== MOBILE SEARCH =====
+function toggleMobileSearch() {
+  const bar = document.getElementById("mobileSearchBar");
+  const open = bar.classList.toggle("open");
+  if (open) document.getElementById("mobileSearch").focus();
+}
+function closeMobileSearch() {
+  document.getElementById("mobileSearchBar").classList.remove("open");
+}
+
+// ===== CUISINE SLIDER =====
+function slideCuisine(dir) {
+  document.getElementById("cuisineScroll").scrollBy({left: dir*200, behavior:"smooth"});
+}
+
+// FIX 10: Back to top visibility
+window.addEventListener("scroll", function() {
+  const btn = document.getElementById("backToTop");
+  if (window.scrollY > 400) btn.classList.add("visible");
+  else btn.classList.remove("visible");
+}, {passive:true});
+
+
+// ===== NEAR ME (haversine against per-restaurant lat/lng) =====
+let nearMeActive   = false;
+let userLat        = null;
+let userLng        = null;
+
+function haversine(lat1, lng1, lat2, lng2) {
+  const R = 3958.8; // miles
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) *
+            Math.sin(dLng/2) * Math.sin(dLng/2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function toggleNearMe() {
+  if (nearMeActive) {
+    // Turn off
+    nearMeActive = false;
+    userLat = userLng = null;
+    document.getElementById("nearMeBtn").classList.remove("active","loading");
+    document.getElementById("nearMeError").style.display = "none";
+    // Restore sort selector
+    document.getElementById("sortSelect").disabled = false;
+    renderListings();
+    return;
+  }
+
+  if (!navigator.geolocation) {
+    showNearMeError("Your browser doesn't support location. Try Chrome or Safari.");
+    return;
+  }
+
+  const btn = document.getElementById("nearMeBtn");
+  btn.classList.add("loading");
+  document.getElementById("nearMeError").style.display = "none";
+
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      userLat = pos.coords.latitude;
+      userLng = pos.coords.longitude;
+      nearMeActive = true;
+      btn.classList.remove("loading");
+      btn.classList.add("active");
+      // Lock sort to distance while Near Me is on
+      document.getElementById("sortSelect").value    = "distance";
+      document.getElementById("sortSelect").disabled = true;
+      currentSort = "distance";
+      visibleCount = PAGE_SIZE;
+      renderListings();
+    },
+    function(err) {
+      btn.classList.remove("loading");
+      const msgs = {
+        1: "Location access denied. Enable it in your browser settings.",
+        2: "Couldn't determine your location. Try again.",
+        3: "Location request timed out. Try again."
+      };
+      showNearMeError(msgs[err.code] || "Location unavailable.");
+    },
+    { timeout: 8000, maximumAge: 60000 }
+  );
+}
+
+function showNearMeError(msg) {
+  const el = document.getElementById("nearMeError");
+  el.innerHTML = '<div class="near-me-error">⚠️ ' + esc(msg) + '</div>';
+  el.style.display = "block";
+}
+
+// ===== INIT =====
+document.addEventListener("DOMContentLoaded", function() {
+  // FIX 4: set total count from DATA.length on load

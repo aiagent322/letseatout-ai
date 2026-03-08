@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Peoria — 40 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="Your complete free guide to every restaurant, bar, and chain in Peoria, AZ. 40 listings. No reviews, no pay-to-play — just where to eat.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Peoria — 40 Restaurants, Bars &amp; Chains">
+<meta property="og:description" content="Every restaurant, bar, and chain in Peoria, AZ. Free directory. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai/peoria">
+<meta property="og:image" content="https://letseatout.ai/og-peoria.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai/peoria">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A;--red-dark:#9E1830;--red-light:#F9E8EC;
+  --gold:#C8973E;--gold-light:#F7F0E3;
+  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#555;--text-light:#888;
+  --cream:#FFFBF5;--white:#FFFFFF;
+  --border:#E8E0D8;--border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px;--r-lg:12px;--hdr-h:61px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;}
+.skip-nav{position:absolute;left:-9999px;}
+.skip-nav:focus{position:fixed;top:0;left:0;padding:10px 18px;background:var(--red);color:white;font-size:14px;font-weight:700;z-index:9999;}
+
+/* TOP BAR */
+.top-bar{background:var(--dark);color:white;padding:6px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;gap:8px;}
+.top-bar-text{display:none;}
+.market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;overflow-x:auto;scrollbar-width:none;}
+.market-pills::-webkit-scrollbar{display:none;}
+.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.market-pill.active{background:var(--red);color:white;}
+.market-pill:not(.active):hover{color:white;}
+
+/* HEADER */
+header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-mark{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:21px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.search-icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.mobile-search-bar{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--red);padding:10px 16px;box-shadow:var(--shadow-m);z-index:99;}
+.mobile-search-bar.open{display:flex;gap:8px;}
+.mobile-search-bar input{flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;}
+.mobile-search-bar input:focus{border-color:var(--red);}
+.mobile-search-bar button{padding:10px 18px;background:var(--red);color:white;border:none;border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+.header-search{display:none;}
+.submit-btn{padding:8px 14px;background:var(--dark);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.submit-btn:hover{background:var(--red);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#001a18 50%,#002a27 100%);color:white;padding:28px 0 22px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.15;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;}
+.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;color:white;letter-spacing:.3px;}
+.hero-stats{display:flex;gap:20px;justify-content:center;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.coming-soon-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;justify-content:center;margin-top:4px;}
+.coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
+.coming-soon-badge{background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.hero-banner-wrap{margin-top:16px;width:100%;}
+
+/* AD ZONES */
+.ad-zone{background:linear-gradient(135deg,#f5ede3,#ebe3d8);border:2px dashed var(--gold);border-radius:var(--r);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ad-zone::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;}
+.ad-inline{width:100%;height:50px;}
+.ad-sidebar{display:none;}
+
+/* CUISINE NAV */
+.cuisine-nav{background:var(--white);padding:10px 0;border-bottom:1px solid var(--border);position:sticky;top:var(--hdr-h);z-index:90;}
+.cuisine-slider-wrap{display:flex;align-items:center;gap:6px;}
+.cuisine-scroll{display:flex;gap:6px;overflow-x:auto;padding:2px;scrollbar-width:none;scroll-behavior:smooth;flex:1;-webkit-overflow-scrolling:touch;}
+.cuisine-scroll::-webkit-scrollbar{display:none;}
+.cuisine-chip{padding:7px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;min-height:36px;}
+.cuisine-chip:active,.cuisine-chip.active{background:var(--red);color:white;border-color:var(--red);}
+.slider-arrow{display:none;}
+
+/* NEAR ME */
+.near-me-chip{padding:7px 14px;border-radius:20px;border:1.5px solid #1D6CE0;background:#1D6CE0;font-size:12px;font-weight:700;color:white;cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;min-height:36px;}
+.near-me-chip.active{background:#0D3D80;border-color:#0D3D80;}
+.near-me-chip.loading{opacity:.75;pointer-events:none;}
+.near-me-chip .nm-spinner{width:12px;height:12px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none;}
+.near-me-chip.loading .nm-spinner{display:block;}
+.near-me-chip.loading .nm-icon{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.dist-badge{font-size:10px;font-weight:700;color:var(--red);background:var(--red-light);padding:2px 7px;border-radius:10px;margin-left:4px;}
+.near-me-error{background:#fff3cd;border:1.5px solid #ffc107;border-radius:var(--r);padding:10px 14px;font-size:12px;color:#856404;margin-bottom:10px;}
+
+/* MAIN LAYOUT */
+.main-layout{display:flex;flex-direction:column;gap:20px;padding:16px 0 32px;}
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;}
+.results-count{font-size:12px;color:var(--text-light);font-weight:500;}
+.results-count strong{color:var(--text);font-weight:700;}
+.sort-sel{padding:6px 10px;border:1.5px solid var(--border);border-radius:var(--r);font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:var(--text-mid);background:var(--white);cursor:pointer;}
+.filter-bar{display:none;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 0 4px;}
+.filter-bar.visible{display:flex;}
+.filter-pill{display:inline-flex;align-items:center;gap:5px;background:var(--red-light);border:1.5px solid var(--red);color:var(--red);border-radius:16px;font-size:11px;font-weight:700;padding:4px 10px;}
+.filter-pill .fp-x{cursor:pointer;font-size:13px;line-height:1;margin-left:2px;}
+.filter-bar-clear{font-size:11px;font-weight:700;color:var(--text-light);cursor:pointer;text-decoration:underline;padding:4px 2px;}
+
+/* LISTING CARDS — now real <a> tags */
+.listing-grid{display:flex;flex-direction:column;gap:8px;}
+.listing-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  transition:border-color .2s;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;color:inherit;
+}
+.listing-card:hover,.listing-card:active{border-color:var(--red);background:var(--red-light);}
+.card-tag{display:none;}
+.card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}
+.card-body h3{font-size:14px;font-weight:700;margin-bottom:1px;color:var(--text);line-height:1.3;}
+.card-chain{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px;}
+.card-desc{font-size:12px;color:var(--text-mid);line-height:1.55;margin:5px 0 6px;}
+.card-body .meta{font-size:11px;color:var(--text-light);display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
+.card-body .meta span{display:flex;align-items:center;gap:3px;}
+.inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:44px 20px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);}
+.no-results .nr-icon{font-size:38px;margin-bottom:10px;}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px;}
+.no-results p{font-size:13px;color:var(--text-light);margin-bottom:16px;}
+.no-results button{padding:10px 22px;background:var(--red);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* LOAD MORE */
+.load-more-wrap{text-align:center;padding:12px 0 4px;}
+.load-more-btn{padding:12px 30px;background:var(--white);border:2px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text-mid);cursor:pointer;transition:all .2s;}
+.load-more-btn:hover{border-color:var(--red);color:var(--red);}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;}
+.sidebar-box h4{font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--red);}
+.zone-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.zone-list li{font-size:12px;color:var(--text-mid);padding:8px 10px;border-radius:var(--r);cursor:pointer;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent;outline:none;}
+.zone-list li:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.zone-list li:hover,.zone-list li:active{background:var(--red-light);color:var(--red);}
+.zone-list li.z-active{background:var(--red-light);color:var(--red);font-weight:700;}
+.zone-list li .ct{background:var(--cream);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;color:var(--text-light);min-width:26px;text-align:center;}
+.zone-list li.z-active .ct{background:var(--red);color:white;}
+.zone-list li.z-counts-stale .ct{opacity:.4;}
+.quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.quick-links li a{font-size:12px;color:var(--red);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px;}
+.quick-links li a:hover{color:var(--red-dark);}
+
+/* SUBMIT */
+.submit-section{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px 16px;margin:0 0 32px;text-align:center;}
+.submit-section h2{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px;}
+.submit-section .sub{color:var(--text-light);font-size:13px;margin-bottom:18px;line-height:1.5;}
+.submit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px;}
+.submit-card{background:var(--cream);border:2px dashed var(--border);border-radius:var(--r-lg);padding:18px 14px;text-align:center;}
+.submit-card .ico{font-size:28px;margin-bottom:6px;}
+.submit-card h3{font-size:13px;font-weight:700;margin-bottom:3px;}
+.submit-card p{font-size:11px;color:var(--text-light);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:24px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:18px;}
+footer .brand span{color:var(--red);}
+footer a{color:var(--gold);text-decoration:none;}
+footer .legal{line-height:1.6;}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--red);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(196,30,58,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(8px);}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--red-dark);}
+
+/* TABLET */
+@media(min-width:600px){
+  :root{--hdr-h:69px;}
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:space-between;}
+  .top-bar-text{display:block;}
+  .header-inner{padding:12px 0;}
+  .logo-mark{width:42px;height:42px;font-size:20px;}
+  .logo-text{font-size:24px;}
+  .search-icon-btn{display:none;}
+  .header-search{display:flex;align-items:center;background:var(--cream);border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .2s;}
+  .header-search:focus-within{border-color:var(--red);}
+  .header-search input{padding:8px 4px 8px 14px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;width:160px;outline:none;}
+  .header-search input::placeholder{color:var(--text-light);}
+  .header-search button{padding:7px 12px;border:none;background:var(--red);color:white;font-size:12px;cursor:pointer;border-radius:0 22px 22px 0;}
+  .hero{padding:36px 0 28px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-stat .num{font-size:34px;}
+  .ad-leaderboard{height:60px;}
+  .ad-inline{height:60px;}
+  .ad-sidebar{display:flex;width:100%;height:180px;}
+  .slider-arrow{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text-mid);flex-shrink:0;transition:all .2s;}
+  .slider-arrow:hover{border-color:var(--red);color:var(--red);}
+  .cuisine-nav{padding:12px 0;}
+  .main-layout{padding:20px 0 40px;gap:24px;}
+  .listing-card{grid-template-columns:48px 1fr auto;padding:16px 18px;gap:16px;}
+  .card-tag{display:block;padding:4px 11px;border-radius:16px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;color:white;}
+  .tag-chain{background:#1E293B;}
+  .tag-local{background:#C2410C;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-section{padding:28px 24px;margin:0 0 40px;}
+  .submit-grid{grid-template-columns:repeat(3,1fr);}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  footer .legal{text-align:right;max-width:400px;}
+}
+@media(min-width:960px){
+  :root{--hdr-h:75px;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .header-inner{padding:14px 0;}
+  .logo-mark{width:44px;height:44px;font-size:22px;}
+  .logo-text{font-size:26px;}
+  .header-search input{width:200px;}
+  .header-search button{padding:8px 14px;font-size:13px;}
+  .hero{padding:44px 0 36px;}
+  .hero h1{font-size:42px;}
+  .hero-sub{font-size:16px;max-width:580px;margin:0 auto;}
+  .hero-stats{gap:28px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:0 auto;}
+  .ad-inline{height:90px;max-width:728px;margin:0 auto;}
+  .ad-sidebar{height:250px;}
+  .cuisine-nav{padding:14px 0;}
+  .slider-arrow{width:32px;height:32px;font-size:14px;}
+  .main-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 0 48px;}
+  .sidebar{display:flex;flex-direction:column;position:sticky;top:calc(var(--hdr-h) + 58px);}
+  .listing-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-1px);}
+  .listing-card:active{transform:none;}
+  .zone-list li:hover{background:var(--red-light);color:var(--red);}
+  .submit-section{max-width:800px;margin:0 auto 48px;padding:36px;}
+  footer{padding:32px 0;}
+  .back-to-top{right:32px;bottom:32px;}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Peoria","description":"Free restaurant directory for Peoria, AZ. 40 listings.","url":"https://letseatout.ai/peoria","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+</script>
+</head>
+<body>
+
+<a class="skip-nav" href="#listingGrid">Skip to listings</a>
+
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at no cost</span>
+    <div class="market-pills">
+      <button type="button" class="market-pill" onclick="location.href='/indio'">Indio</button>
+      <button type="button" class="market-pill" onclick="location.href='/scottsdale'">Scottsdale</button>
+      <button type="button" class="market-pill" onclick="location.href='/sedona'">Sedona</button>
+      <button type="button" class="market-pill" onclick="location.href='/prescott'">Prescott</button>
+      <button type="button" class="market-pill" onclick="location.href='/cave-creek'">Cave Creek</button>
+      <button type="button" class="market-pill" onclick="location.href='/wickenburg'">Wickenburg</button>
+      <button type="button" class="market-pill active" onclick="location.href='/peoria'">Peoria</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Peoria, AZ</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button type="button" class="search-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">🔍</button>
+        <div class="header-search">
+          <input type="search" id="headerSearch" placeholder="Search restaurants…" oninput="syncSearch(this.value)" autocomplete="off">
+          <button type="button" onclick="syncSearch(document.getElementById('headerSearch').value)">Search</button>
+        </div>
+        <button type="button" class="submit-btn" onclick="document.getElementById('submitArea').scrollIntoView({behavior:'smooth'})">+ Add Your Business</button>
+      </div>
+    </div>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="search" id="mobileSearch" placeholder="Restaurant, cuisine, area…" oninput="syncSearch(this.value)" autocomplete="off">
+      <button type="button" onclick="closeMobileSearch()">Done</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Where to Eat in <em>Peoria</em></h1>
+        <p class="hero-sub">Your complete guide to every restaurant, sports bar, and chain in Peoria, AZ. From the Sports Complex to Lake Pleasant — every table, always free.</p>
+        <div class="hero-promise">✦ No reviews &nbsp;·&nbsp; No pay-to-play &nbsp;·&nbsp; No fake ratings &nbsp;·&nbsp; Always free</div>
+        <div class="coming-soon-row">
+          <div class="coming-soon-label">Also coming soon:</div>
+          <span class="coming-soon-badge">Glendale</span>
+          <span class="coming-soon-badge">Sun City</span>
+          <span class="coming-soon-badge">Surprise</span>
+          <span class="coming-soon-badge">El Mirage</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">40</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
+        <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Premium hero placement</div><div class="ad-price">$150/mo</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cuisine-nav" role="navigation" aria-label="Filter by cuisine">
+  <div class="container">
+    <div class="cuisine-slider-wrap">
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:-200,behavior:'smooth'})" aria-label="Scroll left">◀</button>
+      <div class="cuisine-scroll" id="cuisineScroll">
+        <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
+        <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'American')">🍔 American</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Mexican')">🌮 Mexican</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fast Food')">🍟 Fast Food</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Pizza')">🍕 Pizza</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bar')">🍺 Bars</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Coffee')">☕ Coffee</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Italian')">🍝 Italian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Asian')">🍜 Asian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Chinese')">🥡 Chinese</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Steakhouse')">🥩 Steakhouse</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sandwiches')">🥪 Sandwiches</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'BBQ')">🔥 BBQ</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Wings')">🫘 Wings</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Chicken')">🍗 Chicken</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bakery')">🧁 Bakery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Brewery')">🍻 Brewery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Ice Cream')">🍦 Ice Cream</button>
+      </div>
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="main-layout">
+    <div>
+      <div class="results-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
+        <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
+          <option value="distance" disabled style="display:none">📍 Near Me</option>
+          <option value="zone">By Area</option>
+          <option value="name">A–Z</option>
+          <option value="name-desc">Z–A</option>
+          <option value="cuisine">By Cuisine</option>
+          <option value="local">Locals First</option>
+          <option value="chain">Chains First</option>
+        </select>
+      </div>
+      <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
+      <div id="nearMeError"></div>
+      <div class="listing-grid" id="listingGrid"></div>
+      <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+        <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
+      </div>
+      <div class="inline-ad-wrap" style="margin-top:20px">
+        <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Bottom placement</div><div class="ad-price">$100/mo</div></div></div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Premium sidebar</div><div class="ad-price">$125/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Peoria</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('arrowhead',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('arrowhead',this)"><span>Arrowhead</span><span class="ct" id="zc-arrowhead">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('sports',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('sports',this)"><span>Sports Complex Area</span><span class="ct" id="zc-sports">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('pioneer',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('pioneer',this)"><span>Pioneer Rd Corridor</span><span class="ct" id="zc-pioneer">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('vistancia',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('vistancia',this)"><span>Vistancia</span><span class="ct" id="zc-vistancia">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('pleasant',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('pleasant',this)"><span>Lake Pleasant Pkwy</span><span class="ct" id="zc-pleasant">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Sidebar #2</div><div class="ad-price">$100/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="javascript:void(0)">→ Date Night Spots</a></li>
+          <li><a href="javascript:void(0)">→ Best Happy Hours</a></li>
+          <li><a href="javascript:void(0)">→ Family Friendly</a></li>
+          <li><a href="javascript:void(0)">→ Late Night Eats</a></li>
+          <li><a href="javascript:void(0)">→ Patio Dining</a></li>
+          <li><a href="javascript:void(0)">→ New Openings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="submitArea">
+  <div class="submit-section">
+    <h2>Get Listed — It's Free</h2>
+    <p class="sub">Every restaurant, bar, and chain in Peoria is listed at no cost. Send us your info any way that's easy for you.</p>
+    <div class="submit-grid">
+      <div class="submit-card"><div class="ico">🖼️</div><h3>Upload a Flyer</h3><p>PDF, JPG, or PNG of your menu or business card</p></div>
+      <div class="submit-card"><div class="ico">📱</div><h3>Snap a Photo</h3><p>Photo of your storefront, sign, or menu board</p></div>
+      <div class="submit-card"><div class="ico">📝</div><h3>Fill Out Form</h3><p>Name, address, cuisine, hours — takes 60 seconds</p></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-light)">We review submissions daily and add listings within 24–48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px">Peoria's complete dining guide · <a href="/">letseatout.ai</a></div>
+      <div style="margin-top:4px">Advertise: <a href="/cdn-cgi/l/email-protection#aac3c4ccc5eac6cfded9cfcbdec5dfde84cbc3"><span class="__cf_email__" data-cfemail="4821262e2708242d3c3b2d293c273d3c662921">[email&#160;protected]</span></a></div>
+    </div>
+    <div class="legal">
+      Every restaurant and bar in Peoria is listed free. We sell banner advertising only — no paid placement, no paid rankings.<br>
+      <span style="color:rgba(255,255,255,.3)">© 2026 LetsEatOut.ai — All rights reserved</span>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// DATA
+const DATA = [
+{"id": "RB-PHOEN-00001", "name": "Rice Paper", "address": "10810 N Tatum Blvd", "city": "Phoenix", "state": "AZ", "zip": "85028", "cuisine": "Vietnamese", "is_chain": false, "chain_name": "", "phone": "(480) 607-0622", "lat": 33.584243, "lng": -111.979613, "quality": 2, "zone": "Other Areas", "description": "Authentic Vietnamese with huge selection. Light bright restaurant with great pho."},
+{"id": "RB-PHOEN-00002", "name": "Nobuo at Teeter House", "address": "622 E Adams St", "city": "Phoenix", "state": "AZ", "zip": "85004", "cuisine": "Sushi", "is_chain": false, "chain_name": "", "phone": "(602) 254-0600", "lat": 33.449603, "lng": -112.065683, "quality": 2, "zone": "Other Areas", "description": "James Beard winner Nobuo Fukuda. Authentic Japanese kaiseki experience."},
+{"id": "RB-PHOEN-00003", "name": "Pure Sushi Scottsdale", "address": "10810 N Tatum Blvd", "city": "Phoenix", "state": "AZ", "zip": "85028", "cuisine": "Sushi", "is_chain": false, "chain_name": "", "phone": "(480) 595-8010", "lat": 33.584243, "lng": -111.979613, "quality": 2, "zone": "Other Areas", "description": "Top-quality fish globally sourced. Premium sushi experience."},
+{"id": "RB-PHOEN-00004", "name": "Kembara", "address": "5350 E Marriott Dr", "city": "Phoenix", "state": "AZ", "zip": "85054", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(480) 293-3726", "lat": 33.683755, "lng": -111.966022, "quality": 2, "zone": "Other Areas", "description": "JW Marriott Desert Ridge. Chef Angelo Sosa's Southeast Asian cuisine."},
+{"id": "RB-PHOEN-00005", "name": "Steak 44", "address": "5101 N 44th St", "city": "Phoenix", "state": "AZ", "zip": "85018", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(602) 271-4400", "lat": 33.511802, "lng": -111.986556, "quality": 2, "zone": "Other Areas", "description": "Premier Phoenix steakhouse with Scottsdale following. Sophisticated atmosphere and prime cuts."},
+{"id": "RB-PHOEN-00006", "name": "Le Âme Parisian Steakhouse", "address": "2301 E Camelback Rd", "city": "Phoenix", "state": "AZ", "zip": "85016", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(602) 864-4800", "lat": 33.509205, "lng": -112.033043, "quality": 2, "zone": "Other Areas", "description": "Global Ambassador hotel. Upscale French steakhouse experience."},
+{"id": "RB-PHOEN-00007", "name": "The Henry", "address": "4455 E Camelback Rd", "city": "Phoenix", "state": "AZ", "zip": "85018", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(602) 429-8020", "lat": 33.508491, "lng": -111.984767, "quality": 2, "zone": "Other Areas", "description": "All-day restaurant with vegan gluten-free organic options. Bright stylish atmosphere."},
+{"id": "RB-PHOEN-00008", "name": "Little Miss BBQ", "address": "4301 E Indian School Rd", "city": "Phoenix", "state": "AZ", "zip": "85018", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(602) 437-1616", "lat": 33.494855, "lng": -111.988811, "quality": 2, "zone": "Other Areas", "description": "Phoenix institution with Scottsdale following. Texas-style barbecue worth the wait."},
+{"id": "RB-PHOEN-00009", "name": "Luci's at the Orchard", "address": "7100 N 12th St", "city": "Phoenix", "state": "AZ", "zip": "85020", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(602) 773-1339", "lat": 33.540662, "lng": -112.056715, "quality": 2, "zone": "Other Areas", "description": "Cutest brunch spot with ranch house charm. Old Town expansion."},
+{"id": "RB-PHOEN-00010", "name": "Pita Cafe", "address": "10810 N Tatum Blvd", "city": "Phoenix", "state": "AZ", "zip": "85028", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 513-0177", "lat": 33.584243, "lng": -111.979613, "quality": 3, "zone": "Other Areas", "description": "Greek Mediterranean with excellent pita combos. Friendly service."},
+{"id": "RB-PEORI-00001", "name": "Bourbon & Bones Chophouse and Bar", "address": "24985 N 83rd Ave Ste 101", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(623) 231-4276", "lat": 33.67042, "lng": -112.232827, "quality": 4, "zone": "Arrowhead", "description": "Chef-driven boutique chophouse featuring USDA Prime steaks, Wagyu, wet-aged selections, fresh seafood, and an extensive library of 600+ bourbons and whiskeys. Opened May 2023 at 83 Marketplace."},
+{"id": "RB-PEORI-00002", "name": "Four Corners Taphouse", "address": "24762 N Lake Pleasant Pkwy", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 590-4797", "lat": 33.708627, "lng": -112.273263, "quality": 3, "zone": "Lake Pleasant Pkwy", "description": "Westside Concepts' brewhouse-inspired sports bar featuring 21 oversized 85-inch TVs, 24 craft taps, indoor/outdoor seating with 360-degree viewing. Opened June 2025 in former Haymaker space."},
+{"id": "RB-PEORI-00003", "name": "Cantina Gueros - North Peoria", "address": "25315 N Lake Pleasant Pkwy", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 440-3680", "lat": 33.713304, "lng": -112.270871, "quality": 3, "zone": "Lake Pleasant Pkwy", "description": "Westside Concepts' Mexico City-inspired cantina featuring Abuela's traditional recipes with a modern twist. Known for Tacos Borrachos, Quesabirria Tacos, and charred pineapple salsa."},
+{"id": "RB-PEORI-00004", "name": "CHAR Pizzeria Napoletana", "address": "25101 N Lake Pleasant Pkwy Ste 1325", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(623) 249-5366", "lat": 33.754284, "lng": -112.251688, "quality": 4, "zone": "Lake Pleasant Pkwy", "description": "Authentic Neapolitan-style pizzeria with VPN certification. Uses '00' flour, San Marzano tomatoes, and fresh fior di latte mozzarella imported from Italy. Wood-fired oven cooking."},
+{"id": "RB-PEORI-00005", "name": "Sparrow", "address": "8989 W Happy Valley Rd Ste 104", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.7301, "lng": -112.270334, "quality": 4, "zone": "Vistancia", "description": "Chef Mark Tarbell's breakfast and lunch spot featuring elevated comfort food. Weekend at Bernie's salad, chicken wings, and scratch-made dishes in an upscale-casual setting."},
+{"id": "RB-PEORI-00006", "name": "Barley & Smoke", "address": "24762 N Lake Pleasant Pkwy", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(623) 566-8001", "lat": 33.708627, "lng": -112.273263, "quality": 3, "zone": "Lake Pleasant Pkwy", "description": "BBQ and craft beer destination featuring slow-smoked meats, handcrafted cocktails, and an extensive whiskey selection. Popular spot for casual dining and sports viewing."},
+{"id": "RB-PEORI-00007", "name": "Postino Peoria", "address": "8989 W Happy Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(602) 753-9393", "lat": 33.710657, "lng": -112.252155, "quality": 3, "zone": "Vistancia", "description": "Popular wine cafe known for board and bottle specials on Mondays and Tuesdays. Features bruschetta boards, paninis, salads, and an extensive wine selection in a trendy atmosphere."},
+{"id": "RB-PEORI-00008", "name": "Firebirds Wood Fired Grill", "address": "16067 N Arrowhead Fountains Ctr Dr", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(623) 773-0500", "lat": 33.631158, "lng": -112.237537, "quality": 3, "zone": "Arrowhead", "description": "Upscale-casual American restaurant specializing in wood-fired steaks and seafood. Known for hand-cut steaks, fresh seafood, and a lively bar atmosphere."},
+{"id": "RB-PEORI-00009", "name": "Blanco Cocina + Cantina", "address": "7375 W Bell Rd Ste B-04", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 323-7880", "lat": 33.577512, "lng": -112.227057, "quality": 3, "zone": "Sports Complex Area", "description": "Fox Restaurant Concepts' modern Mexican cantina featuring Sonoran-style cuisine with elevated vibes. Known for fresh guacamole, chicken tinga, and creative margaritas."},
+{"id": "RB-PEORI-00010", "name": "The Social On 83rd", "address": "8390 W Deer Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(623) 362-4870", "lat": 33.681658, "lng": -112.239806, "quality": 3, "zone": "Other Areas", "description": "Neighborhood bar and grill with craft cocktails, local beers, and elevated pub fare. Features TVs for sports viewing and a welcoming social atmosphere."},
+{"id": "RB-PEORI-00011", "name": "Bigs Peoria - American Bar and Grill", "address": "7677 N 75th Ave", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(623) 825-9669", "lat": 33.583751, "lng": -112.220128, "quality": 3, "zone": "Pioneer Rd Corridor", "description": "Sports bar and American grill featuring burgers, wings, and pub favorites. Multiple TVs for game day viewing, full bar, and casual neighborhood atmosphere."},
+{"id": "RB-PEORI-00012", "name": "Bubba's 33", "address": "16007 N 83rd Ave", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(623) 566-2333", "lat": 33.65623, "lng": -112.2376, "quality": 3, "zone": "Arrowhead", "description": "Texas-style restaurant specializing in hand-crafted burgers, slow-smoked meats, and cold craft beers. Features live music stage and family-friendly atmosphere."},
+{"id": "RB-PEORI-00013", "name": "Buca di Beppo", "address": "16091 N Arrowhead Fountains Ctr Dr", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(623) 412-9463", "lat": 33.632428, "lng": -112.23678, "quality": 3, "zone": "Arrowhead", "description": "Family-style Italian restaurant serving generous portions of classic Southern Italian dishes. Known for Chicken Parm, pastas, and large group dining in a kitschy atmosphere."},
+{"id": "RB-PEORI-00014", "name": "Modo Mio Italian Kitchen", "address": "9815 W Happy Valley Rd Ste 1100", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(623) 572-5577", "lat": 33.709026, "lng": -112.270556, "quality": 3, "zone": "Vistancia", "description": "Modern Italian kitchen featuring house-made pastas, wood-fired pizzas, and classic Italian entrees. Casual upscale atmosphere with full bar and happy hour specials."},
+{"id": "RB-PEORI-00015", "name": "Grimaldi's Pizzeria", "address": "9788 W Northern Ave Ste 1440", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(623) 486-4455", "lat": 33.553931, "lng": -112.269684, "quality": 3, "zone": "Other Areas", "description": "Legendary Brooklyn-style coal-fired brick oven pizza. Traditional recipes with fresh ingredients, handmade mozzarella, and secret recipe sauce dating back over 100 years."},
+{"id": "RB-PEORI-00016", "name": "Fabio On Fire Pizzeria Italiana", "address": "8275 W Lake Pleasant Pkwy Ste 101", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(623) 680-5385", "lat": 33.748873, "lng": -112.247794, "quality": 3, "zone": "Lake Pleasant Pkwy", "description": "Authentic Italian pizzeria featuring traditional recipes, fresh ingredients, and a welcoming family atmosphere. Known for quality thin-crust pizzas and Italian classics."},
+{"id": "RB-PEORI-00017", "name": "Oscar's Pier 83", "address": "16230 N 83rd Ave", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(623) 979-3474", "lat": 33.629588, "lng": -112.237502, "quality": 3, "zone": "Arrowhead", "description": "Arizona's premier fish and chips destination offering top quality fresh seafood at great prices. Quick casual dining with signature battered fish and seafood platters."},
+{"id": "RB-PEORI-00018", "name": "Angry Crab Shack", "address": "7608 W Cactus Rd", "city": "Peoria", "state": "AZ", "zip": "85381", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(623) 825-9669", "lat": 33.595854, "lng": -112.224413, "quality": 3, "zone": "Other Areas", "description": "Asian-Cajun seafood boil destination with famous flavors. Serves fresh crabs, lobster, crawfish, oysters, shrimp, jambalaya, gumbo, po'boys, and signature seafood boils."},
+{"id": "RB-PEORI-00019", "name": "Squid Ink Sushi", "address": "9947 W Happy Valley Pkwy Ste 109", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(623) 561-7747", "lat": 33.730301, "lng": -112.266403, "quality": 3, "zone": "Vistancia", "description": "Japanese fusion sushi bar and grill featuring traditional and fusion sushi, full bar, live music, and happy hour specials Mon-Fri 3-6pm."},
+{"id": "RB-PEORI-00020", "name": "Sushi Doraku", "address": "9940 W Happy Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(623) 561-0023", "lat": 33.711038, "lng": -112.274035, "quality": 3, "zone": "Vistancia", "description": "Contemporary sushi restaurant offering traditional and creative rolls, sashimi, and Japanese dishes in an upscale casual setting."},
+{"id": "RB-PEORI-00021", "name": "Osaka P83", "address": "16049B N Arrowhead Fountains Center Dr", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(623) 776-0100", "lat": 33.671874, "lng": -112.227488, "quality": 3, "zone": "Arrowhead", "description": "Hibachi steakhouse and sushi bar featuring tableside teppanyaki cooking, fresh sushi, and Japanese entrees. Fun, interactive dining experience."},
+{"id": "RB-PEORI-00022", "name": "Ah-So Sushi & Steak", "address": "16610 N 75th Ave", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(623) 487-8862", "lat": 33.638228, "lng": -112.220388, "quality": 3, "zone": "Pioneer Rd Corridor", "description": "Japanese hibachi steakhouse and sushi bar offering teppanyaki-style cooking, fresh sushi rolls, and Asian-fusion dishes in an entertaining atmosphere."},
+{"id": "RB-PEORI-00023", "name": "Sala Thai Peoria", "address": "9815 W Happy Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(623) 561-9815", "lat": 33.709026, "lng": -112.270556, "quality": 3, "zone": "Vistancia", "description": "Family-owned Thai restaurant with highly-rated authentic cuisine. Features happy hour Tue-Sun 2-5pm with drink and appetizer specials."},
+{"id": "RB-PEORI-00024", "name": "Don Lencho's Mexican & Seafood", "address": "8420 W Peoria Ave", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 487-7086", "lat": 33.581949, "lng": -112.239984, "quality": 3, "zone": "Other Areas", "description": "Family-owned Mexican restaurant featuring classic Mexican dishes, seafood specialties, and tasty margaritas. Known for Camarones Rancheros and authentic Mexican breakfast."},
+{"id": "RB-PEORI-00025", "name": "Carolina's Mexican Food", "address": "9030 W Peoria Ave", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 487-1400", "lat": 33.581366, "lng": -112.253679, "quality": 3, "zone": "Other Areas", "description": "Legendary Phoenix-area Mexican restaurant established 1968. Famous for handmade flour tortillas, green chile burros, and authentic Mexican comfort food."},
+{"id": "RB-PEORI-00026", "name": "Abuelo's Mexican Restaurant", "address": "16092 N Arrowhead Fountains Center Dr", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 878-8282", "lat": 33.632942, "lng": -112.238507, "quality": 3, "zone": "Arrowhead", "description": "Upscale Mexican restaurant featuring made-from-scratch dishes, tableside guacamole, and an extensive tequila selection. Hacienda-style atmosphere."},
+{"id": "RB-PEORI-00027", "name": "Hanging Tree Saloon & Grill", "address": "8988 W Happy Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(623) 561-7700", "lat": 33.710906, "lng": -112.251153, "quality": 3, "zone": "Vistancia", "description": "Western-themed bar and grill featuring American comfort food, craft cocktails, and a lively atmosphere. Popular spot for happy hour and casual dining."},
+{"id": "RB-PEORI-00028", "name": "Red Lobster", "address": "7921 W Bell Rd", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(623) 487-1570", "lat": 33.637687, "lng": -112.229462, "quality": 3, "zone": "Sports Complex Area", "description": "National seafood chain featuring lobster, shrimp, crab, and fresh fish. Known for Ultimate Feast, Crabfest, and endless shrimp specials."},
+{"id": "RB-PEORI-00029", "name": "Harumi Sushi", "address": "24681 N Lake Pleasant Pkwy Ste 101", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(480) 486-6178", "lat": 33.745206, "lng": -112.24811, "quality": 3, "zone": "Lake Pleasant Pkwy", "description": "Contemporary sushi restaurant offering fresh rolls, sashimi, and Japanese entrees in a modern setting. Known for quality fish and creative presentations."},
+{"id": "RB-PEORI-00030", "name": "Haymaker", "address": "24762 N Lake Pleasant Pkwy", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 590-4797", "lat": 33.708627, "lng": -112.273263, "quality": 3, "zone": "Lake Pleasant Pkwy", "description": "Elevated American restaurant and bar featuring farm-to-table cuisine, craft cocktails, and a refined casual atmosphere. Relocated to new location in 2024."},
+{"id": "RB-PEOR-N001", "name": "Driftwood Coffee Co.", "address": "8295 W Jefferson St", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.579229, "lng": -112.237298, "quality": 9, "zone": "Pioneer Rd Corridor", "description": "Locally beloved specialty coffee shop in Old Town Peoria with handcrafted drinks, homemade pastries like pop-tarts and cactus-shaped macarons. Classic pour-overs, cold brews, and signature lattes."},
+{"id": "RB-PEOR-N002", "name": "Union Coffee Co.", "address": "6750 W Thunderbird Rd", "city": "Peoria", "state": "AZ", "zip": "85381", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.611158, "lng": -112.204002, "quality": 9, "zone": "Sports Complex Area", "description": "Community-focused coffee shop with in-house roasted beans. Known for cold brew lattes, white mocha, and specialty seasonal drinks. Minimalist design with a welcoming neighborhood vibe."},
+{"id": "RB-PEOR-N003", "name": "Well Coffee Co.", "address": "7800 W Happy Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.710588, "lng": -112.229461, "quality": 9, "zone": "Vistancia", "description": "West Valley favorite from the Peixoto family who have farmed Brazilian coffee for over 100 years. Try the honey lavender latte or cinnamon toast crunch cold brew. Top-ranked coffee shop in Peoria."},
+{"id": "RB-PEOR-N004", "name": "Wild Pine Coffee Co.", "address": "9375 W Peoria Ave", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.580674, "lng": -112.25829, "quality": 8, "zone": "Pioneer Rd Corridor", "description": "Specialty coffee shop known for unique drinks like the ube latte, Stranger Things, and Goddess Energy. Also serves an excellent brunch menu."},
+{"id": "RB-PEOR-N005", "name": "Java Grounds Coffee House", "address": "8385 W Deer Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 33.680847, "lng": -112.239721, "quality": 8, "zone": "Arrowhead", "description": "Non-profit coffee shop run by Heart for the City AZ, providing jobs and skills training for at-risk youth. Great coffee, breakfast options, and China Mist iced teas."},
+{"id": "RB-PEOR-N006", "name": "Arrowhead Grill", "address": "8280 W Union Hills Dr", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(623) 566-2224", "lat": 33.653196, "lng": -112.235973, "quality": 9, "zone": "Arrowhead", "description": "Locally owned upscale steakhouse near Arrowhead. Famous for the Delmonico Steak and Signature Butter Cake. Great for date night. Rivals Ruth's Chris and Fleming's in quality."},
+{"id": "RB-PEOR-N007", "name": "Brushfire Tacos y Tapas", "address": "13760 N Lake Pleasant Rd", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 878-8226", "lat": 33.677712, "lng": -112.278089, "quality": 8, "zone": "Lake Pleasant Pkwy", "description": "Local Mexican fast-casual favorite. Chef Jeremiah Gracia infuses authentic Mexican street fare with an upscale twist. Try the Piggy in a Poncho taco. Happy hour Mon-Fri 3-6pm."},
+{"id": "RB-PEOR-N008", "name": "Cantina Gueros North Peoria", "address": "26755 N Alma School Pkwy", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 594-9676", "lat": 33.754152, "lng": -112.250119, "quality": 8, "zone": "Lake Pleasant Pkwy", "description": "Mexico City-inspired Mexican with street tacos, enchiladas, elote, and handmade guacamole. Famous Peoria Prickly Pear Margarita. Happy hour Mon-Fri 3-6pm."},
+{"id": "RB-PEOR-N009", "name": "Headquarters AZ", "address": "9375 W Arrowhead Towne Center", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(623) 412-9099", "lat": 33.674311, "lng": -112.233948, "quality": 8, "zone": "Arrowhead", "description": "Upbeat bar and grill across from Arrowhead Harkins theaters. Known for beer towers, fishbowls, gluten-free options, and surprisingly fresh sushi alongside grill favorites."},
+{"id": "RB-PEOR-N010", "name": "Brothers Family Restaurant", "address": "8466 W Peoria Ave", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(623) 979-1077", "lat": 33.581618, "lng": -112.241364, "quality": 8, "zone": "Pioneer Rd Corridor", "description": "Family-owned breakfast and lunch spot known for all-you-can-eat fish fry, Eggs Benedict, Garbage Omelet, fried chicken, and pancakes. A true neighborhood staple."},
+{"id": "RB-PEOR-N011", "name": "Revolu Mexican Kitchen", "address": "8695 W Happy Valley Rd", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(623) 594-5656", "lat": 33.710455, "lng": -112.24538, "quality": 9, "zone": "Arrowhead", "description": "Upscale Mexican street food inspired by Tijuana grandmother recipes. Chef Jeremiah Gracia's flagship concept. Creative tacos, cocktails, and a vibrant atmosphere."},
+{"id": "RB-PEOR-N012", "name": "Ground Control Craft Food & Drink", "address": "26767 N Alma School Pkwy", "city": "Peoria", "state": "AZ", "zip": "85383", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(623) 251-3880", "lat": 33.746714, "lng": -112.247636, "quality": 8, "zone": "Lake Pleasant Pkwy", "description": "Contemporary gastropub in North Peoria offering wine, specialty coffees, beer tastings, and eclectic meals. Popular for brunch and a great gathering spot with craft beverage focus."},
+{"id": "RB-PEOR-N013", "name": "Cracker Barrel Peoria", "address": "16845 N 84th Ave", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "American", "is_chain": true, "chain_name": "Cracker Barrel", "phone": "(623) 875-1136", "lat": 33.63683, "lng": -112.241221, "quality": 6, "zone": "Arrowhead", "description": "Cracker Barrel country store and restaurant near Arrowhead. Classic Southern comfort food, homestyle breakfast all day, and the iconic country store gift shop."},
+{"id": "RB-PEOR-N014", "name": "Firebirds Wood Fired Grill Peoria", "address": "16067 N Arrowhead Fountains Ctr Dr", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "American", "is_chain": true, "chain_name": "Firebirds", "phone": "(623) 773-0500", "lat": 33.631158, "lng": -112.237537, "quality": 8, "zone": "Arrowhead", "description": "Upscale wood-fired grill chain with hand-cut steaks, fresh seafood, and craft cocktails. Great date-night option near Arrowhead."},
+{"id": "RB-PEOR-N015", "name": "The Sicilian Butcher Peoria", "address": "16165 N 83rd Ave", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 744-3100", "lat": 33.633492, "lng": -112.233566, "quality": 9, "zone": "Arrowhead", "description": "From the Maggiore Group — craft meatball restaurant with build-your-own meatball dishes. House-made sauces, pastas, and a buzzing open kitchen. One of Peoria's top Italian spots."},
+{"id": "RB-PEOR-N017", "name": "Sizzle Korean BBQ", "address": "7700 W Arrowhead Towne Center", "city": "Peoria", "state": "AZ", "zip": "85382", "cuisine": "Korean", "is_chain": false, "chain_name": "", "phone": "(480) 696-4040", "lat": 33.669159, "lng": -112.233845, "quality": 8, "zone": "Arrowhead", "description": "Interactive Korean BBQ at Arrowhead Towne Center with tabletop grills. All-you-can-eat option with premium meats, banchan, and Korean sides. Fun group dining experience."},
+{"id": "RB-PEOR-N018", "name": "Cold Beers & Cheeseburgers Peoria", "address": "9828 W Northern Ave", "city": "Peoria", "state": "AZ", "zip": "85345", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(623) 233-5490", "lat": 33.553466, "lng": -112.270822, "quality": 8, "zone": "Pioneer Rd Corridor", "description": "Arizona-local sports bar and burger joint. Craft burgers, cold drafts, and a laid-back game day atmosphere. A West Valley staple."}
+];
+
+// ZONE MAP
+const ZONE_MAP = {
+  "arrowhead": ["Arrowhead", "Arrowhead Towne Center", "83rd Ave"],
+  "sports": ["Sports Complex Area", "Westgate", "Bell Rd", "Stadium"],
+  "pioneer": ["Pioneer Rd Corridor", "Pioneer", "75th Ave", "67th Ave"],
+  "vistancia": ["Vistancia", "Happy Valley", "303 Corridor"],
+  "pleasant": ["Lake Pleasant Pkwy", "Lake Pleasant", "Dove Valley"],
+  "other": ["Other Areas", "Peoria Ave", "Union Hills", "Olive Ave"]
+};
+
+function inZone(zone, key) {
+  if (key === 'All') return true;
+  return (ZONE_MAP[key] || []).includes(zone);
+}
+
+// CUISINE COLORS
+const CC = {
+  "Mexican":"#7C3AED","Italian":"#15803D","American":"#1D4ED8",
+  "Chinese":"#B91C1C","Pizza":"#DC2626","Coffee":"#92400E",
+  "Bar":"#334155","Fast Food":"#EA580C","Chicken":"#DB2777",
+  "Bakery":"#2563EB","Sandwiches":"#16A34A","Asian":"#0D9488",
+  "Korean":"#6D28D9","French":"#4338CA","BBQ":"#C2410C",
+  "Brewery":"#B45309","Ice Cream":"#BE185D","Donuts":"#EC4899",
+  "Wings":"#B91C1C","Steakhouse":"#991B1B","Deli":"#16A34A",
+  "Seafood":"#0369A1","Indian":"#D97706","Thai":"#0D9488",
+  "Vietnamese":"#0891B2","Mediterranean":"#0369A1","Sushi":"#0891B2",
+  "Southwestern":"#C2410C","Fine Dining":"#6D28D9","Wine Bar":"#9333EA",
+  "Breakfast":"#EA580C","Diner":"#78716C","Cafe":"#92400E",
+  "Greek":"#0369A1","Japanese":"#B91C1C","Pub":"#334155",
+  "Tacos":"#7C3AED","Sports Bar":"#1D4ED8","Lounge":"#334155"
+};
+function tileColor(c) { return CC[c] || CC[c.split('/')[0].trim()] || '#475569'; }
+function tileAbbr(c)  { return c.split('/')[0].trim().substring(0,2).toUpperCase(); }
+
+// ESC
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// STATE
+let cuisine = 'All', zone = 'All', sort = 'zone', q = '', show = 30;
+const PAGE = 30;
+let nmActive = false, nmLat = null, nmLng = null;
+
+function haversine(a, b, c, d) {
+  const R=3958.8, dL=(c-a)*Math.PI/180, dG=(d-b)*Math.PI/180;
+  const x=Math.sin(dL/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dG/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+
+// FILTER + SORT
+function filtered() {
+  let r = [...DATA];
+  if (cuisine !== 'All') r = r.filter(x => x.cuisine.toLowerCase().includes(cuisine.toLowerCase()));
+  if (zone    !== 'All') r = r.filter(x => inZone(x.zone, zone));
+  if (q) r = r.filter(x =>
+    x.name.toLowerCase().includes(q) || x.cuisine.toLowerCase().includes(q) ||
+    x.address.toLowerCase().includes(q) || x.zone.toLowerCase().includes(q) ||
+    (x.description||'').toLowerCase().includes(q) || (x.chain_name||'').toLowerCase().includes(q)
+  );
+  if      (sort==='name')     r.sort((a,b)=>a.name.localeCompare(b.name));
+  else if (sort==='name-desc')r.sort((a,b)=>b.name.localeCompare(a.name));
+  else if (sort==='cuisine')  r.sort((a,b)=>a.cuisine.localeCompare(b.cuisine)||a.name.localeCompare(b.name));
+  else if (sort==='chain')    r.sort((a,b)=>(b.is_chain?1:0)-(a.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='local')    r.sort((a,b)=>(a.is_chain?1:0)-(b.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='distance' && nmActive) r.sort((a,b)=>haversine(nmLat,nmLng,a.lat,a.lng)-haversine(nmLat,nmLng,b.lat,b.lng));
+  else                        r.sort((a,b)=>a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name));
+  return r;
+}
+
+// RENDER
+function render() {
+  const items = filtered();
+  const grid  = document.getElementById('listingGrid');
+  const lm    = document.getElementById('loadMoreWrap');
+
+  document.getElementById('totalCount').textContent   = DATA.length;
+  document.getElementById('resultsCount').textContent = items.length;
+  updateFilterBar();
+  updateZoneCounts();
+
+  if (!items.length) {
+    grid.innerHTML = '<div class="no-results"><div class="nr-icon">🔍</div><h3>No restaurants found</h3><p>Try a different cuisine, area, or search term.</p><button onclick="clearAll()">Clear All Filters</button></div>';
+    lm.style.display='none'; return;
+  }
+
+  let h = '';
+  items.slice(0, show).forEach((r, i) => {
+    if (i > 0 && i % 12 === 0) {
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><div class="ad-label"><div class="ad-size">In-Feed Banner</div><div class="ad-price">$75/mo</div></div></div></div>';
+    }
+
+    const mapUrl  = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address + ' ' + r.city + ' ' + r.state);
+    const dist    = (nmActive && r.lat && r.lng) ? ' <span class="dist-badge">' + haversine(nmLat,nmLng,r.lat,r.lng).toFixed(1) + ' mi</span>' : '';
+    const tag     = r.is_chain ? '<span class="card-tag tag-chain">Chain</span>' : '<span class="card-tag tag-local">Local</span>';
+    const sub     = (r.is_chain && r.chain_name && r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase())
+                    ? '<div class="card-chain">' + esc(r.chain_name) + '</div>' : '';
+    const phone   = r.phone ? '<span>📞 ' + esc(r.phone) + '</span>' : '';
+    const desc    = r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : '';
+    const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
+    const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';
+
+    h += '<a href="' + mapUrl + '" target="_blank" rel="noopener" class="listing-card">'
+       + ico
+       + '<div class="card-body">'
+       +   '<h3>' + esc(r.name) + dist + '</h3>'
+       +   sub + desc
+       +   '<div class="meta">'
+       +     '<span>📍 ' + addr + '</span>'
+       +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
+       +     phone
+       +     '<span>🗺️ ' + esc(r.zone) + '</span>'
+       +   '</div>'
+       + '</div>'
+       + tag
+       + '</a>';
+  });
+
+  grid.innerHTML = h;
+  const left = items.length - show;
+  if (left > 0) {
+    lm.style.display = 'block';
+    lm.querySelector('.load-more-btn').textContent = 'Show ' + Math.min(PAGE,left) + ' More (' + left + ' remaining)';
+  } else lm.style.display = 'none';
+}
+
+// FILTER BAR
+function updateFilterBar() {
+  const bar = document.getElementById('filterBar');
+  const pills = [];
+  if (nmActive)       pills.push('<span class="filter-pill">📍 Near Me <span class="fp-x" onclick="toggleNearMe()">✕</span></span>');
+  if (cuisine!=='All')pills.push('<span class="filter-pill">🍴 ' + esc(cuisine) + ' <span class="fp-x" onclick="removeCuisineFilter()">✕</span></span>');
+  if (zone!=='All') {
+    const zl = document.querySelector('#zoneList li.z-active span:first-child');
+    pills.push('<span class="filter-pill">🗺️ ' + esc(zl ? zl.textContent : zone) + ' <span class="fp-x" onclick="removeZoneFilter()">✕</span></span>');
+  }
+  if (q) pills.push('<span class="filter-pill">🔍 &ldquo;' + esc(q) + '&rdquo; <span class="fp-x" onclick="removeSearchFilter()">✕</span></span>');
+  if (pills.length) {
+    bar.innerHTML = pills.join('') + '<span class="filter-bar-clear" onclick="clearAll()">Clear all</span>';
+    bar.classList.add('visible');
+  } else { bar.innerHTML = ''; bar.classList.remove('visible'); }
+}
+
+function updateZoneCounts() {
+  const stale = cuisine !== 'All' || q !== '';
+  document.querySelectorAll('#zoneList li').forEach(li =>
+    stale ? li.classList.add('z-counts-stale') : li.classList.remove('z-counts-stale')
+  );
+}
+
+function loadMore() { show += PAGE; render(); }
+
+// FILTER ACTIONS
+function filterByCuisine(el, c) {
+  cuisine = c; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  el.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  render();
+}
+function filterByZone(key, el) {
+  zone = key; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  el.classList.add('z-active'); el.setAttribute('aria-selected','true');
+  render();
+}
+function syncSearch(v) {
+  q = v.toLowerCase().trim(); show = PAGE;
+  document.getElementById('headerSearch').value = v;
+  document.getElementById('mobileSearch').value = v;
+  render();
+}
+function doSort() { sort = document.getElementById('sortSelect').value; show = PAGE; render(); }
+
+function removeCuisineFilter() {
+  cuisine = 'All'; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  render();
+}
+function removeZoneFilter() {
+  zone = 'All'; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  const f = document.querySelector('#zoneList li');
+  f.classList.add('z-active'); f.setAttribute('aria-selected','true');
+  render();
+}
+function removeSearchFilter() {
+  q = ''; show = PAGE;
+  document.getElementById('headerSearch').value = '';
+  document.getElementById('mobileSearch').value = '';
+  render();
+}
+function clearAll() {
+  if (nmActive) toggleNearMe();
+  cuisine='All'; zone='All'; sort='zone'; q=''; show=PAGE;
+  document.getElementById('headerSearch').value='';
+  document.getElementById('mobileSearch').value='';
+  document.getElementById('sortSelect').value='zone';
+  document.querySelectorAll('.cuisine-chip').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  document.querySelectorAll('#zoneList li').forEach(li=>{li.classList.remove('z-active');li.setAttribute('aria-selected','false');});
+  const f=document.querySelector('#zoneList li');
+  f.classList.add('z-active');f.setAttribute('aria-selected','true');
+  render();
+}
+
+// SEARCH UI
+function toggleMobileSearch() {
+  const b = document.getElementById('mobileSearchBar');
+  if (b.classList.toggle('open')) document.getElementById('mobileSearch').focus();
+}
+function closeMobileSearch() { document.getElementById('mobileSearchBar').classList.remove('open'); }
+
+// BACK TO TOP
+window.addEventListener('scroll', () => {
+  const b = document.getElementById('backToTop');
+  window.scrollY > 400 ? b.classList.add('visible') : b.classList.remove('visible');
+}, {passive:true});
+
+// NEAR ME
+function toggleNearMe() {
+  if (nmActive) {
+    nmActive=false; nmLat=nmLng=null;
+    document.getElementById('nearMeBtn').classList.remove('active','loading');
+    document.getElementById('nearMeError').innerHTML='';
+    document.getElementById('sortSelect').disabled=false;
+    render(); return;
+  }
+  if (!navigator.geolocation) { showNMError('Location not supported by your browser.'); return; }
+  const btn = document.getElementById('nearMeBtn');
+  btn.classList.add('loading');
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      nmLat=pos.coords.latitude; nmLng=pos.coords.longitude;
+      nmActive=true; btn.classList.remove('loading'); btn.classList.add('active');
+      document.getElementById('sortSelect').value='distance';
+      document.getElementById('sortSelect').disabled=true;
+      sort='distance'; show=PAGE; render();
+    },
+    err => {
+      btn.classList.remove('loading');
+      showNMError({1:'Location access denied.',2:'Could not determine location.',3:'Request timed out.'}[err.code]||'Location unavailable.');
+    },
+    {timeout:8000,maximumAge:60000}
+  );
+}
+function showNMError(msg) {
+  document.getElementById('nearMeError').innerHTML = '<div class="near-me-error">⚠️ ' + esc(msg) + '</div>';
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim

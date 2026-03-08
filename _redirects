@@ -1,0 +1,6 @@
+# Cloudflare Pages _redirects file
+# Handles clean URLs without .html extension (already handled by folder/index.html structure)
+# Add any future redirects here
+
+/home           /               301
+/restaurants    /               301

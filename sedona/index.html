@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Sedona Area — 105 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="Your complete free guide to every restaurant, bar, and chain in Sedona Area, AZ. 105 listings. No reviews, no pay-to-play — just where to eat.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Sedona Area — 105 Restaurants, Bars &amp; Chains">
+<meta property="og:description" content="Every restaurant, bar, and chain in Sedona Area, AZ. Free directory. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai/sedona">
+<meta property="og:image" content="https://letseatout.ai/og-sedona.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai/sedona">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A;--red-dark:#9E1830;--red-light:#F9E8EC;
+  --gold:#C8973E;--gold-light:#F7F0E3;
+  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#555;--text-light:#888;
+  --cream:#FFFBF5;--white:#FFFFFF;
+  --border:#E8E0D8;--border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px;--r-lg:12px;--hdr-h:61px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;}
+.skip-nav{position:absolute;left:-9999px;}
+.skip-nav:focus{position:fixed;top:0;left:0;padding:10px 18px;background:var(--red);color:white;font-size:14px;font-weight:700;z-index:9999;}
+
+/* TOP BAR */
+.top-bar{background:var(--dark);color:white;padding:6px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;gap:8px;}
+.top-bar-text{display:none;}
+.market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;overflow-x:auto;scrollbar-width:none;}
+.market-pills::-webkit-scrollbar{display:none;}
+.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.market-pill.active{background:var(--red);color:white;}
+.market-pill:not(.active):hover{color:white;}
+
+/* HEADER */
+header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-mark{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:21px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.search-icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.mobile-search-bar{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--red);padding:10px 16px;box-shadow:var(--shadow-m);z-index:99;}
+.mobile-search-bar.open{display:flex;gap:8px;}
+.mobile-search-bar input{flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;}
+.mobile-search-bar input:focus{border-color:var(--red);}
+.mobile-search-bar button{padding:10px 18px;background:var(--red);color:white;border:none;border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+.header-search{display:none;}
+.submit-btn{padding:8px 14px;background:var(--dark);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.submit-btn:hover{background:var(--red);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#2a0f00 50%,#3d1500 100%);color:white;padding:28px 0 22px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.15;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;}
+.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;color:white;letter-spacing:.3px;}
+.hero-stats{display:flex;gap:20px;justify-content:center;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.coming-soon-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;justify-content:center;margin-top:4px;}
+.coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
+.coming-soon-badge{background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.hero-banner-wrap{margin-top:16px;width:100%;}
+
+/* AD ZONES */
+.ad-zone{background:linear-gradient(135deg,#f5ede3,#ebe3d8);border:2px dashed var(--gold);border-radius:var(--r);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ad-zone::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;}
+.ad-inline{width:100%;height:50px;}
+.ad-sidebar{display:none;}
+
+/* CUISINE NAV */
+.cuisine-nav{background:var(--white);padding:10px 0;border-bottom:1px solid var(--border);position:sticky;top:var(--hdr-h);z-index:90;}
+.cuisine-slider-wrap{display:flex;align-items:center;gap:6px;}
+.cuisine-scroll{display:flex;gap:6px;overflow-x:auto;padding:2px;scrollbar-width:none;scroll-behavior:smooth;flex:1;-webkit-overflow-scrolling:touch;}
+.cuisine-scroll::-webkit-scrollbar{display:none;}
+.cuisine-chip{padding:7px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;min-height:36px;}
+.cuisine-chip:active,.cuisine-chip.active{background:var(--red);color:white;border-color:var(--red);}
+.slider-arrow{display:none;}
+
+/* NEAR ME */
+.near-me-chip{padding:7px 14px;border-radius:20px;border:1.5px solid #1D6CE0;background:#1D6CE0;font-size:12px;font-weight:700;color:white;cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;min-height:36px;}
+.near-me-chip.active{background:#0D3D80;border-color:#0D3D80;}
+.near-me-chip.loading{opacity:.75;pointer-events:none;}
+.near-me-chip .nm-spinner{width:12px;height:12px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none;}
+.near-me-chip.loading .nm-spinner{display:block;}
+.near-me-chip.loading .nm-icon{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.dist-badge{font-size:10px;font-weight:700;color:var(--red);background:var(--red-light);padding:2px 7px;border-radius:10px;margin-left:4px;}
+.near-me-error{background:#fff3cd;border:1.5px solid #ffc107;border-radius:var(--r);padding:10px 14px;font-size:12px;color:#856404;margin-bottom:10px;}
+
+/* MAIN LAYOUT */
+.main-layout{display:flex;flex-direction:column;gap:20px;padding:16px 0 32px;}
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;}
+.results-count{font-size:12px;color:var(--text-light);font-weight:500;}
+.results-count strong{color:var(--text);font-weight:700;}
+.sort-sel{padding:6px 10px;border:1.5px solid var(--border);border-radius:var(--r);font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:var(--text-mid);background:var(--white);cursor:pointer;}
+.filter-bar{display:none;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 0 4px;}
+.filter-bar.visible{display:flex;}
+.filter-pill{display:inline-flex;align-items:center;gap:5px;background:var(--red-light);border:1.5px solid var(--red);color:var(--red);border-radius:16px;font-size:11px;font-weight:700;padding:4px 10px;}
+.filter-pill .fp-x{cursor:pointer;font-size:13px;line-height:1;margin-left:2px;}
+.filter-bar-clear{font-size:11px;font-weight:700;color:var(--text-light);cursor:pointer;text-decoration:underline;padding:4px 2px;}
+
+/* LISTING CARDS — now real <a> tags */
+.listing-grid{display:flex;flex-direction:column;gap:8px;}
+.listing-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  transition:border-color .2s;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;color:inherit;
+}
+.listing-card:hover,.listing-card:active{border-color:var(--red);background:var(--red-light);}
+.card-tag{display:none;}
+.card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}
+.card-body h3{font-size:14px;font-weight:700;margin-bottom:1px;color:var(--text);line-height:1.3;}
+.card-chain{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px;}
+.card-desc{font-size:12px;color:var(--text-mid);line-height:1.55;margin:5px 0 6px;}
+.card-body .meta{font-size:11px;color:var(--text-light);display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
+.card-body .meta span{display:flex;align-items:center;gap:3px;}
+.inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:44px 20px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);}
+.no-results .nr-icon{font-size:38px;margin-bottom:10px;}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px;}
+.no-results p{font-size:13px;color:var(--text-light);margin-bottom:16px;}
+.no-results button{padding:10px 22px;background:var(--red);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* LOAD MORE */
+.load-more-wrap{text-align:center;padding:12px 0 4px;}
+.load-more-btn{padding:12px 30px;background:var(--white);border:2px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text-mid);cursor:pointer;transition:all .2s;}
+.load-more-btn:hover{border-color:var(--red);color:var(--red);}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;}
+.sidebar-box h4{font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--red);}
+.zone-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.zone-list li{font-size:12px;color:var(--text-mid);padding:8px 10px;border-radius:var(--r);cursor:pointer;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent;outline:none;}
+.zone-list li:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.zone-list li:hover,.zone-list li:active{background:var(--red-light);color:var(--red);}
+.zone-list li.z-active{background:var(--red-light);color:var(--red);font-weight:700;}
+.zone-list li .ct{background:var(--cream);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;color:var(--text-light);min-width:26px;text-align:center;}
+.zone-list li.z-active .ct{background:var(--red);color:white;}
+.zone-list li.z-counts-stale .ct{opacity:.4;}
+.quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.quick-links li a{font-size:12px;color:var(--red);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px;}
+.quick-links li a:hover{color:var(--red-dark);}
+
+/* SUBMIT */
+.submit-section{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px 16px;margin:0 0 32px;text-align:center;}
+.submit-section h2{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px;}
+.submit-section .sub{color:var(--text-light);font-size:13px;margin-bottom:18px;line-height:1.5;}
+.submit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px;}
+.submit-card{background:var(--cream);border:2px dashed var(--border);border-radius:var(--r-lg);padding:18px 14px;text-align:center;}
+.submit-card .ico{font-size:28px;margin-bottom:6px;}
+.submit-card h3{font-size:13px;font-weight:700;margin-bottom:3px;}
+.submit-card p{font-size:11px;color:var(--text-light);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:24px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:18px;}
+footer .brand span{color:var(--red);}
+footer a{color:var(--gold);text-decoration:none;}
+footer .legal{line-height:1.6;}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--red);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(196,30,58,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(8px);}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--red-dark);}
+
+/* TABLET */
+@media(min-width:600px){
+  :root{--hdr-h:69px;}
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:space-between;}
+  .top-bar-text{display:block;}
+  .header-inner{padding:12px 0;}
+  .logo-mark{width:42px;height:42px;font-size:20px;}
+  .logo-text{font-size:24px;}
+  .search-icon-btn{display:none;}
+  .header-search{display:flex;align-items:center;background:var(--cream);border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .2s;}
+  .header-search:focus-within{border-color:var(--red);}
+  .header-search input{padding:8px 4px 8px 14px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;width:160px;outline:none;}
+  .header-search input::placeholder{color:var(--text-light);}
+  .header-search button{padding:7px 12px;border:none;background:var(--red);color:white;font-size:12px;cursor:pointer;border-radius:0 22px 22px 0;}
+  .hero{padding:36px 0 28px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-stat .num{font-size:34px;}
+  .ad-leaderboard{height:60px;}
+  .ad-inline{height:60px;}
+  .ad-sidebar{display:flex;width:100%;height:180px;}
+  .slider-arrow{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text-mid);flex-shrink:0;transition:all .2s;}
+  .slider-arrow:hover{border-color:var(--red);color:var(--red);}
+  .cuisine-nav{padding:12px 0;}
+  .main-layout{padding:20px 0 40px;gap:24px;}
+  .listing-card{grid-template-columns:48px 1fr auto;padding:16px 18px;gap:16px;}
+  .card-tag{display:block;padding:4px 11px;border-radius:16px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;color:white;}
+  .tag-chain{background:#1E293B;}
+  .tag-local{background:#C2410C;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-section{padding:28px 24px;margin:0 0 40px;}
+  .submit-grid{grid-template-columns:repeat(3,1fr);}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  footer .legal{text-align:right;max-width:400px;}
+}
+@media(min-width:960px){
+  :root{--hdr-h:75px;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .header-inner{padding:14px 0;}
+  .logo-mark{width:44px;height:44px;font-size:22px;}
+  .logo-text{font-size:26px;}
+  .header-search input{width:200px;}
+  .header-search button{padding:8px 14px;font-size:13px;}
+  .hero{padding:44px 0 36px;}
+  .hero h1{font-size:42px;}
+  .hero-sub{font-size:16px;max-width:580px;margin:0 auto;}
+  .hero-stats{gap:28px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:0 auto;}
+  .ad-inline{height:90px;max-width:728px;margin:0 auto;}
+  .ad-sidebar{height:250px;}
+  .cuisine-nav{padding:14px 0;}
+  .slider-arrow{width:32px;height:32px;font-size:14px;}
+  .main-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 0 48px;}
+  .sidebar{display:flex;flex-direction:column;position:sticky;top:calc(var(--hdr-h) + 58px);}
+  .listing-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-1px);}
+  .listing-card:active{transform:none;}
+  .zone-list li:hover{background:var(--red-light);color:var(--red);}
+  .submit-section{max-width:800px;margin:0 auto 48px;padding:36px;}
+  footer{padding:32px 0;}
+  .back-to-top{right:32px;bottom:32px;}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Sedona Area","description":"Free restaurant directory for Sedona Area, AZ. 105 listings.","url":"https://letseatout.ai/sedona","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+</script>
+</head>
+<body>
+
+<a class="skip-nav" href="#listingGrid">Skip to listings</a>
+
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at no cost</span>
+    <div class="market-pills">
+      <button type="button" class="market-pill" onclick="location.href='/indio'">Indio</button>
+      <button type="button" class="market-pill" onclick="location.href='/scottsdale'">Scottsdale</button>
+      <button type="button" class="market-pill active" onclick="location.href='/sedona'">Sedona</button>
+      <button type="button" class="market-pill" onclick="location.href='/prescott'">Prescott</button>
+      <button type="button" class="market-pill" onclick="location.href='/cave-creek'">Cave Creek</button>
+      <button type="button" class="market-pill" onclick="location.href='/wickenburg'">Wickenburg</button>
+      <button type="button" class="market-pill" onclick="location.href='/peoria'">Peoria</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Sedona, AZ</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button type="button" class="search-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">🔍</button>
+        <div class="header-search">
+          <input type="search" id="headerSearch" placeholder="Search restaurants…" oninput="syncSearch(this.value)" autocomplete="off">
+          <button type="button" onclick="syncSearch(document.getElementById('headerSearch').value)">Search</button>
+        </div>
+        <button type="button" class="submit-btn" onclick="document.getElementById('submitArea').scrollIntoView({behavior:'smooth'})">+ Add Your Business</button>
+      </div>
+    </div>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="search" id="mobileSearch" placeholder="Restaurant, cuisine, area…" oninput="syncSearch(this.value)" autocomplete="off">
+      <button type="button" onclick="closeMobileSearch()">Done</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Where to Eat in <em>Sedona</em></h1>
+        <p class="hero-sub">Your complete guide to every restaurant, bar, and winery in Sedona, AZ. From Uptown to the Village of Oak Creek — every table, always free.</p>
+        <div class="hero-promise">✦ No reviews &nbsp;·&nbsp; No pay-to-play &nbsp;·&nbsp; No fake ratings &nbsp;·&nbsp; Always free</div>
+        <div class="coming-soon-row">
+          <div class="coming-soon-label">Also coming soon:</div>
+          <span class="coming-soon-badge">Jerome</span>
+          <span class="coming-soon-badge">Cottonwood</span>
+          <span class="coming-soon-badge">Clarkdale</span>
+          <span class="coming-soon-badge">Camp Verde</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">105</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
+        <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Premium hero placement</div><div class="ad-price">$150/mo</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cuisine-nav" role="navigation" aria-label="Filter by cuisine">
+  <div class="container">
+    <div class="cuisine-slider-wrap">
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:-200,behavior:'smooth'})" aria-label="Scroll left">◀</button>
+      <div class="cuisine-scroll" id="cuisineScroll">
+        <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
+        <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Mexican')">🌮 Mexican</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'American')">🍔 American</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Southwestern')">🌵 Southwest</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fine Dining')">✨ Fine Dining</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Pizza')">🍕 Pizza</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bar')">🍺 Bars</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Coffee')">☕ Coffee</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Italian')">🍝 Italian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Steakhouse')">🥩 Steakhouse</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Asian')">🍜 Asian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Seafood')">🦞 Seafood</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'BBQ')">🔥 BBQ</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sandwiches')">🥪 Sandwiches</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bakery')">🧁 Bakery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fast Food')">🍟 Fast Food</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Brewery')">🍻 Brewery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Wine Bar')">🍷 Wine Bar</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Ice Cream')">🍦 Ice Cream</button>
+      </div>
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="main-layout">
+    <div>
+      <div class="results-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
+        <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
+          <option value="distance" disabled style="display:none">📍 Near Me</option>
+          <option value="zone">By Area</option>
+          <option value="name">A–Z</option>
+          <option value="name-desc">Z–A</option>
+          <option value="cuisine">By Cuisine</option>
+          <option value="local">Locals First</option>
+          <option value="chain">Chains First</option>
+        </select>
+      </div>
+      <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
+      <div id="nearMeError"></div>
+      <div class="listing-grid" id="listingGrid"></div>
+      <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+        <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
+      </div>
+      <div class="inline-ad-wrap" style="margin-top:20px">
+        <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Bottom placement</div><div class="ad-price">$100/mo</div></div></div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Premium sidebar</div><div class="ad-price">$125/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Sedona Area</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('uptown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('uptown',this)"><span>Uptown Sedona</span><span class="ct" id="zc-uptown">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('w-sedona',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('w-sedona',this)"><span>West Sedona</span><span class="ct" id="zc-wsedona">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('voc',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('voc',this)"><span>Village of Oak Creek</span><span class="ct" id="zc-voc">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('tlaq',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('tlaq',this)"><span>Tlaquepaque Area</span><span class="ct" id="zc-tlaq">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('oakcreek',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('oakcreek',this)"><span>Oak Creek Canyon</span><span class="ct" id="zc-oakcreek">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('cottonwood',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('cottonwood',this)"><span>Cottonwood</span><span class="ct" id="zc-cotton">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('jerome',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('jerome',this)"><span>Jerome</span><span class="ct" id="zc-jerome">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Sidebar #2</div><div class="ad-price">$100/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="javascript:void(0)">→ Date Night Spots</a></li>
+          <li><a href="javascript:void(0)">→ Best Happy Hours</a></li>
+          <li><a href="javascript:void(0)">→ Family Friendly</a></li>
+          <li><a href="javascript:void(0)">→ Late Night Eats</a></li>
+          <li><a href="javascript:void(0)">→ Patio Dining</a></li>
+          <li><a href="javascript:void(0)">→ New Openings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="submitArea">
+  <div class="submit-section">
+    <h2>Get Listed — It's Free</h2>
+    <p class="sub">Every restaurant, bar, and chain in Sedona Area is listed at no cost. Send us your info any way that's easy for you.</p>
+    <div class="submit-grid">
+      <div class="submit-card"><div class="ico">🖼️</div><h3>Upload a Flyer</h3><p>PDF, JPG, or PNG of your menu or business card</p></div>
+      <div class="submit-card"><div class="ico">📱</div><h3>Snap a Photo</h3><p>Photo of your storefront, sign, or menu board</p></div>
+      <div class="submit-card"><div class="ico">📝</div><h3>Fill Out Form</h3><p>Name, address, cuisine, hours — takes 60 seconds</p></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-light)">We review submissions daily and add listings within 24–48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px">Sedona Area's complete dining guide · <a href="/">letseatout.ai</a></div>
+      <div style="margin-top:4px">Advertise: <a href="/cdn-cgi/l/email-protection#ddb4b3bbb29db1b8a9aeb8bca9b2a8a9f3bcb4"><span class="__cf_email__" data-cfemail="4e272028210e222b3a3d2b2f3a213b3a602f27">[email&#160;protected]</span></a></div>
+    </div>
+    <div class="legal">
+      Every restaurant and bar in Sedona Area is listed free. We sell banner advertising only — no paid placement, no paid rankings.<br>
+      <span style="color:rgba(255,255,255,.3)">© 2026 LetsEatOut.ai — All rights reserved</span>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// DATA
+const DATA = [
+{"id": "RB-COTTN-00001", "name": "Blazin' M Ranch", "address": "1875 Mabery Ranch Rd", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 634-0334", "lat": 34.75638, "lng": -112.024436, "quality": 3, "zone": "Cottonwood", "description": "Western dinner theater in Cottonwood with chuck wagon cuisine and entertainment."},
+{"id": "RB-JEROM-00001", "name": "Asylum Restaurant", "address": "200 Hill St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 639-3197", "lat": 34.747644, "lng": -112.114932, "quality": 3, "zone": "Jerome", "description": "Upscale American dining in Jerome Grand Hotel, Wine Spectator Award 17 years, Verde Valley views, haunted history."},
+{"id": "RB-JEROM-00002", "name": "The Haunted Hamburger", "address": "410 Clark St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 634-0554", "lat": 34.750623, "lng": -112.11649, "quality": 2, "zone": "Jerome", "description": "#1 burger restaurant in Arizona since 1994, mile-high views of Verde Valley, legendary haunted atmosphere."},
+{"id": "RB-JEROM-00003", "name": "The Clinkscale Bar + Grill", "address": "143 Main St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.747257, "lng": -112.111236, "quality": 3, "zone": "Jerome", "description": "American fusion with French flair, brunch/lunch/dinner, craft cocktails, exposed brick historic setting."},
+{"id": "RB-JEROM-00004", "name": "Haunted Pizano", "address": "111 Main St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 639-8477", "lat": 34.751434, "lng": -112.117038, "quality": 3, "zone": "Jerome", "description": "Authentic Italian pizzeria, stone-fired pizza, handmade pasta, opened 2024 in historic Pony Express building."},
+{"id": "RB-JEROM-00005", "name": "Bobby D's BBQ", "address": "119 Jerome Ave", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 634-6235", "lat": 34.751209, "lng": -112.116003, "quality": 3, "zone": "Jerome", "description": "Southern-style BBQ in historic English Kitchen building (1899), smoked meats, outdoor seating with views."},
+{"id": "RB-JEROM-00006", "name": "Vaqueros Grill & Cantina", "address": "363 Main St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 649-9090", "lat": 34.750052, "lng": -112.115262, "quality": 3, "zone": "Jerome", "description": "Mexican soul food, famous Navajo Tacos, Verde Valley views, in Arizona's first Safeway building."},
+{"id": "RB-JEROM-00007", "name": "The Flatiron Cafe", "address": "416 Main St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 634-2733", "lat": 34.749569, "lng": -112.114698, "quality": 3, "zone": "Jerome", "description": "Breakfast and lunch cafe, locally roasted Firecreek coffee, healthy options, vegan/gluten-free friendly."},
+{"id": "RB-JEROM-00008", "name": "The Miner's Cafe", "address": "115 Jerome Ave", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 639-0123", "lat": 34.751209, "lng": -112.116003, "quality": 3, "zone": "Jerome", "description": "Family-owned cafe serving fresh homemade breakfast, brunch, lunch and pastries."},
+{"id": "RB-JEROM-00009", "name": "Mile High Grill & Inn", "address": "307 Main St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 634-5094", "lat": 34.750513, "lng": -112.115761, "quality": 3, "zone": "Jerome", "description": "Historic inn and restaurant since 1899, comfort food, full bar, live music weekends."},
+{"id": "RB-JEROM-00010", "name": "Hilltop Deli", "address": "403 Clark St Unit 8B", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Deli", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.753113, "lng": -112.112835, "quality": 3, "zone": "Jerome", "description": "Family-owned deli with fresh sandwiches, local Arizona ingredients, great views."},
+{"id": "RB-JEROM-00011", "name": "The Spirit Room", "address": "166 Main St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 634-8809", "lat": 34.751286, "lng": -112.116281, "quality": 2, "zone": "Jerome", "description": "Historic bar in former red-light district, live music weekends, authentic Old West atmosphere."},
+{"id": "RB-JEROM-00012", "name": "Paul & Jerry's Saloon", "address": "206 Main St", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Historic", "is_chain": false, "chain_name": "", "phone": "(928) 634-2603", "lat": 34.750966, "lng": -112.116025, "quality": 2, "zone": "Jerome", "description": "Oldest family-owned saloon in Arizona since 1939, pool tables, arcade games, craft cocktails."},
+{"id": "RB-JEROM-00013", "name": "Wicked City Brew", "address": "", "city": "Jerome", "state": "AZ", "zip": "86331", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.748911, "lng": -112.113772, "quality": 3, "zone": "Jerome", "description": "Local craft brewery in Jerome with house-made beers."},
+{"id": "RB-COTTN-00002", "name": "Nic's Italian Steak & Crab House", "address": "925 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 634-9626", "lat": 34.747386, "lng": -112.027168, "quality": 3, "zone": "Cottonwood", "description": "Upscale Italian steakhouse, Rat Pack ambiance, 40-ft mahogany bar, steaks, seafood, crab. Old Town."},
+{"id": "RB-COTTN-00003", "name": "Pizzeria Bocce", "address": "1060 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 202-3597", "lat": 34.749877, "lng": -112.028498, "quality": 3, "zone": "Cottonwood", "description": "Wood-fired artisan pizza by certified pizzaiola Michelle Jurisin, bocce ball court, outdoor patio."},
+{"id": "RB-COTTN-00004", "name": "Crema Craft Kitchen & Bar", "address": "917 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 649-5785", "lat": 34.747372, "lng": -112.027021, "quality": 3, "zone": "Cottonwood", "description": "All-day brunch, craft cocktails, housemade gelato, Prescott Coffee Roasters coffee. Historic building."},
+{"id": "RB-COTTN-00005", "name": "Old Town Red Rooster Cafe", "address": "901 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.746901, "lng": -112.027029, "quality": 3, "zone": "Cottonwood", "description": "Homemade soups, fresh salads, classic comfort food. Breakfast and lunch on Historic 89A."},
+{"id": "RB-COTTN-00006", "name": "The Tavern Grille", "address": "914 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 634-6669", "lat": 34.747348, "lng": -112.027565, "quality": 3, "zone": "Cottonwood", "description": "Upscale neighborhood tavern in old Rialto Theatre, Arizona wines, burgers, sandwiches, TVs."},
+{"id": "RB-COTTN-00007", "name": "Eden", "address": "1750 E Villa Dr", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.726544, "lng": -112.006667, "quality": 3, "zone": "Cottonwood", "description": "Modern comfort food, local Wagyu beef from Camp Verde, Southwest flavors, craft cocktails."},
+{"id": "RB-COTTN-00008", "name": "The White Horse Wood Fired Grill", "address": "1100 AZ-260", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.718882, "lng": -112.004998, "quality": 3, "zone": "Cottonwood", "description": "Casual steakhouse, wood-fired steaks, pork chops, craft cocktails, Arizona local beers."},
+{"id": "RB-COTTN-00009", "name": "Adriana's Mexican Restaurant", "address": "1124 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 634-1466", "lat": 34.749891, "lng": -112.028841, "quality": 3, "zone": "Cottonwood", "description": "Authentic Mexican food, famous mole, family-owned, fresh ingredients. Best Mexican in Cottonwood."},
+{"id": "RB-COTTN-00010", "name": "Strada @ Bocce", "address": "1054 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 239-1703", "lat": 34.749876, "lng": -112.028466, "quality": 3, "zone": "Cottonwood", "description": "Food truck vibe in shipping containers, small bites, pizza, gelato, cocktails. By Haunted Group."},
+{"id": "RB-COTTN-00011", "name": "Old Town Cafe", "address": "1025 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.748673, "lng": -112.02715, "quality": 3, "zone": "Cottonwood", "description": "Classic cafe in Old Town Cottonwood serving breakfast and lunch."},
+{"id": "RB-COTTN-00012", "name": "Bing's Burger Station", "address": "794 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.745259, "lng": -112.025906, "quality": 3, "zone": "Cottonwood", "description": "1950s diner in old gas station, burgers, tater tots. Fun retro decor."},
+{"id": "RB-COTTN-00013", "name": "Belfry Brewery", "address": "791 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 239-4595", "lat": 34.745384, "lng": -112.025743, "quality": 2, "zone": "Cottonwood", "description": "Craft brewery in historic 1928 church, 15 signature brews, wood-fired grill, beer garden, live music."},
+{"id": "RB-COTTN-00014", "name": "Merkin Vineyards Tasting Room & Osteria", "address": "155 Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 639-1001", "lat": 34.74143, "lng": -112.009695, "quality": 3, "zone": "Cottonwood", "description": "Maynard James Keenan's winery, farm-to-table Italian, handmade pasta, Arizona wines. Old Town."},
+{"id": "RB-COTTN-00015", "name": "Merkin Vineyards Hilltop Winery & Trattoria", "address": "770 N Verde Heights Dr", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 639-1001", "lat": 34.746332, "lng": -112.028446, "quality": 3, "zone": "Cottonwood", "description": "Hilltop winery with 270-degree Verde Valley views, 4.5-acre vineyard, wood-oven pizzas, pasta."},
+{"id": "RB-COTTN-00016", "name": "Da Vines Vineyard", "address": "705 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 634-6710", "lat": 34.744204, "lng": -112.021849, "quality": 3, "zone": "Cottonwood", "description": "100% Arizona wine, French bistro menu, dog-friendly patio. High desert terroir wines."},
+{"id": "RB-COTTN-00017", "name": "Concho's Mexican Food", "address": "206 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 649-9680", "lat": 34.735638, "lng": -112.009858, "quality": 3, "zone": "Cottonwood", "description": "Authentic Sonoran Mexican, famous chili relleno, house margaritas, family-owned. Locals' favorite."},
+{"id": "RB-COTTN-00018", "name": "Pepe's Diner", "address": "324 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Diner", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.733834, "lng": -112.009872, "quality": 3, "zone": "Cottonwood", "description": "Classic diner since 2011, Mexican-American breakfast and lunch, friendly service, large portions."},
+{"id": "RB-COTTN-00019", "name": "Ay Chihuahua Mexican Food", "address": "1028 N Main St Ste B", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 852-4011", "lat": 34.729817, "lng": -111.997039, "quality": 3, "zone": "Cottonwood", "description": "Family-owned Mexican restaurant, warm atmosphere, authentic cuisine, hibiscus margaritas."},
+{"id": "RB-COTTN-00020", "name": "Randall's Restaurant", "address": "891 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Diner", "is_chain": false, "chain_name": "", "phone": "(928) 634-0043", "lat": 34.721077, "lng": -112.002618, "quality": 3, "zone": "Cottonwood", "description": "Classic breakfast/lunch diner, comfort food, fluffy biscuits, Friday fish fry. Local institution."},
+{"id": "RB-COTTN-00021", "name": "Naughty Burgers", "address": "1 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.738456, "lng": -112.009654, "quality": 3, "zone": "Cottonwood", "description": "Half-pound burgers with chuck, brisket & wagyu blend, connected to Main Stage Sports Bar."},
+{"id": "RB-COTTN-00022", "name": "Golden Trebol", "address": "1330 SR 89A", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 274-2414", "lat": 34.728577, "lng": -112.012454, "quality": 3, "zone": "Cottonwood", "description": "Mexican, Italian and American cuisine, breakfast, lunch and dinner."},
+{"id": "RB-COTTN-00023", "name": "Queen B Vinyl Cafe", "address": "102 E Pima St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 639-3516", "lat": 34.746888, "lng": -112.026299, "quality": 3, "zone": "Cottonwood", "description": "Coffee, avocado toast, breakfast sandwiches, French toast. Vinyl records and cafe combined."},
+{"id": "RB-COTTN-00024", "name": "The KROW Sports Bar & Grill", "address": "1 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.738456, "lng": -112.009654, "quality": 2, "zone": "Cottonwood", "description": "Sports bar with TVs for games, connected to Naughty Burgers, outdoor patio."},
+{"id": "RB-COTTN-00025", "name": "Kactus Kate's Saloon", "address": "913 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.747335, "lng": -112.027168, "quality": 2, "zone": "Cottonwood", "description": "Local bar in Old Town, great spot for watching games, casual atmosphere."},
+{"id": "RB-CLARK-00001", "name": "Violette's Bakery Cafe", "address": "900 Main St", "city": "Clarkdale", "state": "AZ", "zip": "86324", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(928) 607-6808", "lat": 34.771348, "lng": -112.057581, "quality": 3, "zone": "Clarkdale", "description": "French-inspired bakery in a train caboose, croissants, Croque Monsieur, amazing pastries. #1 rated."},
+{"id": "RB-CLARK-00002", "name": "Copper Spike Cafe", "address": "300 N Broadway", "city": "Clarkdale", "state": "AZ", "zip": "86324", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.775106, "lng": -112.056999, "quality": 3, "zone": "Clarkdale", "description": "Verde Canyon Railroad cafe, house-smoked pulled pork, local produce, Arizona craft beer."},
+{"id": "RB-CLARK-00003", "name": "El Toreo", "address": "925 Main St", "city": "Clarkdale", "state": "AZ", "zip": "86324", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 634-5494", "lat": 34.771153, "lng": -112.057782, "quality": 3, "zone": "Clarkdale", "description": "Sonoran style hotdogs, tacos, quesadillas, ceviche. Indoor and patio dining."},
+{"id": "RB-CLARK-00004", "name": "Scott's Main Street Cafe", "address": "914 Main St", "city": "Clarkdale", "state": "AZ", "zip": "86324", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 649-3070", "lat": 34.771329, "lng": -112.057718, "quality": 3, "zone": "Clarkdale", "description": "Salads, pizzas, burgers on Main Street Clarkdale."},
+{"id": "RB-CLARK-00005", "name": "Number 1 Sandwich Shop", "address": "1001 N Main St", "city": "Clarkdale", "state": "AZ", "zip": "86324", "cuisine": "Sandwiches", "is_chain": false, "chain_name": "", "phone": "(928) 639-0217", "lat": 34.772119, "lng": -112.050791, "quality": 3, "zone": "Clarkdale", "description": "Local sandwich shop in Clarkdale."},
+{"id": "RB-CLARK-00006", "name": "Smelter Town Brewery", "address": "921 Main St", "city": "Clarkdale", "state": "AZ", "zip": "86324", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 821-0814", "lat": 34.771158, "lng": -112.057743, "quality": 2, "zone": "Clarkdale", "description": "Craft brewery in historic Park Hotel building, Clark's Copper Ale, Modern Miner IPA, live music."},
+{"id": "RB-CLARK-00007", "name": "10-12 Lounge", "address": "910 Main St", "city": "Clarkdale", "state": "AZ", "zip": "86324", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 639-0800", "lat": 34.771396, "lng": -112.058064, "quality": 2, "zone": "Clarkdale", "description": "Upscale lounge since 1959, craft cocktails, live music, outdoor patio, karaoke Mondays."},
+{"id": "RB-COTTN-00026", "name": "The Neighborhood Coffee Shop", "address": "516 E State Rte 89A Ste 113", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(402) 746-0686", "lat": 34.733626, "lng": -111.995422, "quality": 3, "zone": "Cottonwood", "description": "Local indie coffee shop, organic coffee, housemade pastries, gluten-free/vegan options, cozy atmosphere."},
+{"id": "RB-COTTN-00027", "name": "Firecreek Coffee", "address": "677 E Mingus Ave", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 639-1234", "lat": 34.739456, "lng": -112.02137, "quality": 3, "zone": "Cottonwood", "description": "Coffee roaster with trendy cafe, specialty blends (Campfire, Lucha Libre), French press, pour-over, home-baked goods."},
+{"id": "RB-COTTN-00028", "name": "Sedonuts", "address": "777 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.745271, "lng": -112.025369, "quality": 3, "zone": "Cottonwood", "description": "Coffee and donut shop, locally roasted espresso, handmade donuts, The Vortex cinnamon roll, cold brew."},
+{"id": "RB-COTTN-00029", "name": "Wholesome Cafe", "address": "1537 E Villa Dr", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.726134, "lng": -112.006232, "quality": 3, "zone": "Cottonwood", "description": "Organic/non-GMO cafe, soups, salads, wraps, superfood smoothies, pressed juices, acai bowls, coffee."},
+{"id": "RB-COTTN-00030", "name": "The Chaparral Bar", "address": "325 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 634-2131", "lat": 34.733832, "lng": -112.009872, "quality": 2, "zone": "Cottonwood", "description": "Family-owned local bar, pool tables, darts, karaoke, live music, happy hour 10am-6pm daily."},
+{"id": "RB-COTTN-00031", "name": "Copper Jackalope", "address": "1048 N Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 852-7272", "lat": 34.749265, "lng": -112.027145, "quality": 2, "zone": "Cottonwood", "description": "Curated craft beer experience in Old Town, elevated beer bar, wine selections."},
+{"id": "RB-COTTN-00032", "name": "The Public Taproom", "address": "300 E Cherry St Bldg B", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.730106, "lng": -111.997549, "quality": 2, "zone": "Cottonwood", "description": "Craft beer taproom, live music Fridays, dog-friendly, community hub."},
+{"id": "RB-COTTN-00033", "name": "Main Stage", "address": "1 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 202-3460", "lat": 34.738456, "lng": -112.009654, "quality": 2, "zone": "Cottonwood", "description": "Premier bar and music venue, live bands, karaoke, bingo, trivia, dance floor, pool tables."},
+{"id": "RB-COTTN-00034", "name": "Calavera Bar and Grill", "address": "747 S Main St", "city": "Cottonwood", "state": "AZ", "zip": "86326", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 634-9618", "lat": 34.726649, "lng": -112.00811, "quality": 2, "zone": "Cottonwood", "description": "Mexican restaurant and bar, Day of the Dead decor, margaritas, karaoke, sports bar."},
+{"id": "RB-SEDON-00001", "name": "Mariposa Latin Inspired Grill", "address": "700 AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 862-4444", "lat": 34.865868, "lng": -111.764907, "quality": 1, "zone": "Uptown Sedona", "description": "Chef Lisa Dahl's flagship, Latin-inspired fine dining with panoramic red rock views, wood-fired grill."},
+{"id": "RB-SEDON-00002", "name": "Elote Cafe", "address": "350 Jordan Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 203-0105", "lat": 34.871965, "lng": -111.760891, "quality": 1, "zone": "Uptown Sedona", "description": "Award-winning upscale Mexican, fire-roasted corn, smoked pork cheeks, mezcal & tequila collection."},
+{"id": "RB-SEDON-00003", "name": "Rene at Tlaquepaque", "address": "336 AZ-179 Suite B-118", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 282-9225", "lat": 34.775875, "lng": -111.75698, "quality": 1, "zone": "Village of Oak Creek", "description": "Fine French cuisine with Southwest twist in Tlaquepaque Village, award-winning wine list."},
+{"id": "RB-SEDON-00004", "name": "Dahl & Di Luca Ristorante Italiano", "address": "2321 W AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 282-5219", "lat": 34.861196, "lng": -111.789412, "quality": 1, "zone": "West Sedona", "description": "Upscale Italian fine dining, romantic ambiance, Wine Spectator Award, Chef Lisa Dahl."},
+{"id": "RB-SEDON-00005", "name": "Cress on Oak Creek", "address": "301 L'Auberge Ln", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 282-1661", "lat": 34.8687, "lng": -111.759637, "quality": 1, "zone": "Uptown Sedona", "description": "L'Auberge de Sedona resort restaurant, creekside fine dining, European cuisine, Verde Valley wines."},
+{"id": "RB-SEDON-00006", "name": "Cowboy Club Grille & Spirits", "address": "241 N State Rte 89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 282-4200", "lat": 34.867619, "lng": -111.762978, "quality": 1, "zone": "Uptown Sedona", "description": "High desert cuisine since 1993, rattlesnake, cactus fries, wild game, western memorabilia."},
+{"id": "RB-SEDON-00007", "name": "The Hudson", "address": "671 AZ-179", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(928) 862-4099", "lat": 34.858405, "lng": -111.76306, "quality": 1, "zone": "Village of Oak Creek", "description": "Upscale American with Southwest flair, bison burgers, corn chowder, red rock patio views."},
+{"id": "RB-SEDON-00008", "name": "Hideaway House", "address": "231 State Route 179 Suite B", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 202-4082", "lat": 34.78291, "lng": -111.761943, "quality": 1, "zone": "Village of Oak Creek", "description": "Country Italian, pizza, pasta, three open-air patios with stunning red rock views."},
+{"id": "RB-SEDON-00009", "name": "Coffee Pot Restaurant", "address": "2050 W AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 282-6626", "lat": 34.855365, "lng": -111.794628, "quality": 1, "zone": "West Sedona", "description": "Sedona institution since 1950s, famous for 101 omelettes, huge breakfast portions."},
+{"id": "RB-SEDON-00010", "name": "Butterfly Burger", "address": "6657 State Rte 179 Ste B1", "city": "Sedona", "state": "AZ", "zip": "86351", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 284-2604", "lat": 34.855277, "lng": -111.793041, "quality": 1, "zone": "West Sedona", "description": "Chef Lisa Dahl's couture burger lounge, creative burgers, boozy milkshakes, lively atmosphere."},
+{"id": "RB-SEDON-00011", "name": "Javelina Cantina", "address": "671 AZ-179", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 203-9514", "lat": 34.858405, "lng": -111.76306, "quality": 1, "zone": "Village of Oak Creek", "description": "Tex-Mex with great patio views, margaritas, mango ceviche, vegetarian/vegan options."},
+{"id": "RB-SEDON-00012", "name": "Secret Garden Cafe", "address": "336 AZ-179 Tlaquepaque", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 203-9564", "lat": 34.778115, "lng": -111.762688, "quality": 1, "zone": "Village of Oak Creek", "description": "Lush garden setting in Tlaquepaque, Mediterranean-Southwest brunch, legendary quiche."},
+{"id": "RB-SEDON-00013", "name": "ChocolaTree Organic Eatery", "address": "1595 AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 282-2997", "lat": 34.862962, "lng": -111.788431, "quality": 1, "zone": "West Sedona", "description": "100% organic vegan, seasonal menu, on-site garden, gluten-free, raw foods, marketplace."},
+{"id": "RB-SEDON-00014", "name": "Dellepiane Sedona", "address": "617 AZ-179", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 862-6222", "lat": 34.844579, "lng": -111.768683, "quality": 1, "zone": "Village of Oak Creek", "description": "Argentine street food, gourmet burgers, empanadas, chivito sandwiches."},
+{"id": "RB-SEDON-00015", "name": "Sedona Pizza Company", "address": "2155 W AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 282-0565", "lat": 34.856267, "lng": -111.793113, "quality": 1, "zone": "West Sedona", "description": "Neapolitan-style pizzas since 2013, dog-friendly patio, local favorite."},
+{"id": "RB-SEDON-00016", "name": "FreeForm Coffee Roasters", "address": "411 AZ-179 #7", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 800-2885", "lat": 34.782231, "lng": -111.761301, "quality": 3, "zone": "Village of Oak Creek", "description": "Sustainably sourced, small-batch roasting, excellent flat white, light-filled shop."},
+{"id": "RB-SEDON-00017", "name": "Creekside Sedona", "address": "251 AZ-179", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 282-1705", "lat": 34.864118, "lng": -111.76341, "quality": 3, "zone": "Village of Oak Creek", "description": "Cafe overlooking Oak Creek, American comfort food, breakfast through dinner, coffee bar."},
+{"id": "RB-SEDON-00018", "name": "Vino Di Sedona", "address": "2575 W AZ-89A Ste B", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 554-4682", "lat": 34.86427, "lng": -111.787643, "quality": 2, "zone": "West Sedona", "description": "900+ wine selection, Arizona wines, craft beer, live music 6 nights a week, charcuterie."},
+{"id": "RB-SEDON-00019", "name": "Mooney's Irish Pub & Burger Bar", "address": "671 State Rt 179", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 282-2331", "lat": 34.873561, "lng": -111.75858, "quality": 2, "zone": "Uptown Sedona", "description": "Irish pub open til 2am, 300+ drinks, fish n chips, karaoke, live music, dog-friendly patio."},
+{"id": "RB-SEDON-00020", "name": "Full Moon Saloon", "address": "7000 State Route 179", "city": "Sedona", "state": "AZ", "zip": "86351", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 284-1872", "lat": 34.824606, "lng": -111.777485, "quality": 2, "zone": "Village of Oak Creek", "description": "Western bar in Village of Oak Creek, pool, karaoke, live music, open til 2am."},
+{"id": "RB-SEDON-00021", "name": "Sound Bites Grill", "address": "101 N AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 282-2713", "lat": 34.866219, "lng": -111.763558, "quality": 2, "zone": "Uptown Sedona", "description": "Uptown venue with live music nightly, American menu, steaks, musical memorabilia."},
+{"id": "RB-SEDON-00022", "name": "Oak Creek Brewery & Grill", "address": "336 AZ-179 Ste D-201", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 282-3300", "lat": 34.779786, "lng": -111.755742, "quality": 2, "zone": "Village of Oak Creek", "description": "Sedona craft brewery in Tlaquepaque, microbrews, Seven Dwarves sampler, beer garden."},
+{"id": "RB-SEDON-00023", "name": "Shorebird Coastal Kitchen", "address": "150 AZ-179", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(928) 852-7287", "lat": 34.853706, "lng": -111.764352, "quality": 1, "zone": "Village of Oak Creek", "description": "Coastal eatery, raw bar, sushi, wood-fired rotisserie, complimentary beignets at brunch."},
+{"id": "RB-SEDON-00024", "name": "Mesa Grill Sedona", "address": "1185 Airport Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(928) 282-2400", "lat": 34.852382, "lng": -111.790078, "quality": 1, "zone": "West Sedona", "description": "Sedona Airport views, Southwestern breakfast/lunch, watch planes land, Chef Mercer Mohr."},
+{"id": "RB-SEDON-00025", "name": "SaltRock Southwest Kitchen", "address": "1630 AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(928) 282-0226", "lat": 34.863662, "lng": -111.788847, "quality": 1, "zone": "West Sedona", "description": "Amara Resort restaurant, Southwestern fusion, lobster tacos, Oak Creek views."},
+{"id": "RB-SEDON-00026", "name": "The Vault Uptown", "address": "361 Forest Rd Ste E", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 203-5462", "lat": 34.868945, "lng": -111.762094, "quality": 1, "zone": "Uptown Sedona", "description": "Open kitchen, red rock views, half-moon booths, upscale American, est. 2019."},
+{"id": "RB-SEDON-00027", "name": "Gerardo's Pizzeria", "address": "2675 W State Rte 89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 862-4009", "lat": 34.857066, "lng": -111.793862, "quality": 1, "zone": "West Sedona", "description": "Wood-fired Neapolitan pizza, Slow Food approved, handmade pasta, family-owned since 2016."},
+{"id": "RB-SEDON-00028", "name": "Tortas de Fuego West Sedona", "address": "1630 AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 282-0226", "lat": 34.863662, "lng": -111.788847, "quality": 1, "zone": "West Sedona", "description": "Authentic Mexican tortas, burritos, tacos, fresh ingredients, breakfast-lunch-dinner."},
+{"id": "RB-SEDON-00029", "name": "89Agave Cantina", "address": "254 N State Route 89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 282-7200", "lat": 34.869463, "lng": -111.76028, "quality": 1, "zone": "Uptown Sedona", "description": "Uptown Mexican, extensive tequila bar, handcrafted margaritas, street-side patio."},
+{"id": "RB-SEDON-00030", "name": "Tamaliza", "address": "1155 W State Rte 89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 204-2622", "lat": 34.860078, "lng": -111.794065, "quality": 1, "zone": "West Sedona", "description": "Homemade gourmet tamales, authentic Central Mexico recipes, non-GMO organic corn."},
+{"id": "RB-SEDON-00031", "name": "Golden Goose American Grill", "address": "2545 AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 282-1447", "lat": 34.865908, "lng": -111.763482, "quality": 1, "zone": "West Sedona", "description": "Steaks, seafood, burgers, dog-friendly patio, affordable fine dining."},
+{"id": "RB-SEDON-00032", "name": "Pisa Lisa", "address": "2245 W AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 282-5472", "lat": 34.856681, "lng": -111.79322, "quality": 1, "zone": "West Sedona", "description": "Chef Lisa Dahl's thin-crust pizza, Arizona-grown organic, tapas, gelato."},
+{"id": "RB-SEDON-00033", "name": "Rotten Johnny's Wood-Fired Pizza", "address": "2230 W AZ-89A Ste B5", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 282-6633", "lat": 34.860218, "lng": -111.793944, "quality": 1, "zone": "West Sedona", "description": "Wood-fired thin crust pizza, hoagies, calzones, salads, burgers."},
+{"id": "RB-SEDON-00034", "name": "Red Rock Cafe", "address": "100 Verde Valley School Rd Ste 107", "city": "Sedona", "state": "AZ", "zip": "86351", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 284-1441", "lat": 34.871854, "lng": -111.759336, "quality": 1, "zone": "Uptown Sedona", "description": "Southwestern breakfast/brunch, near Bell Rock, original recipes, local favorite."},
+{"id": "RB-SEDON-00035", "name": "Rascal Modern American Diner & Bar", "address": "300 Soldiers Pass Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 282-4449", "lat": 34.881515, "lng": -111.786598, "quality": 1, "zone": "Uptown Sedona", "description": "Modern diner, USDA Prime steaks, seafood, craft cocktails, happy hour."},
+{"id": "RB-SEDON-00036", "name": "Che Ah Chi", "address": "525 Boynton Canyon Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(928) 204-6000", "lat": 34.872139, "lng": -111.764121, "quality": 1, "zone": "Uptown Sedona", "description": "Enchantment Resort fine dining, panoramic red rock views, Arizona-sourced ingredients."},
+{"id": "RB-SEDON-00037", "name": "Indian Gardens Cafe & Market", "address": "3951 AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 282-7702", "lat": 34.865868, "lng": -111.764907, "quality": 1, "zone": "West Sedona", "description": "Oak Creek Canyon garden cafe, breakfast/lunch, craft beer, espresso, market."},
+{"id": "RB-SEDON-00038", "name": "Miley's Cafe", "address": "6486 AZ-179", "city": "Sedona", "state": "AZ", "zip": "86351", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 284-4123", "lat": 34.819232, "lng": -111.773792, "quality": 1, "zone": "Village of Oak Creek", "description": "Village of Oak Creek, breakfast/brunch, Mexican options, family-owned."},
+{"id": "RB-SEDON-00039", "name": "Hiro's Sushi & Japanese Kitchen", "address": "1730 W AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(928) 282-8906", "lat": 34.865868, "lng": -111.764907, "quality": 1, "zone": "West Sedona", "description": "Authentic sushi, Japanese dishes, sake, beer."},
+{"id": "RB-SEDON-00040", "name": "Synergy Cafe", "address": "2301 AZ-89A #106", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 282-3677", "lat": 34.871735, "lng": -111.758887, "quality": 3, "zone": "West Sedona", "description": "Organic coffee, vegan cafe, elixir bar, apothecary, herbal teas, wellness focus."},
+{"id": "RB-SEDON-00041", "name": "Cuptown Coffeehouse", "address": "274 Apple Ave Suite B", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 282-0035", "lat": 34.87212, "lng": -111.762885, "quality": 3, "zone": "Uptown Sedona", "description": "Uptown coffee, espresso, gluten-free baked goods, local art, cozy atmosphere."},
+{"id": "RB-SEDON-00042", "name": "Layla's Bakery-Cafe", "address": "3190 W State Rte 89A #200", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 862-4330", "lat": 34.862757, "lng": -111.785331, "quality": 3, "zone": "West Sedona", "description": "Bakery cafe, quiche Lorraine, croque madame, lavender matcha, turmeric latte."},
+{"id": "RB-SEDON-00043", "name": "Black Potion Coffee & Crystals", "address": "841 AZ-179", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 554-4925", "lat": 34.859257, "lng": -111.763147, "quality": 3, "zone": "Village of Oak Creek", "description": "Coffee, crystals, metaphysical shop, Peixoto Coffee, Crystal Elixir Latte."},
+{"id": "RB-SEDON-00044", "name": "Oak Creek Espresso", "address": "321 Jordan Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 282-3677", "lat": 34.870888, "lng": -111.761389, "quality": 3, "zone": "Uptown Sedona", "description": "Espresso bar, smoothies, local roasts."},
+{"id": "RB-SEDON-00045", "name": "Sedona Red Rock Coffee & Roastery", "address": "2525 W AZ-89A", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 282-3747", "lat": 34.859242, "lng": -111.786921, "quality": 3, "zone": "West Sedona", "description": "Local roaster, five coffee blends, baked goods, West Sedona."},
+{"id": "RB-SEDON-00046", "name": "Wildcraft Kitchen", "address": "345 Jordan Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 282-9888", "lat": 34.87149, "lng": -111.761371, "quality": 3, "zone": "Uptown Sedona", "description": "Healthy cafe, coffee, smoothies, acai bowls, avocado toast."},
+{"id": "RB-SEDON-00047", "name": "The Chai Spot", "address": "675 AZ-179 Suite C", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 282-7879", "lat": 34.784668, "lng": -111.764307, "quality": 3, "zone": "Village of Oak Creek", "description": "Authentic chai, Indian snacks, samosas, family-run, cultural gem."},
+{"id": "RB-SEDON-00048", "name": "Sedona Beer Company", "address": "465 Jordan Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 862-4148", "lat": 34.873709, "lng": -111.761408, "quality": 2, "zone": "Uptown Sedona", "description": "Craft brewery, local ingredients, pub food, taproom, rotating small-batch beers."},
+{"id": "RB-SEDON-00049", "name": "Basecamp Sedona Beer", "address": "70 Dry Creek Rd", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 224-9002", "lat": 34.86252, "lng": -111.815853, "quality": 2, "zone": "Uptown Sedona", "description": "Sedona Beer Co. satellite, beer garden, food truck, red rock views, dog-friendly."},
+{"id": "RB-SEDON-00050", "name": "Oak Creek Brewing Company", "address": "2050 Yavapai Dr", "city": "Sedona", "state": "AZ", "zip": "86336", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 204-1300", "lat": 34.866368, "lng": -111.79613, "quality": 2, "zone": "West Sedona", "description": "Sedona's oldest craft brewery (1995), Nut Brown Ale, beer garden, firepits."},
+{"id": "RB-SEDON-00051", "name": "PJ's Village Pub", "address": "40 W Cortez Dr", "city": "Sedona", "state": "AZ", "zip": "86351", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 284-2250", "lat": 34.869775, "lng": -111.762403, "quality": 2, "zone": "Uptown Sedona", "description": "Local sports bar since 1974, 18 taps, late-night food til 2am, martini specials."}
+];
+
+// ZONE MAP
+const ZONE_MAP = {
+  "uptown": ["Uptown Sedona", "Uptown", "Airport Mesa"],
+  "w-sedona": ["West Sedona", "89A Corridor"],
+  "voc": ["Village of Oak Creek", "Bell Rock"],
+  "tlaq": ["Tlaquepaque", "Los Abrigados"],
+  "oakcreek": ["Oak Creek Canyon", "Slide Rock"],
+  "cottonwood": ["Cottonwood"],
+  "jerome": ["Jerome", "Clarkdale"],
+  "other": ["Yarnell", "Camp Verde", "Verde Valley"]
+};
+
+function inZone(zone, key) {
+  if (key === 'All') return true;
+  return (ZONE_MAP[key] || []).includes(zone);
+}
+
+// CUISINE COLORS
+const CC = {
+  "Mexican":"#7C3AED","Italian":"#15803D","American":"#1D4ED8",
+  "Chinese":"#B91C1C","Pizza":"#DC2626","Coffee":"#92400E",
+  "Bar":"#334155","Fast Food":"#EA580C","Chicken":"#DB2777",
+  "Bakery":"#2563EB","Sandwiches":"#16A34A","Asian":"#0D9488",
+  "Korean":"#6D28D9","French":"#4338CA","BBQ":"#C2410C",
+  "Brewery":"#B45309","Ice Cream":"#BE185D","Donuts":"#EC4899",
+  "Wings":"#B91C1C","Steakhouse":"#991B1B","Deli":"#16A34A",
+  "Seafood":"#0369A1","Indian":"#D97706","Thai":"#0D9488",
+  "Vietnamese":"#0891B2","Mediterranean":"#0369A1","Sushi":"#0891B2",
+  "Southwestern":"#C2410C","Fine Dining":"#6D28D9","Wine Bar":"#9333EA",
+  "Breakfast":"#EA580C","Diner":"#78716C","Cafe":"#92400E",
+  "Greek":"#0369A1","Japanese":"#B91C1C","Pub":"#334155",
+  "Tacos":"#7C3AED","Sports Bar":"#1D4ED8","Lounge":"#334155"
+};
+function tileColor(c) { return CC[c] || CC[c.split('/')[0].trim()] || '#475569'; }
+function tileAbbr(c)  { return c.split('/')[0].trim().substring(0,2).toUpperCase(); }
+
+// ESC
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// STATE
+let cuisine = 'All', zone = 'All', sort = 'zone', q = '', show = 30;
+const PAGE = 30;
+let nmActive = false, nmLat = null, nmLng = null;
+
+function haversine(a, b, c, d) {
+  const R=3958.8, dL=(c-a)*Math.PI/180, dG=(d-b)*Math.PI/180;
+  const x=Math.sin(dL/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dG/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+
+// FILTER + SORT
+function filtered() {
+  let r = [...DATA];
+  if (cuisine !== 'All') r = r.filter(x => x.cuisine.toLowerCase().includes(cuisine.toLowerCase()));
+  if (zone    !== 'All') r = r.filter(x => inZone(x.zone, zone));
+  if (q) r = r.filter(x =>
+    x.name.toLowerCase().includes(q) || x.cuisine.toLowerCase().includes(q) ||
+    x.address.toLowerCase().includes(q) || x.zone.toLowerCase().includes(q) ||
+    (x.description||'').toLowerCase().includes(q) || (x.chain_name||'').toLowerCase().includes(q)
+  );
+  if      (sort==='name')     r.sort((a,b)=>a.name.localeCompare(b.name));
+  else if (sort==='name-desc')r.sort((a,b)=>b.name.localeCompare(a.name));
+  else if (sort==='cuisine')  r.sort((a,b)=>a.cuisine.localeCompare(b.cuisine)||a.name.localeCompare(b.name));
+  else if (sort==='chain')    r.sort((a,b)=>(b.is_chain?1:0)-(a.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='local')    r.sort((a,b)=>(a.is_chain?1:0)-(b.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='distance' && nmActive) r.sort((a,b)=>haversine(nmLat,nmLng,a.lat,a.lng)-haversine(nmLat,nmLng,b.lat,b.lng));
+  else                        r.sort((a,b)=>a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name));
+  return r;
+}
+
+// RENDER
+function render() {
+  const items = filtered();
+  const grid  = document.getElementById('listingGrid');
+  const lm    = document.getElementById('loadMoreWrap');
+
+  document.getElementById('totalCount').textContent   = DATA.length;
+  document.getElementById('resultsCount').textContent = items.length;
+  updateFilterBar();
+  updateZoneCounts();
+
+  if (!items.length) {
+    grid.innerHTML = '<div class="no-results"><div class="nr-icon">🔍</div><h3>No restaurants found</h3><p>Try a different cuisine, area, or search term.</p><button onclick="clearAll()">Clear All Filters</button></div>';
+    lm.style.display='none'; return;
+  }
+
+  let h = '';
+  items.slice(0, show).forEach((r, i) => {
+    if (i > 0 && i % 12 === 0) {
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><div class="ad-label"><div class="ad-size">In-Feed Banner</div><div class="ad-price">$75/mo</div></div></div></div>';
+    }
+
+    const mapUrl  = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address + ' ' + r.city + ' ' + r.state);
+    const dist    = (nmActive && r.lat && r.lng) ? ' <span class="dist-badge">' + haversine(nmLat,nmLng,r.lat,r.lng).toFixed(1) + ' mi</span>' : '';
+    const tag     = r.is_chain ? '<span class="card-tag tag-chain">Chain</span>' : '<span class="card-tag tag-local">Local</span>';
+    const sub     = (r.is_chain && r.chain_name && r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase())
+                    ? '<div class="card-chain">' + esc(r.chain_name) + '</div>' : '';
+    const phone   = r.phone ? '<span>📞 ' + esc(r.phone) + '</span>' : '';
+    const desc    = r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : '';
+    const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
+    const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';
+
+    h += '<a href="' + mapUrl + '" target="_blank" rel="noopener" class="listing-card">'
+       + ico
+       + '<div class="card-body">'
+       +   '<h3>' + esc(r.name) + dist + '</h3>'
+       +   sub + desc
+       +   '<div class="meta">'
+       +     '<span>📍 ' + addr + '</span>'
+       +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
+       +     phone
+       +     '<span>🗺️ ' + esc(r.zone) + '</span>'
+       +   '</div>'
+       + '</div>'
+       + tag
+       + '</a>';
+  });
+
+  grid.innerHTML = h;
+  const left = items.length - show;
+  if (left > 0) {
+    lm.style.display = 'block';
+    lm.querySelector('.load-more-btn').textContent = 'Show ' + Math.min(PAGE,left) + ' More (' + left + ' remaining)';
+  } else lm.style.display = 'none';
+}
+
+// FILTER BAR
+function updateFilterBar() {
+  const bar = document.getElementById('filterBar');
+  const pills = [];
+  if (nmActive)       pills.push('<span class="filter-pill">📍 Near Me <span class="fp-x" onclick="toggleNearMe()">✕</span></span>');
+  if (cuisine!=='All')pills.push('<span class="filter-pill">🍴 ' + esc(cuisine) + ' <span class="fp-x" onclick="removeCuisineFilter()">✕</span></span>');
+  if (zone!=='All') {
+    const zl = document.querySelector('#zoneList li.z-active span:first-child');
+    pills.push('<span class="filter-pill">🗺️ ' + esc(zl ? zl.textContent : zone) + ' <span class="fp-x" onclick="removeZoneFilter()">✕</span></span>');
+  }
+  if (q) pills.push('<span class="filter-pill">🔍 &ldquo;' + esc(q) + '&rdquo; <span class="fp-x" onclick="removeSearchFilter()">✕</span></span>');
+  if (pills.length) {
+    bar.innerHTML = pills.join('') + '<span class="filter-bar-clear" onclick="clearAll()">Clear all</span>';
+    bar.classList.add('visible');
+  } else { bar.innerHTML = ''; bar.classList.remove('visible'); }
+}
+
+function updateZoneCounts() {
+  const stale = cuisine !== 'All' || q !== '';
+  document.querySelectorAll('#zoneList li').forEach(li =>
+    stale ? li.classList.add('z-counts-stale') : li.classList.remove('z-counts-stale')
+  );
+}
+
+function loadMore() { show += PAGE; render(); }
+
+// FILTER ACTIONS
+function filterByCuisine(el, c) {
+  cuisine = c; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  el.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  render();
+}
+function filterByZone(key, el) {
+  zone = key; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  el.classList.add('z-active'); el.setAttribute('aria-selected','true');
+  render();
+}
+function syncSearch(v) {
+  q = v.toLowerCase().trim(); show = PAGE;
+  document.getElementById('headerSearch').value = v;
+  document.getElementById('mobileSearch').value = v;
+  render();
+}
+function doSort() { sort = document.getElementById('sortSelect').value; show = PAGE; render(); }
+
+function removeCuisineFilter() {
+  cuisine = 'All'; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  render();
+}
+function removeZoneFilter() {
+  zone = 'All'; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  const f = document.querySelector('#zoneList li');
+  f.classList.add('z-active'); f.setAttribute('aria-selected','true');
+  render();
+}
+function removeSearchFilter() {
+  q = ''; show = PAGE;
+  document.getElementById('headerSearch').value = '';
+  document.getElementById('mobileSearch').value = '';
+  render();
+}
+function clearAll() {
+  if (nmActive) toggleNearMe();
+  cuisine='All'; zone='All'; sort='zone'; q=''; show=PAGE;
+  document.getElementById('headerSearch').value='';
+  document.getElementById('mobileSearch').value='';
+  document.getElementById('sortSelect').value='zone';
+  document.querySelectorAll('.cuisine-chip').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  document.querySelectorAll('#zoneList li').forEach(li=>{li.classList.remove('z-active');li.setAttribute('aria-selected','false');});
+  const f=document.querySelector('#zoneList li');
+  f.classList.add('z-active');f.setAttribute('aria-selected','true');
+  render();
+}
+
+// SEARCH UI
+function toggleMobileSearch() {
+  const b = document.getElementById('mobileSearchBar');
+  if (b.classList.toggle('open')) document.getElementById('mobileSearch').focus();
+}
+function closeMobileSearch() { document.getElementById('mobileSearchBar').classList.remove('open'); }
+
+// BACK TO TOP
+window.addEventListener('scroll', () => {
+  const b = document.getElementById('backToTop');
+  window.scrollY > 400 ? b.classList.add('visible') : b.classList.remove('visible');
+}, {passive:true});
+
+// NEAR ME
+function toggleNearMe() {
+  if (nmActive) {
+    nmActive=false; nmLat=nmLng=null;
+    document.getElementById('nearMeBtn').classList.remove('active','loading');
+    document.getElementById('nearMeError').innerHTML='';
+    document.getElementById('sortSelect').disabled=false;
+    render(); return;
+  }
+  if (!navigator.geolocation) { showNMError('Location not supported by your browser.'); return; }
+  const btn = document.getElementById('nearMeBtn');
+  btn.classList.add('loading');
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      nmLat=pos.coords.latitude; nmLng=pos.coords.longitude;
+      nmActive=true; btn.classList.remove('loading'); btn.classList.add('active');
+      document.getElementById('sortSelect').value='distance';
+      document.getElementById('sortSelect').disabled=true;
+      sort='distance'; show=PAGE; render();
+    },
+    err => {
+      btn.classList.remove('loading');
+      showNMError({1:'Location access denied.',2:'Could not determine location.',3:'Request timed out.'}[err.code]||'Location unavailable.');
+    },
+    {timeout:8000,maximumAge:60000}
+  );
+}
+function showNMError(msg) {
+  document.getElementById('nearMeError').innerHTML = '<div class="near-me-error">⚠️ ' + esc(msg) + '</div>';
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim

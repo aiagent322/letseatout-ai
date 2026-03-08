@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Cave Creek · Carefree — 40 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="Your complete free guide to every restaurant, bar, and chain in Cave Creek · Carefree, AZ. 40 listings. No reviews, no pay-to-play — just where to eat.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Cave Creek · Carefree — 40 Restaurants, Bars &amp; Chains">
+<meta property="og:description" content="Every restaurant, bar, and chain in Cave Creek · Carefree, AZ. Free directory. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai/cave-creek">
+<meta property="og:image" content="https://letseatout.ai/og-cave-creek.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai/cave-creek">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A;--red-dark:#9E1830;--red-light:#F9E8EC;
+  --gold:#C8973E;--gold-light:#F7F0E3;
+  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#555;--text-light:#888;
+  --cream:#FFFBF5;--white:#FFFFFF;
+  --border:#E8E0D8;--border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px;--r-lg:12px;--hdr-h:61px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;}
+.skip-nav{position:absolute;left:-9999px;}
+.skip-nav:focus{position:fixed;top:0;left:0;padding:10px 18px;background:var(--red);color:white;font-size:14px;font-weight:700;z-index:9999;}
+
+/* TOP BAR */
+.top-bar{background:var(--dark);color:white;padding:6px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;gap:8px;}
+.top-bar-text{display:none;}
+.market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;overflow-x:auto;scrollbar-width:none;}
+.market-pills::-webkit-scrollbar{display:none;}
+.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.market-pill.active{background:var(--red);color:white;}
+.market-pill:not(.active):hover{color:white;}
+
+/* HEADER */
+header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-mark{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:21px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.search-icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.mobile-search-bar{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--red);padding:10px 16px;box-shadow:var(--shadow-m);z-index:99;}
+.mobile-search-bar.open{display:flex;gap:8px;}
+.mobile-search-bar input{flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;}
+.mobile-search-bar input:focus{border-color:var(--red);}
+.mobile-search-bar button{padding:10px 18px;background:var(--red);color:white;border:none;border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+.header-search{display:none;}
+.submit-btn{padding:8px 14px;background:var(--dark);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.submit-btn:hover{background:var(--red);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#1a0a00 50%,#2e1200 100%);color:white;padding:28px 0 22px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.15;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;}
+.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;color:white;letter-spacing:.3px;}
+.hero-stats{display:flex;gap:20px;justify-content:center;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.coming-soon-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;justify-content:center;margin-top:4px;}
+.coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
+.coming-soon-badge{background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.hero-banner-wrap{margin-top:16px;width:100%;}
+
+/* AD ZONES */
+.ad-zone{background:linear-gradient(135deg,#f5ede3,#ebe3d8);border:2px dashed var(--gold);border-radius:var(--r);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ad-zone::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;}
+.ad-inline{width:100%;height:50px;}
+.ad-sidebar{display:none;}
+
+/* CUISINE NAV */
+.cuisine-nav{background:var(--white);padding:10px 0;border-bottom:1px solid var(--border);position:sticky;top:var(--hdr-h);z-index:90;}
+.cuisine-slider-wrap{display:flex;align-items:center;gap:6px;}
+.cuisine-scroll{display:flex;gap:6px;overflow-x:auto;padding:2px;scrollbar-width:none;scroll-behavior:smooth;flex:1;-webkit-overflow-scrolling:touch;}
+.cuisine-scroll::-webkit-scrollbar{display:none;}
+.cuisine-chip{padding:7px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;min-height:36px;}
+.cuisine-chip:active,.cuisine-chip.active{background:var(--red);color:white;border-color:var(--red);}
+.slider-arrow{display:none;}
+
+/* NEAR ME */
+.near-me-chip{padding:7px 14px;border-radius:20px;border:1.5px solid #1D6CE0;background:#1D6CE0;font-size:12px;font-weight:700;color:white;cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;min-height:36px;}
+.near-me-chip.active{background:#0D3D80;border-color:#0D3D80;}
+.near-me-chip.loading{opacity:.75;pointer-events:none;}
+.near-me-chip .nm-spinner{width:12px;height:12px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none;}
+.near-me-chip.loading .nm-spinner{display:block;}
+.near-me-chip.loading .nm-icon{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.dist-badge{font-size:10px;font-weight:700;color:var(--red);background:var(--red-light);padding:2px 7px;border-radius:10px;margin-left:4px;}
+.near-me-error{background:#fff3cd;border:1.5px solid #ffc107;border-radius:var(--r);padding:10px 14px;font-size:12px;color:#856404;margin-bottom:10px;}
+
+/* MAIN LAYOUT */
+.main-layout{display:flex;flex-direction:column;gap:20px;padding:16px 0 32px;}
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;}
+.results-count{font-size:12px;color:var(--text-light);font-weight:500;}
+.results-count strong{color:var(--text);font-weight:700;}
+.sort-sel{padding:6px 10px;border:1.5px solid var(--border);border-radius:var(--r);font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:var(--text-mid);background:var(--white);cursor:pointer;}
+.filter-bar{display:none;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 0 4px;}
+.filter-bar.visible{display:flex;}
+.filter-pill{display:inline-flex;align-items:center;gap:5px;background:var(--red-light);border:1.5px solid var(--red);color:var(--red);border-radius:16px;font-size:11px;font-weight:700;padding:4px 10px;}
+.filter-pill .fp-x{cursor:pointer;font-size:13px;line-height:1;margin-left:2px;}
+.filter-bar-clear{font-size:11px;font-weight:700;color:var(--text-light);cursor:pointer;text-decoration:underline;padding:4px 2px;}
+
+/* LISTING CARDS — now real <a> tags */
+.listing-grid{display:flex;flex-direction:column;gap:8px;}
+.listing-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  transition:border-color .2s;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;color:inherit;
+}
+.listing-card:hover,.listing-card:active{border-color:var(--red);background:var(--red-light);}
+.card-tag{display:none;}
+.card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}
+.card-body h3{font-size:14px;font-weight:700;margin-bottom:1px;color:var(--text);line-height:1.3;}
+.card-chain{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px;}
+.card-desc{font-size:12px;color:var(--text-mid);line-height:1.55;margin:5px 0 6px;}
+.card-body .meta{font-size:11px;color:var(--text-light);display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
+.card-body .meta span{display:flex;align-items:center;gap:3px;}
+.inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:44px 20px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);}
+.no-results .nr-icon{font-size:38px;margin-bottom:10px;}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px;}
+.no-results p{font-size:13px;color:var(--text-light);margin-bottom:16px;}
+.no-results button{padding:10px 22px;background:var(--red);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* LOAD MORE */
+.load-more-wrap{text-align:center;padding:12px 0 4px;}
+.load-more-btn{padding:12px 30px;background:var(--white);border:2px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text-mid);cursor:pointer;transition:all .2s;}
+.load-more-btn:hover{border-color:var(--red);color:var(--red);}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;}
+.sidebar-box h4{font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--red);}
+.zone-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.zone-list li{font-size:12px;color:var(--text-mid);padding:8px 10px;border-radius:var(--r);cursor:pointer;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent;outline:none;}
+.zone-list li:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.zone-list li:hover,.zone-list li:active{background:var(--red-light);color:var(--red);}
+.zone-list li.z-active{background:var(--red-light);color:var(--red);font-weight:700;}
+.zone-list li .ct{background:var(--cream);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;color:var(--text-light);min-width:26px;text-align:center;}
+.zone-list li.z-active .ct{background:var(--red);color:white;}
+.zone-list li.z-counts-stale .ct{opacity:.4;}
+.quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.quick-links li a{font-size:12px;color:var(--red);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px;}
+.quick-links li a:hover{color:var(--red-dark);}
+
+/* SUBMIT */
+.submit-section{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px 16px;margin:0 0 32px;text-align:center;}
+.submit-section h2{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px;}
+.submit-section .sub{color:var(--text-light);font-size:13px;margin-bottom:18px;line-height:1.5;}
+.submit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px;}
+.submit-card{background:var(--cream);border:2px dashed var(--border);border-radius:var(--r-lg);padding:18px 14px;text-align:center;}
+.submit-card .ico{font-size:28px;margin-bottom:6px;}
+.submit-card h3{font-size:13px;font-weight:700;margin-bottom:3px;}
+.submit-card p{font-size:11px;color:var(--text-light);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:24px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:18px;}
+footer .brand span{color:var(--red);}
+footer a{color:var(--gold);text-decoration:none;}
+footer .legal{line-height:1.6;}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--red);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(196,30,58,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(8px);}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--red-dark);}
+
+/* TABLET */
+@media(min-width:600px){
+  :root{--hdr-h:69px;}
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:space-between;}
+  .top-bar-text{display:block;}
+  .header-inner{padding:12px 0;}
+  .logo-mark{width:42px;height:42px;font-size:20px;}
+  .logo-text{font-size:24px;}
+  .search-icon-btn{display:none;}
+  .header-search{display:flex;align-items:center;background:var(--cream);border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .2s;}
+  .header-search:focus-within{border-color:var(--red);}
+  .header-search input{padding:8px 4px 8px 14px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;width:160px;outline:none;}
+  .header-search input::placeholder{color:var(--text-light);}
+  .header-search button{padding:7px 12px;border:none;background:var(--red);color:white;font-size:12px;cursor:pointer;border-radius:0 22px 22px 0;}
+  .hero{padding:36px 0 28px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-stat .num{font-size:34px;}
+  .ad-leaderboard{height:60px;}
+  .ad-inline{height:60px;}
+  .ad-sidebar{display:flex;width:100%;height:180px;}
+  .slider-arrow{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text-mid);flex-shrink:0;transition:all .2s;}
+  .slider-arrow:hover{border-color:var(--red);color:var(--red);}
+  .cuisine-nav{padding:12px 0;}
+  .main-layout{padding:20px 0 40px;gap:24px;}
+  .listing-card{grid-template-columns:48px 1fr auto;padding:16px 18px;gap:16px;}
+  .card-tag{display:block;padding:4px 11px;border-radius:16px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;color:white;}
+  .tag-chain{background:#1E293B;}
+  .tag-local{background:#C2410C;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-section{padding:28px 24px;margin:0 0 40px;}
+  .submit-grid{grid-template-columns:repeat(3,1fr);}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  footer .legal{text-align:right;max-width:400px;}
+}
+@media(min-width:960px){
+  :root{--hdr-h:75px;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .header-inner{padding:14px 0;}
+  .logo-mark{width:44px;height:44px;font-size:22px;}
+  .logo-text{font-size:26px;}
+  .header-search input{width:200px;}
+  .header-search button{padding:8px 14px;font-size:13px;}
+  .hero{padding:44px 0 36px;}
+  .hero h1{font-size:42px;}
+  .hero-sub{font-size:16px;max-width:580px;margin:0 auto;}
+  .hero-stats{gap:28px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:0 auto;}
+  .ad-inline{height:90px;max-width:728px;margin:0 auto;}
+  .ad-sidebar{height:250px;}
+  .cuisine-nav{padding:14px 0;}
+  .slider-arrow{width:32px;height:32px;font-size:14px;}
+  .main-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 0 48px;}
+  .sidebar{display:flex;flex-direction:column;position:sticky;top:calc(var(--hdr-h) + 58px);}
+  .listing-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-1px);}
+  .listing-card:active{transform:none;}
+  .zone-list li:hover{background:var(--red-light);color:var(--red);}
+  .submit-section{max-width:800px;margin:0 auto 48px;padding:36px;}
+  footer{padding:32px 0;}
+  .back-to-top{right:32px;bottom:32px;}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Cave Creek · Carefree","description":"Free restaurant directory for Cave Creek · Carefree, AZ. 40 listings.","url":"https://letseatout.ai/cave-creek","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+</script>
+</head>
+<body>
+
+<a class="skip-nav" href="#listingGrid">Skip to listings</a>
+
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at no cost</span>
+    <div class="market-pills">
+      <button type="button" class="market-pill" onclick="location.href='/indio'">Indio</button>
+      <button type="button" class="market-pill" onclick="location.href='/scottsdale'">Scottsdale</button>
+      <button type="button" class="market-pill" onclick="location.href='/sedona'">Sedona</button>
+      <button type="button" class="market-pill" onclick="location.href='/prescott'">Prescott</button>
+      <button type="button" class="market-pill active" onclick="location.href='/cave-creek'">Cave Creek</button>
+      <button type="button" class="market-pill" onclick="location.href='/wickenburg'">Wickenburg</button>
+      <button type="button" class="market-pill" onclick="location.href='/peoria'">Peoria</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Cave Creek · Carefree, AZ</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button type="button" class="search-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">🔍</button>
+        <div class="header-search">
+          <input type="search" id="headerSearch" placeholder="Search restaurants…" oninput="syncSearch(this.value)" autocomplete="off">
+          <button type="button" onclick="syncSearch(document.getElementById('headerSearch').value)">Search</button>
+        </div>
+        <button type="button" class="submit-btn" onclick="document.getElementById('submitArea').scrollIntoView({behavior:'smooth'})">+ Add Your Business</button>
+      </div>
+    </div>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="search" id="mobileSearch" placeholder="Restaurant, cuisine, area…" oninput="syncSearch(this.value)" autocomplete="off">
+      <button type="button" onclick="closeMobileSearch()">Done</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Where to Eat in <em>Cave Creek</em></h1>
+        <p class="hero-sub">Your complete guide to every restaurant, saloon, and BBQ joint in Cave Creek and Carefree. The Old West has never eaten so well.</p>
+        <div class="hero-promise">✦ No reviews &nbsp;·&nbsp; No pay-to-play &nbsp;·&nbsp; No fake ratings &nbsp;·&nbsp; Always free</div>
+        <div class="coming-soon-row">
+          <div class="coming-soon-label">Also coming soon:</div>
+          <span class="coming-soon-badge">Anthem</span>
+          <span class="coming-soon-badge">New River</span>
+          <span class="coming-soon-badge">Black Canyon City</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">40</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
+        <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Premium hero placement</div><div class="ad-price">$150/mo</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cuisine-nav" role="navigation" aria-label="Filter by cuisine">
+  <div class="container">
+    <div class="cuisine-slider-wrap">
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:-200,behavior:'smooth'})" aria-label="Scroll left">◀</button>
+      <div class="cuisine-scroll" id="cuisineScroll">
+        <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
+        <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'American')">🍔 American</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Mexican')">🌮 Mexican</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'BBQ')">🔥 BBQ</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bar')">🍺 Bars</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Steakhouse')">🥩 Steakhouse</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fast Food')">🍟 Fast Food</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Coffee')">☕ Coffee</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Pizza')">🍕 Pizza</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sandwiches')">🥪 Sandwiches</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Italian')">🍝 Italian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Brewery')">🍻 Brewery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Asian')">🍜 Asian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bakery')">🧁 Bakery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Wine Bar')">🍷 Wine Bar</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Ice Cream')">🍦 Ice Cream</button>
+      </div>
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="main-layout">
+    <div>
+      <div class="results-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
+        <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
+          <option value="distance" disabled style="display:none">📍 Near Me</option>
+          <option value="zone">By Area</option>
+          <option value="name">A–Z</option>
+          <option value="name-desc">Z–A</option>
+          <option value="cuisine">By Cuisine</option>
+          <option value="local">Locals First</option>
+          <option value="chain">Chains First</option>
+        </select>
+      </div>
+      <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
+      <div id="nearMeError"></div>
+      <div class="listing-grid" id="listingGrid"></div>
+      <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+        <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
+      </div>
+      <div class="inline-ad-wrap" style="margin-top:20px">
+        <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Bottom placement</div><div class="ad-price">$100/mo</div></div></div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Premium sidebar</div><div class="ad-price">$125/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Cave Creek Area</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('cccenter',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('cccenter',this)"><span>Cave Creek Center</span><span class="ct" id="zc-cccenter">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('carefree',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('carefree',this)"><span>Carefree</span><span class="ct" id="zc-carefree">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('spur',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('spur',this)"><span>Cave Creek Rd Corridor</span><span class="ct" id="zc-spur">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('anthem',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('anthem',this)"><span>Anthem Area</span><span class="ct" id="zc-anthem">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Sidebar #2</div><div class="ad-price">$100/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="javascript:void(0)">→ Date Night Spots</a></li>
+          <li><a href="javascript:void(0)">→ Best Happy Hours</a></li>
+          <li><a href="javascript:void(0)">→ Family Friendly</a></li>
+          <li><a href="javascript:void(0)">→ Late Night Eats</a></li>
+          <li><a href="javascript:void(0)">→ Patio Dining</a></li>
+          <li><a href="javascript:void(0)">→ New Openings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="submitArea">
+  <div class="submit-section">
+    <h2>Get Listed — It's Free</h2>
+    <p class="sub">Every restaurant, bar, and chain in Cave Creek · Carefree is listed at no cost. Send us your info any way that's easy for you.</p>
+    <div class="submit-grid">
+      <div class="submit-card"><div class="ico">🖼️</div><h3>Upload a Flyer</h3><p>PDF, JPG, or PNG of your menu or business card</p></div>
+      <div class="submit-card"><div class="ico">📱</div><h3>Snap a Photo</h3><p>Photo of your storefront, sign, or menu board</p></div>
+      <div class="submit-card"><div class="ico">📝</div><h3>Fill Out Form</h3><p>Name, address, cuisine, hours — takes 60 seconds</p></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-light)">We review submissions daily and add listings within 24–48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px">Cave Creek · Carefree's complete dining guide · <a href="/">letseatout.ai</a></div>
+      <div style="margin-top:4px">Advertise: <a href="/cdn-cgi/l/email-protection#a0c9cec6cfe0ccc5d4d3c5c1d4cfd5d48ec1c9"><span class="__cf_email__" data-cfemail="b3daddd5dcf3dfd6c7c0d6d2c7dcc6c79dd2da">[email&#160;protected]</span></a></div>
+    </div>
+    <div class="legal">
+      Every restaurant and bar in Cave Creek · Carefree is listed free. We sell banner advertising only — no paid placement, no paid rankings.<br>
+      <span style="color:rgba(255,255,255,.3)">© 2026 LetsEatOut.ai — All rights reserved</span>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// DATA
+const DATA = [
+{"id": "RB-CAVEC-00001", "name": "Buffalo Chip Saloon & Steakhouse", "address": "6823 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(480) 488-9118", "lat": 33.830652, "lng": -111.93409, "quality": 1, "zone": "Cave Creek Rd Corridor", "description": "Iconic Western roadhouse, bull riding Wed/Fri, live music, BBQ Texas-style, country dance lessons, mechanical bull."},
+{"id": "RB-CAVEC-00002", "name": "Harold's Cave Creek Corral", "address": "6895 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(480) 488-1906", "lat": 33.830208, "lng": -111.932983, "quality": 2, "zone": "Cave Creek Rd Corridor", "description": "Since early 1950s, outdoor Western saloon, steaks, chops, live music, one of biggest Pittsburgh Steelers bars in nation."},
+{"id": "RB-CAVEC-00003", "name": "Tonto Bar & Grill", "address": "5736 E Rancho Mañana Blvd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Southwestern", "is_chain": false, "chain_name": "", "phone": "(480) 488-0698", "lat": 33.832361, "lng": -111.956187, "quality": 3, "zone": "Cave Creek Center", "description": "Upscale resort dining, former Rancho Mañana dude ranch building, Southwestern cuisine, mesquite-grilled steaks, golf course views."},
+{"id": "RB-CAVEC-00004", "name": "El Encanto Mexican Patio Cafe", "address": "6248 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 488-1752", "lat": 33.83192, "lng": -111.946383, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Mexican dining, beautiful patio setting, margaritas, authentic Mexican cuisine."},
+{"id": "RB-CAVEC-00005", "name": "The Horny Toad Restaurant", "address": "6738 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(480) 488-9542", "lat": 33.833432, "lng": -111.936526, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Southwestern and BBQ cuisine, local landmark, cowboy atmosphere, steaks and ribs."},
+{"id": "RB-CAVEC-00006", "name": "Cryin' Coyote Barbecue", "address": "6130 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(480) 575-7155", "lat": 33.832514, "lng": -111.948601, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Slow smoked barbecue, authentic Texas-style BBQ, brisket, ribs, pulled pork."},
+{"id": "RB-CAVEC-00007", "name": "Brugos Italian Bistro", "address": "7100 E Cave Creek Rd #150", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 575-3044", "lat": 33.829993, "lng": -111.928248, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Family-owned Italian, hand-tossed pizza, slow-simmered sauces, Stagecoach Village, twinkling-light patio, Wine Night Wednesday."},
+{"id": "RB-CAVEC-00008", "name": "Kiki Rae's", "address": "6219 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(480) 914-2990", "lat": 33.831937, "lng": -111.947016, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Coastal vibes in the desert, diverse coastal flavors menu, brunch, seafood, relaxed atmosphere."},
+{"id": "RB-CAVEC-00009", "name": "Ofrenda", "address": "7100 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 488-2187", "lat": 33.82902, "lng": -111.929916, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Latin-inspired, dishes from Mexico and South America, traditional cooking methods, tequila selection, upscale casual."},
+{"id": "RB-CAVEC-00010", "name": "Local Jonny's Tavern & Café", "address": "6033 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-7473", "lat": 33.833362, "lng": -111.950521, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Coffee house and tavern, breakfast/brunch/lunch daily, dinner and live music Fri-Sat, craft cocktails, full bar."},
+{"id": "RB-CAVEC-00011", "name": "Le Sans Souci", "address": "7030 E Bella Vista Dr", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "French", "is_chain": false, "chain_name": "", "phone": "(480) 488-2056", "lat": 33.828365, "lng": -111.928821, "quality": 3, "zone": "Cave Creek Center", "description": "French gourmet cuisine, fine dining, elegant atmosphere, classic French dishes."},
+{"id": "RB-CAVEC-00012", "name": "Indian Village", "address": "6746 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 488-2827", "lat": 33.833409, "lng": -111.936384, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Mexican and Native American fare, fry bread, tacos, tamales, Indian fry bread tacos."},
+{"id": "RB-CAVEC-00013", "name": "Cowboy Pizza Co.", "address": "6920 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 488-2588", "lat": 33.831144, "lng": -111.933714, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Casual Italian and pizza, cowboy-themed, family-friendly."},
+{"id": "RB-CAVEC-00014", "name": "Brunch", "address": "6920 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(480) 488-2068", "lat": 33.831144, "lng": -111.933714, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Hearty breakfast and lunch selections, '57 Chevy booth, diner atmosphere."},
+{"id": "RB-CAVEC-00015", "name": "Mountain View Pub", "address": "7033 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(480) 575-7782", "lat": 33.829201, "lng": -111.930389, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Irish traditions and food, pub atmosphere, burgers, fish and chips."},
+{"id": "RB-CAVEC-00016", "name": "Hideaway Grill", "address": "6746 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-2827", "lat": 33.833409, "lng": -111.936384, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Burgers, salads, sandwiches, casual atmosphere."},
+{"id": "RB-CAVEC-00017", "name": "Hansen's Cowboy BBQ", "address": "6245 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(623) 680-9831", "lat": 33.831923, "lng": -111.946448, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Slow smoked BBQ in western outdoor setting, authentic pit barbecue."},
+{"id": "RB-CAVEC-00018", "name": "Wagon Wheel", "address": "36457 N Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-2291", "lat": 33.793101, "lng": -111.967581, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Breakfast and lunch, rustic Old West decor, classic diner fare."},
+{"id": "RB-CAVEC-00019", "name": "Raven's View", "address": "42016 N Old Mine Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 488-1090", "lat": 33.8502, "lng": -111.9847, "quality": 3, "zone": "Cave Creek Center", "description": "Wine and beer pub in Tonto Hills, desert mountain views, dog-friendly patio, live music."},
+{"id": "RB-CAVEC-00020", "name": "Janey's Coffee Co. & Bodega", "address": "6602 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(480) 575-6885", "lat": 33.833806, "lng": -111.938489, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Coffee and wine bar, live music, relaxed atmosphere."},
+{"id": "RB-CAVEC-00021", "name": "It's a Divine Bakery", "address": "6554 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(602) 695-2306", "lat": 33.833172, "lng": -111.939447, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Coffee and bakery goods, pastries, specialty coffee drinks."},
+{"id": "RB-CAVEC-00022", "name": "Village Coffee & Créperie", "address": "7110 E Cave Creek Rd, Ste 134B", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(480) 488-3835", "lat": 33.8215, "lng": -111.9667, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Crepes and coffee, French-inspired cafe."},
+{"id": "RB-CAVEC-00023", "name": "Grotto Cafe", "address": "6501 E Cave Creek Rd #8", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(480) 499-0140", "lat": 33.8144, "lng": -111.969, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Salads, sandwiches, coffee and wine bar, relaxed atmosphere."},
+{"id": "RB-CAVEC-00024", "name": "The City Creamery", "address": "6268 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(480) 397-1130", "lat": 33.831914, "lng": -111.945946, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Homemade ice cream, local favorite."},
+{"id": "RB-CAVEC-00025", "name": "Z's House of Thai", "address": "6602 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(480) 575-7115", "lat": 33.833806, "lng": -111.938489, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Thai cuisine, authentic dishes, curries and noodles."},
+{"id": "RB-CAVEC-00026", "name": "Cave Greek Gyros", "address": "6245 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(602) 492-4976", "lat": 33.831923, "lng": -111.946448, "quality": 3, "zone": "Cave Creek Rd Corridor", "description": "Greek food, gyros wraps, Greek salads, fries."},
+{"id": "RB-CAREF-00001", "name": "Keeler's Neighborhood Steakhouse", "address": "7212 E Ho Hum Rd", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(480) 488-9009", "lat": 33.8215, "lng": -111.92, "quality": 3, "zone": "Carefree", "description": "Certified Angus Beef steaks, rooftop deck with Black Mountain views, live music, upscale yet unpretentious, Spanish Village."},
+{"id": "RB-CAREF-00002", "name": "Pizzicata", "address": "7212 E Hum Rd", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 488-2848", "lat": 33.826986, "lng": -111.919931, "quality": 3, "zone": "Carefree", "description": "First Pinsa Romana in Arizona, family from Umbria Italy, homemade pasta, gelato, Italian wines, Spanish Village."},
+{"id": "RB-CAREF-00003", "name": "Giordano's Trattoria Romana", "address": "7275 E Easy St", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 595-0233", "lat": 33.823444, "lng": -111.923716, "quality": 3, "zone": "Carefree", "description": "Northern Italian, family-run from NYC, owner Adele greets guests, best-kept secret in Carefree, homestyle cooking."},
+{"id": "RB-CAREF-00004", "name": "Alberto Ristorante", "address": "7171 E Cave Creek Rd", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(480) 488-5800", "lat": 33.82746, "lng": -111.92513, "quality": 3, "zone": "Carefree", "description": "Classic Italian dishes, gluten-free menu, full bar, Mariachi Center location."},
+{"id": "RB-CAREF-00005", "name": "Venues Cafe", "address": "34 Easy St", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-1234", "lat": 33.825169, "lng": -111.922668, "quality": 3, "zone": "Carefree", "description": "American bistro, comfort food Southwest flair, Burger Tuesday, 30ft rock wall, near Sundial, happy hour daily."},
+{"id": "RB-CAREF-00006", "name": "Athens on Easy Street", "address": "7211 E Ho Rd #23", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(480) 488-1284", "lat": 33.825601, "lng": -111.923507, "quality": 3, "zone": "Carefree", "description": "Greek-inspired modern Mediterranean, approachable menu, family atmosphere."},
+{"id": "RB-CAREF-00007", "name": "Spotted Donkey Cantina", "address": "34505 N Scottsdale Rd", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 488-9969", "lat": 33.818076, "lng": -111.925395, "quality": 3, "zone": "Carefree", "description": "At El Pedregal, Mexican cuisine, extensive tequila list, outdoor patio with desert vistas, Sunday brunch."},
+{"id": "RB-CAREF-00008", "name": "Confluence", "address": "36889 N Tom Darlington Dr", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(480) 488-9642", "lat": 33.822016, "lng": -111.923825, "quality": 3, "zone": "Carefree", "description": "Fine dining with healthy options, bistro interior, open patio with mountain views."},
+{"id": "RB-CAREF-00009", "name": "English Rose Tea Room", "address": "201 Easy St", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-4812", "lat": 33.824844, "lng": -111.92379, "quality": 3, "zone": "Carefree", "description": "Authentic British afternoon tea since 2001, Best Afternoon Tea by Phoenix Magazine, loose-leaf teas, English foods."},
+{"id": "RB-CAREF-00010", "name": "Black Mountain Cafe & Lounge", "address": "7171 E Cave Creek Rd", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-0603", "lat": 33.82746, "lng": -111.92513, "quality": 3, "zone": "Carefree", "description": "Since 1978, breakfast and lunch, dinner Tue-Sat, bar called Gears, live music, karaoke Tuesday."},
+{"id": "RB-CAREF-00011", "name": "Carefree Coffee Roastery", "address": "7275 E Easy St", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(480) 488-1045", "lat": 33.823444, "lng": -111.923716, "quality": 3, "zone": "Carefree", "description": "European-style coffee shop, superior coffee and tea, relaxed environment."},
+{"id": "RB-CAREF-00012", "name": "Sundial Garden Cafe", "address": "Easy St", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-9825", "lat": 33.823555, "lng": -111.923255, "quality": 3, "zone": "Carefree", "description": "Seasonal family-run cafe, homemade breakfast and lunch, near Sundial Monument, pet-friendly patio."},
+{"id": "RB-CAREF-00013", "name": "Grind & Gears", "address": "7275 E Easy St", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(480) 488-9099", "lat": 33.823444, "lng": -111.923716, "quality": 3, "zone": "Carefree", "description": "Bike shop and coffee shop, local roast coffee, espresso, smoothies, bicycle sales and repairs."},
+{"id": "RB-CAREF-00014", "name": "Brix Wines", "address": "7211 E Ho Rd", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(480) 488-1221", "lat": 33.825445, "lng": -111.923396, "quality": 3, "zone": "Carefree", "description": "Wine store and wine bar, sip and savor, wine tastings."},
+{"id": "RB-CC-N001", "name": "Big Earl's Greasy Eats", "address": "6135 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 575-7889", "lat": 33.832491, "lng": -111.948531, "quality": 8, "zone": "Cave Creek Center", "description": "Retro-cool restaurant in a former gas station serving some of the best burgers, milkshakes, and sandwiches in Cave Creek. Grease-free despite the name."},
+{"id": "RB-CC-N002", "name": "Heart & Soul Cafe", "address": "4705 E Carefree Hwy", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 595-7300", "lat": 33.798207, "lng": -111.980663, "quality": 8, "zone": "Cave Creek Rd Corridor", "description": "Western-themed bar and grill with eclectic American comfort food, daily specials, live country music, and dancing. Bring your cowboy gear."},
+{"id": "RB-CC-N003", "name": "Brisam's Grill Bar and Patio", "address": "4730 E Lone Mountain Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 595-2202", "lat": 33.852649, "lng": -111.929516, "quality": 7, "zone": "Cave Creek Rd Corridor", "description": "Neighborhood restaurant and bar with great burgers, peel-and-eat shrimp, fish tacos, loaded fries, and pizza. Family-friendly despite the sports bar vibe."},
+{"id": "RB-CC-N004", "name": "Stumblina's Cantina", "address": "6268 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 687-9077", "lat": 33.831914, "lng": -111.945946, "quality": 7, "zone": "Cave Creek Center", "description": "Casual cantina with burgers, sandwiches, salads, and spirits. Large front patio perfect for desert evenings."},
+{"id": "RB-CC-N005", "name": "Road House Cave Creek", "address": "6900 E Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-3300", "lat": 33.831515, "lng": -111.934245, "quality": 7, "zone": "Cave Creek Center", "description": "Harley-themed bar and grill with an outdoor deck. Classic American cuisine, craft beers, and a biker-friendly atmosphere in the heart of Cave Creek."},
+{"id": "RB-CC-N006", "name": "Oregano's Cave Creek", "address": "37645 N Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Pizza", "is_chain": true, "chain_name": "Oregano's", "phone": "(480) 889-0386", "lat": 33.826025, "lng": -111.955066, "quality": 7, "zone": "Cave Creek Rd Corridor", "description": "Arizona-based Chicago-style pizza chain. Deep dish, stuffed pizza, and pasta favorites. Known for the Cookie Monster dessert."},
+{"id": "RB-CC-N007", "name": "Desert Cave Mexican Food", "address": "37611 N Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(480) 486-9305", "lat": 33.825714, "lng": -111.955036, "quality": 7, "zone": "Cave Creek Rd Corridor", "description": "Homemade Mexican take-out on the north end of Cave Creek Road. Family recipes, fresh ingredients, locally loved."},
+{"id": "RB-CC-N008", "name": "Dutch Bros Cave Creek", "address": "34350 N Cave Creek Rd", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Coffee", "is_chain": true, "chain_name": "Dutch Bros", "phone": "", "lat": 33.796923, "lng": -111.966646, "quality": 7, "zone": "Cave Creek Rd Corridor", "description": "Dutch Bros drive-thru coffee on Cave Creek Road. Known for creative specialty drinks, fast service, and famously upbeat staff."},
+{"id": "RB-CC-N009", "name": "Starbucks Carefree Hwy", "address": "5310 E Carefree Hwy", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(480) 575-7125", "lat": 33.799725, "lng": -111.967012, "quality": 6, "zone": "Cave Creek Rd Corridor", "description": "Starbucks at the Cave Creek / Carefree Highway intersection. Full menu with drive-thru."},
+{"id": "RB-CC-N010", "name": "Jersey Mike's Cave Creek", "address": "5355 E Carefree Hwy", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Sandwiches", "is_chain": true, "chain_name": "Jersey Mike's", "phone": "(480) 590-3188", "lat": 33.798739, "lng": -111.966359, "quality": 7, "zone": "Cave Creek Rd Corridor", "description": "Jersey Mike's sub sandwiches at the Carefree Highway strip. Fresh-sliced meats, Mike's Way dressing."},
+{"id": "RB-CC-N011", "name": "Chipotle Cave Creek", "address": "5355 E Carefree Hwy", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Mexican", "is_chain": true, "chain_name": "Chipotle", "phone": "(602) 325-3394", "lat": 33.798739, "lng": -111.966359, "quality": 7, "zone": "Cave Creek Rd Corridor", "description": "Chipotle Mexican Grill at the Carefree Highway shopping center. Burritos, bowls, and tacos."},
+{"id": "RB-CC-N012", "name": "Mod Pizza Cave Creek", "address": "5355 E Carefree Hwy", "city": "Cave Creek", "state": "AZ", "zip": "85331", "cuisine": "Pizza", "is_chain": true, "chain_name": "Mod Pizza", "phone": "(480) 660-8918", "lat": 33.798739, "lng": -111.966359, "quality": 7, "zone": "Cave Creek Rd Corridor", "description": "Mod Pizza with build-your-own personal pizzas at the Carefree Highway location. Fast-casual, unlimited toppings."},
+{"id": "RB-CC-N014", "name": "Pizzafaro's", "address": "36889 N Tom Darlington Dr", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(480) 488-0703", "lat": 33.822016, "lng": -111.923825, "quality": 8, "zone": "Carefree", "description": "Family-run artisan pizza restaurant in Carefree with beers on tap, pasta, and subs. Local favorite with a warm neighborhood atmosphere."},
+{"id": "RB-CC-N015", "name": "Confluence Carefree", "address": "36899 N Tom Darlington Dr", "city": "Carefree", "state": "AZ", "zip": "85377", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(480) 488-9796", "lat": 33.821731, "lng": -111.92282, "quality": 9, "zone": "Carefree", "description": "Contemporary New American bistro with bold, creative dishes. Known for Malpeque oysters, locally sourced ingredients, and an impressive cocktail program."}
+];
+
+// ZONE MAP
+const ZONE_MAP = {
+  "cccenter": ["Cave Creek Center", "Cave Creek", "Frontier Town"],
+  "carefree": ["Carefree", "Carefree Hwy"],
+  "spur": ["Cave Creek Rd Corridor", "Spur Cross", "Scottsdale Rd"],
+  "anthem": ["Anthem", "Daisy Mountain"],
+  "other": ["Black Mountain", "Desert Hills", "Tatum Ranch", "New River"]
+};
+
+function inZone(zone, key) {
+  if (key === 'All') return true;
+  return (ZONE_MAP[key] || []).includes(zone);
+}
+
+// CUISINE COLORS
+const CC = {
+  "Mexican":"#7C3AED","Italian":"#15803D","American":"#1D4ED8",
+  "Chinese":"#B91C1C","Pizza":"#DC2626","Coffee":"#92400E",
+  "Bar":"#334155","Fast Food":"#EA580C","Chicken":"#DB2777",
+  "Bakery":"#2563EB","Sandwiches":"#16A34A","Asian":"#0D9488",
+  "Korean":"#6D28D9","French":"#4338CA","BBQ":"#C2410C",
+  "Brewery":"#B45309","Ice Cream":"#BE185D","Donuts":"#EC4899",
+  "Wings":"#B91C1C","Steakhouse":"#991B1B","Deli":"#16A34A",
+  "Seafood":"#0369A1","Indian":"#D97706","Thai":"#0D9488",
+  "Vietnamese":"#0891B2","Mediterranean":"#0369A1","Sushi":"#0891B2",
+  "Southwestern":"#C2410C","Fine Dining":"#6D28D9","Wine Bar":"#9333EA",
+  "Breakfast":"#EA580C","Diner":"#78716C","Cafe":"#92400E",
+  "Greek":"#0369A1","Japanese":"#B91C1C","Pub":"#334155",
+  "Tacos":"#7C3AED","Sports Bar":"#1D4ED8","Lounge":"#334155"
+};
+function tileColor(c) { return CC[c] || CC[c.split('/')[0].trim()] || '#475569'; }
+function tileAbbr(c)  { return c.split('/')[0].trim().substring(0,2).toUpperCase(); }
+
+// ESC
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// STATE
+let cuisine = 'All', zone = 'All', sort = 'zone', q = '', show = 30;
+const PAGE = 30;
+let nmActive = false, nmLat = null, nmLng = null;
+
+function haversine(a, b, c, d) {
+  const R=3958.8, dL=(c-a)*Math.PI/180, dG=(d-b)*Math.PI/180;
+  const x=Math.sin(dL/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dG/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+
+// FILTER + SORT
+function filtered() {
+  let r = [...DATA];
+  if (cuisine !== 'All') r = r.filter(x => x.cuisine.toLowerCase().includes(cuisine.toLowerCase()));
+  if (zone    !== 'All') r = r.filter(x => inZone(x.zone, zone));
+  if (q) r = r.filter(x =>
+    x.name.toLowerCase().includes(q) || x.cuisine.toLowerCase().includes(q) ||
+    x.address.toLowerCase().includes(q) || x.zone.toLowerCase().includes(q) ||
+    (x.description||'').toLowerCase().includes(q) || (x.chain_name||'').toLowerCase().includes(q)
+  );
+  if      (sort==='name')     r.sort((a,b)=>a.name.localeCompare(b.name));
+  else if (sort==='name-desc')r.sort((a,b)=>b.name.localeCompare(a.name));
+  else if (sort==='cuisine')  r.sort((a,b)=>a.cuisine.localeCompare(b.cuisine)||a.name.localeCompare(b.name));
+  else if (sort==='chain')    r.sort((a,b)=>(b.is_chain?1:0)-(a.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='local')    r.sort((a,b)=>(a.is_chain?1:0)-(b.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='distance' && nmActive) r.sort((a,b)=>haversine(nmLat,nmLng,a.lat,a.lng)-haversine(nmLat,nmLng,b.lat,b.lng));
+  else                        r.sort((a,b)=>a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name));
+  return r;
+}
+
+// RENDER
+function render() {
+  const items = filtered();
+  const grid  = document.getElementById('listingGrid');
+  const lm    = document.getElementById('loadMoreWrap');
+
+  document.getElementById('totalCount').textContent   = DATA.length;
+  document.getElementById('resultsCount').textContent = items.length;
+  updateFilterBar();
+  updateZoneCounts();
+
+  if (!items.length) {
+    grid.innerHTML = '<div class="no-results"><div class="nr-icon">🔍</div><h3>No restaurants found</h3><p>Try a different cuisine, area, or search term.</p><button onclick="clearAll()">Clear All Filters</button></div>';
+    lm.style.display='none'; return;
+  }
+
+  let h = '';
+  items.slice(0, show).forEach((r, i) => {
+    if (i > 0 && i % 12 === 0) {
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><div class="ad-label"><div class="ad-size">In-Feed Banner</div><div class="ad-price">$75/mo</div></div></div></div>';
+    }
+
+    const mapUrl  = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address + ' ' + r.city + ' ' + r.state);
+    const dist    = (nmActive && r.lat && r.lng) ? ' <span class="dist-badge">' + haversine(nmLat,nmLng,r.lat,r.lng).toFixed(1) + ' mi</span>' : '';
+    const tag     = r.is_chain ? '<span class="card-tag tag-chain">Chain</span>' : '<span class="card-tag tag-local">Local</span>';
+    const sub     = (r.is_chain && r.chain_name && r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase())
+                    ? '<div class="card-chain">' + esc(r.chain_name) + '</div>' : '';
+    const phone   = r.phone ? '<span>📞 ' + esc(r.phone) + '</span>' : '';
+    const desc    = r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : '';
+    const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
+    const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';
+
+    h += '<a href="' + mapUrl + '" target="_blank" rel="noopener" class="listing-card">'
+       + ico
+       + '<div class="card-body">'
+       +   '<h3>' + esc(r.name) + dist + '</h3>'
+       +   sub + desc
+       +   '<div class="meta">'
+       +     '<span>📍 ' + addr + '</span>'
+       +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
+       +     phone
+       +     '<span>🗺️ ' + esc(r.zone) + '</span>'
+       +   '</div>'
+       + '</div>'
+       + tag
+       + '</a>';
+  });
+
+  grid.innerHTML = h;
+  const left = items.length - show;
+  if (left > 0) {
+    lm.style.display = 'block';
+    lm.querySelector('.load-more-btn').textContent = 'Show ' + Math.min(PAGE,left) + ' More (' + left + ' remaining)';
+  } else lm.style.display = 'none';
+}
+
+// FILTER BAR
+function updateFilterBar() {
+  const bar = document.getElementById('filterBar');
+  const pills = [];
+  if (nmActive)       pills.push('<span class="filter-pill">📍 Near Me <span class="fp-x" onclick="toggleNearMe()">✕</span></span>');
+  if (cuisine!=='All')pills.push('<span class="filter-pill">🍴 ' + esc(cuisine) + ' <span class="fp-x" onclick="removeCuisineFilter()">✕</span></span>');
+  if (zone!=='All') {
+    const zl = document.querySelector('#zoneList li.z-active span:first-child');
+    pills.push('<span class="filter-pill">🗺️ ' + esc(zl ? zl.textContent : zone) + ' <span class="fp-x" onclick="removeZoneFilter()">✕</span></span>');
+  }
+  if (q) pills.push('<span class="filter-pill">🔍 &ldquo;' + esc(q) + '&rdquo; <span class="fp-x" onclick="removeSearchFilter()">✕</span></span>');
+  if (pills.length) {
+    bar.innerHTML = pills.join('') + '<span class="filter-bar-clear" onclick="clearAll()">Clear all</span>';
+    bar.classList.add('visible');
+  } else { bar.innerHTML = ''; bar.classList.remove('visible'); }
+}
+
+function updateZoneCounts() {
+  const stale = cuisine !== 'All' || q !== '';
+  document.querySelectorAll('#zoneList li').forEach(li =>
+    stale ? li.classList.add('z-counts-stale') : li.classList.remove('z-counts-stale')
+  );
+}
+
+function loadMore() { show += PAGE; render(); }
+
+// FILTER ACTIONS
+function filterByCuisine(el, c) {
+  cuisine = c; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  el.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  render();
+}
+function filterByZone(key, el) {
+  zone = key; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  el.classList.add('z-active'); el.setAttribute('aria-selected','true');
+  render();
+}
+function syncSearch(v) {
+  q = v.toLowerCase().trim(); show = PAGE;
+  document.getElementById('headerSearch').value = v;
+  document.getElementById('mobileSearch').value = v;
+  render();
+}
+function doSort() { sort = document.getElementById('sortSelect').value; show = PAGE; render(); }
+
+function removeCuisineFilter() {
+  cuisine = 'All'; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  render();
+}
+function removeZoneFilter() {
+  zone = 'All'; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  const f = document.querySelector('#zoneList li');
+  f.classList.add('z-active'); f.setAttribute('aria-selected','true');
+  render();
+}
+function removeSearchFilter() {
+  q = ''; show = PAGE;
+  document.getElementById('headerSearch').value = '';
+  document.getElementById('mobileSearch').value = '';
+  render();
+}
+function clearAll() {
+  if (nmActive) toggleNearMe();
+  cuisine='All'; zone='All'; sort='zone'; q=''; show=PAGE;
+  document.getElementById('headerSearch').value='';
+  document.getElementById('mobileSearch').value='';
+  document.getElementById('sortSelect').value='zone';
+  document.querySelectorAll('.cuisine-chip').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  document.querySelectorAll('#zoneList li').forEach(li=>{li.classList.remove('z-active');li.setAttribute('aria-selected','false');});
+  const f=document.querySelector('#zoneList li');
+  f.classList.add('z-active');f.setAttribute('aria-selected','true');
+  render();
+}
+
+// SEARCH UI
+function toggleMobileSearch() {
+  const b = document.getElementById('mobileSearchBar');
+  if (b.classList.toggle('open')) document.getElementById('mobileSearch').focus();
+}
+function closeMobileSearch() { document.getElementById('mobileSearchBar').classList.remove('open'); }
+
+// BACK TO TOP
+window.addEventListener('scroll', () => {
+  const b = document.getElementById('backToTop');
+  window.scrollY > 400 ? b.classList.add('visible') : b.classList.remove('visible');
+}, {passive:true});
+
+// NEAR ME
+function toggleNearMe() {
+  if (nmActive) {
+    nmActive=false; nmLat=nmLng=null;
+    document.getElementById('nearMeBtn').classList.remove('active','loading');
+    document.getElementById('nearMeError').innerHTML='';
+    document.getElementById('sortSelect').disabled=false;
+    render(); return;
+  }
+  if (!navigator.geolocation) { showNMError('Location not supported by your browser.'); return; }
+  const btn = document.getElementById('nearMeBtn');
+  btn.classList.add('loading');
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      nmLat=pos.coords.latitude; nmLng=pos.coords.longitude;
+      nmActive=true; btn.classList.remove('loading'); btn.classList.add('active');
+      document.getElementById('sortSelect').value='distance';
+      document.getElementById('sortSelect').disabled=true;
+      sort='distance'; show=PAGE; render();
+    },
+    err => {
+      btn.classList.remove('loading');
+      showNMError({1:'Location access denied.',2:'Could not determine location.',3:'Request timed out.'}[err.code]||'Location unavailable.');
+    },
+    {timeout:8000,maximumAge:60000}
+  );
+}
+function showNMError(msg) {
+  document.getElementById('nearMeError').innerHTML = '<div class="near-me-error">⚠️ ' + esc(msg) + '</div>';
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim

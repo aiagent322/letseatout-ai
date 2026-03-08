@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Arizona's Free Restaurant Directory Network</title>
+<meta name="description" content="Free restaurant directories for Arizona's best cities — Scottsdale, Sedona, Prescott, Cave Creek, Wickenburg, Peoria and more. No pay-to-play. No fake ratings. Just where to eat.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Arizona's Free Restaurant Directory Network">
+<meta property="og:description" content="Free restaurant directories across Arizona. Every restaurant, bar, and chain listed. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai">
+<meta property="og:image" content="https://letseatout.ai/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A; --red-dark:#9E1830; --red-light:#F9E8EC;
+  --gold:#C8973E; --gold-light:#F7F0E3;
+  --dark:#1A1A1A; --text:#1A1A1A; --text-mid:#555; --text-light:#888;
+  --cream:#FFFBF5; --white:#FFFFFF;
+  --border:#E8E0D8; --border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px; --r-lg:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;max-width:1160px;margin:0 auto;}
+
+/* ── TOP BAR ────────────────────────────────────────────── */
+.top-bar{background:var(--dark);color:white;padding:7px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;}
+.top-bar-text{color:rgba(255,255,255,.55);font-weight:600;letter-spacing:.3px;}
+.top-bar-text em{color:var(--gold);font-style:normal;}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-mark{width:42px;height:42px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:22px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.nav-link{font-size:12px;font-weight:700;color:var(--text-mid);text-decoration:none;padding:6px 12px;border-radius:20px;transition:all .2s;}
+.nav-link:hover{color:var(--red);background:var(--red-light);}
+.header-cta{padding:8px 16px;background:var(--dark);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:background .2s;white-space:nowrap;text-decoration:none;display:inline-block;}
+.header-cta:hover{background:var(--red);}
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero{background:linear-gradient(135deg,var(--dark) 0%,#2a1a0e 50%,#3d2215 100%);color:white;padding:44px 0 36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(200,151,62,.15);border:1px solid rgba(200,151,62,.35);padding:5px 14px;border-radius:20px;font-size:10px;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:32px;line-height:1.15;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.65;max-width:540px;}
+.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600;color:white;letter-spacing:.3px;}
+.hero-stats{display:flex;gap:28px;justify-content:center;margin-top:6px;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;margin-top:2px;}
+
+/* ── AD ZONES ────────────────────────────────────────────── */
+.ad-zone{background:linear-gradient(135deg,#f5ede3,#ebe3d8);border:2px dashed var(--gold);border-radius:var(--r);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ad-zone::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:1px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;margin-top:22px;}
+
+/* ── SECTION HEADERS ─────────────────────────────────────── */
+.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--red);}
+.section-header h2{font-family:'DM Serif Display',serif;font-size:22px;}
+.section-header .sh-sub{font-size:12px;color:var(--text-light);font-weight:600;}
+
+/* ── CITY GRID ───────────────────────────────────────────── */
+.cities-section{padding:32px 0 40px;}
+.city-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+.city-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:18px 20px;display:flex;align-items:center;gap:16px;
+  text-decoration:none;color:inherit;
+  transition:border-color .2s,box-shadow .2s,transform .15s;
+  -webkit-tap-highlight-color:transparent;position:relative;overflow:hidden;
+}
+.city-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-2px);}
+.city-card:active{transform:none;}
+.city-card.live{cursor:pointer;}
+.city-card.coming-soon{opacity:.7;cursor:default;}
+.city-card.coming-soon:hover{border-color:var(--border);box-shadow:none;transform:none;}
+.city-card-ico{
+  width:54px;height:54px;border-radius:var(--r);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:26px;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+.city-card-body{flex:1;min-width:0;}
+.city-card-body h3{font-size:16px;font-weight:800;margin-bottom:2px;color:var(--text);}
+.city-card-body .city-meta{font-size:12px;color:var(--text-light);font-weight:500;margin-bottom:5px;}
+.city-card-body .city-tags{display:flex;flex-wrap:wrap;gap:4px;}
+.city-tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;background:var(--cream);color:var(--text-mid);border:1px solid var(--border);}
+.city-card-right{flex-shrink:0;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
+.city-count{font-family:'DM Serif Display',serif;font-size:24px;color:var(--red);line-height:1;}
+.city-count-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:700;}
+.live-badge{display:inline-flex;align-items:center;gap:4px;background:#D1FAE5;color:#065F46;border:1.5px solid #6EE7B7;font-size:10px;font-weight:800;padding:3px 10px;border-radius:10px;text-transform:uppercase;letter-spacing:.5px;}
+.live-badge::before{content:'';width:6px;height:6px;background:#10B981;border-radius:50%;}
+.cs-badge{display:inline-flex;align-items:center;background:rgba(200,151,62,.12);color:var(--gold);border:1.5px solid rgba(200,151,62,.35);font-size:10px;font-weight:800;padding:3px 10px;border-radius:10px;text-transform:uppercase;letter-spacing:.5px;}
+.city-card-arrow{font-size:18px;color:var(--red);opacity:.6;transition:opacity .2s,transform .2s;}
+.city-card:hover .city-card-arrow{opacity:1;transform:translateX(3px);}
+
+/* ── FEATURE ROW ─────────────────────────────────────────── */
+.feature-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:36px 0;}
+.feature-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+.feature-block{text-align:center;padding:6px;}
+.feature-block .fb-ico{font-size:32px;margin-bottom:10px;}
+.feature-block h3{font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:6px;}
+.feature-block p{font-size:13px;color:var(--text-mid);line-height:1.6;}
+
+/* ── SUBMIT CTA ──────────────────────────────────────────── */
+.submit-cta{background:linear-gradient(135deg,var(--dark) 0%,#2a1a0e 100%);color:white;padding:36px 0;text-align:center;}
+.submit-cta h2{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:8px;}
+.submit-cta p{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px;line-height:1.6;}
+.cta-btn{display:inline-block;padding:13px 28px;background:var(--red);color:white;border:none;border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:background .2s;text-decoration:none;}
+.cta-btn:hover{background:var(--red-dark);}
+.cta-btn-ghost{display:inline-block;margin-left:10px;padding:12px 24px;background:transparent;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.2);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;}
+.cta-btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:28px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:20px;}
+footer .brand span{color:var(--red);}
+footer .footer-links{display:flex;flex-wrap:wrap;gap:10px;}
+footer .footer-links a{color:rgba(255,255,255,.4);text-decoration:none;font-size:11px;font-weight:600;transition:color .2s;}
+footer .footer-links a:hover{color:var(--gold);}
+footer .legal{line-height:1.7;font-size:11px;}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(min-width:560px){
+  .city-grid{grid-template-columns:1fr 1fr;}
+  .hero h1{font-size:38px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:60px;}
+}
+@media(min-width:860px){
+  .city-grid{grid-template-columns:1fr 1fr 1fr;}
+  .hero{padding:56px 0 44px;}
+  .hero h1{font-size:46px;}
+  .feature-grid{grid-template-columns:1fr 1fr 1fr;}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:22px auto 0;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Let's Eat Out",
+  "url": "https://letseatout.ai",
+  "description": "Free restaurant directories for Arizona cities. No pay-to-play, no fake ratings.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Let's Eat Out",
+    "url": "https://letseatout.ai"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at <em>no cost</em> · No pay-to-play · No fake ratings</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Arizona's Free Restaurant Network</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <a href="#cities" class="nav-link">Cities</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="/cdn-cgi/l/email-protection#b3daddd5dcf3dfd6c7c0d6d2c7dcc6c79dd2da" class="header-cta">+ List Your Restaurant</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">🌵 Arizona's Restaurant Network</div>
+      <h1>Where to Eat in <em>Arizona</em></h1>
+      <p class="hero-sub">Free restaurant directories for Arizona's best cities and areas. Every restaurant, bar, and chain listed — no pay-to-play, no fake ratings. Just honest, complete guides to where to eat.</p>
+      <div class="hero-promise">✦ No reviews &nbsp;·&nbsp; No pay-to-play &nbsp;·&nbsp; No fake ratings &nbsp;·&nbsp; Always free</div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">7</div><div class="lbl">Markets</div></div>
+        <div class="hero-stat"><div class="num">778</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num">$0</div><div class="lbl">Cost to List</div></div>
+      </div>
+      <div class="ad-leaderboard ad-zone">
+        <div class="ad-label">
+          <div class="ad-size">Network Leaderboard — 320×50 mobile / 728×90 desktop</div>
+          <div class="ad-desc">Premium network-wide placement · all 7 markets</div>
+          <div class="ad-price">$250/mo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CITIES -->
+<div class="cities-section" id="cities">
+  <div class="container">
+    <div class="section-header">
+      <h2>Choose Your City</h2>
+      <span class="sh-sub">7 Arizona markets</span>
+    </div>
+    <div class="city-grid">
+
+      <!-- INDIO (live, California market) -->
+      <a href="/indio" class="city-card live">
+        <div class="city-card-ico" style="background:linear-gradient(135deg,#C41E3A,#9E1830);">🏜️</div>
+        <div class="city-card-body">
+          <h3>Indio, CA</h3>
+          <div class="city-meta">Coachella Valley · California</div>
+          <div class="city-tags">
+            <span class="city-tag">Mexican</span>
+            <span class="city-tag">American</span>
+            <span class="city-tag">Fast Food</span>
+          </div>
+        </div>
+        <div class="city-card-right">
+          <div>
+            <div class="city-count">171</div>
+            <div class="city-count-lbl">Listings</div>
+          </div>
+          <span class="live-badge">Live</span>
+          <span class="city-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- SCOTTSDALE -->
+      <a href="/scottsdale" class="city-card live">
+        <div class="city-card-ico" style="background:linear-gradient(135deg,#1A6B4A,#0D4A32);">🌆</div>
+        <div class="city-card-body">
+          <h3>Scottsdale</h3>
+          <div class="city-meta">East Valley · Arizona</div>
+          <div class="city-tags">
+            <span class="city-tag">Steakhouse</span>
+            <span class="city-tag">Upscale</span>
+            <span class="city-tag">Rooftop</span>
+          </div>
+        </div>
+        <div class="city-card-right">
+          <div>
+            <div class="city-count">142</div>
+            <div class="city-count-lbl">Listings</div>
+          </div>
+          <span class="live-badge">Live</span>
+          <span class="city-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- SEDONA -->
+      <a href="/sedona" class="city-card live">
+        <div class="city-card-ico" style="background:linear-gradient(135deg,#C2410C,#9A3412);">🏔️</div>
+        <div class="city-card-body">
+          <h3>Sedona Area</h3>
+          <div class="city-meta">Red Rock Country · Arizona</div>
+          <div class="city-tags">
+            <span class="city-tag">Fine Dining</span>
+            <span class="city-tag">Southwest</span>
+            <span class="city-tag">Views</span>
+          </div>
+        </div>
+        <div class="city-card-right">
+          <div>
+            <div class="city-count">105</div>
+            <div class="city-count-lbl">Listings</div>
+          </div>
+          <span class="live-badge">Live</span>
+          <span class="city-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- PRESCOTT -->
+      <a href="/prescott" class="city-card live">
+        <div class="city-card-ico" style="background:linear-gradient(135deg,#1D4ED8,#1E3A8A);">🌲</div>
+        <div class="city-card-body">
+          <h3>Prescott Area</h3>
+          <div class="city-meta">Granite Dells · Arizona</div>
+          <div class="city-tags">
+            <span class="city-tag">Historic</span>
+            <span class="city-tag">Brewpubs</span>
+            <span class="city-tag">American</span>
+          </div>
+        </div>
+        <div class="city-card-right">
+          <div>
+            <div class="city-count">251</div>
+            <div class="city-count-lbl">Listings</div>
+          </div>
+          <span class="live-badge">Live</span>
+          <span class="city-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- CAVE CREEK-CAREFREE -->
+      <a href="/cave-creek" class="city-card live">
+        <div class="city-card-ico" style="background:linear-gradient(135deg,#92400E,#78350F);">🤠</div>
+        <div class="city-card-body">
+          <h3>Cave Creek · Carefree</h3>
+          <div class="city-meta">North Sonoran Desert · Arizona</div>
+          <div class="city-tags">
+            <span class="city-tag">Western</span>
+            <span class="city-tag">BBQ</span>
+            <span class="city-tag">Saloons</span>
+          </div>
+        </div>
+        <div class="city-card-right">
+          <div>
+            <div class="city-count">40</div>
+            <div class="city-count-lbl">Listings</div>
+          </div>
+          <span class="live-badge">Live</span>
+          <span class="city-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- WICKENBURG -->
+      <a href="/wickenburg" class="city-card live">
+        <div class="city-card-ico" style="background:linear-gradient(135deg,#B45309,#92400E);">⚒️</div>
+        <div class="city-card-body">
+          <h3>Wickenburg</h3>
+          <div class="city-meta">Hassayampa Valley · Arizona</div>
+          <div class="city-tags">
+            <span class="city-tag">Ranch Style</span>
+            <span class="city-tag">Diners</span>
+            <span class="city-tag">American</span>
+          </div>
+        </div>
+        <div class="city-card-right">
+          <div>
+            <div class="city-count">29</div>
+            <div class="city-count-lbl">Listings</div>
+          </div>
+          <span class="live-badge">Live</span>
+          <span class="city-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- PEORIA -->
+      <a href="/peoria" class="city-card live">
+        <div class="city-card-ico" style="background:linear-gradient(135deg,#0F766E,#134E4A);">⚾</div>
+        <div class="city-card-body">
+          <h3>Peoria</h3>
+          <div class="city-meta">West Valley · Arizona</div>
+          <div class="city-tags">
+            <span class="city-tag">Sports Bars</span>
+            <span class="city-tag">Family</span>
+            <span class="city-tag">Pizza</span>
+          </div>
+        </div>
+        <div class="city-card-right">
+          <div>
+            <div class="city-count">40</div>
+            <div class="city-count-lbl">Listings</div>
+          </div>
+          <span class="live-badge">Live</span>
+          <span class="city-card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW -->
+<div class="feature-section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Let's Eat Out?</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-block">
+        <div class="fb-ico">🚫</div>
+        <h3>No Pay-to-Play</h3>
+        <p>Every restaurant, bar, and chain is listed equally — no sponsored results, no promoted placements, no ads buried in listings.</p>
+      </div>
+      <div class="feature-block">
+        <div class="fb-ico">⭐</div>
+        <h3>No Fake Ratings</h3>
+        <p>We don't do star ratings that can be gamed or bought. We show you who's there and let you decide — just like a real local would.</p>
+      </div>
+      <div class="feature-block">
+        <div class="fb-ico">📍</div>
+        <h3>Always Complete</h3>
+        <p>We aim to list every single dining option in each market — not just the ones that claim their profile. If it serves food, it's here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMIT CTA -->
+<div class="submit-cta">
+  <div class="container">
+    <h2>Own a Restaurant?</h2>
+    <p>We list every restaurant for free. Claim your listing to add photos, hours,<br>your menu link, and a direct contact — still free, always.</p>
+    <a href="/cdn-cgi/l/email-protection#e58c8b838aa5898091968084918a9091cb848cda9690878f808691d8a689848c88c5a89cc5a98c96918c8b82" class="cta-btn">Claim Your Free Listing</a>
+    <a href="/cdn-cgi/l/email-protection#41282f272e012d2435322420352e34356f20287e3234232b2422357c002537243335283224612e2f610d2435320420350e3435" class="cta-btn-ghost">Advertise With Us</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px;font-size:11px;color:rgba(255,255,255,.35);">Arizona's free restaurant directory network</div>
+    </div>
+    <div class="footer-links">
+      <a href="/indio">Indio</a>
+      <a href="/scottsdale">Scottsdale</a>
+      <a href="/sedona">Sedona</a>
+      <a href="/prescott">Prescott</a>
+      <a href="/cave-creek">Cave Creek</a>
+      <a href="/wickenburg">Wickenburg</a>
+      <a href="/peoria">Peoria</a>
+    </div>
+    <div class="legal">
+      © 2025 Let's Eat Out · <a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9d5dccdcadcd8cdd6cccd97d8

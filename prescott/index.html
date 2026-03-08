@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Prescott Area — 251 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="Your complete free guide to every restaurant, bar, and chain in Prescott Area, AZ. 251 listings. No reviews, no pay-to-play — just where to eat.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Prescott Area — 251 Restaurants, Bars &amp; Chains">
+<meta property="og:description" content="Every restaurant, bar, and chain in Prescott Area, AZ. Free directory. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai/prescott">
+<meta property="og:image" content="https://letseatout.ai/og-prescott.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai/prescott">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A;--red-dark:#9E1830;--red-light:#F9E8EC;
+  --gold:#C8973E;--gold-light:#F7F0E3;
+  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#555;--text-light:#888;
+  --cream:#FFFBF5;--white:#FFFFFF;
+  --border:#E8E0D8;--border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px;--r-lg:12px;--hdr-h:61px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;}
+.skip-nav{position:absolute;left:-9999px;}
+.skip-nav:focus{position:fixed;top:0;left:0;padding:10px 18px;background:var(--red);color:white;font-size:14px;font-weight:700;z-index:9999;}
+
+/* TOP BAR */
+.top-bar{background:var(--dark);color:white;padding:6px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;gap:8px;}
+.top-bar-text{display:none;}
+.market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;overflow-x:auto;scrollbar-width:none;}
+.market-pills::-webkit-scrollbar{display:none;}
+.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.market-pill.active{background:var(--red);color:white;}
+.market-pill:not(.active):hover{color:white;}
+
+/* HEADER */
+header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-mark{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:21px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.search-icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.mobile-search-bar{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--red);padding:10px 16px;box-shadow:var(--shadow-m);z-index:99;}
+.mobile-search-bar.open{display:flex;gap:8px;}
+.mobile-search-bar input{flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;}
+.mobile-search-bar input:focus{border-color:var(--red);}
+.mobile-search-bar button{padding:10px 18px;background:var(--red);color:white;border:none;border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+.header-search{display:none;}
+.submit-btn{padding:8px 14px;background:var(--dark);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.submit-btn:hover{background:var(--red);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#0a1020 50%,#101828 100%);color:white;padding:28px 0 22px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.15;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;}
+.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;color:white;letter-spacing:.3px;}
+.hero-stats{display:flex;gap:20px;justify-content:center;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.coming-soon-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;justify-content:center;margin-top:4px;}
+.coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
+.coming-soon-badge{background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.hero-banner-wrap{margin-top:16px;width:100%;}
+
+/* AD ZONES */
+.ad-zone{background:linear-gradient(135deg,#f5ede3,#ebe3d8);border:2px dashed var(--gold);border-radius:var(--r);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ad-zone::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;}
+.ad-inline{width:100%;height:50px;}
+.ad-sidebar{display:none;}
+
+/* CUISINE NAV */
+.cuisine-nav{background:var(--white);padding:10px 0;border-bottom:1px solid var(--border);position:sticky;top:var(--hdr-h);z-index:90;}
+.cuisine-slider-wrap{display:flex;align-items:center;gap:6px;}
+.cuisine-scroll{display:flex;gap:6px;overflow-x:auto;padding:2px;scrollbar-width:none;scroll-behavior:smooth;flex:1;-webkit-overflow-scrolling:touch;}
+.cuisine-scroll::-webkit-scrollbar{display:none;}
+.cuisine-chip{padding:7px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;min-height:36px;}
+.cuisine-chip:active,.cuisine-chip.active{background:var(--red);color:white;border-color:var(--red);}
+.slider-arrow{display:none;}
+
+/* NEAR ME */
+.near-me-chip{padding:7px 14px;border-radius:20px;border:1.5px solid #1D6CE0;background:#1D6CE0;font-size:12px;font-weight:700;color:white;cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;min-height:36px;}
+.near-me-chip.active{background:#0D3D80;border-color:#0D3D80;}
+.near-me-chip.loading{opacity:.75;pointer-events:none;}
+.near-me-chip .nm-spinner{width:12px;height:12px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none;}
+.near-me-chip.loading .nm-spinner{display:block;}
+.near-me-chip.loading .nm-icon{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.dist-badge{font-size:10px;font-weight:700;color:var(--red);background:var(--red-light);padding:2px 7px;border-radius:10px;margin-left:4px;}
+.near-me-error{background:#fff3cd;border:1.5px solid #ffc107;border-radius:var(--r);padding:10px 14px;font-size:12px;color:#856404;margin-bottom:10px;}
+
+/* MAIN LAYOUT */
+.main-layout{display:flex;flex-direction:column;gap:20px;padding:16px 0 32px;}
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;}
+.results-count{font-size:12px;color:var(--text-light);font-weight:500;}
+.results-count strong{color:var(--text);font-weight:700;}
+.sort-sel{padding:6px 10px;border:1.5px solid var(--border);border-radius:var(--r);font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:var(--text-mid);background:var(--white);cursor:pointer;}
+.filter-bar{display:none;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 0 4px;}
+.filter-bar.visible{display:flex;}
+.filter-pill{display:inline-flex;align-items:center;gap:5px;background:var(--red-light);border:1.5px solid var(--red);color:var(--red);border-radius:16px;font-size:11px;font-weight:700;padding:4px 10px;}
+.filter-pill .fp-x{cursor:pointer;font-size:13px;line-height:1;margin-left:2px;}
+.filter-bar-clear{font-size:11px;font-weight:700;color:var(--text-light);cursor:pointer;text-decoration:underline;padding:4px 2px;}
+
+/* LISTING CARDS — now real <a> tags */
+.listing-grid{display:flex;flex-direction:column;gap:8px;}
+.listing-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  transition:border-color .2s;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;color:inherit;
+}
+.listing-card:hover,.listing-card:active{border-color:var(--red);background:var(--red-light);}
+.card-tag{display:none;}
+.card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}
+.card-body h3{font-size:14px;font-weight:700;margin-bottom:1px;color:var(--text);line-height:1.3;}
+.card-chain{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px;}
+.card-desc{font-size:12px;color:var(--text-mid);line-height:1.55;margin:5px 0 6px;}
+.card-body .meta{font-size:11px;color:var(--text-light);display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
+.card-body .meta span{display:flex;align-items:center;gap:3px;}
+.inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:44px 20px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);}
+.no-results .nr-icon{font-size:38px;margin-bottom:10px;}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px;}
+.no-results p{font-size:13px;color:var(--text-light);margin-bottom:16px;}
+.no-results button{padding:10px 22px;background:var(--red);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* LOAD MORE */
+.load-more-wrap{text-align:center;padding:12px 0 4px;}
+.load-more-btn{padding:12px 30px;background:var(--white);border:2px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text-mid);cursor:pointer;transition:all .2s;}
+.load-more-btn:hover{border-color:var(--red);color:var(--red);}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;}
+.sidebar-box h4{font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--red);}
+.zone-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.zone-list li{font-size:12px;color:var(--text-mid);padding:8px 10px;border-radius:var(--r);cursor:pointer;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent;outline:none;}
+.zone-list li:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.zone-list li:hover,.zone-list li:active{background:var(--red-light);color:var(--red);}
+.zone-list li.z-active{background:var(--red-light);color:var(--red);font-weight:700;}
+.zone-list li .ct{background:var(--cream);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;color:var(--text-light);min-width:26px;text-align:center;}
+.zone-list li.z-active .ct{background:var(--red);color:white;}
+.zone-list li.z-counts-stale .ct{opacity:.4;}
+.quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.quick-links li a{font-size:12px;color:var(--red);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px;}
+.quick-links li a:hover{color:var(--red-dark);}
+
+/* SUBMIT */
+.submit-section{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px 16px;margin:0 0 32px;text-align:center;}
+.submit-section h2{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px;}
+.submit-section .sub{color:var(--text-light);font-size:13px;margin-bottom:18px;line-height:1.5;}
+.submit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px;}
+.submit-card{background:var(--cream);border:2px dashed var(--border);border-radius:var(--r-lg);padding:18px 14px;text-align:center;}
+.submit-card .ico{font-size:28px;margin-bottom:6px;}
+.submit-card h3{font-size:13px;font-weight:700;margin-bottom:3px;}
+.submit-card p{font-size:11px;color:var(--text-light);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:24px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:18px;}
+footer .brand span{color:var(--red);}
+footer a{color:var(--gold);text-decoration:none;}
+footer .legal{line-height:1.6;}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--red);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(196,30,58,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(8px);}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--red-dark);}
+
+/* TABLET */
+@media(min-width:600px){
+  :root{--hdr-h:69px;}
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:space-between;}
+  .top-bar-text{display:block;}
+  .header-inner{padding:12px 0;}
+  .logo-mark{width:42px;height:42px;font-size:20px;}
+  .logo-text{font-size:24px;}
+  .search-icon-btn{display:none;}
+  .header-search{display:flex;align-items:center;background:var(--cream);border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .2s;}
+  .header-search:focus-within{border-color:var(--red);}
+  .header-search input{padding:8px 4px 8px 14px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;width:160px;outline:none;}
+  .header-search input::placeholder{color:var(--text-light);}
+  .header-search button{padding:7px 12px;border:none;background:var(--red);color:white;font-size:12px;cursor:pointer;border-radius:0 22px 22px 0;}
+  .hero{padding:36px 0 28px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-stat .num{font-size:34px;}
+  .ad-leaderboard{height:60px;}
+  .ad-inline{height:60px;}
+  .ad-sidebar{display:flex;width:100%;height:180px;}
+  .slider-arrow{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text-mid);flex-shrink:0;transition:all .2s;}
+  .slider-arrow:hover{border-color:var(--red);color:var(--red);}
+  .cuisine-nav{padding:12px 0;}
+  .main-layout{padding:20px 0 40px;gap:24px;}
+  .listing-card{grid-template-columns:48px 1fr auto;padding:16px 18px;gap:16px;}
+  .card-tag{display:block;padding:4px 11px;border-radius:16px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;color:white;}
+  .tag-chain{background:#1E293B;}
+  .tag-local{background:#C2410C;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-section{padding:28px 24px;margin:0 0 40px;}
+  .submit-grid{grid-template-columns:repeat(3,1fr);}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  footer .legal{text-align:right;max-width:400px;}
+}
+@media(min-width:960px){
+  :root{--hdr-h:75px;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .header-inner{padding:14px 0;}
+  .logo-mark{width:44px;height:44px;font-size:22px;}
+  .logo-text{font-size:26px;}
+  .header-search input{width:200px;}
+  .header-search button{padding:8px 14px;font-size:13px;}
+  .hero{padding:44px 0 36px;}
+  .hero h1{font-size:42px;}
+  .hero-sub{font-size:16px;max-width:580px;margin:0 auto;}
+  .hero-stats{gap:28px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:0 auto;}
+  .ad-inline{height:90px;max-width:728px;margin:0 auto;}
+  .ad-sidebar{height:250px;}
+  .cuisine-nav{padding:14px 0;}
+  .slider-arrow{width:32px;height:32px;font-size:14px;}
+  .main-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 0 48px;}
+  .sidebar{display:flex;flex-direction:column;position:sticky;top:calc(var(--hdr-h) + 58px);}
+  .listing-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-1px);}
+  .listing-card:active{transform:none;}
+  .zone-list li:hover{background:var(--red-light);color:var(--red);}
+  .submit-section{max-width:800px;margin:0 auto 48px;padding:36px;}
+  footer{padding:32px 0;}
+  .back-to-top{right:32px;bottom:32px;}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Prescott Area","description":"Free restaurant directory for Prescott Area, AZ. 251 listings.","url":"https://letseatout.ai/prescott","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+</script>
+</head>
+<body>
+
+<a class="skip-nav" href="#listingGrid">Skip to listings</a>
+
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at no cost</span>
+    <div class="market-pills">
+      <button type="button" class="market-pill" onclick="location.href='/indio'">Indio</button>
+      <button type="button" class="market-pill" onclick="location.href='/scottsdale'">Scottsdale</button>
+      <button type="button" class="market-pill" onclick="location.href='/sedona'">Sedona</button>
+      <button type="button" class="market-pill active" onclick="location.href='/prescott'">Prescott</button>
+      <button type="button" class="market-pill" onclick="location.href='/cave-creek'">Cave Creek</button>
+      <button type="button" class="market-pill" onclick="location.href='/wickenburg'">Wickenburg</button>
+      <button type="button" class="market-pill" onclick="location.href='/peoria'">Peoria</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Prescott, AZ</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button type="button" class="search-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">🔍</button>
+        <div class="header-search">
+          <input type="search" id="headerSearch" placeholder="Search restaurants…" oninput="syncSearch(this.value)" autocomplete="off">
+          <button type="button" onclick="syncSearch(document.getElementById('headerSearch').value)">Search</button>
+        </div>
+        <button type="button" class="submit-btn" onclick="document.getElementById('submitArea').scrollIntoView({behavior:'smooth'})">+ Add Your Business</button>
+      </div>
+    </div>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="search" id="mobileSearch" placeholder="Restaurant, cuisine, area…" oninput="syncSearch(this.value)" autocomplete="off">
+      <button type="button" onclick="closeMobileSearch()">Done</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Where to Eat in <em>Prescott</em></h1>
+        <p class="hero-sub">Your complete guide to every restaurant, bar, and brewpub in the Prescott area. Courthouse Plaza to Prescott Valley — every table, always free.</p>
+        <div class="hero-promise">✦ No reviews &nbsp;·&nbsp; No pay-to-play &nbsp;·&nbsp; No fake ratings &nbsp;·&nbsp; Always free</div>
+        <div class="coming-soon-row">
+          <div class="coming-soon-label">Also coming soon:</div>
+          <span class="coming-soon-badge">Prescott Valley</span>
+          <span class="coming-soon-badge">Chino Valley</span>
+          <span class="coming-soon-badge">Dewey-Humboldt</span>
+          <span class="coming-soon-badge">Mayer</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">251</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
+        <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Premium hero placement</div><div class="ad-price">$150/mo</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cuisine-nav" role="navigation" aria-label="Filter by cuisine">
+  <div class="container">
+    <div class="cuisine-slider-wrap">
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:-200,behavior:'smooth'})" aria-label="Scroll left">◀</button>
+      <div class="cuisine-scroll" id="cuisineScroll">
+        <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
+        <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'American')">🍔 American</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Mexican')">🌮 Mexican</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Brewery')">🍻 Brewery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Pizza')">🍕 Pizza</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bar')">🍺 Bars</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Coffee')">☕ Coffee</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Steakhouse')">🥩 Steakhouse</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fast Food')">🍟 Fast Food</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sandwiches')">🥪 Sandwiches</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Italian')">🍝 Italian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Asian')">🍜 Asian</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'BBQ')">🔥 BBQ</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bakery')">🧁 Bakery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Breakfast')">🍳 Breakfast</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Wine Bar')">🍷 Wine Bar</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Seafood')">🦞 Seafood</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Ice Cream')">🍦 Ice Cream</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Diner')">🍽️ Diner</button>
+      </div>
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="main-layout">
+    <div>
+      <div class="results-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
+        <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
+          <option value="distance" disabled style="display:none">📍 Near Me</option>
+          <option value="zone">By Area</option>
+          <option value="name">A–Z</option>
+          <option value="name-desc">Z–A</option>
+          <option value="cuisine">By Cuisine</option>
+          <option value="local">Locals First</option>
+          <option value="chain">Chains First</option>
+        </select>
+      </div>
+      <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
+      <div id="nearMeError"></div>
+      <div class="listing-grid" id="listingGrid"></div>
+      <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+        <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
+      </div>
+      <div class="inline-ad-wrap" style="margin-top:20px">
+        <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Bottom placement</div><div class="ad-price">$100/mo</div></div></div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Premium sidebar</div><div class="ad-price">$125/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Prescott Area</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('downtown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('downtown',this)"><span>Downtown Prescott</span><span class="ct" id="zc-downtown">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('whiskey',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('whiskey',this)"><span>Whiskey Row</span><span class="ct" id="zc-whiskey">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('gurley',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('gurley',this)"><span>Gurley St Corridor</span><span class="ct" id="zc-gurley">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('gateway',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('gateway',this)"><span>Gateway Mall Area</span><span class="ct" id="zc-gateway">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('pvaz',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('pvaz',this)"><span>Prescott Valley</span><span class="ct" id="zc-pvaz">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('chino',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('chino',this)"><span>Chino Valley</span><span class="ct" id="zc-chino">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Sidebar #2</div><div class="ad-price">$100/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="javascript:void(0)">→ Date Night Spots</a></li>
+          <li><a href="javascript:void(0)">→ Best Happy Hours</a></li>
+          <li><a href="javascript:void(0)">→ Family Friendly</a></li>
+          <li><a href="javascript:void(0)">→ Late Night Eats</a></li>
+          <li><a href="javascript:void(0)">→ Patio Dining</a></li>
+          <li><a href="javascript:void(0)">→ New Openings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="submitArea">
+  <div class="submit-section">
+    <h2>Get Listed — It's Free</h2>
+    <p class="sub">Every restaurant, bar, and chain in Prescott Area is listed at no cost. Send us your info any way that's easy for you.</p>
+    <div class="submit-grid">
+      <div class="submit-card"><div class="ico">🖼️</div><h3>Upload a Flyer</h3><p>PDF, JPG, or PNG of your menu or business card</p></div>
+      <div class="submit-card"><div class="ico">📱</div><h3>Snap a Photo</h3><p>Photo of your storefront, sign, or menu board</p></div>
+      <div class="submit-card"><div class="ico">📝</div><h3>Fill Out Form</h3><p>Name, address, cuisine, hours — takes 60 seconds</p></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-light)">We review submissions daily and add listings within 24–48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px">Prescott Area's complete dining guide · <a href="/">letseatout.ai</a></div>
+      <div style="margin-top:4px">Advertise: <a href="/cdn-cgi/l/email-protection#11787f777e517d7465627470657e64653f7078"><span class="__cf_email__" data-cfemail="8ce5e2eae3cce0e9f8ffe9edf8e3f9f8a2ede5">[email&#160;protected]</span></a></div>
+    </div>
+    <div class="legal">
+      Every restaurant and bar in Prescott Area is listed free. We sell banner advertising only — no paid placement, no paid rankings.<br>
+      <span style="color:rgba(255,255,255,.3)">© 2026 LetsEatOut.ai — All rights reserved</span>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// DATA
+const DATA = [
+{"id": "RB-PRESV-00001", "name": "Tony's Too Bar And Grill", "address": "2685 N State Route 89", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 772-6667", "lat": 34.605977, "lng": -112.318273, "quality": 3, "zone": "Prescott Valley", "description": "Local bar with live music on various nights, great bartenders, friendly owner."},
+{"id": "RB-PRESV-00002", "name": "Antelope Lanes", "address": "6301 E 2nd St", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 772-2288", "lat": 34.578679, "lng": -112.354879, "quality": 3, "zone": "Prescott Valley", "description": "Bowling alley and bar in Prescott Valley with lanes, arcade, and drinks."},
+{"id": "RB-PRESV-00003", "name": "Pinon Pines Nite Club", "address": "6500 N Spouse Dr", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 772-9130", "lat": 34.60965, "lng": -112.322603, "quality": 3, "zone": "Prescott Valley", "description": "Country bar with live bands, only bar in town with off-track horse betting."},
+{"id": "RB-PRESC-00001", "name": "Desperado", "address": "118 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 778-5700", "lat": 34.541474, "lng": -112.470236, "quality": 3, "zone": "Whiskey Row", "description": "Cozy Whiskey Row dive bar with relaxed atmosphere and good drinks."},
+{"id": "RB-PRESV-00004", "name": "Hideout Bar", "address": "7890 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 775-0020", "lat": 34.609823, "lng": -112.321102, "quality": 3, "zone": "Prescott Valley", "description": "Local watering hole in Prescott Valley with cold beer and friendly service."},
+{"id": "RB-PRESV-00005", "name": "Jackass Bar & Grill PV", "address": "6851 E 1st St Ste A", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 772-6300", "lat": 34.607746, "lng": -112.31849, "quality": 3, "zone": "Prescott Valley", "description": "Local dive bar in Prescott Valley on Valley Road with pool tables and bar food."},
+{"id": "RB-PRESC-00002", "name": "Jersey Lilly Saloon", "address": "116 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 541-7854", "lat": 34.541508, "lng": -112.470235, "quality": 2, "zone": "Whiskey Row", "description": "Upstairs in Historic Palace Building with balcony overlooking Courthouse Square. Live music and strong drinks."},
+{"id": "RB-PRESC-00003", "name": "The Palace Restaurant and Saloon", "address": "120 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 541-1996", "lat": 34.541327, "lng": -112.470361, "quality": 2, "zone": "Whiskey Row", "description": "Arizona's oldest saloon established 1877, where Wyatt Earp and Doc Holliday once visited. Live music, dancing, fine steaks."},
+{"id": "RB-PRESC-00004", "name": "Bird Cage Saloon", "address": "160 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 778-9921", "lat": 34.540291, "lng": -112.470546, "quality": 2, "zone": "Whiskey Row", "description": "Casual Whiskey Row spot with live music, dancing, craft beers, and eclectic décor."},
+{"id": "RB-PRESC-00005", "name": "Matt's Saloon", "address": "112 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 778-6627", "lat": 34.541577, "lng": -112.470234, "quality": 2, "zone": "Whiskey Row", "description": "Legendary Whiskey Row saloon since 1960 with live country music, dancing, and Wild West atmosphere."},
+{"id": "RB-PRESV-00006", "name": "Y-Not Lounge", "address": "6400 E 1st St", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 772-8090", "lat": 34.583673, "lng": -112.33771, "quality": 3, "zone": "Prescott Valley", "description": "Prescott Valley lounge with drinks and casual atmosphere."},
+{"id": "RB-PRESV-00007", "name": "Barefoot Bob's Billiards", "address": "8399 E Valley Rd", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 772-3777", "lat": 34.586866, "lng": -112.321159, "quality": 3, "zone": "Prescott Valley", "description": "Pool hall and bar in Prescott Valley with tables and drinks."},
+{"id": "RB-PRESV-00008", "name": "Coopers Pub", "address": "4499 AZ-69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 759-4455", "lat": 34.583839, "lng": -112.310891, "quality": 3, "zone": "Prescott Valley", "description": "Small family-owned pub in Prescott Valley with pub food, wings, and friendly service."},
+{"id": "RB-PRESC-00006", "name": "City Tavern at Founding Fathers", "address": "218 N Granite St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 277-0144", "lat": 34.544434, "lng": -112.471744, "quality": 2, "zone": "Downtown Prescott", "description": "Arizona's largest self-serve tapwall with 65+ beers, wines, cocktails. Creekside patio, trivia nights."},
+{"id": "RB-PRESC-00007", "name": "Fairweather Social Club", "address": "224 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 277-0555", "lat": 34.544061, "lng": -112.46877, "quality": 2, "zone": "Downtown Prescott", "description": "Modern bar with craft cocktails, local beers, natural wines, live music venue. Downtown social hub."},
+{"id": "RB-PRESC-00008", "name": "Seven Six Speakeasy", "address": "218 N Granite St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 277-0144", "lat": 34.544434, "lng": -112.471744, "quality": 2, "zone": "Downtown Prescott", "description": "Members-only speakeasy at Founding Fathers with 150+ whiskies, craft cocktails, exclusive atmosphere."},
+{"id": "RB-PRESV-00009", "name": "Tailgaters Sports Grill", "address": "7160 E Pav Way", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 775-0000", "lat": 34.584977, "lng": -112.340242, "quality": 3, "zone": "Prescott Valley", "description": "Sports bar with big screens, pizza and wings, in Prescott Valley."},
+{"id": "RB-PRESC-00009", "name": "Lonesome Valley Brewing Whiskey Row Taproom", "address": "124 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 237-5488", "lat": 34.54137, "lng": -112.470238, "quality": 3, "zone": "Whiskey Row", "description": "Small-batch craft beers made locally in Prescott Valley, taproom on Whiskey Row."},
+{"id": "RB-PRESC-00010", "name": "Susie's Skyway Restaurant", "address": "6500 MacCurdy Dr", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Diner", "is_chain": false, "chain_name": "", "phone": "(928) 445-6971", "lat": 34.649789, "lng": -112.427214, "quality": 3, "zone": "Downtown Prescott", "description": "Airport diner with runway views, homestyle cooking, pancakes, burgers. Great plane watching."},
+{"id": "RB-PRESC-00011", "name": "Mustang Cafe", "address": "1042 Willow Creek Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-0909", "lat": 34.56275, "lng": -112.482331, "quality": 3, "zone": "Gateway Mall Area", "description": "Casual American dining with comfort food."},
+{"id": "RB-PRESC-00012", "name": "Gurley St. Grill", "address": "230 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 445-3388", "lat": 34.541992, "lng": -112.47061, "quality": 2, "zone": "Gurley St Corridor", "description": "Historic brick building pub serving burgers, beers, pasta and salads with private banquet rooms since 1900."},
+{"id": "RB-PRESC-00013", "name": "Red White & Brew", "address": "200 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 776-8085", "lat": 34.541945, "lng": -112.467174, "quality": 2, "zone": "Gurley St Corridor", "description": "Craft beer bar and grill in downtown Prescott with burgers, salads, and local brews."},
+{"id": "RB-PRESV-00010", "name": "Jackass Bar & Grill", "address": "6851 E 1st St Ste A", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 772-6300", "lat": 34.611766, "lng": -112.322562, "quality": 3, "zone": "Prescott Valley", "description": "Bar and grill on Valley Road in Prescott Valley with American favorites."},
+{"id": "RB-PRESC-00014", "name": "Palace Restaurant and Saloon", "address": "120 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 541-1996", "lat": 34.541327, "lng": -112.470361, "quality": 3, "zone": "Whiskey Row", "description": "Arizona's oldest operating bar since 1877, steaks, burgers, and historic atmosphere."},
+{"id": "RB-PRESV-00011", "name": "Quailwood Kitchen & Tap House", "address": "3150 N Glassford Hill Rd", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 899-3858", "lat": 34.58954, "lng": -112.339408, "quality": 3, "zone": "Prescott Valley", "description": "Kitchen and tap house in Dewey with American fare and craft beers."},
+{"id": "RB-PRESC-00015", "name": "Kendall's Famous Burgers & Ice Cream", "address": "113 S Cortez St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-3658", "lat": 34.541671, "lng": -112.468615, "quality": 3, "zone": "Downtown Prescott", "description": "Classic burger joint and ice cream on Courthouse Square, a Prescott institution."},
+{"id": "RB-PRESC-00016", "name": "Applebee's", "address": "1881 E Highway 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Applebee", "phone": "(928) 445-8787", "lat": 34.547627, "lng": -112.45037, "quality": 3, "zone": "Downtown Prescott", "description": "Casual dining chain with burgers, ribs, drinks. Open late."},
+{"id": "RB-PRESC-00017", "name": "B Simple", "address": "126 N Granite St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 277-0199", "lat": 34.542495, "lng": -112.471612, "quality": 3, "zone": "Downtown Prescott", "description": "Diner-style breakfast and lunch with prosciutto Benedict, pancakes, and omelettes."},
+{"id": "RB-PRESC-00018", "name": "Black Canyon Grille", "address": "2850 N State Route 89", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 777-0770", "lat": 34.566257, "lng": -112.490313, "quality": 3, "zone": "Gateway Mall Area", "description": "Restaurant at Wyndham Garden Hotel with American cuisine and casual dining."},
+{"id": "RB-PRESV-00012", "name": "Cracker Barrel Old Country Store", "address": "5707 E State Rte 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 772-0447", "lat": 34.609818, "lng": -112.320321, "quality": 3, "zone": "Prescott Valley", "description": "Country-style comfort food, breakfast, and gift shop."},
+{"id": "RB-PRESC-00019", "name": "Creekside Preserve Lodge Restaurant", "address": "1 Perkins Dr", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 632-0777", "lat": 34.639637, "lng": -112.42173, "quality": 3, "zone": "Downtown Prescott", "description": "Lodge restaurant with scenic creek views and American comfort cuisine."},
+{"id": "RB-PRESC-00020", "name": "JB's Restaurant", "address": "1121 E Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-4029", "lat": 34.54497, "lng": -112.455539, "quality": 3, "zone": "Downtown Prescott", "description": "American restaurant on Sheldon Street with comfort food and family dining."},
+{"id": "RB-PRESC-00021", "name": "Superb Food Company", "address": "124 N Granite St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 772-3434", "lat": 34.54246, "lng": -112.471612, "quality": 3, "zone": "Downtown Prescott", "description": "American comfort food restaurant with generous portions and friendly service."},
+{"id": "RB-PRESC-00022", "name": "Sweet Potato Cafe", "address": "443 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 771-2233", "lat": 34.550607, "lng": -112.478976, "quality": 3, "zone": "Gateway Mall Area", "description": "Comfort food cafe on Miller Valley Road with homestyle dishes and friendly service."},
+{"id": "RB-PRESC-00023", "name": "The Apple Pan", "address": "1100 White Spar Rd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-4988", "lat": 34.523174, "lng": -112.480315, "quality": 3, "zone": "Downtown Prescott", "description": "Comfort food and hometown favorites with friendly service, popular with locals."},
+{"id": "RB-PRESC-00024", "name": "Bill's Grill", "address": "333 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-6600", "lat": 34.537376, "lng": -112.470129, "quality": 2, "zone": "Whiskey Row", "description": "Flavorful food inspired by culinary training in Thailand and Oaxaca, Mexico. Great burgers and beer."},
+{"id": "RB-PRESV-00013", "name": "Gabby's Grill", "address": "8377 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 277-1787", "lat": 34.612702, "lng": -112.319085, "quality": 3, "zone": "Prescott Valley", "description": "Best breakfast and lunch in Prescott Valley with home-style favorites, daily specials, and banquet facilities."},
+{"id": "RB-CHINV-00001", "name": "Essence Kitchen + Bar", "address": "1021 N State Route 89 Ste 104", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 925-3888", "lat": 34.763549, "lng": -112.454033, "quality": 2, "zone": "Chino Valley", "description": "Modern American cuisine in Chino Valley with seasonal menu, fresh ingredients, and full bar service."},
+{"id": "RB-PRESC-00025", "name": "Firehouse Kitchen", "address": "217 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 776-4566", "lat": 34.541827, "lng": -112.470457, "quality": 2, "zone": "Gurley St Corridor", "description": "Upscale American cuisine in historic fire station building on corner of Goodwin and Granite."},
+{"id": "RB-PRESV-00014", "name": "Sally B's Cafe", "address": "8380 E Valley Rd", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 772-2053", "lat": 34.587035, "lng": -112.321278, "quality": 3, "zone": "Prescott Valley", "description": "New American cafe serving breakfast, lunch, and dinner with generous portions and friendly service."},
+{"id": "RB-PRESC-00026", "name": "Murphy's Restaurant", "address": "201 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 445-4044", "lat": 34.543936, "lng": -112.468573, "quality": 1, "zone": "Downtown Prescott", "description": "Upscale American dining since 1984 featuring prime rib, seafood, steaks, and famous carrot cake in a historic 1890s mercantile building."},
+{"id": "RB-PRESC-00027", "name": "Bistro St. Michael", "address": "100 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 778-2500", "lat": 34.541783, "lng": -112.47023, "quality": 2, "zone": "Whiskey Row", "description": "Comfort food in the iconic Hotel St. Michael on Whiskey Row, serving breakfast, lunch, and dinner with courthouse plaza views."},
+{"id": "RB-PRESC-00028", "name": "Dry Gulch Steakhouse", "address": "1630 Adams St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 778-9693", "lat": 34.566717, "lng": -112.496374, "quality": 2, "zone": "Downtown Prescott", "description": "Family-owned since 1993 serving hand-cut steaks, BBQ ribs, and famous margaritas in a casual Western atmosphere."},
+{"id": "RB-PRESC-00029", "name": "Icha Maajoh at Prescott Resort", "address": "1500 E Highway 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 776-1666", "lat": 34.547627, "lng": -112.45037, "quality": 2, "zone": "Downtown Prescott", "description": "Native American-inspired cuisine at Prescott Resort and Conference Center."},
+{"id": "RB-PRESV-00015", "name": "Leff-T's Steakhouse & Grill", "address": "6091 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 632-1388", "lat": 34.613912, "lng": -112.317244, "quality": 2, "zone": "Prescott Valley", "description": "Rustic cowboy steakhouse in Dewey serving hand-cut steaks, rodeo burgers, and full bar with friendly service."},
+{"id": "RB-PRESC-00030", "name": "Prescott Station", "address": "231 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 778-0133", "lat": 34.541829, "lng": -112.470613, "quality": 2, "zone": "Gurley St Corridor", "description": "Southwest-inspired tapas, steaks, seafood, 250+ wines and 100+ beers in downtown location."},
+{"id": "RB-PRESC-00031", "name": "Prescott Steak House", "address": "520 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 445-4101", "lat": 34.549727, "lng": -112.478737, "quality": 2, "zone": "Gateway Mall Area", "description": "Family steakhouse on Miller Valley Road serving quality steaks and American classics."},
+{"id": "RB-PRESC-00032", "name": "The Barley Hound", "address": "234 S Cortez St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 237-4506", "lat": 34.539246, "lng": -112.468862, "quality": 2, "zone": "Downtown Prescott", "description": "Farm-to-table gastropub with seasonal menu, craft cocktails, Arizona beers, and dog-friendly patio near Courthouse Square."},
+{"id": "RB-PRESC-00033", "name": "Texas Roadhouse", "address": "3310 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 778-7427", "lat": 34.548209, "lng": -112.406211, "quality": 3, "zone": "Gateway Mall Area", "description": "Steakhouse chain with hand-cut steaks, ribs, and fresh-baked bread."},
+{"id": "RB-PRESC-00034", "name": "The Cattlemans", "address": "2850 N State Route 89 Ste 2", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 772-8000", "lat": 34.573618, "lng": -112.494214, "quality": 3, "zone": "Gateway Mall Area", "description": "Local steakhouse with true local ambience, \"not fancy but food is fabulous.\""},
+{"id": "RB-PRESV-00016", "name": "Sauced Potstickers", "address": "7501 E Civic Cir Ste 140", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(928) 237-0095", "lat": 34.609442, "lng": -112.316846, "quality": 3, "zone": "Prescott Valley", "description": "Pan-Asian drive-thru featuring hand-made potstickers, sauces, and boba drinks since 2015."},
+{"id": "RB-PRESV-00017", "name": "Yogi's Grill P.V.", "address": "7160 E Pav Way Ste 108", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(928) 515-1068", "lat": 34.605665, "lng": -112.32218, "quality": 3, "zone": "Prescott Valley", "description": "Asian grill in Prescott Valley with fresh ingredients and custom bowls."},
+{"id": "RB-PRESC-00035", "name": "Bear & Dragon", "address": "121 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(928) 458-5268", "lat": 34.54235, "lng": -112.468603, "quality": 3, "zone": "Downtown Prescott", "description": "Asian fusion restaurant with unique dishes and crafted cocktails."},
+{"id": "RB-PRESC-00036", "name": "Milo's", "address": "115 Grove Ave", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Asian", "is_chain": false, "chain_name": "", "phone": "(928) 227-2027", "lat": 34.542877, "lng": -112.476389, "quality": 3, "zone": "Downtown Prescott", "description": "Asian fusion restaurant with creative dishes and modern presentation."},
+{"id": "RB-PRESC-00037", "name": "Doc's BBQ & Whiskey", "address": "115 S Granite St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 237-3888", "lat": 34.541557, "lng": -112.471424, "quality": 2, "zone": "Downtown Prescott", "description": "BBQ and whiskey bar with smoked meats and extensive whiskey selection."},
+{"id": "RB-CHINV-00002", "name": "Big Daddy E's BBQ", "address": "1600 S Highway 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 515-2344", "lat": 34.720275, "lng": -112.453516, "quality": 3, "zone": "Chino Valley", "description": "BBQ restaurant in Chino Valley with smoked meats and homestyle sides."},
+{"id": "RB-PRESV-00018", "name": "Big H BBQ", "address": "2985 N Centre Ct", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 237-5264", "lat": 34.586288, "lng": -112.340169, "quality": 3, "zone": "Prescott Valley", "description": "BBQ restaurant in Dewey serving smoked meats and traditional sides."},
+{"id": "RB-PRESV-00019", "name": "Larry & Hy's Bare Bones BBQ", "address": "7160 E Pav Way Ste 100", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 708-0800", "lat": 34.612151, "lng": -112.32172, "quality": 3, "zone": "Prescott Valley", "description": "Slow smoked BBQ ribs, brisket, pulled pork."},
+{"id": "RB-PRESV-00020", "name": "The Squealing Hog", "address": "5795 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 350-5718", "lat": 34.613021, "lng": -112.319064, "quality": 3, "zone": "Prescott Valley", "description": "Smoked meats and BBQ restaurant in Prescott Valley with authentic flavors."},
+{"id": "RB-PRESC-00038", "name": "Pangaea Bakery", "address": "220 W Goodwin St Ste 2", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(928) 778-2953", "lat": 34.542122, "lng": -112.467547, "quality": 3, "zone": "Downtown Prescott", "description": "Artisan bakery with bread, pastries, sandwiches."},
+{"id": "RB-PRESC-00039", "name": "Allena Le Petit Sucre", "address": "109 S Granite St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(928) 541-0055", "lat": 34.54166, "lng": -112.471423, "quality": 3, "zone": "Downtown Prescott", "description": "French-inspired bakery and cafe with pastries, desserts, and light fare."},
+{"id": "RB-PRESC-00040", "name": "House of Bread", "address": "254 Lee Blvd Ste 102", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(928) 277-0108", "lat": 34.542896, "lng": -112.464321, "quality": 3, "zone": "Downtown Prescott", "description": "Fresh-baked artisan breads, sandwiches, and cafe fare."},
+{"id": "RB-PRESC-00041", "name": "Panera Bread", "address": "3065 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bakery", "is_chain": true, "chain_name": "Panera", "phone": "(928) 227-9037", "lat": 34.551329, "lng": -112.412497, "quality": 3, "zone": "Gateway Mall Area", "description": "Bakery cafe with soups, salads, sandwiches, pastries. Gateway Mall area."},
+{"id": "RB-PRESC-00042", "name": "Wildflower Bread Company", "address": "3201 State Hwy 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(928) 717-1700", "lat": 34.550177, "lng": -112.406963, "quality": 3, "zone": "Downtown Prescott", "description": "Artisan bakery and cafe with fresh bread, sandwiches, salads, and soups."},
+{"id": "RB-CHINV-00003", "name": "Bonn-Fire", "address": "988 N Highway 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 636-7410", "lat": 34.834432, "lng": -112.460709, "quality": 3, "zone": "Chino Valley", "description": "Bar and grill in Chino Valley with casual dining and friendly atmosphere."},
+{"id": "RB-PRESC-00043", "name": "Prescott Junction", "address": "1008 E Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 445-1019", "lat": 34.545323, "lng": -112.4567, "quality": 3, "zone": "Downtown Prescott", "description": "Family-owned diner with breakfast buffet and great pies."},
+{"id": "RB-PRESV-00021", "name": "Zeke's Eatin' Place", "address": "5777 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 775-1700", "lat": 34.613081, "lng": -112.318912, "quality": 3, "zone": "Prescott Valley", "description": "Prescott Valley diner with homestyle food. Breakfast and lunch."},
+{"id": "RB-PRESC-00044", "name": "Dinner Bell Cafe & Cantina", "address": "321 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 445-9888", "lat": 34.541757, "lng": -112.472548, "quality": 2, "zone": "Gurley St Corridor", "description": "Established in 1946, homestyle American breakfast and lunch favorites with Mexican dinner since 2024."},
+{"id": "RB-PRESC-00045", "name": "Lone Spur Cafe", "address": "106 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 445-8202", "lat": 34.541883, "lng": -112.469435, "quality": 2, "zone": "Gurley St Corridor", "description": "Cowboy-themed breakfast and lunch cafe on Gurley Street with hearty portions and Western atmosphere since 1990s."},
+{"id": "RB-CHINV-00004", "name": "Chino Valley's Skillets Cafe", "address": "1015 N Hwy 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 237-5235", "lat": 34.76988, "lng": -112.45316, "quality": 3, "zone": "Chino Valley", "description": "American-style breakfast and lunch cafe in Chino Valley since 2016 with hearty portions."},
+{"id": "RB-PRESC-00046", "name": "The Porch Prescott", "address": "230 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 515-2030", "lat": 34.541992, "lng": -112.47061, "quality": 3, "zone": "Gurley St Corridor", "description": "Farmhouse-style coffee shop with breakfast and brunch, local favorite since 2017."},
+{"id": "RB-PRESC-00047", "name": "Waffles-N-More", "address": "1950 E State Route 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 778-3039", "lat": 34.548264, "lng": -112.445903, "quality": 3, "zone": "Downtown Prescott", "description": "Breakfast spot on Iron Springs Road featuring waffles and breakfast favorites."},
+{"id": "RB-PRESV-00022", "name": "Zeke's Eating Place", "address": "5777 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 772-7800", "lat": 34.606977, "lng": -112.319439, "quality": 3, "zone": "Prescott Valley", "description": "Family restaurant famous for Wagon Wheel Pancakes and hearty breakfasts in Prescott Valley."},
+{"id": "RB-PRESC-00048", "name": "Prescott Brewing Company", "address": "130 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 771-2795", "lat": 34.541883, "lng": -112.469435, "quality": 2, "zone": "Gurley St Corridor", "description": "Brewpub with handcrafted beers, pub food, and casual dining on Gurley Street since 1994."},
+{"id": "RB-PRESC-00049", "name": "Brown Bag Burger", "address": "217 W Gurley St Ste 2", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 541-2739", "lat": 34.538098, "lng": -112.463589, "quality": 3, "zone": "Gurley St Corridor", "description": "Gourmet burgers and craft beer in Prescott with creative toppings and quality ingredients."},
+{"id": "RB-PRESC-00050", "name": "Marino's Mob Burgers and Ice Cream", "address": "113 S Cortez St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-3658", "lat": 34.541671, "lng": -112.468615, "quality": 2, "zone": "Downtown Prescott", "description": "Gangster-themed gourmet burgers and ice cream. Downtown Prescott location."},
+{"id": "RB-PRESC-00051", "name": "Red Robin", "address": "3055 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Fast Food", "is_chain": false, "chain_name": "", "phone": "(928) 445-5677", "lat": 34.551263, "lng": -112.410748, "quality": 3, "zone": "Gateway Mall Area", "description": "Gourmet burgers and bottomless fries. Gateway Mall location."},
+{"id": "RB-PRESV-00023", "name": "Carlito's Cafe & Coffee House", "address": "7160 E Pav Way", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 515-2753", "lat": 34.584977, "lng": -112.340242, "quality": 3, "zone": "Prescott Valley", "description": "Coffee house and cafe in Prescott Valley with espresso drinks and light fare."},
+{"id": "RB-PRESC-00052", "name": "Cuppers Coffee House", "address": "226 S Cortez St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 445-1636", "lat": 34.539383, "lng": -112.468859, "quality": 3, "zone": "Downtown Prescott", "description": "Breakfast and lunch cafe with famous skinny pancakes, specialty coffees like Ay Chihuahua mocha."},
+{"id": "RB-CHINV-00005", "name": "Heidi Lane Cafe", "address": "988 N Highway 89 Ste 1", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 515-3279", "lat": 34.756652, "lng": -112.452244, "quality": 3, "zone": "Chino Valley", "description": "Local cafe in Chino Valley serving breakfast, lunch, and comfort food."},
+{"id": "RB-PRESC-00053", "name": "Iron Springs Cafe", "address": "1501 Iron Springs Rd", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 443-8848", "lat": 34.567846, "lng": -112.49485, "quality": 3, "zone": "Gateway Mall Area", "description": "Neighborhood cafe on Iron Springs Road serving breakfast, lunch, and comfort food."},
+{"id": "RB-PRESC-00054", "name": "Lynx Lake Cafe", "address": "4505 E Forest Service Rd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 778-0720", "lat": 34.540969, "lng": -112.469717, "quality": 3, "zone": "Downtown Prescott", "description": "Lakeside cafe at Lynx Lake with boat rentals and scenic views."},
+{"id": "RB-PRESC-00055", "name": "Roosters Cafe", "address": "1550 W Laurel Loop Ste 2", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 778-4600", "lat": 34.53563, "lng": -112.472865, "quality": 3, "zone": "Downtown Prescott", "description": "Breakfast and lunch cafe with homestyle cooking."},
+{"id": "RB-PRESC-00056", "name": "Salt & Pepper Cafe", "address": "106 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 445-0188", "lat": 34.541799, "lng": -112.468539, "quality": 3, "zone": "Gurley St Corridor", "description": "Cafe on Miller Valley Road serving breakfast and lunch favorites."},
+{"id": "RB-PRESC-00057", "name": "Wild Iris Coffeehouse & Bakery", "address": "124 S Granite St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 778-5155", "lat": 34.541181, "lng": -112.471849, "quality": 3, "zone": "Downtown Prescott", "description": "Local coffee shop with extensive menu, in-house pastries, and cozy atmosphere."},
+{"id": "RB-PRESC-00058", "name": "Raven Cafe", "address": "142 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 717-0009", "lat": 34.542731, "lng": -112.468795, "quality": 2, "zone": "Downtown Prescott", "description": "European-style green cafe with organic ingredients, all-organic espresso bar, craft beers, rooftop patio, and live music."},
+{"id": "RB-PRESC-00059", "name": "KFC Prescott", "address": "847 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Chicken", "is_chain": true, "chain_name": "KFC", "phone": "(928) 445-9090", "lat": 34.556796, "lng": -112.481718, "quality": 3, "zone": "Gateway Mall Area", "description": "Original recipe fried chicken, sides, biscuits."},
+{"id": "RB-PRESC-00060", "name": "Popeyes Louisiana Kitchen", "address": "1721 E State Route 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Chicken", "is_chain": true, "chain_name": "Popeyes", "phone": "(928) 771-8080", "lat": 34.548264, "lng": -112.445903, "quality": 3, "zone": "Downtown Prescott", "description": "Louisiana-style fried chicken, biscuits, Cajun fries."},
+{"id": "RB-PRESC-00061", "name": "Raising Cane's", "address": "3270 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Chicken", "is_chain": true, "chain_name": "Raising Cane", "phone": "(928) 277-1000", "lat": 34.551438, "lng": -112.410737, "quality": 3, "zone": "Gateway Mall Area", "description": "Chicken fingers, fries, coleslaw, Texas toast. Fresh and quality."},
+{"id": "RB-PRESC-00062", "name": "Chick-fil-A Prescott", "address": "3145 Willow Creek Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Chicken", "is_chain": true, "chain_name": "Chick-fil-A", "phone": "(928) 778-8800", "lat": 34.595803, "lng": -112.465159, "quality": 3, "zone": "Gateway Mall Area", "description": "Chicken sandwiches, nuggets, waffle fries. Closed Sundays."},
+{"id": "RB-CHINV-00006", "name": "Beijing Delight Restaurant", "address": "1025 N Highway 89 Ste 103", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "(928) 636-6888", "lat": 34.763485, "lng": -112.447123, "quality": 3, "zone": "Chino Valley", "description": "Chinese cuisine in Chino Valley with traditional dishes and takeout service."},
+{"id": "RB-PRESC-00063", "name": "Chi's Cuisine", "address": "1500 E State Route 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "(928) 443-9959", "lat": 34.548264, "lng": -112.445903, "quality": 3, "zone": "Downtown Prescott", "description": "Chinese cuisine on Cortez Street near Courthouse Square with traditional dishes."},
+{"id": "RB-PRESV-00024", "name": "Toi's Thai Kitchen", "address": "7501 E Civic Cir", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "(928) 772-9898", "lat": 34.595813, "lng": -112.333952, "quality": 3, "zone": "Prescott Valley", "description": "Thai cuisine in Prescott Valley with authentic dishes and quick service."},
+{"id": "RB-PRESV-00025", "name": "Panda Express Prescott Valley", "address": "3140 N Glassford Hill Rd", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Chinese", "is_chain": true, "chain_name": "Panda Express", "phone": "(928) 775-6888", "lat": 34.588245, "lng": -112.340019, "quality": 3, "zone": "Prescott Valley", "description": "American-Chinese fast food with Orange Chicken, chow mein, and more."},
+{"id": "RB-PRESC-00064", "name": "The Point Bar and Lounge", "address": "128 N Granite St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 778-2255", "lat": 34.542529, "lng": -112.471611, "quality": 2, "zone": "Downtown Prescott", "description": "Speakeasy-style craft cocktail lounge with house-made bitters and hand-cut ice."},
+{"id": "RB-PRESC-00065", "name": "Le Crepe Co", "address": "117 N Cortez St Ste 2", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 277-0300", "lat": 34.536904, "lng": -112.465766, "quality": 3, "zone": "Downtown Prescott", "description": "French crepes, sweet and savory, with coffee."},
+{"id": "RB-PRESC-00066", "name": "Devil's Pantry", "address": "120 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Deli", "is_chain": false, "chain_name": "", "phone": "(928) 277-0726", "lat": 34.542353, "lng": -112.468802, "quality": 3, "zone": "Downtown Prescott", "description": "Deli and specialty foods on Montezuma Street in downtown Prescott."},
+{"id": "RB-PRESC-00067", "name": "Park Plaza Liquor and Deli", "address": "402 W Goodwin St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Sandwiches", "is_chain": false, "chain_name": "", "phone": "(928) 445-7420", "lat": 34.540062, "lng": -112.473232, "quality": 3, "zone": "Downtown Prescott", "description": "Wood-fired pizza, sandwiches, wine, beer, cheese, and cured meats selection."},
+{"id": "RB-PRESC-00068", "name": "Speed's Hangar Deli", "address": "6500 MacCurdy Dr Ste 2", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Sandwiches", "is_chain": false, "chain_name": "", "phone": "(928) 708-0080", "lat": 34.543866, "lng": -112.470349, "quality": 3, "zone": "Downtown Prescott", "description": "Deli and sandwiches near Prescott Airport with quick service."},
+{"id": "RB-PRESC-00069", "name": "Treat Center on Whiskey Row", "address": "156 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(928) 445-5377", "lat": 34.54082, "lng": -112.47025, "quality": 3, "zone": "Whiskey Row", "description": "Sweet treats and desserts on historic Whiskey Row in downtown Prescott."},
+{"id": "RB-PRESC-00070", "name": "Sonic Drive-In", "address": "287 W Whipple St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Diner", "is_chain": true, "chain_name": "Sonic", "phone": "(928) 778-2338", "lat": 34.55672, "lng": -112.484398, "quality": 3, "zone": "Downtown Prescott", "description": "Drive-in fast food with burgers, shakes, tots."},
+{"id": "RB-PRESV-00026", "name": "Backburner Family Restaurant", "address": "8399 E Valley Rd", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 772-9298", "lat": 34.586866, "lng": -112.321159, "quality": 3, "zone": "Prescott Valley", "description": "Family restaurant on Long Mesa Drive in Prescott Valley with homestyle cooking."},
+{"id": "RB-CHINV-00007", "name": "Baize Family Restaurant", "address": "1016 S Highway 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 636-0902", "lat": 34.720275, "lng": -112.453516, "quality": 3, "zone": "Chino Valley", "description": "Family-style dining in Chino Valley with comfort food and friendly atmosphere."},
+{"id": "RB-PRESC-00071", "name": "Culver's Prescott", "address": "3125 Willow Creek Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-0800", "lat": 34.595402, "lng": -112.465103, "quality": 3, "zone": "Gateway Mall Area", "description": "Fresh ButterBurgers, frozen custard, fish and chips. Wisconsin-style fast casual."},
+{"id": "RB-PRESV-00027", "name": "Culver's Prescott Valley", "address": "2544 N Stoneridge Dr", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 277-0322", "lat": 34.579864, "lng": -112.361108, "quality": 3, "zone": "Prescott Valley", "description": "Fresh ButterBurgers, frozen custard. Prescott Valley location on Stoneridge Dr."},
+{"id": "RB-CHINV-00008", "name": "Subway Chino Valley", "address": "1015 N Highway 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "American", "is_chain": true, "chain_name": "Subway", "phone": "(928) 636-1122", "lat": 34.739533, "lng": -112.45433, "quality": 3, "zone": "Chino Valley", "description": "Fresh sandwiches and salads in Chino Valley."},
+{"id": "RB-PRESC-00072", "name": "Arby's Prescott", "address": "1801 E Highway 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Arby", "phone": "(928) 778-2780", "lat": 34.547627, "lng": -112.45037, "quality": 3, "zone": "Downtown Prescott", "description": "Roast beef sandwiches, curly fries, jamocha shakes."},
+{"id": "RB-PRESC-00073", "name": "Burger King Prescott", "address": "1861 E Highway 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Burger King", "phone": "(928) 778-7788", "lat": 34.537427, "lng": -112.466262, "quality": 3, "zone": "Downtown Prescott", "description": "Flame-grilled burgers, Whoppers, onion rings."},
+{"id": "RB-PRESC-00074", "name": "Five Guys Prescott", "address": "3280 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Five Guys", "phone": "(928) 778-3489", "lat": 34.551446, "lng": -112.410736, "quality": 3, "zone": "Gateway Mall Area", "description": "Fresh burgers, fries cooked in peanut oil. Build your own burger."},
+{"id": "RB-PRESC-00075", "name": "In-N-Out Burger", "address": "3040 Hwy 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fast Food", "is_chain": true, "chain_name": "In-N-Out", "phone": "(800) 786-1000", "lat": 34.552468, "lng": -112.409263, "quality": 3, "zone": "Downtown Prescott", "description": "Fresh never frozen burgers, hand-cut fries. Quality fast food."},
+{"id": "RB-PRESC-00076", "name": "Jack in the Box", "address": "201 W Goodwin St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Jack in the Box", "phone": "(928) 445-2500", "lat": 34.539892, "lng": -112.470319, "quality": 3, "zone": "Downtown Prescott", "description": "Fast food with burgers, tacos, breakfast all day."},
+{"id": "RB-PRESC-00077", "name": "McDonald's Miller Valley", "address": "539 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fast Food", "is_chain": true, "chain_name": "McDonald", "phone": "(928) 445-7490", "lat": 34.550341, "lng": -112.478373, "quality": 3, "zone": "Gateway Mall Area", "description": "Fast food chain with burgers, fries, breakfast."},
+{"id": "RB-PRESC-00078", "name": "Wendy's Prescott", "address": "1841 E Highway 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Wendy", "phone": "(928) 445-7777", "lat": 34.547627, "lng": -112.45037, "quality": 3, "zone": "Downtown Prescott", "description": "Fresh never frozen burgers, Frosty, chicken sandwiches."},
+{"id": "RB-PRESC-00079", "name": "Peacock Room at Hassayampa Inn", "address": "122 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 778-9434", "lat": 34.542177, "lng": -112.467809, "quality": 2, "zone": "Gurley St Corridor", "description": "Art Deco elegance in historic 1927 hotel. Lobster ravioli, lamb shank, rib eye. High tea monthly."},
+{"id": "RB-CHINV-00009", "name": "Danny B's Fish and Chips", "address": "1025 N Highway 89 Ste 101", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(928) 277-0283", "lat": 34.764395, "lng": -112.448979, "quality": 3, "zone": "Chino Valley", "description": "Fish and chips restaurant in Chino Valley with British-style favorites."},
+{"id": "RB-PRESV-00028", "name": "Stoneridge Golf Course Restaurant", "address": "1601 N Stoneridge Dr", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 772-6500", "lat": 34.580271, "lng": -112.360558, "quality": 3, "zone": "Prescott Valley", "description": "New American dining at Stoneridge Golf Course with scenic views."},
+{"id": "RB-PRESC-00080", "name": "FARM Provisions", "address": "148 N Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 776-3001", "lat": 34.542853, "lng": -112.470206, "quality": 1, "zone": "Whiskey Row", "description": "Farm-to-table restaurant featuring locally sourced cuisine and community-driven hospitality."},
+{"id": "RB-PRESC-00081", "name": "Biga by Senses", "address": "226 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 776-1001", "lat": 34.541992, "lng": -112.470566, "quality": 2, "zone": "Gurley St Corridor", "description": "Sustainable farm-to-table dining featuring Arizona-grown ingredients from local farms."},
+{"id": "RB-PRESC-00082", "name": "Atmesfir", "address": "132 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.541233, "lng": -112.470241, "quality": 3, "zone": "Whiskey Row", "description": "Chef-operated fine-dining restaurant offering creative seasonal fare with reservation-only policy."},
+{"id": "RB-PRESC-00083", "name": "El Gato Azul", "address": "316 W Goodwin St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.54008, "lng": -112.472525, "quality": 3, "zone": "Downtown Prescott", "description": "Spanish-Mediterranean tapas bistro with eclectic menu, creekside setting, and outdoor ambiance."},
+{"id": "RB-PRESC-00084", "name": "Papa’s Italian Restaurant", "address": "129 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.542488, "lng": -112.4686, "quality": 3, "zone": "Downtown Prescott", "description": "Family-run Italian restaurant with classic dishes, extensive wine list, and warm atmosphere."},
+{"id": "RB-PRESC-00085", "name": "Peacock Room at the Hassayampa Inn", "address": "122 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.542177, "lng": -112.467809, "quality": 3, "zone": "Gurley St Corridor", "description": "Elegant dining in an Art Deco setting inside the historic Hassayampa Inn, offering upscale seasonal cuisine."},
+{"id": "RB-PRESC-00086", "name": "The Palace Restaurant & Saloon", "address": "120 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.541327, "lng": -112.470361, "quality": 3, "zone": "Whiskey Row", "description": "Arizona’s oldest operating bar and saloon, established in 1877, offering historic dining experience."},
+{"id": "RB-PRESC-00087", "name": "Torme", "address": "234 S Cortez St Ste 2", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.54046, "lng": -112.464853, "quality": 3, "zone": "Downtown Prescott", "description": "Contemporary Italian restaurant offering homemade pasta dishes with fresh, seasonal ingredients."},
+{"id": "RB-PRESV-00029", "name": "Dairy Queen", "address": "6410 E 2nd St", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Ice Cream", "is_chain": true, "chain_name": "Dairy Queen", "phone": "(928) 772-3300", "lat": 34.579684, "lng": -112.3524, "quality": 3, "zone": "Prescott Valley", "description": "Soft serve ice cream, Blizzards, burgers. Prescott Valley location."},
+{"id": "RB-PRESC-00088", "name": "Frannie's Cones and Coffee", "address": "104 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(928) 515-2316", "lat": 34.541883, "lng": -112.469435, "quality": 3, "zone": "Gurley St Corridor", "description": "Ice cream and coffee shop on Gurley Street with sweet treats."},
+{"id": "RB-PRESC-00089", "name": "Mango Bliss Dessert Bar", "address": "3196 Willow Creek Rd Unit 105-A", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(928) 445-3333", "lat": 34.573426, "lng": -112.494215, "quality": 3, "zone": "Gateway Mall Area", "description": "Ice cream, frozen yogurt, and desserts in downtown Prescott."},
+{"id": "RB-PRESC-00090", "name": "Prescott Creamery and Soda Shop", "address": "217 W Gurley St Ste 3", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Ice Cream", "is_chain": false, "chain_name": "", "phone": "(928) 778-1020", "lat": 34.540916, "lng": -112.459051, "quality": 3, "zone": "Gurley St Corridor", "description": "Classic ice cream and old-fashioned soda shop experience."},
+{"id": "RB-PRESC-00091", "name": "Taj Mahal", "address": "124 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Indian", "is_chain": false, "chain_name": "", "phone": "(928) 778-0999", "lat": 34.542422, "lng": -112.468801, "quality": 3, "zone": "Downtown Prescott", "description": "Indian cuisine in Prescott with traditional dishes, vegetarian options, and friendly service."},
+{"id": "RB-PRESC-00092", "name": "Labruzza's Italian Ristorante", "address": "840 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 778-8585", "lat": 34.555616, "lng": -112.481846, "quality": 3, "zone": "Gateway Mall Area", "description": "Traditional Italian cuisine with pasta, pizza, seafood."},
+{"id": "RB-PRESC-00093", "name": "Papa's Italian Restaurant", "address": "129 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 778-4400", "lat": 34.542488, "lng": -112.4686, "quality": 3, "zone": "Downtown Prescott", "description": "Italian restaurant with pizza, pasta, and full bar in Prescott."},
+{"id": "RB-PRESC-00094", "name": "Olive Garden", "address": "3060 AZ-69", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Italian", "is_chain": true, "chain_name": "Olive Garden", "phone": "(928) 541-9194", "lat": 34.552073, "lng": -112.408273, "quality": 3, "zone": "Downtown Prescott", "description": "Italian chain with breadsticks, soups, pasta. Gateway Blvd location."},
+{"id": "RB-PRESC-00095", "name": "Bill's Pizza", "address": "107 S Cortez St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 443-0800", "lat": 34.541501, "lng": -112.46854, "quality": 2, "zone": "Downtown Prescott", "description": "World-class sourdough pizza on Courthouse Plaza using Italian flour and highest quality toppings, local favorite."},
+{"id": "RB-PRESV-00030", "name": "Ciao Bella", "address": "5791 E State Route 69 Ste 3", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 756-2783", "lat": 34.605523, "lng": -112.316443, "quality": 2, "zone": "Prescott Valley", "description": "Family-owned authentic Italian restaurant with homemade pasta, chicken parmesan, and gluten-free options."},
+{"id": "RB-PRESV-00031", "name": "Gabriella's Ristorante", "address": "2745 N Cortez St", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 227-0358", "lat": 34.609668, "lng": -112.322357, "quality": 2, "zone": "Prescott Valley", "description": "Homemade pasta, chicken, veal, and seafood with bottomless salad and Italian wines in Prescott Valley since 2018."},
+{"id": "RB-PRESC-00096", "name": "Rosa's Pizzeria", "address": "330 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 445-7400", "lat": 34.542022, "lng": -112.472526, "quality": 2, "zone": "Gurley St Corridor", "description": "Authentic Sicilian and Southern Italian cuisine with New York-style pizza, homemade pastas, and family recipes."},
+{"id": "RB-PRESC-00097", "name": "Rosa's Pizzeria Prescott Valley", "address": "330 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "(928) 277-0633", "lat": 34.542022, "lng": -112.472526, "quality": 3, "zone": "Gurley St Corridor", "description": "Sicilian and New York-style pizza, homemade pastas in Prescott Valley location."},
+{"id": "RB-PRESC-00098", "name": "Fujiyama Japanese Restaurant & Sushi", "address": "1781 E State Rte 69 Ste 15", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(928) 776-8659", "lat": 34.536276, "lng": -112.464398, "quality": 2, "zone": "Downtown Prescott", "description": "Best Japanese restaurant in Prescott. Fresh sushi, teriyaki, tempura, noodle bowls. 26+ years in business."},
+{"id": "RB-PRESV-00032", "name": "Sakura", "address": "2986 N Park Ave", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Japanese", "is_chain": false, "chain_name": "", "phone": "(928) 772-8888", "lat": 34.586498, "lng": -112.337717, "quality": 3, "zone": "Prescott Valley", "description": "Japanese cuisine and sushi bar in Prescott Valley with fresh preparations and traditional dishes."},
+{"id": "RB-PRESC-00099", "name": "El Charro Prescott", "address": "120 N Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 445-7130", "lat": 34.542373, "lng": -112.470217, "quality": 3, "zone": "Whiskey Row", "description": "Oldest Mexican restaurant in Northern Arizona since 1959. Original Brambila family recipes."},
+{"id": "RB-PRESC-00100", "name": "La Cocina de Durango", "address": "1298 Willow Creek Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 778-1033", "lat": 34.566449, "lng": -112.482354, "quality": 3, "zone": "Gateway Mall Area", "description": "Authentic Mexican cuisine from Durango region."},
+{"id": "RB-PRESC-00101", "name": "Macayo's Mexican Kitchen", "address": "3280 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 445-0600", "lat": 34.551446, "lng": -112.410736, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican food chain with Sonoran-style dishes."},
+{"id": "RB-PRESC-00102", "name": "Pasquale's Place", "address": "840 Miller Valley Rd Ste 2", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 776-9001", "lat": 34.565363, "lng": -112.49189, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican and Italian comfort food."},
+{"id": "RB-PRESC-00103", "name": "Chipotle Prescott", "address": "150 E Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": true, "chain_name": "Chipotle", "phone": "(928) 778-2323", "lat": 34.545821, "lng": -112.46853, "quality": 3, "zone": "Downtown Prescott", "description": "Fast casual Mexican with customizable burritos, bowls, tacos."},
+{"id": "RB-PRESV-00033", "name": "Chipotle Prescott Valley", "address": "5791 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": true, "chain_name": "Chipotle", "phone": "(928) 775-2900", "lat": 34.609987, "lng": -112.315148, "quality": 3, "zone": "Prescott Valley", "description": "Fast casual Mexican burritos, bowls. Prescott Valley location."},
+{"id": "RB-PRESC-00104", "name": "Taco Bell Prescott", "address": "1741 E State Route 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": true, "chain_name": "Taco Bell", "phone": "(928) 717-1304", "lat": 34.548264, "lng": -112.445903, "quality": 3, "zone": "Downtown Prescott", "description": "Fast food Mexican with tacos, burritos, nachos."},
+{"id": "RB-CHINV-00010", "name": "El Charro Norte", "address": "1025 N Highway 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 460-5869", "lat": 34.739533, "lng": -112.45433, "quality": 2, "zone": "Chino Valley", "description": "Northern Arizona's oldest Mexican restaurant since 1959, Sonoran classics, full bar, and outdoor patio in Chino Valley."},
+{"id": "RB-PRESC-00105", "name": "The Office Cantina", "address": "128 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 445-1211", "lat": 34.542491, "lng": -112.4688, "quality": 2, "zone": "Downtown Prescott", "description": "Contemporary Southwestern dishes, tacos, chile rellenos, and homemade margaritas with 25 TV screens for sports."},
+{"id": "RB-PRESC-00106", "name": "Alfonso's Iron Springs", "address": "1415 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 515-1114", "lat": 34.546228, "lng": -112.450793, "quality": 3, "zone": "Gurley St Corridor", "description": "Mexican restaurant on Iron Springs Road with breakfast burritos and traditional dishes."},
+{"id": "RB-PRESC-00107", "name": "Alfonso's Mexican Food", "address": "1415 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 772-6038", "lat": 34.546228, "lng": -112.450793, "quality": 3, "zone": "Gurley St Corridor", "description": "Authentic Mexican with burritos, tacos, sopes, salsa bar, and drive-through convenience."},
+{"id": "RB-PRESC-00108", "name": "Aliberto's", "address": "3250 Gateway Blvd Ste 2", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 445-5555", "lat": 34.571264, "lng": -112.490346, "quality": 3, "zone": "Gateway Mall Area", "description": "Family-owned Mexican eatery bringing the spirit of Mexico to your table."},
+{"id": "RB-PRESC-00109", "name": "Arturo's Mexican Restaurant", "address": "309 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 636-0200", "lat": 34.541857, "lng": -112.472468, "quality": 3, "zone": "Gurley St Corridor", "description": "Family-owned Mexican restaurant since 1995, known for best chips and salsa, margaritas."},
+{"id": "RB-PRESC-00110", "name": "Arturo's Mexican Restaurant Chino Valley", "address": "309 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 636-0200", "lat": 34.541857, "lng": -112.472468, "quality": 3, "zone": "Gurley St Corridor", "description": "Family-owned Mexican since 1995, best chips and salsa, daily specials, Margarita Mondays."},
+{"id": "RB-PRESC-00111", "name": "Barbudos Mexican Grill & Cantina", "address": "1042 Willow Creek Rd Suite 107", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 443-0102", "lat": 34.566989, "lng": -112.49186, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican grill and cantina with Baja-style tacos, burritos, and margaritas."},
+{"id": "RB-PRESV-00034", "name": "Carniceria Azteca", "address": "5707 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 772-2726", "lat": 34.606196, "lng": -112.316378, "quality": 3, "zone": "Prescott Valley", "description": "Mexican grocery and restaurant on State Route 69 with authentic cuisine."},
+{"id": "RB-PRESC-00112", "name": "Casa Sanchez", "address": "1121 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 777-1355", "lat": 34.543363, "lng": -112.45515, "quality": 3, "zone": "Gurley St Corridor", "description": "Mexican restaurant serving authentic dishes with friendly atmosphere."},
+{"id": "RB-PRESC-00113", "name": "Cucina Rustica Prescott", "address": "234 S Cortez St Ste 3", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 227-2140", "lat": 34.539908, "lng": -112.471926, "quality": 3, "zone": "Downtown Prescott", "description": "Southwestern cuisine with Italian influences in downtown Prescott."},
+{"id": "RB-PRESV-00035", "name": "El Asadero PV", "address": "5755 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 772-4555", "lat": 34.612636, "lng": -112.324971, "quality": 3, "zone": "Prescott Valley", "description": "Mexican restaurant on Robert Road in Prescott Valley with grilled specialties."},
+{"id": "RB-PRESV-00036", "name": "El Gordo Mexican Grill", "address": "5777 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 237-5548", "lat": 34.611623, "lng": -112.322571, "quality": 3, "zone": "Prescott Valley", "description": "Mexican grill on Robert Road in Prescott Valley with traditional dishes and tacos."},
+{"id": "RB-PRESC-00114", "name": "Filiberto's", "address": "1001 Iron Springs Rd", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 443-8626", "lat": 34.558274, "lng": -112.483122, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican fast food with burritos, tacos, and traditional favorites."},
+{"id": "RB-PRESC-00115", "name": "Frank's Mexican Restaurant", "address": "309 W Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 778-7762", "lat": 34.54509, "lng": -112.469071, "quality": 3, "zone": "Downtown Prescott", "description": "Family Mexican restaurant with traditional recipes and generous portions."},
+{"id": "RB-PRESC-00116", "name": "Garcia's Mexican Restaurant", "address": "1298 Willow Creek Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 778-9976", "lat": 34.566449, "lng": -112.482354, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican restaurant with inexpensive lunch specials, famous cheesy bean dip."},
+{"id": "RB-PRESC-00117", "name": "Gringo's Taco Shop", "address": "150 E Sheldon St Ste 2", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 776-0090", "lat": 34.544285, "lng": -112.46753, "quality": 3, "zone": "Downtown Prescott", "description": "Popular taco shop with authentic flavors and quick service."},
+{"id": "RB-PRESV-00037", "name": "Kalavera's Bar & Grill", "address": "7170 E Pav Way", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 772-4445", "lat": 34.585573, "lng": -112.335515, "quality": 3, "zone": "Prescott Valley", "description": "Mexican bar and grill in Prescott Valley with traditional dishes and full bar."},
+{"id": "RB-PRESV-00038", "name": "La Casita", "address": "5795 E State Route 69 Ste 2", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 775-0086", "lat": 34.607579, "lng": -112.315658, "quality": 3, "zone": "Prescott Valley", "description": "Family Mexican restaurant in Prescott Valley with authentic dishes and friendly atmosphere."},
+{"id": "RB-PRESC-00118", "name": "La Planchada", "address": "108 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 443-1001", "lat": 34.541799, "lng": -112.468529, "quality": 3, "zone": "Gurley St Corridor", "description": "Taqueria and tequila bar on Gurley Street with fresh tacos and lime margaritas."},
+{"id": "RB-PRESC-00119", "name": "Lindo Mexico Restaurante", "address": "134 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 776-4002", "lat": 34.542594, "lng": -112.468798, "quality": 3, "zone": "Downtown Prescott", "description": "Mexican restaurant with margaritas, chips and salsa, traditional dishes in friendly atmosphere."},
+{"id": "RB-PRESC-00120", "name": "Los Pinos Mexican Restaurant", "address": "1500 Iron Springs Rd", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 778-2345", "lat": 34.567954, "lng": -112.4947, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican restaurant serving authentic cuisine in Prescott."},
+{"id": "RB-PRESC-00121", "name": "Maya Mexican Restaurant", "address": "1042 Willow Creek Rd Ste 2", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 776-0289", "lat": 34.569625, "lng": -112.486703, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican and vegetarian options in Prescott with traditional dishes."},
+{"id": "RB-PRESC-00122", "name": "Mi Tierra Mexicana Restaurant", "address": "4001 N Arizona Ave", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 443-9598", "lat": 34.546965, "lng": -112.459039, "quality": 3, "zone": "Downtown Prescott", "description": "Authentic Mexican restaurant with traditional dishes and fresh ingredients."},
+{"id": "RB-PRESV-00039", "name": "Oliva's Mexican Food", "address": "5795 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 772-3001", "lat": 34.612031, "lng": -112.321526, "quality": 3, "zone": "Prescott Valley", "description": "Mexican restaurant on State Route 69 in Prescott Valley with traditional cuisine."},
+{"id": "RB-PRESV-00040", "name": "Oliva's Mexican Restaurant", "address": "5795 E State Route 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 772-6070", "lat": 34.610696, "lng": -112.322305, "quality": 3, "zone": "Prescott Valley", "description": "Mexican restaurant on Highway 69 in Prescott Valley with family recipes."},
+{"id": "RB-PRESV-00041", "name": "Taqueria Don Omar", "address": "3021 N Windsong Dr", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 772-8028", "lat": 34.586008, "lng": -112.326772, "quality": 3, "zone": "Prescott Valley", "description": "Authentic Mexican and seafood in Prescott Valley with generous portions and friendly service."},
+{"id": "RB-PRESC-00123", "name": "Spicy Streats", "address": "1201 Iron Springs Rd #13", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 237-5432", "lat": 34.561598, "lng": -112.486595, "quality": 3, "zone": "Gateway Mall Area", "description": "Mexican street food with protein bowls, spicy chicken, and fresh ingredients."},
+{"id": "RB-PRESC-00124", "name": "New Frontiers Natural Marketplace", "address": "1112 Iron Springs Rd", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 445-7370", "lat": 34.558918, "lng": -112.483797, "quality": 3, "zone": "Gateway Mall Area", "description": "Natural foods store with deli, salad bar, prepared foods."},
+{"id": "RB-PRESC-00125", "name": "The County Seat", "address": "214 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 227-2411", "lat": 34.54401, "lng": -112.468771, "quality": 2, "zone": "Downtown Prescott", "description": "Healthy brunch, dinner, and cocktails with views of Yavapai County Courthouse from upstairs location."},
+{"id": "RB-CHINV-00011", "name": "Aroma Pizza", "address": "988 N Highway 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 636-3770", "lat": 34.834432, "lng": -112.460709, "quality": 3, "zone": "Chino Valley", "description": "Local pizza restaurant in Chino Valley serving fresh pies and Italian favorites."},
+{"id": "RB-CHINV-00012", "name": "Domino's Chino Valley", "address": "1067 N Highway 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Pizza", "is_chain": true, "chain_name": "Domino", "phone": "(928) 636-6000", "lat": 34.834432, "lng": -112.460709, "quality": 3, "zone": "Chino Valley", "description": "Pizza delivery and carryout in Chino Valley."},
+{"id": "RB-PRESC-00126", "name": "Granite Mountain Pizza", "address": "1500 Iron Springs Rd Ste 2", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 445-2565", "lat": 34.570023, "lng": -112.487577, "quality": 3, "zone": "Gateway Mall Area", "description": "Pizza, salads, chicken wings, and Italian favorites in Prescott."},
+{"id": "RB-PRESC-00127", "name": "Mama Eddas Gourmet Pizza", "address": "840 Miller Valley Rd Ste 3", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 778-9999", "lat": 34.569219, "lng": -112.491381, "quality": 3, "zone": "Gateway Mall Area", "description": "Gourmet pizza with unique toppings and combinations."},
+{"id": "RB-PRESC-00128", "name": "NiMarco's Pizza", "address": "840 Miller Valley Rd Ste 4", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 778-2400", "lat": 34.574626, "lng": -112.489314, "quality": 3, "zone": "Gateway Mall Area", "description": "Local pizza with fresh ingredients and specialty pies."},
+{"id": "RB-PRESC-00129", "name": "Papa John's Pizza", "address": "3250 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Pizza", "is_chain": true, "chain_name": "Papa John", "phone": "(928) 778-7272", "lat": 34.547769, "lng": -112.407307, "quality": 3, "zone": "Gateway Mall Area", "description": "Pizza chain with garlic sauce and pepperoncinis."},
+{"id": "RB-PRESC-00130", "name": "Peter Piper Pizza", "address": "3240 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 778-6767", "lat": 34.551414, "lng": -112.410738, "quality": 3, "zone": "Gateway Mall Area", "description": "Family pizza restaurant with arcade games."},
+{"id": "RB-PRESC-00131", "name": "Pizza Hut Prescott", "address": "1512 Willow Creek Rd Ste 103", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Pizza", "is_chain": true, "chain_name": "Pizza Hut", "phone": "(928) 445-9800", "lat": 34.56687, "lng": -112.487955, "quality": 3, "zone": "Gateway Mall Area", "description": "Pizza chain with pan pizza, wings, pasta."},
+{"id": "RB-PRESC-00132", "name": "Red Lobster - Prescott", "address": "3261 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Seafood", "is_chain": false, "chain_name": "", "phone": "(928) 776-8800", "lat": 34.551431, "lng": -112.410737, "quality": 3, "zone": "Gateway Mall Area", "description": "Seafood chain with shrimp, lobster, crab, and signature dishes."},
+{"id": "RB-PRESC-00133", "name": "Shirley's Urban Eats", "address": "623 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 445-0410", "lat": 34.552709, "lng": -112.48019, "quality": 2, "zone": "Gateway Mall Area", "description": "Upscale American diner with soul food favorites, turkey crepes, harvest salads, lavash flatbreads."},
+{"id": "RB-PRESC-00134", "name": "Cocky's Chicken & Brew", "address": "1921 E State Route 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 237-5555", "lat": 34.537158, "lng": -112.467669, "quality": 3, "zone": "Downtown Prescott", "description": "Wings, happy hour, Sunday football specials with beer and margaritas."},
+{"id": "RB-PRESC-00135", "name": "Pudge & Asti's Sports Grill", "address": "721 N 6th St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 776-0444", "lat": 34.553944, "lng": -112.466, "quality": 3, "zone": "Downtown Prescott", "description": "Sports bar with big screens and pub grub."},
+{"id": "RB-PRESC-00136", "name": "The Fat Frog", "address": "1042 Willow Creek Rd Ste 3", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 776-3764", "lat": 34.567454, "lng": -112.492174, "quality": 3, "zone": "Gateway Mall Area", "description": "Sports bar with big screens, bar food, and cold drinks."},
+{"id": "RB-PRESC-00137", "name": "The Final Score Sports Bar & Grill", "address": "720 E Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 445-1234", "lat": 34.545462, "lng": -112.460112, "quality": 3, "zone": "Downtown Prescott", "description": "Sports bar with bar food, big screens, and game-day atmosphere."},
+{"id": "RB-PRESC-00138", "name": "Jersey Mike's Subs", "address": "3196 Willow Creek Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Sandwiches", "is_chain": true, "chain_name": "Jersey Mike", "phone": "(928) 778-6700", "lat": 34.598954, "lng": -112.457333, "quality": 3, "zone": "Gateway Mall Area", "description": "Fresh sliced subs, cheesesteaks, wraps."},
+{"id": "RB-PRESC-00139", "name": "TARA Fine Thai Cuisine", "address": "129 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(928) 772-3249", "lat": 34.542488, "lng": -112.4686, "quality": 2, "zone": "Downtown Prescott", "description": "Elegant Thai dining with koi pond, 8-foot Buddha, signature cocktails, and authentic dishes on Courthouse Square."},
+{"id": "RB-PRESV-00042", "name": "Thai Cafe", "address": "3051 N Windsong Dr", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(928) 237-5293", "lat": 34.586057, "lng": -112.326772, "quality": 2, "zone": "Prescott Valley", "description": "Authentic Thai cuisine in Prescott Valley with lunch and dinner service, family-owned and operated."},
+{"id": "RB-PRESC-00140", "name": "Dee Thai Express", "address": "520 W Sheldon St Ste 1", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(928) 515-2435", "lat": 34.538912, "lng": -112.470329, "quality": 3, "zone": "Downtown Prescott", "description": "Quick, affordable Thai food. Quaint little Thai shop near downtown."},
+{"id": "RB-PRESC-00141", "name": "Thai @ Mall", "address": "3250 Gateway Blvd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(928) 541-1234", "lat": 34.547769, "lng": -112.407307, "quality": 3, "zone": "Gateway Mall Area", "description": "Thai cuisine at Prescott Gateway Mall with authentic dishes."},
+{"id": "RB-PRESC-00142", "name": "Thai House Cafe", "address": "826 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(928) 777-0041", "lat": 34.542925, "lng": -112.481646, "quality": 3, "zone": "Gurley St Corridor", "description": "Thai cuisine on Cortez Street near Courthouse Square with traditional dishes."},
+{"id": "RB-CHINV-00013", "name": "Thai Spot", "address": "1067 N Highway 89 Ste 9", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Thai", "is_chain": false, "chain_name": "", "phone": "(928) 636-2888", "lat": 34.759187, "lng": -112.454204, "quality": 3, "zone": "Chino Valley", "description": "Thai restaurant in Chino Valley with authentic dishes and local following."},
+{"id": "RB-PRESC-00143", "name": "Back Alley Wine Bar", "address": "156 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 443-9463", "lat": 34.54082, "lng": -112.47025, "quality": 2, "zone": "Whiskey Row", "description": "Wine tasting room in Whiskey Row Alley with Arizona wines, beer, mead, live music."},
+{"id": "RB-PRESC-00144", "name": "Flying Leap Vineyards Tasting Room", "address": "148 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 237-1180", "lat": 34.540958, "lng": -112.470247, "quality": 2, "zone": "Whiskey Row", "description": "Prescott tasting room for award-winning Arizona wines, flights and souvenir glasses."},
+{"id": "RB-PRESV-00043", "name": "Rafter Eleven", "address": "7120 E Pav Way Ste 101", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 227-2050", "lat": 34.611957, "lng": -112.324573, "quality": 2, "zone": "Prescott Valley", "description": "Boutique winery and bistro with handcrafted wines, artisanal cheeses, gourmet small plates, and live music."},
+{"id": "RB-PRESC-00145", "name": "Vino at Prescott Pines", "address": "901 White Spar Rd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "(928) 445-2270", "lat": 34.526571, "lng": -112.478959, "quality": 2, "zone": "Downtown Prescott", "description": "Wine bar and bistro at historic Prescott Pines Inn with curated wines from Arizona and beyond, small bites in pine setting."},
+{"id": "RB-PRESV-00044", "name": "Buffalo Wild Wings", "address": "2985 N Centre Ct", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Bar", "is_chain": true, "chain_name": "Buffalo Wild", "phone": "(928) 759-9800", "lat": 34.586288, "lng": -112.340169, "quality": 3, "zone": "Prescott Valley", "description": "Wings, sports, and beer in Prescott Valley with big screens."},
+{"id": "RB-PRESC-00146", "name": "The Copper Note", "address": "120 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 515-3359", "lat": 34.541883, "lng": -112.469435, "quality": 2, "zone": "Gurley St Corridor", "description": "Contemporary American restaurant with organic grass-fed steaks and wild-caught seafood overlooking Courthouse Square"},
+{"id": "RB-PRESC-00147", "name": "Uncle Bud's Place", "address": "150 E Sheldon St Ste 111", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 227-0092", "lat": 34.53997, "lng": -112.464731, "quality": 2, "zone": "Downtown Prescott", "description": "Authentic Cajun cuisine - jambalaya, gumbo, smoked meats, muffuletta sandwiches"},
+{"id": "RB-PRESC-00148", "name": "Limoncello Pizzeria Napoletana", "address": "218 W Goodwin St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.540059, "lng": -112.470515, "quality": 2, "zone": "Downtown Prescott", "description": "Authentic Neapolitan pizza from hand-crafted Naples oven, imported Italian ingredients"},
+{"id": "RB-PRESC-00149", "name": "La Bruzza's Italian Ristorante", "address": "1012 Iron Springs Rd", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Italian", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.558337, "lng": -112.483189, "quality": 3, "zone": "Gateway Mall Area", "description": "BYOB Italian restaurant serving Prescott for over 25 years with homemade specials"},
+{"id": "RB-PRESV-00045", "name": "Yogi's Grill", "address": "2992 N Park Ave C", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Sushi", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.606996, "lng": -112.322997, "quality": 3, "zone": "Prescott Valley", "description": "Teriyaki bowls, sushi rolls, poke bowls, and stir-fry noodles"},
+{"id": "RB-PRESV-00046", "name": "Dad's Backyard Grill", "address": "2982 N Park Ave Ste B", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 277-1787", "lat": 34.611649, "lng": -112.315397, "quality": 3, "zone": "Prescott Valley", "description": "American BBQ and grill favorites (also known as Gabby's Grill)"},
+{"id": "RB-PRESC-00150", "name": "Vietnamese Pho Noodle Shop", "address": "824 E Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Vietnamese", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.54546, "lng": -112.459191, "quality": 3, "zone": "Downtown Prescott", "description": "Authentic Vietnamese pho and noodle dishes"},
+{"id": "RB-PRESC-00151", "name": "Pho Cafe", "address": "712 E Sheldon St Ste 108", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Vietnamese", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.539478, "lng": -112.466179, "quality": 3, "zone": "Downtown Prescott", "description": "Vietnamese pho and cafe specialties"},
+{"id": "RB-PRESC-00152", "name": "Cove Cafe", "address": "1750 E State Rte 69", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.535411, "lng": -112.470632, "quality": 3, "zone": "Downtown Prescott", "description": "Casual cafe serving breakfast and lunch"},
+{"id": "RB-PRESC-00153", "name": "The Point Bar & Lounge", "address": "1440 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.546228, "lng": -112.450793, "quality": 2, "zone": "Gurley St Corridor", "description": "Upscale lounge with cocktails and bar bites"},
+{"id": "RB-PRESC-00154", "name": "Kimmyz Secret Saloon", "address": "130 W Gurley St Suite B16", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 458-7517", "lat": 34.533293, "lng": -112.460423, "quality": 2, "zone": "Gurley St Corridor", "description": "Hidden speakeasy in basement of Bashford Courts with live music and craft cocktails"},
+{"id": "RB-PRESC-00155", "name": "Lyzzard's Lounge", "address": "120 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 778-2244", "lat": 34.542353, "lng": -112.468802, "quality": 3, "zone": "Downtown Prescott", "description": "Eclectic dive bar with pool tables, jukebox, and rock vibe"},
+{"id": "RB-PRESC-00156", "name": "Prescott Public House", "address": "108 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 541-0433", "lat": 34.541645, "lng": -112.470233, "quality": 2, "zone": "Whiskey Row", "description": "Craft beer pub with great selection and downtown location"},
+{"id": "RB-PRESC-00157", "name": "Whiskey River Tavern", "address": "140 N Granite St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.542736, "lng": -112.471609, "quality": 3, "zone": "Downtown Prescott", "description": "Local hangout with live music, multiple bar areas and outdoor patio"},
+{"id": "RB-PRESC-00158", "name": "The Betsy", "address": "109 W Goodwin St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.539871, "lng": -112.468992, "quality": 2, "zone": "Downtown Prescott", "description": "Curated wine bar with membership and public events in refined atmosphere"},
+{"id": "RB-PRESC-00159", "name": "1881 Spirits", "address": "116 W Goodwin St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.540037, "lng": -112.469081, "quality": 3, "zone": "Downtown Prescott", "description": "Cocktail bar offering craft cocktails and spirits"},
+{"id": "RB-PRESC-00160", "name": "Willow Tree Tapas & Wine", "address": "134 S Granite St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Wine Bar", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.541214, "lng": -112.471629, "quality": 3, "zone": "Downtown Prescott", "description": "Wine bar with tapas menu and crab cakes"},
+{"id": "RB-PRESC-00161", "name": "The Cortez", "address": "125 N Cortez St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.542419, "lng": -112.468601, "quality": 3, "zone": "Downtown Prescott", "description": "Downtown bar with food and drinks on the square"},
+{"id": "RB-PRESC-00162", "name": "Saigon Cafe", "address": "701 E Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Vietnamese", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.545298, "lng": -112.460277, "quality": 3, "zone": "Downtown Prescott", "description": "Vietnamese pho and noodle dishes"},
+{"id": "RB-PRESC-00163", "name": "Ohana Hawaiian BBQ", "address": "1360 Iron Springs Rd Ste 100", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.567048, "lng": -112.488845, "quality": 3, "zone": "Gateway Mall Area", "description": "Hawaiian plate lunches and BBQ"},
+{"id": "RB-PRESC-00164", "name": "KoKo Grill", "address": "1500 E Highway 69 Ste 550", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Korean", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.535711, "lng": -112.464537, "quality": 3, "zone": "Downtown Prescott", "description": "Korean BBQ and Asian cuisine"},
+{"id": "RB-DEWEY-00001", "name": "Hassayampa Smokehouse BBQ", "address": "171 E State Rte 69 Ste E", "city": "Dewey", "state": "AZ", "zip": "86327", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 237-5264", "lat": 34.614154, "lng": -112.317107, "quality": 3, "zone": "Prescott Valley", "description": "Texas-style BBQ and smoked meats"},
+{"id": "RB-PRESC-00165", "name": "Peacock Dining Room", "address": "122 E Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 778-9434", "lat": 34.542177, "lng": -112.467809, "quality": 3, "zone": "Gurley St Corridor", "description": "Art Deco fine dining at historic Hassayampa Inn"},
+{"id": "RB-PRESC-00166", "name": "The Badger's Den", "address": "201 N Marina St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.543918, "lng": -112.467146, "quality": 3, "zone": "Downtown Prescott", "description": "Comfort food and casual dining"},
+{"id": "RB-PRESC-00167", "name": "Theodore's Fine Foods", "address": "130 N Marina St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.542512, "lng": -112.467382, "quality": 3, "zone": "Downtown Prescott", "description": "Gourmet foods and specialty items"},
+{"id": "RB-PRESC-00168", "name": "That Apple Pan", "address": "510 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "(928) 445-8323", "lat": 34.542295, "lng": -112.475616, "quality": 2, "zone": "Gurley St Corridor", "description": "Locally owned breakfast & lunch restaurant - Apple-Pan-Tastic experience"},
+{"id": "RB-PRESC-00169", "name": "Maggie's Kitchen", "address": "121 N McCormick St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.542405, "lng": -112.472767, "quality": 3, "zone": "Downtown Prescott", "description": "Local breakfast spot with hometown feel"},
+{"id": "RB-PRESC-00170", "name": "Jen's Seventh Ave Cafe", "address": "1550 Iron Springs Rd", "city": "Prescott", "state": "AZ", "zip": "86305", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.568493, "lng": -112.495268, "quality": 3, "zone": "Gateway Mall Area", "description": "Neighborhood breakfast and lunch cafe"},
+{"id": "RB-PRESC-00171", "name": "Nana's Cafe", "address": "401 White Spar Rd", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Breakfast", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.53034, "lng": -112.473855, "quality": 3, "zone": "Downtown Prescott", "description": "Cozy cafe serving breakfast and lunch"},
+{"id": "RB-PRESC-00172", "name": "Prescott Junction Restaurant", "address": "301 E Sheldon St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 778-9344", "lat": 34.545283, "lng": -112.465644, "quality": 3, "zone": "Downtown Prescott", "description": "Breakfast, lunch, and dinner with buffet option"},
+{"id": "RB-PRESC-00173", "name": "Outlaw Donuts", "address": "3130 Willow Creek Rd Ste E", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Donuts/Bakery", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.569811, "lng": -112.4877, "quality": 3, "zone": "Gateway Mall Area", "description": "Fresh donuts and pastries - must-visit bakery"},
+{"id": "RB-PRESV-00047", "name": "Denny's Prescott Valley", "address": "7925 E Hwy 69", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Breakfast", "is_chain": true, "chain_name": "Denny", "phone": "(928) 772-4420", "lat": 34.607431, "lng": -112.321363, "quality": 3, "zone": "Prescott Valley", "description": "24-hour diner chain with breakfast, lunch, dinner"},
+{"id": "RB-PRESC-00174", "name": "Lonesome Valley Brewing Whiskey Row", "address": "110 S Montezuma St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.541611, "lng": -112.470233, "quality": 3, "zone": "Whiskey Row", "description": "Small-batch craft beers from local Prescott Valley brewery"},
+{"id": "RB-PRESC-00175", "name": "Method Coffee", "address": "228 W Goodwin St", "city": "Prescott", "state": "AZ", "zip": "86303", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 776-0500", "lat": 34.54006, "lng": -112.470625, "quality": 3, "zone": "Downtown Prescott", "description": "Specialty coffee roaster and cafe, locally owned since 2008, craft coffee with expert baristas."},
+{"id": "RB-PRESC-00176", "name": "Firehouse Coffee Prescott", "address": "120 W Gurley St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 350-8077", "lat": 34.541883, "lng": -112.469435, "quality": 3, "zone": "Gurley St Corridor", "description": "100% organic coffee roastery in Old Capitol Market, sourcing highest quality global beans."},
+{"id": "RB-PRESC-00177", "name": "Merchant Coffee", "address": "218 N Granite St", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.544434, "lng": -112.471744, "quality": 3, "zone": "Downtown Prescott", "description": "Specialty coffee shop in Founding Fathers Collective, partnered with Provision Coffee Phoenix."},
+{"id": "RB-PRESC-00178", "name": "BlackGold Espresso", "address": "715 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 327-9885", "lat": 34.553573, "lng": -112.480921, "quality": 3, "zone": "Gateway Mall Area", "description": "Local drive-thru and walk-up espresso bar with specialty coffee drinks."},
+{"id": "RB-PRESC-00179", "name": "Spiritual Bean Coffee", "address": "608 Miller Valley Rd", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(858) 335-1361", "lat": 34.551736, "lng": -112.479774, "quality": 3, "zone": "Gateway Mall Area", "description": "Artisan coffee roaster and coffee house with organic beans, opened 2024."},
+{"id": "RB-PRESC-00180", "name": "Valo Coffee", "address": "3180 Willow Creek Rd Ste A1", "city": "Prescott", "state": "AZ", "zip": "86301", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.574683, "lng": -112.493802, "quality": 3, "zone": "Gateway Mall Area", "description": "Modern coffee shop on Willow Creek serving specialty drinks."},
+{"id": "RB-PRESV-00048", "name": "Yellow Leaf Coffee", "address": "2820 N Glassford Hill Rd", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 759-8804", "lat": 34.584108, "lng": -112.343075, "quality": 3, "zone": "Prescott Valley", "description": "Drive-thru espresso shop known for rich coffee, no burnt taste, friendly service."},
+{"id": "RB-PRESV-00049", "name": "Plus Coffee", "address": "3106 Gateway Blvd Ste 400", "city": "Prescott Valley", "state": "AZ", "zip": "86303", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.607916, "lng": -112.320222, "quality": 3, "zone": "Prescott Valley", "description": "100% organic coffee, acai bowls, breakfast, baked goods, meeting rooms available."},
+{"id": "RB-PRESV-00050", "name": "Third Shot Coffee", "address": "7760 E Florentine Rd", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.588236, "lng": -112.330177, "quality": 3, "zone": "Prescott Valley", "description": "Local coffee shop serving specialty espresso drinks and light fare."},
+{"id": "RB-PRESV-00051", "name": "Roast n Toast", "address": "8000 E State Rte 69 Ste 101", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.613205, "lng": -112.322238, "quality": 3, "zone": "Prescott Valley", "description": "Coffee and breakfast spot with roasted coffee and morning favorites."},
+{"id": "RB-PRESV-00052", "name": "Grafted Coffee & Tea", "address": "6600 E 2nd St", "city": "Prescott Valley", "state": "AZ", "zip": "86314", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.580087, "lng": -112.350299, "quality": 3, "zone": "Prescott Valley", "description": "Coffee and tea house serving specialty beverages."},
+{"id": "RB-CHINV-00014", "name": "Overflow Coffee", "address": "448 N Hwy 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.76988, "lng": -112.45316, "quality": 3, "zone": "Chino Valley", "description": "Local coffee shop with great brews, breakfast burritos, welcoming community atmosphere."},
+{"id": "RB-CHINV-00015", "name": "The Herd Coffee House", "address": "1222 B State Rte 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.755826, "lng": -112.445734, "quality": 3, "zone": "Chino Valley", "description": "Organic coffee bar with boutique, spin class, spray tanning, modern farmhouse aesthetic."},
+{"id": "RB-CHINV-00016", "name": "Tumbleweed Mobile Coffee", "address": "", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.757523, "lng": -112.45378, "quality": 3, "zone": "Chino Valley", "description": "Mobile coffee service run by DeeDee, known for the best tasting coffee in Chino Valley."},
+{"id": "RB-CHINV-00017", "name": "Brewed Awakenings Coffee", "address": "78 State Hwy 89", "city": "Chino Valley", "state": "AZ", "zip": "86323", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.757092, "lng": -112.445254, "quality": 3, "zone": "Chino Valley", "description": "Drive-thru coffee shop with espresso, smoothies, and pastries since 1998."},
+{"id": "RB-DEWEY-00002", "name": "Elevation Coffee", "address": "12075 E Hwy 69", "city": "Dewey", "state": "AZ", "zip": "86327", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "", "lat": 34.607201, "lng": -112.319515, "quality": 3, "zone": "Prescott Valley", "description": "Local coffee shop serving espresso drinks, tea, sandwiches with friendly atmosphere."}
+];
+
+// ZONE MAP
+const ZONE_MAP = {
+  "downtown": ["Downtown Prescott", "Courthouse Plaza", "Montezuma St"],
+  "whiskey": ["Whiskey Row", "Marina St"],
+  "gurley": ["Gurley St", "Gurley St Corridor"],
+  "gateway": ["Gateway Mall Area", "Willow Creek Rd", "Iron Springs", "Miller Valley"],
+  "pvaz": ["Prescott Valley", "Glassford Hill"],
+  "chino": ["Chino Valley", "Highway 89"],
+  "other": ["Prescott Lakes", "Phippen", "Viewpoint", "Dewey"]
+};
+
+function inZone(zone, key) {
+  if (key === 'All') return true;
+  return (ZONE_MAP[key] || []).includes(zone);
+}
+
+// CUISINE COLORS
+const CC = {
+  "Mexican":"#7C3AED","Italian":"#15803D","American":"#1D4ED8",
+  "Chinese":"#B91C1C","Pizza":"#DC2626","Coffee":"#92400E",
+  "Bar":"#334155","Fast Food":"#EA580C","Chicken":"#DB2777",
+  "Bakery":"#2563EB","Sandwiches":"#16A34A","Asian":"#0D9488",
+  "Korean":"#6D28D9","French":"#4338CA","BBQ":"#C2410C",
+  "Brewery":"#B45309","Ice Cream":"#BE185D","Donuts":"#EC4899",
+  "Wings":"#B91C1C","Steakhouse":"#991B1B","Deli":"#16A34A",
+  "Seafood":"#0369A1","Indian":"#D97706","Thai":"#0D9488",
+  "Vietnamese":"#0891B2","Mediterranean":"#0369A1","Sushi":"#0891B2",
+  "Southwestern":"#C2410C","Fine Dining":"#6D28D9","Wine Bar":"#9333EA",
+  "Breakfast":"#EA580C","Diner":"#78716C","Cafe":"#92400E",
+  "Greek":"#0369A1","Japanese":"#B91C1C","Pub":"#334155",
+  "Tacos":"#7C3AED","Sports Bar":"#1D4ED8","Lounge":"#334155"
+};
+function tileColor(c) { return CC[c] || CC[c.split('/')[0].trim()] || '#475569'; }
+function tileAbbr(c)  { return c.split('/')[0].trim().substring(0,2).toUpperCase(); }
+
+// ESC
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// STATE
+let cuisine = 'All', zone = 'All', sort = 'zone', q = '', show = 30;
+const PAGE = 30;
+let nmActive = false, nmLat = null, nmLng = null;
+
+function haversine(a, b, c, d) {
+  const R=3958.8, dL=(c-a)*Math.PI/180, dG=(d-b)*Math.PI/180;
+  const x=Math.sin(dL/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dG/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+
+// FILTER + SORT
+function filtered() {
+  let r = [...DATA];
+  if (cuisine !== 'All') r = r.filter(x => x.cuisine.toLowerCase().includes(cuisine.toLowerCase()));
+  if (zone    !== 'All') r = r.filter(x => inZone(x.zone, zone));
+  if (q) r = r.filter(x =>
+    x.name.toLowerCase().includes(q) || x.cuisine.toLowerCase().includes(q) ||
+    x.address.toLowerCase().includes(q) || x.zone.toLowerCase().includes(q) ||
+    (x.description||'').toLowerCase().includes(q) || (x.chain_name||'').toLowerCase().includes(q)
+  );
+  if      (sort==='name')     r.sort((a,b)=>a.name.localeCompare(b.name));
+  else if (sort==='name-desc')r.sort((a,b)=>b.name.localeCompare(a.name));
+  else if (sort==='cuisine')  r.sort((a,b)=>a.cuisine.localeCompare(b.cuisine)||a.name.localeCompare(b.name));
+  else if (sort==='chain')    r.sort((a,b)=>(b.is_chain?1:0)-(a.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='local')    r.sort((a,b)=>(a.is_chain?1:0)-(b.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='distance' && nmActive) r.sort((a,b)=>haversine(nmLat,nmLng,a.lat,a.lng)-haversine(nmLat,nmLng,b.lat,b.lng));
+  else                        r.sort((a,b)=>a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name));
+  return r;
+}
+
+// RENDER
+function render() {
+  const items = filtered();
+  const grid  = document.getElementById('listingGrid');
+  const lm    = document.getElementById('loadMoreWrap');
+
+  document.getElementById('totalCount').textContent   = DATA.length;
+  document.getElementById('resultsCount').textContent = items.length;
+  updateFilterBar();
+  updateZoneCounts();
+
+  if (!items.length) {
+    grid.innerHTML = '<div class="no-results"><div class="nr-icon">🔍</div><h3>No restaurants found</h3><p>Try a different cuisine, area, or search term.</p><button onclick="clearAll()">Clear All Filters</button></div>';
+    lm.style.display='none'; return;
+  }
+
+  let h = '';
+  items.slice(0, show).forEach((r, i) => {
+    if (i > 0 && i % 12 === 0) {
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><div class="ad-label"><div class="ad-size">In-Feed Banner</div><div class="ad-price">$75/mo</div></div></div></div>';
+    }
+
+    const mapUrl  = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address + ' ' + r.city + ' ' + r.state);
+    const dist    = (nmActive && r.lat && r.lng) ? ' <span class="dist-badge">' + haversine(nmLat,nmLng,r.lat,r.lng).toFixed(1) + ' mi</span>' : '';
+    const tag     = r.is_chain ? '<span class="card-tag tag-chain">Chain</span>' : '<span class="card-tag tag-local">Local</span>';
+    const sub     = (r.is_chain && r.chain_name && r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase())
+                    ? '<div class="card-chain">' + esc(r.chain_name) + '</div>' : '';
+    const phone   = r.phone ? '<span>📞 ' + esc(r.phone) + '</span>' : '';
+    const desc    = r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : '';
+    const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
+    const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';
+
+    h += '<a href="' + mapUrl + '" target="_blank" rel="noopener" class="listing-card">'
+       + ico
+       + '<div class="card-body">'
+       +   '<h3>' + esc(r.name) + dist + '</h3>'
+       +   sub + desc
+       +   '<div class="meta">'
+       +     '<span>📍 ' + addr + '</span>'
+       +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
+       +     phone
+       +     '<span>🗺️ ' + esc(r.zone) + '</span>'
+       +   '</div>'
+       + '</div>'
+       + tag
+       + '</a>';
+  });
+
+  grid.innerHTML = h;
+  const left = items.length - show;
+  if (left > 0) {
+    lm.style.display = 'block';
+    lm.querySelector('.load-more-btn').textContent = 'Show ' + Math.min(PAGE,left) + ' More (' + left + ' remaining)';
+  } else lm.style.display = 'none';
+}
+
+// FILTER BAR
+function updateFilterBar() {
+  const bar = document.getElementById('filterBar');
+  const pills = [];
+  if (nmActive)       pills.push('<span class="filter-pill">📍 Near Me <span class="fp-x" onclick="toggleNearMe()">✕</span></span>');
+  if (cuisine!=='All')pills.push('<span class="filter-pill">🍴 ' + esc(cuisine) + ' <span class="fp-x" onclick="removeCuisineFilter()">✕</span></span>');
+  if (zone!=='All') {
+    const zl = document.querySelector('#zoneList li.z-active span:first-child');
+    pills.push('<span class="filter-pill">🗺️ ' + esc(zl ? zl.textContent : zone) + ' <span class="fp-x" onclick="removeZoneFilter()">✕</span></span>');
+  }
+  if (q) pills.push('<span class="filter-pill">🔍 &ldquo;' + esc(q) + '&rdquo; <span class="fp-x" onclick="removeSearchFilter()">✕</span></span>');
+  if (pills.length) {
+    bar.innerHTML = pills.join('') + '<span class="filter-bar-clear" onclick="clearAll()">Clear all</span>';
+    bar.classList.add('visible');
+  } else { bar.innerHTML = ''; bar.classList.remove('visible'); }
+}
+
+function updateZoneCounts() {
+  const stale = cuisine !== 'All' || q !== '';
+  document.querySelectorAll('#zoneList li').forEach(li =>
+    stale ? li.classList.add('z-counts-stale') : li.classList.remove('z-counts-stale')
+  );
+}
+
+function loadMore() { show += PAGE; render(); }
+
+// FILTER ACTIONS
+function filterByCuisine(el, c) {
+  cuisine = c; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  el.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  render();
+}
+function filterByZone(key, el) {
+  zone = key; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  el.classList.add('z-active'); el.setAttribute('aria-selected','true');
+  render();
+}
+function syncSearch(v) {
+  q = v.toLowerCase().trim(); show = PAGE;
+  document.getElementById('headerSearch').value = v;
+  document.getElementById('mobileSearch').value = v;
+  render();
+}
+function doSort() { sort = document.getElementById('sortSelect').value; show = PAGE; render(); }
+
+function removeCuisineFilter() {
+  cuisine = 'All'; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  render();
+}
+function removeZoneFilter() {
+  zone = 'All'; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  const f = document.querySelector('#zoneList li');
+  f.classList.add('z-active'); f.setAttribute('aria-selected','true');
+  render();
+}
+function removeSearchFilter() {
+  q = ''; show = PAGE;
+  document.getElementById('headerSearch').value = '';
+  document.getElementById('mobileSearch').value = '';
+  render();
+}
+function clearAll() {
+  if (nmActive) toggleNearMe();
+  cuisine='All'; zone='All'; sort='zone'; q=''; show=PAGE;
+  document.getElementById('headerSearch').value='';
+  document.getElementById('mobileSearch').value='';
+  document.getElementById('sortSelect').value='zone';
+  document.querySelectorAll('.cuisine-chip').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  document.querySelectorAll('#zoneList li').forEach(li=>{li.classList.remove('z-active');li.setAttribute('aria-selected','false');});
+  const f=document.querySelector('#zoneList li');
+  f.classList.add('z-active');f.setAttribute('aria-selected','true');
+  render();
+}
+
+// SEARCH UI
+function toggleMobileSearch() {
+  const b = document.getElementById('mobileSearchBar');
+  if (b.classList.toggle('open')) document.getElementById('mobileSearch').focus();
+}
+function closeMobileSearch() { document.getElementById('mobileSearchBar').classList.remove('open'); }
+
+// BACK TO TOP
+window.addEventListener('scroll', () => {
+  const b = document.getElementById('backToTop');
+  window.scrollY > 400 ? b.classList.add('visible') : b.classList.remove('visible');
+}, {passive:true});
+
+// NEAR ME
+function toggleNearMe() {
+  if (nmActive) {
+    nmActive=false; nmLat=nmLng=null;
+    document.getElementById('nearMeBtn').classList.remove('active','loading');
+    document.getElementById('nearMeError').innerHTML='';
+    document.getElementById('sortSelect').disabled=false;
+    render(); return;
+  }
+  if (!navigator.geolocation) { showNMError('Location not supported by your browser.'); return; }
+  const btn = document.getElementById('nearMeBtn');
+  btn.classList.add('loading');
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      nmLat=pos.coords.latitude; nmLng=pos.coords.longitude;
+      nmActive=true; btn.classList.remove('loading'); btn.classList.add('active');
+      document.getElementById('sortSelect').value='distance';
+      document.getElementById('sortSelect').disabled=true;
+      sort='distance'; show=PAGE; render();
+    },
+    err => {
+      btn.classList.remove('loading');
+      showNMError({1:'Location access denied.',2:'Could not determine location.',3:'Request timed out.'}[err.code]||'Location unavailable.');
+    },
+    {timeout:8000,maximumAge:60000}
+  );
+}
+function showNMError(msg) {
+  document.getElementById('nearMeError').innerHTML = '<div class="near-me-error">⚠️ ' + esc(msg) + '</div>';
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Eat Out · Wickenburg — 29 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="Your complete free guide to every restaurant, bar, and chain in Wickenburg, AZ. 29 listings. No reviews, no pay-to-play — just where to eat.">
+<meta name="theme-color" content="#C41E3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Let's Eat Out · Wickenburg — 29 Restaurants, Bars &amp; Chains">
+<meta property="og:description" content="Every restaurant, bar, and chain in Wickenburg, AZ. Free directory. No pay-to-play, no fake ratings.">
+<meta property="og:url" content="https://letseatout.ai/wickenburg">
+<meta property="og:image" content="https://letseatout.ai/og-wickenburg.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://letseatout.ai/wickenburg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C41E3A;--red-dark:#9E1830;--red-light:#F9E8EC;
+  --gold:#C8973E;--gold-light:#F7F0E3;
+  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#555;--text-light:#888;
+  --cream:#FFFBF5;--white:#FFFFFF;
+  --border:#E8E0D8;--border-light:#F0EBE5;
+  --shadow-s:0 1px 3px rgba(0,0,0,.06);
+  --shadow-m:0 4px 16px rgba(0,0,0,.08);
+  --shadow-l:0 8px 32px rgba(0,0,0,.12);
+  --r:8px;--r-lg:12px;--hdr-h:61px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.container{width:100%;padding:0 16px;}
+.skip-nav{position:absolute;left:-9999px;}
+.skip-nav:focus{position:fixed;top:0;left:0;padding:10px 18px;background:var(--red);color:white;font-size:14px;font-weight:700;z-index:9999;}
+
+/* TOP BAR */
+.top-bar{background:var(--dark);color:white;padding:6px 0;font-size:11px;}
+.top-bar .container{display:flex;justify-content:center;align-items:center;gap:8px;}
+.top-bar-text{display:none;}
+.market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;overflow-x:auto;scrollbar-width:none;}
+.market-pills::-webkit-scrollbar{display:none;}
+.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.market-pill.active{background:var(--red);color:white;}
+.market-pill:not(.active):hover{color:white;}
+
+/* HEADER */
+header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px;}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
+.logo-mark{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(196,30,58,.3);}
+.logo-text-wrap{display:flex;flex-direction:column;}
+.logo-text{font-family:'DM Serif Display',serif;font-size:21px;color:var(--dark);line-height:1;}
+.logo-text span{color:var(--red);}
+.logo-tag{font-size:9px;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.search-icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.mobile-search-bar{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--red);padding:10px 16px;box-shadow:var(--shadow-m);z-index:99;}
+.mobile-search-bar.open{display:flex;gap:8px;}
+.mobile-search-bar input{flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;}
+.mobile-search-bar input:focus{border-color:var(--red);}
+.mobile-search-bar button{padding:10px 18px;background:var(--red);color:white;border:none;border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+.header-search{display:none;}
+.submit-btn{padding:8px 14px;background:var(--dark);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.submit-btn:hover{background:var(--red);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#1a0e00 50%,#2e1800 100%);color:white;padding:28px 0 22px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8973E' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.15;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;}
+.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;color:white;letter-spacing:.3px;}
+.hero-stats{display:flex;gap:20px;justify-content:center;}
+.hero-stat{text-align:center;}
+.hero-stat .num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--gold);line-height:1.1;}
+.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.coming-soon-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;justify-content:center;margin-top:4px;}
+.coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
+.coming-soon-badge{background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.hero-banner-wrap{margin-top:16px;width:100%;}
+
+/* AD ZONES */
+.ad-zone{background:linear-gradient(135deg,#f5ede3,#ebe3d8);border:2px dashed var(--gold);border-radius:var(--r);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ad-zone::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(200,151,62,.04) 10px,rgba(200,151,62,.04) 20px);}
+.ad-label{position:relative;text-align:center;padding:8px 14px;}
+.ad-label .ad-size{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;}
+.ad-label .ad-desc{font-size:12px;color:var(--text-light);font-weight:500;}
+.ad-label .ad-price{font-family:'DM Serif Display',serif;font-size:18px;color:var(--red);margin-top:3px;}
+.ad-leaderboard{width:100%;height:50px;}
+.ad-inline{width:100%;height:50px;}
+.ad-sidebar{display:none;}
+
+/* CUISINE NAV */
+.cuisine-nav{background:var(--white);padding:10px 0;border-bottom:1px solid var(--border);position:sticky;top:var(--hdr-h);z-index:90;}
+.cuisine-slider-wrap{display:flex;align-items:center;gap:6px;}
+.cuisine-scroll{display:flex;gap:6px;overflow-x:auto;padding:2px;scrollbar-width:none;scroll-behavior:smooth;flex:1;-webkit-overflow-scrolling:touch;}
+.cuisine-scroll::-webkit-scrollbar{display:none;}
+.cuisine-chip{padding:7px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;min-height:36px;}
+.cuisine-chip:active,.cuisine-chip.active{background:var(--red);color:white;border-color:var(--red);}
+.slider-arrow{display:none;}
+
+/* NEAR ME */
+.near-me-chip{padding:7px 14px;border-radius:20px;border:1.5px solid #1D6CE0;background:#1D6CE0;font-size:12px;font-weight:700;color:white;cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;min-height:36px;}
+.near-me-chip.active{background:#0D3D80;border-color:#0D3D80;}
+.near-me-chip.loading{opacity:.75;pointer-events:none;}
+.near-me-chip .nm-spinner{width:12px;height:12px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none;}
+.near-me-chip.loading .nm-spinner{display:block;}
+.near-me-chip.loading .nm-icon{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.dist-badge{font-size:10px;font-weight:700;color:var(--red);background:var(--red-light);padding:2px 7px;border-radius:10px;margin-left:4px;}
+.near-me-error{background:#fff3cd;border:1.5px solid #ffc107;border-radius:var(--r);padding:10px 14px;font-size:12px;color:#856404;margin-bottom:10px;}
+
+/* MAIN LAYOUT */
+.main-layout{display:flex;flex-direction:column;gap:20px;padding:16px 0 32px;}
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;}
+.results-count{font-size:12px;color:var(--text-light);font-weight:500;}
+.results-count strong{color:var(--text);font-weight:700;}
+.sort-sel{padding:6px 10px;border:1.5px solid var(--border);border-radius:var(--r);font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:var(--text-mid);background:var(--white);cursor:pointer;}
+.filter-bar{display:none;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 0 4px;}
+.filter-bar.visible{display:flex;}
+.filter-pill{display:inline-flex;align-items:center;gap:5px;background:var(--red-light);border:1.5px solid var(--red);color:var(--red);border-radius:16px;font-size:11px;font-weight:700;padding:4px 10px;}
+.filter-pill .fp-x{cursor:pointer;font-size:13px;line-height:1;margin-left:2px;}
+.filter-bar-clear{font-size:11px;font-weight:700;color:var(--text-light);cursor:pointer;text-decoration:underline;padding:4px 2px;}
+
+/* LISTING CARDS — now real <a> tags */
+.listing-grid{display:flex;flex-direction:column;gap:8px;}
+.listing-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  transition:border-color .2s;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;color:inherit;
+}
+.listing-card:hover,.listing-card:active{border-color:var(--red);background:var(--red-light);}
+.card-tag{display:none;}
+.card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}
+.card-body h3{font-size:14px;font-weight:700;margin-bottom:1px;color:var(--text);line-height:1.3;}
+.card-chain{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px;}
+.card-desc{font-size:12px;color:var(--text-mid);line-height:1.55;margin:5px 0 6px;}
+.card-body .meta{font-size:11px;color:var(--text-light);display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
+.card-body .meta span{display:flex;align-items:center;gap:3px;}
+.inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:44px 20px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);}
+.no-results .nr-icon{font-size:38px;margin-bottom:10px;}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px;}
+.no-results p{font-size:13px;color:var(--text-light);margin-bottom:16px;}
+.no-results button{padding:10px 22px;background:var(--red);color:white;border:none;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* LOAD MORE */
+.load-more-wrap{text-align:center;padding:12px 0 4px;}
+.load-more-btn{padding:12px 30px;background:var(--white);border:2px solid var(--border);border-radius:24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text-mid);cursor:pointer;transition:all .2s;}
+.load-more-btn:hover{border-color:var(--red);color:var(--red);}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:12px;}
+.sidebar-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;}
+.sidebar-box h4{font-family:'DM Serif Display',serif;font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--red);}
+.zone-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.zone-list li{font-size:12px;color:var(--text-mid);padding:8px 10px;border-radius:var(--r);cursor:pointer;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent;outline:none;}
+.zone-list li:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.zone-list li:hover,.zone-list li:active{background:var(--red-light);color:var(--red);}
+.zone-list li.z-active{background:var(--red-light);color:var(--red);font-weight:700;}
+.zone-list li .ct{background:var(--cream);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;color:var(--text-light);min-width:26px;text-align:center;}
+.zone-list li.z-active .ct{background:var(--red);color:white;}
+.zone-list li.z-counts-stale .ct{opacity:.4;}
+.quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.quick-links li a{font-size:12px;color:var(--red);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px;}
+.quick-links li a:hover{color:var(--red-dark);}
+
+/* SUBMIT */
+.submit-section{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px 16px;margin:0 0 32px;text-align:center;}
+.submit-section h2{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px;}
+.submit-section .sub{color:var(--text-light);font-size:13px;margin-bottom:18px;line-height:1.5;}
+.submit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px;}
+.submit-card{background:var(--cream);border:2px dashed var(--border);border-radius:var(--r-lg);padding:18px 14px;text-align:center;}
+.submit-card .ico{font-size:28px;margin-bottom:6px;}
+.submit-card h3{font-size:13px;font-weight:700;margin-bottom:3px;}
+.submit-card p{font-size:11px;color:var(--text-light);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:24px 0;font-size:12px;}
+footer .container{display:flex;flex-direction:column;gap:14px;}
+footer .brand{color:white;font-family:'DM Serif Display',serif;font-size:18px;}
+footer .brand span{color:var(--red);}
+footer a{color:var(--gold);text-decoration:none;}
+footer .legal{line-height:1.6;}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--red);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(196,30,58,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(8px);}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--red-dark);}
+
+/* TABLET */
+@media(min-width:600px){
+  :root{--hdr-h:69px;}
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:space-between;}
+  .top-bar-text{display:block;}
+  .header-inner{padding:12px 0;}
+  .logo-mark{width:42px;height:42px;font-size:20px;}
+  .logo-text{font-size:24px;}
+  .search-icon-btn{display:none;}
+  .header-search{display:flex;align-items:center;background:var(--cream);border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .2s;}
+  .header-search:focus-within{border-color:var(--red);}
+  .header-search input{padding:8px 4px 8px 14px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;width:160px;outline:none;}
+  .header-search input::placeholder{color:var(--text-light);}
+  .header-search button{padding:7px 12px;border:none;background:var(--red);color:white;font-size:12px;cursor:pointer;border-radius:0 22px 22px 0;}
+  .hero{padding:36px 0 28px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-stat .num{font-size:34px;}
+  .ad-leaderboard{height:60px;}
+  .ad-inline{height:60px;}
+  .ad-sidebar{display:flex;width:100%;height:180px;}
+  .slider-arrow{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text-mid);flex-shrink:0;transition:all .2s;}
+  .slider-arrow:hover{border-color:var(--red);color:var(--red);}
+  .cuisine-nav{padding:12px 0;}
+  .main-layout{padding:20px 0 40px;gap:24px;}
+  .listing-card{grid-template-columns:48px 1fr auto;padding:16px 18px;gap:16px;}
+  .card-tag{display:block;padding:4px 11px;border-radius:16px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;color:white;}
+  .tag-chain{background:#1E293B;}
+  .tag-local{background:#C2410C;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-section{padding:28px 24px;margin:0 0 40px;}
+  .submit-grid{grid-template-columns:repeat(3,1fr);}
+  footer .container{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+  footer .legal{text-align:right;max-width:400px;}
+}
+@media(min-width:960px){
+  :root{--hdr-h:75px;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .header-inner{padding:14px 0;}
+  .logo-mark{width:44px;height:44px;font-size:22px;}
+  .logo-text{font-size:26px;}
+  .header-search input{width:200px;}
+  .header-search button{padding:8px 14px;font-size:13px;}
+  .hero{padding:44px 0 36px;}
+  .hero h1{font-size:42px;}
+  .hero-sub{font-size:16px;max-width:580px;margin:0 auto;}
+  .hero-stats{gap:28px;}
+  .hero-stat .num{font-size:36px;}
+  .ad-leaderboard{height:90px;max-width:728px;margin:0 auto;}
+  .ad-inline{height:90px;max-width:728px;margin:0 auto;}
+  .ad-sidebar{height:250px;}
+  .cuisine-nav{padding:14px 0;}
+  .slider-arrow{width:32px;height:32px;font-size:14px;}
+  .main-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 0 48px;}
+  .sidebar{display:flex;flex-direction:column;position:sticky;top:calc(var(--hdr-h) + 58px);}
+  .listing-card:hover{border-color:var(--red);box-shadow:var(--shadow-m);transform:translateY(-1px);}
+  .listing-card:active{transform:none;}
+  .zone-list li:hover{background:var(--red-light);color:var(--red);}
+  .submit-section{max-width:800px;margin:0 auto 48px;padding:36px;}
+  footer{padding:32px 0;}
+  .back-to-top{right:32px;bottom:32px;}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Wickenburg","description":"Free restaurant directory for Wickenburg, AZ. 29 listings.","url":"https://letseatout.ai/wickenburg","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+</script>
+</head>
+<body>
+
+<a class="skip-nav" href="#listingGrid">Skip to listings</a>
+
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-text">Free directory — every restaurant, bar &amp; chain listed at no cost</span>
+    <div class="market-pills">
+      <button type="button" class="market-pill" onclick="location.href='/indio'">Indio</button>
+      <button type="button" class="market-pill" onclick="location.href='/scottsdale'">Scottsdale</button>
+      <button type="button" class="market-pill" onclick="location.href='/sedona'">Sedona</button>
+      <button type="button" class="market-pill" onclick="location.href='/prescott'">Prescott</button>
+      <button type="button" class="market-pill" onclick="location.href='/cave-creek'">Cave Creek</button>
+      <button type="button" class="market-pill active" onclick="location.href='/wickenburg'">Wickenburg</button>
+      <button type="button" class="market-pill" onclick="location.href='/peoria'">Peoria</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">🍽️</div>
+        <div class="logo-text-wrap">
+          <div class="logo-text">Let's <span>Eat Out</span></div>
+          <div class="logo-tag">Wickenburg, AZ</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button type="button" class="search-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">🔍</button>
+        <div class="header-search">
+          <input type="search" id="headerSearch" placeholder="Search restaurants…" oninput="syncSearch(this.value)" autocomplete="off">
+          <button type="button" onclick="syncSearch(document.getElementById('headerSearch').value)">Search</button>
+        </div>
+        <button type="button" class="submit-btn" onclick="document.getElementById('submitArea').scrollIntoView({behavior:'smooth'})">+ Add Your Business</button>
+      </div>
+    </div>
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="search" id="mobileSearch" placeholder="Restaurant, cuisine, area…" oninput="syncSearch(this.value)" autocomplete="off">
+      <button type="button" onclick="closeMobileSearch()">Done</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Where to Eat in <em>Wickenburg</em></h1>
+        <p class="hero-sub">Your complete guide to every restaurant, diner, and bar in Wickenburg, AZ. The Dude Ranch Capital of the World — where to eat after a long ride.</p>
+        <div class="hero-promise">✦ No reviews &nbsp;·&nbsp; No pay-to-play &nbsp;·&nbsp; No fake ratings &nbsp;·&nbsp; Always free</div>
+        <div class="coming-soon-row">
+          <div class="coming-soon-label">Also coming soon:</div>
+          <span class="coming-soon-badge">Congress</span>
+          <span class="coming-soon-badge">Morristown</span>
+          <span class="coming-soon-badge">Surprise</span>
+          <span class="coming-soon-badge">Buckeye</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">29</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
+        <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Premium hero placement</div><div class="ad-price">$150/mo</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cuisine-nav" role="navigation" aria-label="Filter by cuisine">
+  <div class="container">
+    <div class="cuisine-slider-wrap">
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:-200,behavior:'smooth'})" aria-label="Scroll left">◀</button>
+      <div class="cuisine-scroll" id="cuisineScroll">
+        <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
+        <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'American')">🍔 American</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Mexican')">🌮 Mexican</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bar')">🍺 Bars</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Fast Food')">🍟 Fast Food</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Coffee')">☕ Coffee</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Pizza')">🍕 Pizza</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Steakhouse')">🥩 Steakhouse</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Sandwiches')">🥪 Sandwiches</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'BBQ')">🔥 BBQ</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Bakery')">🧁 Bakery</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Diner')">🍽️ Diner</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,'Ice Cream')">🍦 Ice Cream</button>
+      </div>
+      <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="main-layout">
+    <div>
+      <div class="results-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
+        <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
+          <option value="distance" disabled style="display:none">📍 Near Me</option>
+          <option value="zone">By Area</option>
+          <option value="name">A–Z</option>
+          <option value="name-desc">Z–A</option>
+          <option value="cuisine">By Cuisine</option>
+          <option value="local">Locals First</option>
+          <option value="chain">Chains First</option>
+        </select>
+      </div>
+      <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
+      <div id="nearMeError"></div>
+      <div class="listing-grid" id="listingGrid"></div>
+      <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+        <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
+      </div>
+      <div class="inline-ad-wrap" style="margin-top:20px">
+        <div class="ad-zone ad-leaderboard"><div class="ad-label"><div class="ad-size">Leaderboard 320×50 / 728×90</div><div class="ad-desc">Bottom placement</div><div class="ad-price">$100/mo</div></div></div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Premium sidebar</div><div class="ad-price">$125/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Wickenburg</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('downtown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('downtown',this)"><span>Downtown Wickenburg</span><span class="ct" id="zc-downtown">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('hwy60',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('hwy60',this)"><span>Hwy 60 / Wickenburg Way</span><span class="ct" id="zc-hwy60">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('hwy93',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('hwy93',this)"><span>Hwy 93 North</span><span class="ct" id="zc-hwy93">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('vulture',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('vulture',this)"><span>Vulture Mine Rd</span><span class="ct" id="zc-vulture">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+      <div class="ad-zone ad-sidebar"><div class="ad-label"><div class="ad-size">300×250 Sidebar</div><div class="ad-desc">Sidebar #2</div><div class="ad-price">$100/mo</div></div></div>
+      <div class="sidebar-box">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="javascript:void(0)">→ Date Night Spots</a></li>
+          <li><a href="javascript:void(0)">→ Best Happy Hours</a></li>
+          <li><a href="javascript:void(0)">→ Family Friendly</a></li>
+          <li><a href="javascript:void(0)">→ Late Night Eats</a></li>
+          <li><a href="javascript:void(0)">→ Patio Dining</a></li>
+          <li><a href="javascript:void(0)">→ New Openings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="submitArea">
+  <div class="submit-section">
+    <h2>Get Listed — It's Free</h2>
+    <p class="sub">Every restaurant, bar, and chain in Wickenburg is listed at no cost. Send us your info any way that's easy for you.</p>
+    <div class="submit-grid">
+      <div class="submit-card"><div class="ico">🖼️</div><h3>Upload a Flyer</h3><p>PDF, JPG, or PNG of your menu or business card</p></div>
+      <div class="submit-card"><div class="ico">📱</div><h3>Snap a Photo</h3><p>Photo of your storefront, sign, or menu board</p></div>
+      <div class="submit-card"><div class="ico">📝</div><h3>Fill Out Form</h3><p>Name, address, cuisine, hours — takes 60 seconds</p></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-light)">We review submissions daily and add listings within 24–48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand">Let's <span>Eat Out</span></div>
+      <div style="margin-top:6px">Wickenburg's complete dining guide · <a href="/">letseatout.ai</a></div>
+      <div style="margin-top:4px">Advertise: <a href="/cdn-cgi/l/email-protection#82ebece4edc2eee7f6f1e7e3f6edf7f6ace3eb"><span class="__cf_email__" data-cfemail="0e676068614e626b7a7d6b6f7a617b7a206f67">[email&#160;protected]</span></a></div>
+    </div>
+    <div class="legal">
+      Every restaurant and bar in Wickenburg is listed free. We sell banner advertising only — no paid placement, no paid rankings.<br>
+      <span style="color:rgba(255,255,255,.3)">© 2026 LetsEatOut.ai — All rights reserved</span>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// DATA
+const DATA = [
+{"id": "RB-CONGR-00001", "name": "Nichols West", "address": "22525 AZ-71", "city": "Congress", "state": "AZ", "zip": "85332", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 427-0235", "lat": 34.16269, "lng": -112.851032, "quality": 1, "zone": "Other Areas", "description": "Upscale dining on Hwy 71, full bar, eggs benedict, steaks, seafood, pasta, rack of lamb."},
+{"id": "RB-CONGR-00002", "name": "Wild West Saloon at the Depot", "address": "27200 AZ-89", "city": "Congress", "state": "AZ", "zip": "85332", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 427-6355", "lat": 34.154335, "lng": -112.843742, "quality": 2, "zone": "Other Areas", "description": "Western saloon, pizza, BBQ, cheese curds, karaoke nights, live music, outdoor seating, RV parking."},
+{"id": "RB-WICKE-00001", "name": "Horseshoe Cafe", "address": "207 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Diner", "is_chain": false, "chain_name": "", "phone": "(928) 684-7377", "lat": 33.969399, "lng": -112.729028, "quality": 1, "zone": "Hwy 60 / Wickenburg Way", "description": "Western diner since the Old West days, famous biscuits & gravy, chicken fried steak, giant pancakes, cowboy decor, local favorite."},
+{"id": "RB-WICKE-00002", "name": "Anita's Cocina", "address": "57 N Valentine St", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 684-5777", "lat": 33.970068, "lng": -112.728998, "quality": 2, "zone": "Downtown Wickenburg", "description": "Mexican restaurant since 1986, green tamales, full bar, breakfast/lunch/dinner, 4 dining areas, homemade salsa, local institution."},
+{"id": "RB-WICKE-00003", "name": "El Ranchero Restaurant", "address": "683 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 684-5121", "lat": 33.96255, "lng": -112.792917, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Authentic Mexican, green chili pork, chile rellenos, 100-year-old family tamale recipe, homemade-style food, outdoor seating."},
+{"id": "RB-WICKE-00004", "name": "Charley's Steak House", "address": "1187 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 684-2413", "lat": 33.963848, "lng": -112.753805, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Family steakhouse, owner Charley still cooking at 80+, knotty pine walls, lamb night, fish night, old-school dining."},
+{"id": "RB-WICKE-00005", "name": "Cowboy Cookin'", "address": "495 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 684-3882", "lat": 33.971002, "lng": -112.722138, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Steakhouse and comfort food, prime rib, NY steak, amazing burgers, dinner rolls, soups, friendly servers."},
+{"id": "RB-WICKE-00006", "name": "Mecca Bar and Grill", "address": "162 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 684-3527", "lat": 33.969399, "lng": -112.729028, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "New American bar and grill, burgers, diverse menu, cozy atmosphere, outdoor seating, dog-friendly patio."},
+{"id": "RB-WICKE-00007", "name": "Wissota Chophouse & Grill", "address": "575 Bass Rd", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Steakhouse", "is_chain": false, "chain_name": "", "phone": "(928) 415-8800", "lat": 33.971175, "lng": -112.721071, "quality": 3, "zone": "Downtown Wickenburg", "description": "Upscale chophouse at Cobblestone Hotel, 45-day dry-aged steaks, 20 Arizona craft beers on tap, wine bar."},
+{"id": "RB-WICKE-00008", "name": "Cary's Pizza", "address": "170 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 684-0589", "lat": 33.962235, "lng": -112.773357, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Thin cracker-style crust pizza, charming converted house, unique decor in each room, one-man show."},
+{"id": "RB-WICKE-00009", "name": "Onery Hog BBQ", "address": "686 N Tegner St", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(308) 765-9654", "lat": 33.973595, "lng": -112.734813, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Mom and pop BBQ joint, melt-in-your-mouth brisket, tender ribs, perfectly seasoned meats, no alcohol."},
+{"id": "RB-WICKE-00010", "name": "Qorri's Restaurant", "address": "651 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 684-2002", "lat": 33.962235, "lng": -112.773357, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Italian restaurant, pizza and wings, lasagna, white calzone, vodka penne, New York-style recipes, good bar."},
+{"id": "RB-WICKE-00011", "name": "Nana's Sandwich Shoppe", "address": "48 N Tegner St", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Bakery/Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 684-5539", "lat": 33.969217, "lng": -112.730744, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Fresh sandwiches, espresso, homemade pies, cinnamon rolls, homemade breads and cookies, ice cream."},
+{"id": "RB-WICKE-00012", "name": "La Cabana Saloon", "address": "132 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Bar", "is_chain": false, "chain_name": "", "phone": "(928) 684-7671", "lat": 33.969399, "lng": -112.729028, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Western saloon, cold beer, porch seating, relaxed atmosphere, small town feel."},
+{"id": "RB-WICKE-00013", "name": "Vulture Peak Brewing Company", "address": "120 N Washington St", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Brewery", "is_chain": false, "chain_name": "", "phone": "(928) 361-0369", "lat": 33.968625, "lng": -112.732589, "quality": 3, "zone": "Downtown Wickenburg", "description": "Wickenburg's first and only craft brewery, lagers, stouts, IPAs, American ales, live music Saturdays, popcorn."},
+{"id": "RB-WICKE-00014", "name": "Rancho Bar 7", "address": "111 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 684-2492", "lat": 33.969399, "lng": -112.729028, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Bar and restaurant, casual dining, local hangout."},
+{"id": "RB-WICKE-00015", "name": "The Palomino", "address": "107 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 684-4442", "lat": 33.969399, "lng": -112.729028, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Western bar and grill, full bar, family dining room, dog-friendly patio, karaoke and live music weekends."},
+{"id": "RB-WICKE-00016", "name": "Spurs Cafe", "address": "172 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Diner", "is_chain": false, "chain_name": "", "phone": "(928) 684-8777", "lat": 33.969399, "lng": -112.729028, "quality": 1, "zone": "Hwy 60 / Wickenburg Way", "description": "Family-run breakfast/lunch spot, breakfast all day, eggs benedict, patty melts, 10% off if you wear spurs, Neighborhood Favorite."},
+{"id": "RB-WICKE-00017", "name": "Bedoian's Bakery & Bistro", "address": "233 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Mediterranean", "is_chain": false, "chain_name": "", "phone": "(928) 415-1021", "lat": 33.969399, "lng": -112.729028, "quality": 2, "zone": "Hwy 60 / Wickenburg Way", "description": "Scratch-made pastries, Mediterranean bistro, hummus, turkey pot pie, best baklava in Arizona, espresso bar, owner Victor Bedoian."},
+{"id": "RB-WICKE-00018", "name": "Capital Farms Meats & Provisions", "address": "410 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 543-9597", "lat": 33.96592, "lng": -112.735122, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Butcher shop with lunch counter, grass-fed Corriente beef, famous smashburgers, beef tallow grilling, local provisions, jerky."},
+{"id": "RB-WICKE-00019", "name": "Lydia's La Canasta", "address": "2023 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Mexican", "is_chain": false, "chain_name": "", "phone": "(928) 415-0031", "lat": 33.962219, "lng": -112.769326, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Authentic Mexican, only real chile relleno in town, fry bread, homemade tortillas, roasted pepper salsa, veteran discounts."},
+{"id": "RB-WICKE-00020", "name": "Sizzling Wok", "address": "621 W Wickenburg Way, Ste 2269", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Chinese", "is_chain": false, "chain_name": "", "phone": "(928) 684-3977", "lat": 33.962219, "lng": -112.769326, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Chinese restaurant, authentic dishes, family-friendly, consistently good service."},
+{"id": "RB-WICKE-00021", "name": "Sundance Pizza and Tastee Ice Cream", "address": "512 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Pizza", "is_chain": false, "chain_name": "", "phone": "(928) 684-7569", "lat": 33.969399, "lng": -112.729028, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Pizza, wings, sandwiches, burgers, amazing strawberry milkshakes, soft-serve ice cream, family-run."},
+{"id": "RB-WICKE-00022", "name": "Hitching Post Bar & Grill", "address": "1420 N Country Club Dr", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 684-2011", "lat": 33.970055, "lng": -112.758678, "quality": 3, "zone": "Downtown Wickenburg", "description": "Golf club restaurant at Wickenburg Golf Club, panoramic Bradshaw Mountain views, patio dining, events venue."},
+{"id": "RB-WICKE-00023", "name": "Los Caballeros Club Grill", "address": "1551 S Vulture Mine Rd", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 684-4896", "lat": 33.952519, "lng": -112.771887, "quality": 3, "zone": "Vulture Mine Rd", "description": "Golf club restaurant at Rancho de los Caballeros, all-American cuisine, signature cocktails, Sonoran Desert views, open to public."},
+{"id": "RB-WICKE-00024", "name": "Buttermilk & Honey Bakeshop", "address": "69 N Frontier St", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(928) 671-1333", "lat": 33.968704, "lng": -112.731405, "quality": 3, "zone": "Downtown Wickenburg", "description": "Scratch bakery, cheddar-bacon-jalapeno biscuits, muffins, cookies, fluffy pastries, ice cream, coffee."},
+{"id": "RB-WICKE-00025", "name": "Pour Jo Coffee", "address": "144 N Frontier St", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Coffee", "is_chain": false, "chain_name": "", "phone": "(480) 406-8269", "lat": 33.969205, "lng": -112.732455, "quality": 3, "zone": "Downtown Wickenburg", "description": "Coffee shop on Frontier Street, espresso drinks, downtown location."},
+{"id": "RB-WICKE-00026", "name": "Fresh Greens", "address": "620 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 258-7509", "lat": 33.962219, "lng": -112.769326, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Healthy eating option, fresh salads, greens-focused menu."},
+{"id": "RB-WICKE-00027", "name": "Copper State Cafe", "address": "901 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Cafe", "is_chain": false, "chain_name": "", "phone": "(928) 258-0881", "lat": 33.965111, "lng": -112.748634, "quality": 3, "zone": "Hwy 60 / Wickenburg Way", "description": "Cafe serving breakfast and lunch, chicken fried steak, comfort food, country cooking."},
+{"id": "RB-WICK-N001", "name": "Starbucks Wickenburg", "address": "515 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Coffee", "is_chain": true, "chain_name": "Starbucks", "phone": "(928) 684-5479", "lat": 33.969754, "lng": -112.721635, "quality": 6, "zone": "Hwy 60 / Wickenburg Way", "description": "Wickenburg's only Starbucks location on the east end of Wickenburg Way. Drive-thru available."},
+{"id": "RB-WICK-N002", "name": "McDonald's Wickenburg", "address": "370 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Fast Food", "is_chain": true, "chain_name": "McDonald's", "phone": "(928) 684-2972", "lat": 33.972226, "lng": -112.725027, "quality": 5, "zone": "Hwy 60 / Wickenburg Way", "description": "McDonald's on Wickenburg Way. Standard menu with drive-thru."},
+{"id": "RB-WICK-N003", "name": "Burger King Wickenburg", "address": "524 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Burger King", "phone": "(928) 684-7193", "lat": 33.969399, "lng": -112.729028, "quality": 5, "zone": "Hwy 60 / Wickenburg Way", "description": "Burger King on Wickenburg Way with drive-thru."},
+{"id": "RB-WICK-N004", "name": "Dairy Queen Wickenburg", "address": "2250 N Vulture Mine Rd", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Ice Cream", "is_chain": true, "chain_name": "Dairy Queen", "phone": "(928) 684-7926", "lat": 33.991309, "lng": -112.771952, "quality": 6, "zone": "Vulture Mine Rd", "description": "Classic Dairy Queen soft-serve, Blizzards, and fast food on the north end of town near Vulture Mine Rd."},
+{"id": "RB-WICK-N005", "name": "Arby's Wickenburg", "address": "2250 N Vulture Mine Rd", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Fast Food", "is_chain": true, "chain_name": "Arby's", "phone": "(928) 684-4976", "lat": 33.991309, "lng": -112.771952, "quality": 5, "zone": "Vulture Mine Rd", "description": "Arby's roast beef sandwiches and curly fries at the north Wickenburg Vulture Mine Road location."},
+{"id": "RB-WICK-N006", "name": "Pizza Hut Wickenburg", "address": "528 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Pizza", "is_chain": true, "chain_name": "Pizza Hut", "phone": "(928) 684-8887", "lat": 33.969392, "lng": -112.720594, "quality": 5, "zone": "Hwy 60 / Wickenburg Way", "description": "Pizza Hut with dine-in, carryout, and delivery serving Wickenburg and surrounding areas."},
+{"id": "RB-WICK-N007", "name": "Filiberto's Mexican Food", "address": "530 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Mexican", "is_chain": true, "chain_name": "Filiberto's", "phone": "(928) 684-3515", "lat": 33.969399, "lng": -112.729028, "quality": 6, "zone": "Hwy 60 / Wickenburg Way", "description": "Arizona-based Mexican fast food chain known for 24-hour carne asada burritos, quesadillas, and breakfast items."},
+{"id": "RB-WICK-N008", "name": "Hassayampa Smokehouse BBQ", "address": "169 E Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "BBQ", "is_chain": false, "chain_name": "", "phone": "(928) 684-6123", "lat": 33.969399, "lng": -112.729028, "quality": 8, "zone": "Downtown Wickenburg", "description": "Local smokehouse known for slow-smoked meats and classic BBQ sides in the heart of downtown Wickenburg. Also listed as Onery Hog BBQ at same address — locally beloved."},
+{"id": "RB-WICK-N009", "name": "Jake's Spoon", "address": "3500 Wickenburg Ranch Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 684-2453", "lat": 34.017147, "lng": -112.797709, "quality": 8, "zone": "Other Areas", "description": "Restaurant located within Wickenburg Ranch, the upscale gated community. Known for great burgers and a full American menu for residents and guests."},
+{"id": "RB-WICK-N010", "name": "19 at Rancho de los Caballeros", "address": "1551 S Vulture Mine Rd", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Fine Dining", "is_chain": false, "chain_name": "", "phone": "(928) 684-5484", "lat": 33.952519, "lng": -112.771887, "quality": 9, "zone": "Vulture Mine Rd", "description": "Fine dining restaurant at the legendary Rancho de los Caballeros dude ranch and golf resort. Upscale Southwestern cuisine in a historic ranch setting."},
+{"id": "RB-WICK-N011", "name": "C & C's Baking Studio", "address": "45 N Valentine St", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "Bakery", "is_chain": false, "chain_name": "", "phone": "(928) 543-5454", "lat": 33.96999, "lng": -112.728941, "quality": 8, "zone": "Downtown Wickenburg", "description": "Local baking studio in downtown Wickenburg with freshly made pastries, custom cakes, and sweet treats."},
+{"id": "RB-WICK-N012", "name": "Rancho Bar 7 Restaurant", "address": "680 W Wickenburg Way", "city": "Wickenburg", "state": "AZ", "zip": "85390", "cuisine": "American", "is_chain": false, "chain_name": "", "phone": "(928) 684-2273", "lat": 33.962235, "lng": -112.773357, "quality": 7, "zone": "Hwy 60 / Wickenburg Way", "description": "Classic Western bar and restaurant on Wickenburg Way. American comfort food with a cowboy atmosphere."}
+];
+
+// ZONE MAP
+const ZONE_MAP = {
+  "downtown": ["Downtown Wickenburg", "Downtown", "Tegner St", "Frontier St"],
+  "hwy60": ["Hwy 60 / Wickenburg Way", "Wickenburg Way", "Apache St"],
+  "hwy93": ["Hwy 93 North", "Highway 93"],
+  "vulture": ["Vulture Mine Rd", "Airport"],
+  "other": ["Date Creek", "Congress", "Constellation", "Ranches"]
+};
+
+function inZone(zone, key) {
+  if (key === 'All') return true;
+  return (ZONE_MAP[key] || []).includes(zone);
+}
+
+// CUISINE COLORS
+const CC = {
+  "Mexican":"#7C3AED","Italian":"#15803D","American":"#1D4ED8",
+  "Chinese":"#B91C1C","Pizza":"#DC2626","Coffee":"#92400E",
+  "Bar":"#334155","Fast Food":"#EA580C","Chicken":"#DB2777",
+  "Bakery":"#2563EB","Sandwiches":"#16A34A","Asian":"#0D9488",
+  "Korean":"#6D28D9","French":"#4338CA","BBQ":"#C2410C",
+  "Brewery":"#B45309","Ice Cream":"#BE185D","Donuts":"#EC4899",
+  "Wings":"#B91C1C","Steakhouse":"#991B1B","Deli":"#16A34A",
+  "Seafood":"#0369A1","Indian":"#D97706","Thai":"#0D9488",
+  "Vietnamese":"#0891B2","Mediterranean":"#0369A1","Sushi":"#0891B2",
+  "Southwestern":"#C2410C","Fine Dining":"#6D28D9","Wine Bar":"#9333EA",
+  "Breakfast":"#EA580C","Diner":"#78716C","Cafe":"#92400E",
+  "Greek":"#0369A1","Japanese":"#B91C1C","Pub":"#334155",
+  "Tacos":"#7C3AED","Sports Bar":"#1D4ED8","Lounge":"#334155"
+};
+function tileColor(c) { return CC[c] || CC[c.split('/')[0].trim()] || '#475569'; }
+function tileAbbr(c)  { return c.split('/')[0].trim().substring(0,2).toUpperCase(); }
+
+// ESC
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// STATE
+let cuisine = 'All', zone = 'All', sort = 'zone', q = '', show = 30;
+const PAGE = 30;
+let nmActive = false, nmLat = null, nmLng = null;
+
+function haversine(a, b, c, d) {
+  const R=3958.8, dL=(c-a)*Math.PI/180, dG=(d-b)*Math.PI/180;
+  const x=Math.sin(dL/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dG/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+
+// FILTER + SORT
+function filtered() {
+  let r = [...DATA];
+  if (cuisine !== 'All') r = r.filter(x => x.cuisine.toLowerCase().includes(cuisine.toLowerCase()));
+  if (zone    !== 'All') r = r.filter(x => inZone(x.zone, zone));
+  if (q) r = r.filter(x =>
+    x.name.toLowerCase().includes(q) || x.cuisine.toLowerCase().includes(q) ||
+    x.address.toLowerCase().includes(q) || x.zone.toLowerCase().includes(q) ||
+    (x.description||'').toLowerCase().includes(q) || (x.chain_name||'').toLowerCase().includes(q)
+  );
+  if      (sort==='name')     r.sort((a,b)=>a.name.localeCompare(b.name));
+  else if (sort==='name-desc')r.sort((a,b)=>b.name.localeCompare(a.name));
+  else if (sort==='cuisine')  r.sort((a,b)=>a.cuisine.localeCompare(b.cuisine)||a.name.localeCompare(b.name));
+  else if (sort==='chain')    r.sort((a,b)=>(b.is_chain?1:0)-(a.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='local')    r.sort((a,b)=>(a.is_chain?1:0)-(b.is_chain?1:0)||a.name.localeCompare(b.name));
+  else if (sort==='distance' && nmActive) r.sort((a,b)=>haversine(nmLat,nmLng,a.lat,a.lng)-haversine(nmLat,nmLng,b.lat,b.lng));
+  else                        r.sort((a,b)=>a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name));
+  return r;
+}
+
+// RENDER
+function render() {
+  const items = filtered();
+  const grid  = document.getElementById('listingGrid');
+  const lm    = document.getElementById('loadMoreWrap');
+
+  document.getElementById('totalCount').textContent   = DATA.length;
+  document.getElementById('resultsCount').textContent = items.length;
+  updateFilterBar();
+  updateZoneCounts();
+
+  if (!items.length) {
+    grid.innerHTML = '<div class="no-results"><div class="nr-icon">🔍</div><h3>No restaurants found</h3><p>Try a different cuisine, area, or search term.</p><button onclick="clearAll()">Clear All Filters</button></div>';
+    lm.style.display='none'; return;
+  }
+
+  let h = '';
+  items.slice(0, show).forEach((r, i) => {
+    if (i > 0 && i % 12 === 0) {
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><div class="ad-label"><div class="ad-size">In-Feed Banner</div><div class="ad-price">$75/mo</div></div></div></div>';
+    }
+
+    const mapUrl  = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address + ' ' + r.city + ' ' + r.state);
+    const dist    = (nmActive && r.lat && r.lng) ? ' <span class="dist-badge">' + haversine(nmLat,nmLng,r.lat,r.lng).toFixed(1) + ' mi</span>' : '';
+    const tag     = r.is_chain ? '<span class="card-tag tag-chain">Chain</span>' : '<span class="card-tag tag-local">Local</span>';
+    const sub     = (r.is_chain && r.chain_name && r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase())
+                    ? '<div class="card-chain">' + esc(r.chain_name) + '</div>' : '';
+    const phone   = r.phone ? '<span>📞 ' + esc(r.phone) + '</span>' : '';
+    const desc    = r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : '';
+    const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
+    const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';
+
+    h += '<a href="' + mapUrl + '" target="_blank" rel="noopener" class="listing-card">'
+       + ico
+       + '<div class="card-body">'
+       +   '<h3>' + esc(r.name) + dist + '</h3>'
+       +   sub + desc
+       +   '<div class="meta">'
+       +     '<span>📍 ' + addr + '</span>'
+       +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
+       +     phone
+       +     '<span>🗺️ ' + esc(r.zone) + '</span>'
+       +   '</div>'
+       + '</div>'
+       + tag
+       + '</a>';
+  });
+
+  grid.innerHTML = h;
+  const left = items.length - show;
+  if (left > 0) {
+    lm.style.display = 'block';
+    lm.querySelector('.load-more-btn').textContent = 'Show ' + Math.min(PAGE,left) + ' More (' + left + ' remaining)';
+  } else lm.style.display = 'none';
+}
+
+// FILTER BAR
+function updateFilterBar() {
+  const bar = document.getElementById('filterBar');
+  const pills = [];
+  if (nmActive)       pills.push('<span class="filter-pill">📍 Near Me <span class="fp-x" onclick="toggleNearMe()">✕</span></span>');
+  if (cuisine!=='All')pills.push('<span class="filter-pill">🍴 ' + esc(cuisine) + ' <span class="fp-x" onclick="removeCuisineFilter()">✕</span></span>');
+  if (zone!=='All') {
+    const zl = document.querySelector('#zoneList li.z-active span:first-child');
+    pills.push('<span class="filter-pill">🗺️ ' + esc(zl ? zl.textContent : zone) + ' <span class="fp-x" onclick="removeZoneFilter()">✕</span></span>');
+  }
+  if (q) pills.push('<span class="filter-pill">🔍 &ldquo;' + esc(q) + '&rdquo; <span class="fp-x" onclick="removeSearchFilter()">✕</span></span>');
+  if (pills.length) {
+    bar.innerHTML = pills.join('') + '<span class="filter-bar-clear" onclick="clearAll()">Clear all</span>';
+    bar.classList.add('visible');
+  } else { bar.innerHTML = ''; bar.classList.remove('visible'); }
+}
+
+function updateZoneCounts() {
+  const stale = cuisine !== 'All' || q !== '';
+  document.querySelectorAll('#zoneList li').forEach(li =>
+    stale ? li.classList.add('z-counts-stale') : li.classList.remove('z-counts-stale')
+  );
+}
+
+function loadMore() { show += PAGE; render(); }
+
+// FILTER ACTIONS
+function filterByCuisine(el, c) {
+  cuisine = c; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  el.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  render();
+}
+function filterByZone(key, el) {
+  zone = key; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  el.classList.add('z-active'); el.setAttribute('aria-selected','true');
+  render();
+}
+function syncSearch(v) {
+  q = v.toLowerCase().trim(); show = PAGE;
+  document.getElementById('headerSearch').value = v;
+  document.getElementById('mobileSearch').value = v;
+  render();
+}
+function doSort() { sort = document.getElementById('sortSelect').value; show = PAGE; render(); }
+
+function removeCuisineFilter() {
+  cuisine = 'All'; show = PAGE;
+  document.querySelectorAll('.cuisine-chip').forEach(x => x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  render();
+}
+function removeZoneFilter() {
+  zone = 'All'; show = PAGE;
+  document.querySelectorAll('#zoneList li').forEach(li => { li.classList.remove('z-active'); li.setAttribute('aria-selected','false'); });
+  const f = document.querySelector('#zoneList li');
+  f.classList.add('z-active'); f.setAttribute('aria-selected','true');
+  render();
+}
+function removeSearchFilter() {
+  q = ''; show = PAGE;
+  document.getElementById('headerSearch').value = '';
+  document.getElementById('mobileSearch').value = '';
+  render();
+}
+function clearAll() {
+  if (nmActive) toggleNearMe();
+  cuisine='All'; zone='All'; sort='zone'; q=''; show=PAGE;
+  document.getElementById('headerSearch').value='';
+  document.getElementById('mobileSearch').value='';
+  document.getElementById('sortSelect').value='zone';
+  document.querySelectorAll('.cuisine-chip').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.cuisine-chip').classList.add('active');
+  document.querySelectorAll('#zoneList li').forEach(li=>{li.classList.remove('z-active');li.setAttribute('aria-selected','false');});
+  const f=document.querySelector('#zoneList li');
+  f.classList.add('z-active');f.setAttribute('aria-selected','true');
+  render();
+}
+
+// SEARCH UI
+function toggleMobileSearch() {
+  const b = document.getElementById('mobileSearchBar');
+  if (b.classList.toggle('open')) document.getElementById('mobileSearch').focus();
+}
+function closeMobileSearch() { document.getElementById('mobileSearchBar').classList.remove('open'); }
+
+// BACK TO TOP
+window.addEventListener('scroll', () => {
+  const b = document.getElementById('backToTop');
+  window.scrollY > 400 ? b.classList.add('visible') : b.classList.remove('visible');
+}, {passive:true});
+
+// NEAR ME
+function toggleNearMe() {
+  if (nmActive) {
+    nmActive=false; nmLat=nmLng=null;
+    document.getElementById('nearMeBtn').classList.remove('active','loading');
+    document.getElementById('nearMeError').innerHTML='';
+    document.getElementById('sortSelect').disabled=false;
+    render(); return;
+  }
+  if (!navigator.geolocation) { showNMError('Location not supported by your browser.'); return; }
+  const btn = document.getElementById('nearMeBtn');
+  btn.classList.add('loading');
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      nmLat=pos.coords.latitude; nmLng=pos.coords.longitude;
+      nmActive=true; btn.classList.remove('loading'); btn.classList.add('active');
+      document.getElementById('sortSelect').value='distance';
+      document.getElementById('sortSelect').disabled=true;
+      sort='distance'; show=PAGE; render();
+    },
+    err => {
+      btn.classList.remove('loading');
+      showNMError({1:'Location access denied.',2:'Could not determine location.',3:'Request timed out.'}[err.code]||'Location unavailable.');
+    },
+    {timeout:8000,maximumAge:60000}
+  );
+}
+function showNMError(msg) {
+  document.getElementById('nearMeError').innerHTML = '<div class="near-me-error">⚠️ ' + esc(msg) + '</div>';
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim

@@ -858,4 +858,24 @@ function showNMError(msg) {
 
 // INIT
 document.addEventListener('DOMContentLoaded', () => {
-  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim
+  const cuisines = [...new Set(DATA.map(r => r.cuisine.split('/')[0].trim()))];
+  const areas    = [...new Set(DATA.map(r => r.zone))];
+  const sc = document.getElementById('statCuisines');
+  const sa = document.getElementById('statAreas');
+  if (sc) sc.textContent = cuisines.length;
+  if (sa) sa.textContent = areas.length;
+
+  // Zone counts
+  const zcAll = document.getElementById('zc-all');
+  if (zcAll) zcAll.textContent = DATA.length;
+  Object.keys(ZONE_MAP).forEach(key => {
+    const elId = 'zc-' + key.replace(/-/g, '');
+    const el = document.getElementById(elId);
+    if (el) el.textContent = DATA.filter(r => inZone(r.zone, key)).length;
+  });
+
+  render();
+});
+</script>
+</body>
+</html>

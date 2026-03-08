@@ -1414,4 +1414,22 @@ function showNearMeError(msg) {
 
 // ===== INIT =====
 document.addEventListener("DOMContentLoaded", function() {
-  // FIX 4: set total count from DATA.length on load
+  // Set total count from DATA.length on load
+  var st = document.getElementById("statTotal");
+  if (st) st.textContent = DATA.length;
+  document.getElementById("totalCount").textContent = DATA.length;
+
+  // Zone counts
+  var zcAll = document.getElementById("zc-all");
+  if (zcAll) zcAll.textContent = DATA.length;
+  Object.keys(ZONE_MAP).forEach(function(key) {
+    var elId = "zc-" + key.replace(/-/g, "");
+    var el = document.getElementById(elId);
+    if (el) el.textContent = DATA.filter(function(r) { return inZone(r.zone, key); }).length;
+  });
+
+  renderListings();
+});
+</script>
+</body>
+</html>

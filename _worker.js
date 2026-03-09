@@ -1,14 +1,14 @@
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
-    const response = await fetch(request, {
-      cf: {
-        cacheEverything: true,
-        cacheTtl: 86400
-      }
-    });
+    // Fetch static asset from Pages
+    const response = await env.ASSETS.fetch(request);
 
-    return response;
+    // Clone response and set cache headers
+    const cached = new Response(response.body, response);
+    cached.headers.set("Cache-Control", "public, max-age=86400");
 
+    return cached;
   }
 };

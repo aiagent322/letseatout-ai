@@ -1068,7 +1068,8 @@ function renderListings() {
   toShow.forEach((r, i) => {
     if (i > 0 && i % 12 === 0) {
       var _adBanners=["BlackAngusBanner.png", "DillonsLakePleasant-2.jpg", "K4_Gourmet_Beef_Banner_1.jpg", "Southpoint.jpg", "TwinPeaks_3_art_600px.jpg", "WesternTrails.jpg"];
-      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><img src="/ads/' + _adBanners[Math.floor(i/12) % _adBanners.length] + '" style="width:100%;height:auto;display:block;" alt="Advertisement"></div></div>';
+      var _adIdx = Math.floor(i/12) - 1;
+      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><img src="/ads/' + _adBanners[_adIdx % _adBanners.length] + '" style="width:100%;height:auto;display:block;" alt="Advertisement"></div></div>';
     }
 
     // FIX 8: chain sub-label only when chain_name differs from name

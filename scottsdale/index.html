@@ -884,5 +884,49 @@ document.addEventListener('DOMContentLoaded', () => {
   render();
 });
 </script>
+
+<script>
+(function() {
+  var _sidebarImgs = ["BlackAngusSteak.png", "BlackAngusSteakPotato.png", "DillionsSidebar1.jpg", "HandbarJSidebar.png", "K4SideBar.jpg", "K4sidebar2.jpg", "TwinpeaksSidebar.png", "WesternTrailsSidebar1.jpg"];
+  var _slots = document.querySelectorAll('.ad-zone.ad-sidebar');
+  if (!_slots.length) return;
+
+  var _starts = [3, 6, 1];
+  var _indices = _starts.slice();
+  var _delays  = [0, 3000, 6000]; // stagger start: 0s, 3s, 6s
+  var _interval = 8000;           // each slot rotates every 8s
+
+  function rotateSlot(slotIdx) {
+    var slot = _slots[slotIdx];
+    if (!slot) return;
+    _indices[slotIdx] = (_indices[slotIdx] + 1) % _sidebarImgs.length;
+    var img = slot.querySelector('img');
+    if (img) {
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.4s ease';
+      setTimeout(function() {
+        img.src = '/ads/' + _sidebarImgs[_indices[slotIdx]];
+        img.style.opacity = '1';
+      }, 400);
+    }
+  }
+
+  for (var s = 0; s < 3; s++) {
+    (function(slotIdx) {
+      // Set initial image based on start index
+      var slot = _slots[slotIdx];
+      if (slot) {
+        var img = slot.querySelector('img');
+        if (img) img.src = '/ads/' + _sidebarImgs[_starts[slotIdx]];
+      }
+      // Stagger the rotation start
+      setTimeout(function() {
+        setInterval(function() { rotateSlot(slotIdx); }, _interval);
+      }, _delays[slotIdx]);
+    })(s);
+  }
+})();
+</script>
+
 </body>
 </html>

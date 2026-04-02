@@ -539,10 +539,19 @@ function toggleMobileSearch() {
 }
 function closeMobileSearch() { document.getElementById('mobileSearchBar').classList.remove('open'); }
 
-// BACK TO TOP
+// BACK TO TOP + CUISINE NAV COLLAPSE
+let lastScrollY = 0;
 window.addEventListener('scroll', () => {
   const b = document.getElementById('backToTop');
+  const nav = document.querySelector('.cuisine-nav');
+  const currentY = window.scrollY;
   window.scrollY > 400 ? b.classList.add('visible') : b.classList.remove('visible');
+  if (currentY > 200 && currentY > lastScrollY) {
+    nav.classList.add('collapsed');
+  } else {
+    nav.classList.remove('collapsed');
+  }
+  lastScrollY = currentY;
 }, {passive:true});
 
 // NEAR ME

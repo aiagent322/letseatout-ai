@@ -860,11 +860,20 @@ function slideCuisine(dir) {
   document.getElementById("cuisineScroll").scrollBy({left: dir*200, behavior:"smooth"});
 }
 
-// FIX 10: Back to top visibility
+// FIX 10: Back to top visibility + cuisine nav collapse
+let lastScrollY = 0;
 window.addEventListener("scroll", function() {
   const btn = document.getElementById("backToTop");
+  const nav = document.querySelector('.cuisine-nav');
+  const currentY = window.scrollY;
   if (window.scrollY > 400) btn.classList.add("visible");
   else btn.classList.remove("visible");
+  if (currentY > 200 && currentY > lastScrollY) {
+    nav.classList.add('collapsed');
+  } else {
+    nav.classList.remove('collapsed');
+  }
+  lastScrollY = currentY;
 }, {passive:true});
 
 

@@ -6,7 +6,7 @@
 :root {
   --red:#C41E3A;--red-dark:#9E1830;--red-light:#F9E8EC;
   --gold:#C8973E;--gold-light:#F7F0E3;
-  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#555;--text-light:#888;
+  --dark:#1A1A1A;--text:#1A1A1A;--text-mid:#333;--text-light:#555;
   --cream:#FFFBF5;--white:#FFFFFF;
   --border:#E8E0D8;--border-light:#F0EBE5;
   --shadow-s:0 1px 3px rgba(0,0,0,.06);

@@ -139,9 +139,11 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}
 .card-body h3{font-size:17px;font-weight:800;margin-bottom:3px;color:var(--text);line-height:1.25;}
 .card-chain{font-size:13px;color:var(--text-mid);font-weight:600;margin-bottom:4px;}
-.card-desc{font-size:14px;color:#444;line-height:1.5;margin:6px 0 8px;}
+.card-desc{font-size:14px;color:#444;line-height:1.5;margin:6px 0 8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
 .card-body .meta{font-size:13px;color:var(--text-mid);font-weight:500;display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
 .card-body .meta span{display:flex;align-items:center;gap:3px;}
+.card-body .meta a.tel-link{color:var(--text-mid);text-decoration:none;}
+.card-body .meta a.tel-link:hover{color:var(--red);}
 .inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
 
 /* NO RESULTS */
@@ -607,7 +609,7 @@ function render() {
     const tag     = r.is_chain ? '<span class="card-tag tag-chain">Chain</span>' : '<span class="card-tag tag-local">Local</span>';
     const sub     = (r.is_chain && r.chain_name && r.chain_name.trim().toLowerCase() !== r.name.trim().toLowerCase())
                     ? '<div class="card-chain">' + esc(r.chain_name) + '</div>' : '';
-    const phone   = r.phone ? '<span>📞 ' + esc(r.phone) + '</span>' : '';
+    const phone   = r.phone ? '<span>📞 <a class="tel-link" href="tel:' + r.phone.replace(/\D/g,"") + '">' + esc(r.phone) + '</a></span>' : '';
     const desc    = r.description ? '<p class="card-desc">' + esc(r.description) + '</p>' : '';
     const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
     const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';

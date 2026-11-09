@@ -13,10 +13,10 @@ https://letseatout.ai
 | Sedona Area, AZ | /sedona | 105 |
 | Prescott Area, AZ | /prescott | 251 |
 | Cave Creek · Carefree, AZ | /cave-creek | 50 |
-| Wickenburg Area, AZ | /wickenburg | 40 |
+| Wickenburg Area, AZ | /wickenburg | 38 |
 | Peoria, AZ | /peoria | 57 |
 
-**Network Total: 645 listings**
+**Network Total: 643 listings**
 
 ## Architecture
 

@@ -168,9 +168,6 @@
       <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
         <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
       </div>
-      <div class="inline-ad-wrap" style="margin-top:20px">
-        <div class="ad-zone ad-leaderboard"><img src="/ads/DillonsLakePleasant-2.jpg" style="width:100%;height:auto;display:block;" alt="Advertisement"></div>
-      </div>
     </div>
   </div>
 </div>
@@ -467,11 +464,6 @@ function render() {
 
   let h = '';
   items.slice(0, show).forEach((r, i) => {
-    if (i > 0 && i % 12 === 0) {
-      var _adBanners=["BlackAngusBanner.png", "DillonsLakePleasant-2.jpg", "K4_Gourmet_Beef_Banner_1.jpg", "Southpoint.jpg", "TwinPeaks_3_art_600px.jpg", "WesternTrails.jpg"];
-      var _adIdx = Math.floor(i/12) - 1;
-      h += '<div class="inline-ad-wrap"><div class="ad-zone ad-inline"><img src="/ads/' + _adBanners[_adIdx % _adBanners.length] + '" style="width:100%;height:auto;display:block;" alt="Advertisement"></div></div>';
-    }
 
     const mapUrl  = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(r.name + ' ' + r.address + ' ' + r.city + ' ' + r.state);
     const dist    = (nmActive && r.lat && r.lng) ? ' <span class="dist-badge">' + haversine(nmLat,nmLng,r.lat,r.lng).toFixed(1) + ' mi</span>' : '';
@@ -663,48 +655,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<script>
-(function() {
-  var _sidebarImgs = ["BlackAngusSteak.png", "BlackAngusSteakPotato.png", "DillionsSidebar1.jpg", "HandbarJSidebar.png", "K4SideBar.jpg", "K4sidebar2.jpg", "TwinpeaksSidebar.png", "WesternTrailsSidebar1.jpg"];
-  var _slots = document.querySelectorAll('.ad-zone.ad-sidebar');
-  if (!_slots.length) return;
-
-  var _starts = [1, 4, 7];
-  var _indices = _starts.slice();
-  var _delays  = [0, 3000, 6000]; // stagger start: 0s, 3s, 6s
-  var _interval = 8000;           // each slot rotates every 8s
-
-  function rotateSlot(slotIdx) {
-    var slot = _slots[slotIdx];
-    if (!slot) return;
-    _indices[slotIdx] = (_indices[slotIdx] + 1) % _sidebarImgs.length;
-    var img = slot.querySelector('img');
-    if (img) {
-      img.style.opacity = '0';
-      img.style.transition = 'opacity 0.4s ease';
-      setTimeout(function() {
-        img.src = '/ads/' + _sidebarImgs[_indices[slotIdx]];
-        img.style.opacity = '1';
-      }, 400);
-    }
-  }
-
-  for (var s = 0; s < 3; s++) {
-    (function(slotIdx) {
-      // Set initial image based on start index
-      var slot = _slots[slotIdx];
-      if (slot) {
-        var img = slot.querySelector('img');
-        if (img) img.src = '/ads/' + _sidebarImgs[_starts[slotIdx]];
-      }
-      // Stagger the rotation start
-      setTimeout(function() {
-        setInterval(function() { rotateSlot(slotIdx); }, _interval);
-      }, _delays[slotIdx]);
-    })(s);
-  }
-})();
-</script>
 
 </body>
 </html>

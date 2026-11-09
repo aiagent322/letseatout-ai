@@ -9,15 +9,14 @@ https://letseatout.ai
 
 | Market | URL | Listings |
 |--------|-----|----------|
-| Indio, CA | /indio | 171 |
 | Scottsdale, AZ | /scottsdale | 142 |
 | Sedona Area, AZ | /sedona | 105 |
 | Prescott Area, AZ | /prescott | 251 |
-| Cave Creek · Carefree, AZ | /cave-creek | 40 |
-| Wickenburg, AZ | /wickenburg | 29 |
-| Peoria, AZ | /peoria | 40 |
+| Cave Creek · Carefree, AZ | /cave-creek | 53 |
+| Wickenburg Area, AZ | /wickenburg | 40 |
+| Peoria, AZ | /peoria | 57 |
 
-**Network Total: 778 listings**
+**Network Total: 648 listings**
 
 ## Architecture
 
@@ -27,7 +26,6 @@ Deployed via GitHub → Cloudflare Pages.
 ```
 letseatout-ai/
 ├── index.html              ← Network hub (letseatout.ai/)
-├── indio/index.html        ← letseatout.ai/indio
 ├── scottsdale/index.html   ← letseatout.ai/scottsdale
 ├── sedona/index.html       ← letseatout.ai/sedona
 ├── prescott/index.html     ← letseatout.ai/prescott
@@ -77,6 +75,8 @@ Each restaurant in the DATA array:
   "description": "Description text."
 }
 ```
+
+For checked listings, use `checkedOn` with the date of the source check. The Cave Creek and Wickenburg cards also support optional `menuUrl`, `hoursUrl`, and `websiteUrl` links to official sources. When changing a directory count, also update its homepage card, the homepage total, and this table.
 
 ## Contact
 info@letseatout.ai

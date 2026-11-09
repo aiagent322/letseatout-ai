@@ -119,6 +119,9 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
   transition:border-color .2s;-webkit-tap-highlight-color:transparent;
   text-decoration:none;color:inherit;
 }
+.listing-card-with-links{position:relative;}
+.listing-card-with-links .card-map-link::after{content:"";position:absolute;inset:0;}
+.listing-card-with-links .meta a:not(.card-map-link){position:relative;z-index:1;text-decoration:underline;}
 .listing-card:hover,.listing-card:active{border-color:var(--red);background:var(--red-light);}
 .card-tag{display:none;}
 .card-ico{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;font-weight:800;color:white;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,.18);}

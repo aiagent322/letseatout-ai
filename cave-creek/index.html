@@ -357,13 +357,13 @@ function render() {
        + '<div class="card-body">'
        +   '<h3>' + esc(r.name) + dist + '</h3>'
        +   sub + desc
+       +   '<a class="card-more card-map-link" href="' + mapUrl + '" target="_blank" rel="noopener">Learn more &amp; map</a>'
        +   '<div class="meta">'
        +     '<span>📍 ' + addr + '</span>'
        +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
        +     phone + officialLinks + checked
        +     '<span>🗺️ ' + esc(r.zone) + '</span>'
        +   '</div>'
-       +   '<a class="card-more card-map-link" href="' + mapUrl + '" target="_blank" rel="noopener">Learn more &amp; map</a>'
        + '</div>'
        + tag
        + '</article>';

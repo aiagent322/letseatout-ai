@@ -141,7 +141,7 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .card-body .meta span{display:flex;align-items:center;gap:3px;}
 .card-body .meta a.tel-link{color:var(--text-mid);text-decoration:none;}
 .card-body .meta a.tel-link:hover{color:var(--red);}
-.card-more{display:inline-block;margin-top:10px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--red);text-decoration:none;}
+.card-more{display:inline-block;margin:2px 0 4px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--red);text-decoration:none;}
 .listing-card:hover .card-more{text-decoration:underline;}
 .inline-ad-wrap{padding:8px 0;display:flex;justify-content:center;}
 

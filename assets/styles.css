@@ -66,6 +66,8 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .coming-soon-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;width:100%;margin-bottom:2px;}
 .coming-soon-badge{background:rgba(200,151,62,.15);border:1.5px solid rgba(200,151,62,.4);color:var(--gold);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;}
 .hero-banner-wrap{margin-top:16px;width:100%;}
+.hero-banner-wrap ins{display:block;max-width:610px;margin:0 auto;text-decoration:none;}
+.hero-banner-wrap ins img{display:block;max-width:100%;height:auto;}
 
 /* AD ZONES */
 .ad-zone{background:none;border:none;border-radius:var(--r);display:block;position:relative;overflow:hidden;}

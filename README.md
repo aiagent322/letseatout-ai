@@ -10,13 +10,13 @@ https://letseatout.ai
 | Market | URL | Listings |
 |--------|-----|----------|
 | Scottsdale, AZ | /scottsdale | 133 |
-| Sedona Area, AZ | /sedona | 105 |
+| Sedona Area, AZ | /sedona | 94 |
 | Prescott Area, AZ | /prescott | 182 |
 | Cave Creek · Carefree, AZ | /cave-creek | 50 |
 | Wickenburg Area, AZ | /wickenburg | 35 |
 | Peoria, AZ | /peoria | 38 |
 
-**Network Total: 543 listings**
+**Network Total: 532 listings**
 
 ## Architecture
 

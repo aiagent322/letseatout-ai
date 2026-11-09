@@ -171,6 +171,11 @@
       <div class="filter-bar" id="filterBar" role="status" aria-live="polite"></div>
       <div id="nearMeError"></div>
       <div class="listing-grid" id="listingGrid"></div>
+      <div class="mid-banner-wrap" id="midAd">
+        <!-- Revive Adserver Hosted edition Asynchronous JS Tag - Generated with Revive Adserver v6.0.6 -->
+        <ins data-revive-zoneid="31812" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins>
+        <script async src="//servedby.revive-adserver.net/asyncjs.php"></script>
+      </div>
       <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
         <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
       </div>
@@ -353,6 +358,7 @@ function esc(s) {
 
 // STATE
 let cuisine = 'All', zone = 'All', sort = 'zone', q = '', show = 30;
+const midAd = document.getElementById('midAd');
 const PAGE = 30;
 let nmActive = false, nmLat = null, nmLng = null;
 
@@ -428,6 +434,11 @@ function render() {
   });
 
   grid.innerHTML = h;
+  // Revive mid-page zone: middle of the rendered listings (end of list when only a few)
+  if (midAd) {
+    var _cards = grid.querySelectorAll(':scope > .listing-card'), _n = _cards.length;
+    grid.insertBefore(midAd, _n < 6 ? null : _cards[Math.floor(_n / 2)]);
+  }
   const left = items.length - show;
   if (left > 0) {
     lm.style.display = 'block';

@@ -71,6 +71,9 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .footer-banner-wrap{padding:24px 16px;text-align:center;}
 .footer-banner-wrap ins{display:block;max-width:610px;margin:0 auto;text-decoration:none;}
 .footer-banner-wrap ins img{display:block;max-width:100%;height:auto;}
+.mid-banner-wrap{padding:16px 0;text-align:center;}
+.mid-banner-wrap ins{display:block;max-width:610px;margin:0 auto;text-decoration:none;}
+.mid-banner-wrap ins img{display:block;max-width:100%;height:auto;}
 
 /* AD ZONES */
 .ad-zone{background:none;border:none;border-radius:var(--r);display:block;position:relative;overflow:hidden;}

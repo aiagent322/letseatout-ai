@@ -14,9 +14,9 @@ https://letseatout.ai
 | Prescott Area, AZ | /prescott | 251 |
 | Cave Creek · Carefree, AZ | /cave-creek | 50 |
 | Wickenburg Area, AZ | /wickenburg | 35 |
-| Peoria, AZ | /peoria | 57 |
+| Peoria, AZ | /peoria | 39 |
 
-**Network Total: 631 listings**
+**Network Total: 613 listings**
 
 ## Architecture
 

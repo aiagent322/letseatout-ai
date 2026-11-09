@@ -520,6 +520,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   render();
+  // Homepage "Near Me" hand-off: /<market>?nearme=1 turns on Near Me
+  if (/[?&]nearme=1(&|$)/.test(location.search)) {
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+    toggleNearMe();
+  }
 });
 </script>
 

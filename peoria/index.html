@@ -344,11 +344,12 @@ function render() {
        +   '<h3>' + esc(r.name) + dist + '</h3>'
        +   sub + desc
        +   '<div class="meta">'
-       +     '<span>📍 <a class="tel-link card-map-link" href="' + mapUrl + '" target="_blank" rel="noopener">' + addr + '</a></span>'
+       +     '<span>📍 ' + addr + '</span>'
        +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
        +     phone
        +     '<span>🗺️ ' + esc(r.zone) + '</span>'
        +   '</div>'
+       +   '<a class="card-more card-map-link" href="' + mapUrl + '" target="_blank" rel="noopener">Learn more &amp; map</a>'
        + '</div>'
        + tag
        + '</article>';

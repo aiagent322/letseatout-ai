@@ -140,7 +140,23 @@
 
 <div class="container">
   <div class="main-layout">
-    <div>
+    <div class="sidebar">
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Scottsdale</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('oldtown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('oldtown',this)"><span>Old Town</span><span class="ct" id="zc-oldtown">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('n-scotts',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('n-scotts',this)"><span>North Scottsdale</span><span class="ct" id="zc-nscotts">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('quarter',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('quarter',this)"><span>Scottsdale Quarter</span><span class="ct" id="zc-quarter">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('s-scotts',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('s-scotts',this)"><span>South Scottsdale</span><span class="ct" id="zc-sscotts">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('dc-ranch',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('dc-ranch',this)"><span>DC Ranch / Silverleaf</span><span class="ct" id="zc-dcranch">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('gainey',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('gainey',this)"><span>Gainey Ranch</span><span class="ct" id="zc-gainey">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('mccorm',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('mccorm',this)"><span>McCormick Ranch</span><span class="ct" id="zc-mccorm">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="directory-results">
       <div class="results-bar">
         <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
         <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
@@ -160,23 +176,7 @@
         <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
       </div>
       <div class="inline-ad-wrap" style="margin-top:20px">
-        <div class="ad-zone ad-leaderboard"><img src="/ads/K4_Gourmet_Beef_Banner_1.jpg" style="width:100%;height:auto;display:block;" alt="Advertisement"></div></div>
-      </div>
-    </div>
-    <div class="sidebar">
-      <div class="sidebar-box">
-        <h4>Browse by Area</h4>
-        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
-          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Scottsdale</span><span class="ct" id="zc-all">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('oldtown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('oldtown',this)"><span>Old Town</span><span class="ct" id="zc-oldtown">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('n-scotts',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('n-scotts',this)"><span>North Scottsdale</span><span class="ct" id="zc-nscotts">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('quarter',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('quarter',this)"><span>Scottsdale Quarter</span><span class="ct" id="zc-quarter">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('s-scotts',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('s-scotts',this)"><span>South Scottsdale</span><span class="ct" id="zc-sscotts">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('dc-ranch',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('dc-ranch',this)"><span>DC Ranch / Silverleaf</span><span class="ct" id="zc-dcranch">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('gainey',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('gainey',this)"><span>Gainey Ranch</span><span class="ct" id="zc-gainey">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('mccorm',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('mccorm',this)"><span>McCormick Ranch</span><span class="ct" id="zc-mccorm">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
-        </ul>
+        <div class="ad-zone ad-leaderboard"><img src="/ads/K4_Gourmet_Beef_Banner_1.jpg" style="width:100%;height:auto;display:block;" alt="Advertisement"></div>
       </div>
     </div>
   </div>

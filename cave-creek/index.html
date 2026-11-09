@@ -132,7 +132,20 @@
 
 <div class="container">
   <div class="main-layout">
-    <div>
+    <div class="sidebar">
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Cave Creek Area</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('cccenter',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('cccenter',this)"><span>Cave Creek Center</span><span class="ct" id="zc-cccenter">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('carefree',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('carefree',this)"><span>Carefree</span><span class="ct" id="zc-carefree">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('spur',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('spur',this)"><span>Cave Creek Rd Corridor</span><span class="ct" id="zc-spur">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('anthem',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('anthem',this)"><span>Anthem Area</span><span class="ct" id="zc-anthem">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="directory-results">
       <div class="results-bar">
         <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
         <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
@@ -152,20 +165,7 @@
         <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
       </div>
       <div class="inline-ad-wrap" style="margin-top:20px">
-        <div class="ad-zone ad-leaderboard"><img src="/ads/K4_Gourmet_Beef_Banner_1.jpg" style="width:100%;height:auto;display:block;" alt="Advertisement"></div></div>
-      </div>
-    </div>
-    <div class="sidebar">
-      <div class="sidebar-box">
-        <h4>Browse by Area</h4>
-        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
-          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Cave Creek Area</span><span class="ct" id="zc-all">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('cccenter',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('cccenter',this)"><span>Cave Creek Center</span><span class="ct" id="zc-cccenter">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('carefree',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('carefree',this)"><span>Carefree</span><span class="ct" id="zc-carefree">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('spur',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('spur',this)"><span>Cave Creek Rd Corridor</span><span class="ct" id="zc-spur">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('anthem',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('anthem',this)"><span>Anthem Area</span><span class="ct" id="zc-anthem">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
-        </ul>
+        <div class="ad-zone ad-leaderboard"><img src="/ads/K4_Gourmet_Beef_Banner_1.jpg" style="width:100%;height:auto;display:block;" alt="Advertisement"></div>
       </div>
     </div>
   </div>

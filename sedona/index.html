@@ -136,7 +136,23 @@
 
 <div class="container">
   <div class="main-layout">
-    <div>
+    <div class="sidebar">
+      <div class="sidebar-box">
+        <h4>Browse by Area</h4>
+        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
+          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Sedona Area</span><span class="ct" id="zc-all">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('uptown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('uptown',this)"><span>Uptown Sedona</span><span class="ct" id="zc-uptown">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('w-sedona',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('w-sedona',this)"><span>West Sedona</span><span class="ct" id="zc-wsedona">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('voc',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('voc',this)"><span>Village of Oak Creek</span><span class="ct" id="zc-voc">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('tlaq',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('tlaq',this)"><span>Tlaquepaque Area</span><span class="ct" id="zc-tlaq">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('oakcreek',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('oakcreek',this)"><span>Oak Creek Canyon</span><span class="ct" id="zc-oakcreek">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('cottonwood',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('cottonwood',this)"><span>Cottonwood</span><span class="ct" id="zc-cotton">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('jerome',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('jerome',this)"><span>Jerome</span><span class="ct" id="zc-jerome">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="directory-results">
       <div class="results-bar">
         <div class="results-count">Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> listings</div>
         <select class="sort-sel" id="sortSelect" onchange="doSort()" aria-label="Sort">
@@ -156,23 +172,7 @@
         <button type="button" class="load-more-btn" onclick="loadMore()">Load More</button>
       </div>
       <div class="inline-ad-wrap" style="margin-top:20px">
-        <div class="ad-zone ad-leaderboard"><img src="/ads/BlackAngusBanner.png" style="width:100%;height:auto;display:block;" alt="Advertisement"></div></div>
-      </div>
-    </div>
-    <div class="sidebar">
-      <div class="sidebar-box">
-        <h4>Browse by Area</h4>
-        <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
-          <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('All',this)"><span>All Sedona Area</span><span class="ct" id="zc-all">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('uptown',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('uptown',this)"><span>Uptown Sedona</span><span class="ct" id="zc-uptown">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('w-sedona',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('w-sedona',this)"><span>West Sedona</span><span class="ct" id="zc-wsedona">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('voc',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('voc',this)"><span>Village of Oak Creek</span><span class="ct" id="zc-voc">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('tlaq',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('tlaq',this)"><span>Tlaquepaque Area</span><span class="ct" id="zc-tlaq">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('oakcreek',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('oakcreek',this)"><span>Oak Creek Canyon</span><span class="ct" id="zc-oakcreek">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('cottonwood',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('cottonwood',this)"><span>Cottonwood</span><span class="ct" id="zc-cotton">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('jerome',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('jerome',this)"><span>Jerome</span><span class="ct" id="zc-jerome">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('other',this)" onkeydown="if(event.key==='Enter'||event.key===' ')filterByZone('other',this)"><span>Other Areas</span><span class="ct" id="zc-other">—</span></li>
-        </ul>
+        <div class="ad-zone ad-leaderboard"><img src="/ads/BlackAngusBanner.png" style="width:100%;height:auto;display:block;" alt="Advertisement"></div>
       </div>
     </div>
   </div>

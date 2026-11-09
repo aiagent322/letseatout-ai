@@ -441,20 +441,20 @@ function render() {
     const addr    = esc(r.address) + ', ' + esc(r.city) + ', ' + esc(r.state) + ' ' + esc(r.zip);
     const ico     = '<div class="card-ico" style="background:' + tileColor(r.cuisine) + '">' + tileAbbr(r.cuisine) + '</div>';
 
-    h += '<a href="' + mapUrl + '" target="_blank" rel="noopener" class="listing-card">'
+    h += '<article class="listing-card listing-card-with-links">'
        + ico
        + '<div class="card-body">'
        +   '<h3>' + esc(r.name) + dist + '</h3>'
        +   sub + desc
        +   '<div class="meta">'
-       +     '<span>📍 ' + addr + '</span>'
+       +     '<span>📍 <a class="tel-link card-map-link" href="' + mapUrl + '" target="_blank" rel="noopener">' + addr + '</a></span>'
        +     '<span>🍴 ' + esc(r.cuisine) + '</span>'
        +     phone
        +     '<span>🗺️ ' + esc(r.zone) + '</span>'
        +   '</div>'
        + '</div>'
        + tag
-       + '</a>';
+       + '</article>';
   });
 
   grid.innerHTML = h;

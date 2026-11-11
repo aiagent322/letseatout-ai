@@ -26,9 +26,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var
 .top-bar-text{display:none;}
 .market-pills{display:flex;gap:3px;background:rgba(255,255,255,.08);padding:3px;border-radius:20px;overflow-x:auto;scrollbar-width:none;}
 .market-pills::-webkit-scrollbar{display:none;}
-.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.market-pill{padding:4px 12px;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;color:#fff;border-radius:16px;cursor:pointer;transition:all .2s;white-space:nowrap;}
 .market-pill.active{background:var(--red);color:white;}
-.market-pill:not(.active):hover{color:white;}
+.market-pill:not(.active):hover{color:#fff;background:rgba(255,255,255,.18);}
 
 /* HEADER */
 header{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-m);}

@@ -18,9 +18,9 @@ https://letseatout.ai
 | Queen Creek, AZ | /queen-creek | 144 |
 | Flagstaff & Area, AZ | /flagstaff | 208 |
 | Buckeye, AZ | /buckeye | 93 |
-| Verde Valley, AZ | /verde-valley | 83 |
+| Verde Valley, AZ | /verde-valley | 72 |
 
-**Network Total: 1,049 listings**
+**Network Total: 1,038 listings**
 
 ## Architecture
 

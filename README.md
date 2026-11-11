@@ -15,9 +15,9 @@ https://letseatout.ai
 | Cave Creek · Carefree, AZ | /cave-creek | 50 |
 | Wickenburg Area, AZ | /wickenburg | 35 |
 | Peoria, AZ | /peoria | 38 |
-| Queen Creek, AZ | /queen-creek | 146 |
+| Queen Creek, AZ | /queen-creek | 144 |
 
-**Network Total: 667 listings**
+**Network Total: 665 listings**
 
 ## Architecture
 

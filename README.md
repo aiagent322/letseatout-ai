@@ -22,8 +22,9 @@ https://letseatout.ai
 | Payson & Rim Country, AZ | /payson | 66 |
 | Globe & Miami, AZ | /globe | 31 |
 | Show Low & Snowflake, AZ | /show-low | 29 |
+| Kingman & Area, AZ | /kingman | 62 |
 
-**Network Total: 1,164 listings**
+**Network Total: 1,226 listings**
 
 ## Architecture
 
@@ -46,6 +47,7 @@ letseatout-ai/
 ├── payson/index.html       ← letseatout.ai/payson
 ├── globe/index.html        ← letseatout.ai/globe
 ├── show-low/index.html     ← letseatout.ai/show-low
+├── kingman/index.html      ← letseatout.ai/kingman
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

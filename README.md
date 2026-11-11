@@ -16,8 +16,9 @@ https://letseatout.ai
 | Wickenburg Area, AZ | /wickenburg | 35 |
 | Peoria, AZ | /peoria | 38 |
 | Queen Creek, AZ | /queen-creek | 144 |
+| Flagstaff & Area, AZ | /flagstaff | 216 |
 
-**Network Total: 665 listings**
+**Network Total: 881 listings**
 
 ## Architecture
 
@@ -34,6 +35,7 @@ letseatout-ai/
 ├── wickenburg/index.html   ← letseatout.ai/wickenburg
 ├── peoria/index.html       ← letseatout.ai/peoria
 ├── queen-creek/index.html  ← letseatout.ai/queen-creek
+├── flagstaff/index.html    ← letseatout.ai/flagstaff
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

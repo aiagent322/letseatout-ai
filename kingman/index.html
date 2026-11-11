@@ -11,11 +11,11 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Let's Eat Out · Kingman — 62 Restaurants, Bars &amp; Chains</title>
-<meta name="description" content="A free guide to restaurants, bars, and chains in Kingman, AZ. 62 listings. No reviews, no pay-to-play — just where to eat.">
+<title>Let's Eat Out · Kingman — 39 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="A free guide to restaurants, bars, and chains in Kingman, AZ. 39 listings. No reviews, no pay-to-play — just where to eat.">
 <meta name="theme-color" content="#C41E3A">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Let's Eat Out · Kingman — 62 Restaurants, Bars &amp; Chains">
+<meta property="og:title" content="Let's Eat Out · Kingman — 39 Restaurants, Bars &amp; Chains">
 <meta property="og:description" content="Restaurants, bars, and chains in Kingman, AZ. Free directory. No pay-to-play, no fake ratings.">
 <meta property="og:url" content="https://letseatout.ai/kingman">
 <meta property="og:image" content="https://letseatout.ai/og-home.png">
@@ -29,7 +29,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Kingman","description":"Free restaurant directory for Kingman, AZ. 62 listings.","url":"https://letseatout.ai/kingman","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Kingman","description":"Free restaurant directory for Kingman, AZ. 39 listings.","url":"https://letseatout.ai/kingman","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
 </script>
 </head>
 <body>
@@ -93,7 +93,7 @@
         <a href="/kingman/where-to-eat" class="guide-link">📖 Where to Eat in Kingman — Tips for Dining</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><div class="num">62</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num">39</div><div class="lbl">Restaurants</div></div>
         <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
         <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
       </div>
@@ -116,7 +116,6 @@
         <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;American&quot;)">American</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Asian&quot;)">Asian</button>
-        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Bakery&quot;)">Bakery</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Bar &amp; Grill&quot;)">Bar &amp; Grill</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;BBQ&quot;)">BBQ</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Brewery&quot;)">Brewery</button>
@@ -124,14 +123,10 @@
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Chicken&quot;)">Chicken</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Coffee&quot;)">Coffee</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Dessert&quot;)">Dessert</button>
-        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Hawaiian&quot;)">Hawaiian</button>
-        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Indian&quot;)">Indian</button>
-        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Japanese&quot;)">Japanese</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Mexican&quot;)">Mexican</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Pizza&quot;)">Pizza</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Sandwiches&quot;)">Sandwiches</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Steakhouse&quot;)">Steakhouse</button>
-        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Thai&quot;)">Thai</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Wine Bar&quot;)">Wine Bar</button>
       </div>
       <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
@@ -146,15 +141,11 @@
         <h4>Browse by Area</h4>
         <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
           <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('All',this)}"><span>All Kingman</span><span class="ct" id="zc-all">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area1',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area1',this)}"><span>Chloride</span><span class="ct" id="zc-area1">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area2',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area2',this)}"><span>Dolan Springs</span><span class="ct" id="zc-area2">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area3',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area3',this)}"><span>Golden Valley</span><span class="ct" id="zc-area3">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area4',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area4',this)}"><span>Kingman · Andy Devine &amp; Route 66</span><span class="ct" id="zc-area4">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area5',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area5',this)}"><span>Kingman · Downtown &amp; Beale St</span><span class="ct" id="zc-area5">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area6',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area6',this)}"><span>Kingman · Other</span><span class="ct" id="zc-area6">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area7',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area7',this)}"><span>Kingman · Stockton Hill Rd</span><span class="ct" id="zc-area7">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area8',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area8',this)}"><span>Oatman</span><span class="ct" id="zc-area8">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area9',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area9',this)}"><span>Wikieup</span><span class="ct" id="zc-area9">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area1',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area1',this)}"><span>Kingman · Andy Devine &amp; Route 66</span><span class="ct" id="zc-area1">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area2',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area2',this)}"><span>Kingman · Downtown &amp; Beale St</span><span class="ct" id="zc-area2">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area3',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area3',this)}"><span>Kingman · Other</span><span class="ct" id="zc-area3">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area4',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area4',this)}"><span>Kingman · Stockton Hill Rd</span><span class="ct" id="zc-area4">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area5',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area5',this)}"><span>Oatman</span><span class="ct" id="zc-area5">—</span></li>
         </ul>
       </div>
     </div>
@@ -212,108 +203,6 @@
 // DATA
 const DATA = [
   {
-    "name": "Yesterday's Restaurant",
-    "address": "9827 2nd St",
-    "city": "Chloride",
-    "state": "AZ",
-    "zip": "86431",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Chloride",
-    "description": "",
-    "id": "RB-KING-00001",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://www.chlorideaz.com/"
-  },
-  {
-    "name": "Canyon Cafe",
-    "address": "16064 Pierce Ferry Rd",
-    "city": "Dolan Springs",
-    "state": "AZ",
-    "zip": "86441",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Dolan Springs",
-    "description": "",
-    "id": "RB-KING-00002",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Sonora Kitchen",
-    "address": "16056 Pierce Ferry Rd",
-    "city": "Dolan Springs",
-    "state": "AZ",
-    "zip": "86441",
-    "cuisine": "Mexican",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Dolan Springs",
-    "description": "",
-    "id": "RB-KING-00003",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Off Road Diner Mexican Cantina",
-    "address": "120 S Emery Park Rd",
-    "city": "Golden Valley",
-    "state": "AZ",
-    "zip": "86413",
-    "cuisine": "Mexican",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Golden Valley",
-    "description": "",
-    "id": "RB-KING-00004",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "BoSa Donuts",
-    "address": "3146 Stockton Hill Rd",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Bakery",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Stockton Hill Rd",
-    "description": "",
-    "id": "RB-KING-00005",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://bosadonutsaz.com/"
-  },
-  {
-    "name": "Brothers Indian Restaurant",
-    "address": "2770 W Old Hwy 66",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Indian",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Other",
-    "description": "",
-    "id": "RB-KING-00006",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
     "name": "Burger King",
     "address": "3250 E Andy Devine Ave",
     "city": "Kingman",
@@ -338,31 +227,14 @@ const DATA = [
     "zip": "",
     "cuisine": "Bar & Grill",
     "chain_name": "",
-    "phone": "",
+    "phone": "928-377-5391",
     "zone": "Kingman · Andy Devine & Route 66",
-    "description": "",
+    "description": "American restaurant and lounge inside the Ramada Kingman on Historic Route 66, serving burgers and sandwiches, with brewpub, bar and casual-to-fine dining options.",
     "id": "RB-KING-00008",
     "is_chain": false,
     "lat": null,
     "lng": null,
     "websiteUrl": ""
-  },
-  {
-    "name": "Catrenello's Family Restaurant",
-    "address": "4875 N Olympic Way",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Other",
-    "description": "",
-    "id": "RB-KING-00009",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://www.catrenellos.com/"
   },
   {
     "name": "Cellar Door Wine Bar",
@@ -374,25 +246,8 @@ const DATA = [
     "chain_name": "",
     "phone": "",
     "zone": "Kingman · Downtown & Beale St",
-    "description": "",
+    "description": "Wine bar with over 140 bottled wines, about 30 by the glass, plus roughly 35 beers, non-alcoholic drinks and a small appetizer menu of cheese plate, hummus and olives.",
     "id": "RB-KING-00010",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Cerbat Cliffs Grill",
-    "address": "1001 Gates Ave",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Downtown & Beale St",
-    "description": "",
-    "id": "RB-KING-00011",
     "is_chain": false,
     "lat": null,
     "lng": null,
@@ -414,23 +269,6 @@ const DATA = [
     "lat": null,
     "lng": null,
     "websiteUrl": "https://www.chilis.com/locations/us/arizona/kingman/kingman"
-  },
-  {
-    "name": "Chillz Ice Cream Shoppe",
-    "address": "2404 Stockton Hill Rd",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Dessert",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Stockton Hill Rd",
-    "description": "",
-    "id": "RB-KING-00013",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
   },
   {
     "name": "Chipotle Mexican Grill",
@@ -508,9 +346,9 @@ const DATA = [
     "zip": "",
     "cuisine": "Steakhouse",
     "chain_name": "",
-    "phone": "",
+    "phone": "928-753-3523",
     "zone": "Kingman · Andy Devine & Route 66",
-    "description": "",
+    "description": "Steakhouse in a 1930s WPA-built building with western decor, a rooftop Route 66 view and dog-friendly patio, serving steaks, prime rib, fish tacos and salads.",
     "id": "RB-KING-00018",
     "is_chain": false,
     "lat": null,
@@ -610,9 +448,9 @@ const DATA = [
     "zip": "",
     "cuisine": "Mexican",
     "chain_name": "",
-    "phone": "",
+    "phone": "928-718-0018",
     "zone": "Kingman · Andy Devine & Route 66",
-    "description": "",
+    "description": "Family-owned Southwest and Mexican restaurant in a roughly century-old building on historic Route 66 in Kingman, operating at this location since 1995 as part of a six-location group.",
     "id": "RB-KING-00024",
     "is_chain": false,
     "lat": null,
@@ -678,31 +516,14 @@ const DATA = [
     "zip": "",
     "cuisine": "BBQ",
     "chain_name": "",
-    "phone": "",
+    "phone": "928-757-8227",
     "zone": "Kingman · Downtown & Beale St",
-    "description": "",
+    "description": "Casual barbecue restaurant in historic downtown Kingman serving smoked chicken, pulled pork and brisket sandwiches, Southern-style appetizers, peach cobbler, milkshakes and soft serve; formerly operated under the Redneck's name.",
     "id": "RB-KING-00028",
     "is_chain": false,
     "lat": null,
     "lng": null,
     "websiteUrl": "https://www.floydandcompany.com/"
-  },
-  {
-    "name": "Frey's Mexican Food",
-    "address": "401 W Beale St",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Mexican",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Downtown & Beale St",
-    "description": "",
-    "id": "RB-KING-00029",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://freysmexicanfood.com/contact/"
   },
   {
     "name": "Frozen Yogurt Island",
@@ -714,29 +535,12 @@ const DATA = [
     "chain_name": "",
     "phone": "",
     "zone": "Kingman · Stockton Hill Rd",
-    "description": "",
+    "description": "Self-serve frozen yogurt shop in Kingman where customers build their own blend and add toppings, with a family-oriented setting on Stockton Hill Road.",
     "id": "RB-KING-00030",
     "is_chain": false,
     "lat": null,
     "lng": null,
     "websiteUrl": ""
-  },
-  {
-    "name": "Garibaldi's",
-    "address": "311 E Andy Devine Ave",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Mexican",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Andy Devine & Route 66",
-    "description": "",
-    "id": "RB-KING-00031",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://garibaldisrestaurantkingman.com/contact/"
   },
   {
     "name": "Golden Corral",
@@ -807,40 +611,6 @@ const DATA = [
     "websiteUrl": "https://locations.kfc.com/az/kingman/3350-n-stockton-hill-rd"
   },
   {
-    "name": "La Rosa de Michoacan",
-    "address": "2302 Hualapai Mountain Rd",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Mexican",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Other",
-    "description": "",
-    "id": "RB-KING-00036",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://www.larosadeamichoacan.online/"
-  },
-  {
-    "name": "La Tea Da on Beale",
-    "address": "410 E Beale St",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Coffee",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Downtown & Beale St",
-    "description": "",
-    "id": "RB-KING-00037",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
     "name": "Mattina's",
     "address": "318 E Oak St",
     "city": "Kingman",
@@ -848,9 +618,9 @@ const DATA = [
     "zip": "",
     "cuisine": "American",
     "chain_name": "",
-    "phone": "",
+    "phone": "928-753-7504",
     "zone": "Kingman · Downtown & Beale St",
-    "description": "",
+    "description": "Italian restaurant in a historic single-family home in Kingman, serving pasta such as Alfredo and lobster ravioli, seafood, lamb and steaks, with catering available and reservations taken by phone.",
     "id": "RB-KING-00038",
     "is_chain": false,
     "lat": null,
@@ -899,27 +669,10 @@ const DATA = [
     "zip": "",
     "cuisine": "American",
     "chain_name": "",
-    "phone": "",
+    "phone": "928-718-0066",
     "zone": "Kingman · Andy Devine & Route 66",
-    "description": "",
+    "description": "Route 66 diner serving traditional diner fare, homemade root beer and pizza, in an interior filled with Route 66 memorabilia; it began as a small cafe and gas station.",
     "id": "RB-KING-00041",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Niu Valley Hawaiian Grill",
-    "address": "3146 Stockton Hill Rd Ste A/B",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Hawaiian",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Stockton Hill Rd",
-    "description": "",
-    "id": "RB-KING-00042",
     "is_chain": false,
     "lat": null,
     "lng": null,
@@ -986,29 +739,12 @@ const DATA = [
     "chain_name": "",
     "phone": "",
     "zone": "Kingman · Downtown & Beale St",
-    "description": "",
+    "description": "Brewery on East Beale Street in downtown Kingman, listed in county food-safety inspection records.",
     "id": "RB-KING-00046",
     "is_chain": false,
     "lat": null,
     "lng": null,
     "websiteUrl": "https://ricketycricketbrewing.com/contact/"
-  },
-  {
-    "name": "Sakura Sushi and Grill",
-    "address": "3505 Stockton Hill Rd",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Japanese",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Stockton Hill Rd",
-    "description": "",
-    "id": "RB-KING-00047",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
   },
   {
     "name": "Sonic Drive-In",
@@ -1062,23 +798,6 @@ const DATA = [
     "websiteUrl": ""
   },
   {
-    "name": "Stuff It Burger To Go",
-    "address": "2170 Northern Ave",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Burgers",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Other",
-    "description": "",
-    "id": "RB-KING-00051",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://stuffitburgers.com/"
-  },
-  {
     "name": "Subway",
     "address": "3880 Stockton Hill Rd",
     "city": "Kingman",
@@ -1091,40 +810,6 @@ const DATA = [
     "description": "Subway serves made-to-order subs, wraps and salads at this Stockton Hill Rd location in Kingman.",
     "id": "RB-KING-00052",
     "is_chain": true,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Sundowner Saloon",
-    "address": "4400 Stockton Hill Rd",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Bar & Grill",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Stockton Hill Rd",
-    "description": "",
-    "id": "RB-KING-00053",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Tack Shed Saloon",
-    "address": "2829 Beverly Ave",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Bar & Grill",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Andy Devine & Route 66",
-    "description": "",
-    "id": "RB-KING-00054",
-    "is_chain": false,
     "lat": null,
     "lng": null,
     "websiteUrl": ""
@@ -1164,23 +849,6 @@ const DATA = [
     "websiteUrl": "https://locations.tacobell.com/az/kingman.html"
   },
   {
-    "name": "Thai Chef",
-    "address": "3051 Armour Ave",
-    "city": "Kingman",
-    "state": "AZ",
-    "zip": "",
-    "cuisine": "Thai",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Kingman · Other",
-    "description": "",
-    "id": "RB-KING-00057",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://www.thaichefaz.com/"
-  },
-  {
     "name": "Oatman Hotel Restaurant",
     "address": "181 Main St",
     "city": "Oatman",
@@ -1188,113 +856,33 @@ const DATA = [
     "zip": "86433",
     "cuisine": "American",
     "chain_name": "",
-    "phone": "",
+    "phone": "928-768-4408",
     "zone": "Oatman",
-    "description": "",
+    "description": "Restaurant and ice cream shop inside the historic Oatman Hotel, a building opened in 1902 as the Durlin Hotel, serving American food in the Old West town of Oatman.",
     "id": "RB-KING-00058",
     "is_chain": false,
     "lat": null,
     "lng": null,
     "websiteUrl": ""
-  },
-  {
-    "name": "Olive Oatman Restaurant",
-    "address": "170 Main St",
-    "city": "Oatman",
-    "state": "AZ",
-    "zip": "86433",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Oatman",
-    "description": "",
-    "id": "RB-KING-00059",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Dazzo's Chicago Style Eatery",
-    "address": "17715 S US-93",
-    "city": "Wikieup",
-    "state": "AZ",
-    "zip": "85360",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Wikieup",
-    "description": "",
-    "id": "RB-KING-00060",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Los Alamitos Mexican Seafood",
-    "address": "18137 S US-93",
-    "city": "Wikieup",
-    "state": "AZ",
-    "zip": "85360",
-    "cuisine": "Mexican",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Wikieup",
-    "description": "",
-    "id": "RB-KING-00061",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Luchia's Restaurant",
-    "address": "15797 S US-93",
-    "city": "Wikieup",
-    "state": "AZ",
-    "zip": "85360",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Wikieup",
-    "description": "",
-    "id": "RB-KING-00062",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://luchias.com/contact"
   }
 ];
 
 // ZONE MAP
 const ZONE_MAP = {
   "area1": [
-    "Chloride"
-  ],
-  "area2": [
-    "Dolan Springs"
-  ],
-  "area3": [
-    "Golden Valley"
-  ],
-  "area4": [
     "Kingman · Andy Devine & Route 66"
   ],
-  "area5": [
+  "area2": [
     "Kingman · Downtown & Beale St"
   ],
-  "area6": [
+  "area3": [
     "Kingman · Other"
   ],
-  "area7": [
+  "area4": [
     "Kingman · Stockton Hill Rd"
   ],
-  "area8": [
+  "area5": [
     "Oatman"
-  ],
-  "area9": [
-    "Wikieup"
   ]
 };
 

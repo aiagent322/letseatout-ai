@@ -22,9 +22,9 @@ https://letseatout.ai
 | Payson & Rim Country, AZ | /payson | 66 |
 | Globe & Miami, AZ | /globe | 31 |
 | Show Low & Snowflake, AZ | /show-low | 29 |
-| Kingman & Area, AZ | /kingman | 62 |
+| Kingman & Area, AZ | /kingman | 39 |
 
-**Network Total: 1,226 listings**
+**Network Total: 1,203 listings**
 
 ## Architecture
 

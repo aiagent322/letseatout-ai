@@ -20,9 +20,9 @@ https://letseatout.ai
 | Buckeye, AZ | /buckeye | 93 |
 | Verde Valley, AZ | /verde-valley | 72 |
 | Payson & Rim Country, AZ | /payson | 66 |
-| Globe & Miami, AZ | /globe | 38 |
+| Globe & Miami, AZ | /globe | 31 |
 
-**Network Total: 1,142 listings**
+**Network Total: 1,135 listings**
 
 ## Architecture
 

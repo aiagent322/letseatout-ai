@@ -20,8 +20,9 @@ https://letseatout.ai
 | Buckeye, AZ | /buckeye | 93 |
 | Verde Valley, AZ | /verde-valley | 72 |
 | Payson & Rim Country, AZ | /payson | 66 |
+| Globe & Miami, AZ | /globe | 38 |
 
-**Network Total: 1,104 listings**
+**Network Total: 1,142 listings**
 
 ## Architecture
 
@@ -42,6 +43,7 @@ letseatout-ai/
 ├── buckeye/index.html      ← letseatout.ai/buckeye
 ├── verde-valley/index.html ← letseatout.ai/verde-valley
 ├── payson/index.html       ← letseatout.ai/payson
+├── globe/index.html        ← letseatout.ai/globe
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

@@ -16,9 +16,9 @@ https://letseatout.ai
 | Wickenburg Area, AZ | /wickenburg | 35 |
 | Peoria, AZ | /peoria | 38 |
 | Queen Creek, AZ | /queen-creek | 144 |
-| Flagstaff & Area, AZ | /flagstaff | 209 |
+| Flagstaff & Area, AZ | /flagstaff | 208 |
 
-**Network Total: 874 listings**
+**Network Total: 873 listings**
 
 ## Architecture
 

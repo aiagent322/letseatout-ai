@@ -18,8 +18,9 @@ https://letseatout.ai
 | Queen Creek, AZ | /queen-creek | 144 |
 | Flagstaff & Area, AZ | /flagstaff | 208 |
 | Buckeye, AZ | /buckeye | 93 |
+| Verde Valley, AZ | /verde-valley | 83 |
 
-**Network Total: 966 listings**
+**Network Total: 1,049 listings**
 
 ## Architecture
 
@@ -38,6 +39,7 @@ letseatout-ai/
 ├── queen-creek/index.html  ← letseatout.ai/queen-creek
 ├── flagstaff/index.html    ← letseatout.ai/flagstaff
 ├── buckeye/index.html      ← letseatout.ai/buckeye
+├── verde-valley/index.html ← letseatout.ai/verde-valley
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

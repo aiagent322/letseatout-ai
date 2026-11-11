@@ -17,9 +17,9 @@ https://letseatout.ai
 | Peoria, AZ | /peoria | 38 |
 | Queen Creek, AZ | /queen-creek | 144 |
 | Flagstaff & Area, AZ | /flagstaff | 208 |
-| Buckeye, AZ | /buckeye | 99 |
+| Buckeye, AZ | /buckeye | 93 |
 
-**Network Total: 972 listings**
+**Network Total: 966 listings**
 
 ## Architecture
 

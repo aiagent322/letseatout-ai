@@ -21,10 +21,10 @@ https://letseatout.ai
 | Verde Valley, AZ | /verde-valley | 72 |
 | Payson & Rim Country, AZ | /payson | 66 |
 | Globe & Miami, AZ | /globe | 31 |
-| Show Low & Snowflake, AZ | /show-low | 29 |
+| Show Low & Snowflake, AZ | /show-low | 31 |
 | Kingman & Area, AZ | /kingman | 42 |
 
-**Network Total: 1,206 listings**
+**Network Total: 1,208 listings**
 
 ## Architecture
 

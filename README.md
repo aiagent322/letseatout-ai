@@ -23,8 +23,9 @@ https://letseatout.ai
 | Globe & Miami, AZ | /globe | 31 |
 | Show Low & Snowflake, AZ | /show-low | 33 |
 | Kingman & Area, AZ | /kingman | 42 |
+| Winslow & Holbrook, AZ | /winslow | 42 |
 
-**Network Total: 1,210 listings**
+**Network Total: 1,252 listings**
 
 ## Architecture
 
@@ -48,6 +49,7 @@ letseatout-ai/
 ├── globe/index.html        ← letseatout.ai/globe
 ├── show-low/index.html     ← letseatout.ai/show-low
 ├── kingman/index.html      ← letseatout.ai/kingman
+├── winslow/index.html      ← letseatout.ai/winslow
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

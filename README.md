@@ -19,9 +19,9 @@ https://letseatout.ai
 | Flagstaff & Area, AZ | /flagstaff | 208 |
 | Buckeye, AZ | /buckeye | 93 |
 | Verde Valley, AZ | /verde-valley | 72 |
-| Payson & Rim Country, AZ | /payson | 67 |
+| Payson & Rim Country, AZ | /payson | 66 |
 
-**Network Total: 1,105 listings**
+**Network Total: 1,104 listings**
 
 ## Architecture
 

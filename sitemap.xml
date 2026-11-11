@@ -138,4 +138,12 @@
     <loc>https://letseatout.ai/globe/where-to-eat</loc>
     <lastmod>2026-11-11</lastmod>
   </url>
+  <url>
+    <loc>https://letseatout.ai/show-low</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://letseatout.ai/show-low/where-to-eat</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
 </urlset>

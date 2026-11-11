@@ -21,8 +21,9 @@ https://letseatout.ai
 | Verde Valley, AZ | /verde-valley | 72 |
 | Payson & Rim Country, AZ | /payson | 66 |
 | Globe & Miami, AZ | /globe | 31 |
+| Show Low & Snowflake, AZ | /show-low | 62 |
 
-**Network Total: 1,135 listings**
+**Network Total: 1,197 listings**
 
 ## Architecture
 
@@ -44,6 +45,7 @@ letseatout-ai/
 ├── verde-valley/index.html ← letseatout.ai/verde-valley
 ├── payson/index.html       ← letseatout.ai/payson
 ├── globe/index.html        ← letseatout.ai/globe
+├── show-low/index.html     ← letseatout.ai/show-low
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

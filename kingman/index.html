@@ -11,11 +11,11 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Let's Eat Out · Kingman — 39 Restaurants, Bars &amp; Chains</title>
-<meta name="description" content="A free guide to restaurants, bars, and chains in Kingman, AZ. 39 listings. No reviews, no pay-to-play — just where to eat.">
+<title>Let's Eat Out · Kingman — 42 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="A free guide to restaurants, bars, and chains in Kingman, AZ. 42 listings. No reviews, no pay-to-play — just where to eat.">
 <meta name="theme-color" content="#C41E3A">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Let's Eat Out · Kingman — 39 Restaurants, Bars &amp; Chains">
+<meta property="og:title" content="Let's Eat Out · Kingman — 42 Restaurants, Bars &amp; Chains">
 <meta property="og:description" content="Restaurants, bars, and chains in Kingman, AZ. Free directory. No pay-to-play, no fake ratings.">
 <meta property="og:url" content="https://letseatout.ai/kingman">
 <meta property="og:image" content="https://letseatout.ai/og-home.png">
@@ -29,7 +29,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Kingman","description":"Free restaurant directory for Kingman, AZ. 39 listings.","url":"https://letseatout.ai/kingman","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Kingman","description":"Free restaurant directory for Kingman, AZ. 42 listings.","url":"https://letseatout.ai/kingman","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
 </script>
 </head>
 <body>
@@ -93,7 +93,7 @@
         <a href="/kingman/where-to-eat" class="guide-link">📖 Where to Eat in Kingman — Tips for Dining</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><div class="num">39</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num">42</div><div class="lbl">Restaurants</div></div>
         <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
         <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
       </div>
@@ -127,6 +127,7 @@
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Pizza&quot;)">Pizza</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Sandwiches&quot;)">Sandwiches</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Steakhouse&quot;)">Steakhouse</button>
+        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Thai&quot;)">Thai</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Wine Bar&quot;)">Wine Bar</button>
       </div>
       <button type="button" class="slider-arrow" onclick="document.getElementById('cuisineScroll').scrollBy({left:200,behavior:'smooth'})" aria-label="Scroll right">▶</button>
@@ -141,11 +142,12 @@
         <h4>Browse by Area</h4>
         <ul class="zone-list" id="zoneList" role="listbox" aria-label="Filter by area">
           <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('All',this)}"><span>All Kingman</span><span class="ct" id="zc-all">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area1',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area1',this)}"><span>Kingman · Andy Devine &amp; Route 66</span><span class="ct" id="zc-area1">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area2',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area2',this)}"><span>Kingman · Downtown &amp; Beale St</span><span class="ct" id="zc-area2">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area3',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area3',this)}"><span>Kingman · Other</span><span class="ct" id="zc-area3">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area4',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area4',this)}"><span>Kingman · Stockton Hill Rd</span><span class="ct" id="zc-area4">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area5',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area5',this)}"><span>Oatman</span><span class="ct" id="zc-area5">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area1',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area1',this)}"><span>Chloride</span><span class="ct" id="zc-area1">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area2',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area2',this)}"><span>Kingman · Andy Devine &amp; Route 66</span><span class="ct" id="zc-area2">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area3',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area3',this)}"><span>Kingman · Downtown &amp; Beale St</span><span class="ct" id="zc-area3">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area4',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area4',this)}"><span>Kingman · Other</span><span class="ct" id="zc-area4">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area5',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area5',this)}"><span>Kingman · Stockton Hill Rd</span><span class="ct" id="zc-area5">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area6',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area6',this)}"><span>Oatman</span><span class="ct" id="zc-area6">—</span></li>
         </ul>
       </div>
     </div>
@@ -202,6 +204,23 @@
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // DATA
 const DATA = [
+  {
+    "name": "Yesterday's Restaurant",
+    "address": "9827 2nd St",
+    "city": "Chloride",
+    "state": "AZ",
+    "zip": "86431",
+    "cuisine": "American",
+    "chain_name": "",
+    "phone": "928-565-4251",
+    "zone": "Chloride",
+    "description": "Diner-style restaurant in Chloride next to Shep's Miners Inn, serving burgers, homemade fries and BLT sandwiches in a historic setting.",
+    "id": "RB-KING-00001",
+    "is_chain": false,
+    "lat": null,
+    "lng": null,
+    "websiteUrl": ""
+  },
   {
     "name": "Burger King",
     "address": "3250 E Andy Devine Ave",
@@ -815,6 +834,23 @@ const DATA = [
     "websiteUrl": ""
   },
   {
+    "name": "Sundowner Saloon",
+    "address": "4400 Stockton Hill Rd",
+    "city": "Kingman",
+    "state": "AZ",
+    "zip": "",
+    "cuisine": "Bar & Grill",
+    "chain_name": "",
+    "phone": "",
+    "zone": "Kingman · Stockton Hill Rd",
+    "description": "Bar and lounge with a food permit on Stockton Hill Rd in Kingman, listed in county food-safety inspection records.",
+    "id": "RB-KING-00053",
+    "is_chain": false,
+    "lat": null,
+    "lng": null,
+    "websiteUrl": ""
+  },
+  {
     "name": "Taco Bell",
     "address": "3220 Stockton Hill Rd",
     "city": "Kingman",
@@ -849,6 +885,23 @@ const DATA = [
     "websiteUrl": "https://locations.tacobell.com/az/kingman.html"
   },
   {
+    "name": "Thai Chef",
+    "address": "3051 Armour Ave",
+    "city": "Kingman",
+    "state": "AZ",
+    "zip": "",
+    "cuisine": "Thai",
+    "chain_name": "",
+    "phone": "",
+    "zone": "Kingman · Other",
+    "description": "Thai restaurant on Armour Ave in Kingman, listed in county food-safety inspection records.",
+    "id": "RB-KING-00057",
+    "is_chain": false,
+    "lat": null,
+    "lng": null,
+    "websiteUrl": "https://www.thaichefaz.com/"
+  },
+  {
     "name": "Oatman Hotel Restaurant",
     "address": "181 Main St",
     "city": "Oatman",
@@ -870,18 +923,21 @@ const DATA = [
 // ZONE MAP
 const ZONE_MAP = {
   "area1": [
-    "Kingman · Andy Devine & Route 66"
+    "Chloride"
   ],
   "area2": [
-    "Kingman · Downtown & Beale St"
+    "Kingman · Andy Devine & Route 66"
   ],
   "area3": [
-    "Kingman · Other"
+    "Kingman · Downtown & Beale St"
   ],
   "area4": [
-    "Kingman · Stockton Hill Rd"
+    "Kingman · Other"
   ],
   "area5": [
+    "Kingman · Stockton Hill Rd"
+  ],
+  "area6": [
     "Oatman"
   ]
 };

@@ -90,4 +90,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://letseatout.ai/queen-creek</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://letseatout.ai/queen-creek/where-to-eat</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
 </urlset>

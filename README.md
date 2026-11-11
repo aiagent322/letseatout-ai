@@ -15,8 +15,9 @@ https://letseatout.ai
 | Cave Creek · Carefree, AZ | /cave-creek | 50 |
 | Wickenburg Area, AZ | /wickenburg | 35 |
 | Peoria, AZ | /peoria | 38 |
+| Queen Creek, AZ | /queen-creek | 146 |
 
-**Network Total: 521 listings**
+**Network Total: 667 listings**
 
 ## Architecture
 
@@ -32,6 +33,7 @@ letseatout-ai/
 ├── cave-creek/index.html   ← letseatout.ai/cave-creek
 ├── wickenburg/index.html   ← letseatout.ai/wickenburg
 ├── peoria/index.html       ← letseatout.ai/peoria
+├── queen-creek/index.html  ← letseatout.ai/queen-creek
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

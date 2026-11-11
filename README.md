@@ -17,8 +17,9 @@ https://letseatout.ai
 | Peoria, AZ | /peoria | 38 |
 | Queen Creek, AZ | /queen-creek | 144 |
 | Flagstaff & Area, AZ | /flagstaff | 208 |
+| Buckeye, AZ | /buckeye | 99 |
 
-**Network Total: 873 listings**
+**Network Total: 972 listings**
 
 ## Architecture
 
@@ -36,6 +37,7 @@ letseatout-ai/
 ├── peoria/index.html       ← letseatout.ai/peoria
 ├── queen-creek/index.html  ← letseatout.ai/queen-creek
 ├── flagstaff/index.html    ← letseatout.ai/flagstaff
+├── buckeye/index.html      ← letseatout.ai/buckeye
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

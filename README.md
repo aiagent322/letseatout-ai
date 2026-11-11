@@ -19,8 +19,9 @@ https://letseatout.ai
 | Flagstaff & Area, AZ | /flagstaff | 208 |
 | Buckeye, AZ | /buckeye | 93 |
 | Verde Valley, AZ | /verde-valley | 72 |
+| Payson & Rim Country, AZ | /payson | 76 |
 
-**Network Total: 1,038 listings**
+**Network Total: 1,114 listings**
 
 ## Architecture
 
@@ -40,6 +41,7 @@ letseatout-ai/
 ├── flagstaff/index.html    ← letseatout.ai/flagstaff
 ├── buckeye/index.html      ← letseatout.ai/buckeye
 ├── verde-valley/index.html ← letseatout.ai/verde-valley
+├── payson/index.html       ← letseatout.ai/payson
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

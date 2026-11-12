@@ -24,8 +24,9 @@ https://letseatout.ai
 | Show Low & Snowflake, AZ | /show-low | 33 |
 | Kingman & Area, AZ | /kingman | 42 |
 | Winslow & Holbrook, AZ | /winslow | 35 |
+| Grand Canyon Area, AZ | /grand-canyon | 30 |
 
-**Network Total: 1,236 listings**
+**Network Total: 1,266 listings**
 
 ## Architecture
 
@@ -50,6 +51,7 @@ letseatout-ai/
 ├── show-low/index.html     ← letseatout.ai/show-low
 ├── kingman/index.html      ← letseatout.ai/kingman
 ├── winslow/index.html      ← letseatout.ai/winslow
+├── grand-canyon/index.html ← letseatout.ai/grand-canyon
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects              ← Cloudflare Pages redirects

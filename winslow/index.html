@@ -11,11 +11,11 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Let's Eat Out · Winslow — 42 Restaurants, Bars &amp; Chains</title>
-<meta name="description" content="A free guide to restaurants, bars, and chains in Winslow, AZ. 42 listings. No reviews, no pay-to-play — just where to eat.">
+<title>Let's Eat Out · Winslow — 35 Restaurants, Bars &amp; Chains</title>
+<meta name="description" content="A free guide to restaurants, bars, and chains in Winslow, AZ. 35 listings. No reviews, no pay-to-play — just where to eat.">
 <meta name="theme-color" content="#C41E3A">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Let's Eat Out · Winslow — 42 Restaurants, Bars &amp; Chains">
+<meta property="og:title" content="Let's Eat Out · Winslow — 35 Restaurants, Bars &amp; Chains">
 <meta property="og:description" content="Restaurants, bars, and chains in Winslow, AZ. Free directory. No pay-to-play, no fake ratings.">
 <meta property="og:url" content="https://letseatout.ai/winslow">
 <meta property="og:image" content="https://letseatout.ai/og-home.png">
@@ -29,7 +29,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Winslow","description":"Free restaurant directory for Winslow, AZ. 42 listings.","url":"https://letseatout.ai/winslow","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
+{"@context":"https://schema.org","@type":"WebPage","name":"Let's Eat Out · Winslow","description":"Free restaurant directory for Winslow, AZ. 35 listings.","url":"https://letseatout.ai/winslow","publisher":{"@type":"Organization","name":"Let's Eat Out","url":"https://letseatout.ai"}}
 </script>
 </head>
 <body>
@@ -94,7 +94,7 @@
         <a href="/winslow/where-to-eat" class="guide-link">📖 Where to Eat in Winslow — Tips for Dining</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><div class="num">42</div><div class="lbl">Restaurants</div></div>
+        <div class="hero-stat"><div class="num">35</div><div class="lbl">Restaurants</div></div>
         <div class="hero-stat"><div class="num" id="statCuisines">—</div><div class="lbl">Cuisines</div></div>
         <div class="hero-stat"><div class="num" id="statAreas">—</div><div class="lbl">Areas</div></div>
       </div>
@@ -116,10 +116,8 @@
         <button type="button" class="near-me-chip" id="nearMeBtn" onclick="toggleNearMe()"><span class="nm-icon">📍</span><span class="nm-spinner"></span> Near Me</button>
         <button type="button" class="cuisine-chip active" onclick="filterByCuisine(this,'All')">All</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;American&quot;)">American</button>
-        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Asian&quot;)">Asian</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Bar&quot;)">Bar</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Bar &amp; Grill&quot;)">Bar &amp; Grill</button>
-        <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;BBQ&quot;)">BBQ</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Brewery&quot;)">Brewery</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Burgers&quot;)">Burgers</button>
         <button type="button" class="cuisine-chip" onclick="filterByCuisine(this,&quot;Chicken&quot;)">Chicken</button>
@@ -148,9 +146,8 @@
           <li class="z-active" role="option" aria-selected="true" tabindex="0" onclick="filterByZone('All',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('All',this)}"><span>All Winslow</span><span class="ct" id="zc-all">—</span></li>
           <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area1',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area1',this)}"><span>Holbrook · Hopi Dr &amp; Downtown</span><span class="ct" id="zc-area1">—</span></li>
           <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area2',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area2',this)}"><span>Holbrook · Navajo Blvd</span><span class="ct" id="zc-area2">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area3',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area3',this)}"><span>Joseph City</span><span class="ct" id="zc-area3">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area4',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area4',this)}"><span>Winslow · Downtown &amp; Route 66</span><span class="ct" id="zc-area4">—</span></li>
-          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area5',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area5',this)}"><span>Winslow · Park Dr &amp; Other</span><span class="ct" id="zc-area5">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area3',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area3',this)}"><span>Winslow · Downtown &amp; Route 66</span><span class="ct" id="zc-area3">—</span></li>
+          <li role="option" aria-selected="false" tabindex="0" onclick="filterByZone('area4',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterByZone('area4',this)}"><span>Winslow · Park Dr &amp; Other</span><span class="ct" id="zc-area4">—</span></li>
         </ul>
       </div>
     </div>
@@ -276,23 +273,6 @@ const DATA = [
     "websiteUrl": ""
   },
   {
-    "name": "El Falcone Family Restaurant",
-    "address": "1113 E Third St",
-    "city": "Winslow",
-    "state": "AZ",
-    "zip": "86047",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Winslow · Downtown & Route 66",
-    "description": "Falcon Restaurant & Lounge sits along Historic Route 66 in Winslow and is described as a no-fuss spot serving Mexican and American food.",
-    "id": "RB-WINS-00005",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
     "name": "E&O Kitchen",
     "address": "703 Airport Rd",
     "city": "Winslow",
@@ -304,23 +284,6 @@ const DATA = [
     "zone": "Winslow · Park Dr & Other",
     "description": "Mexican restaurant at Winslow's small regional airport, known for fresh Mexican dishes, with views of small planes taking off and landing.",
     "id": "RB-WINS-00006",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Cajian Creations",
-    "address": "122 E Second St",
-    "city": "Winslow",
-    "state": "AZ",
-    "zip": "86047",
-    "cuisine": "Asian",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Winslow · Downtown & Route 66",
-    "description": "A Cajun-Asian fusion restaurant serving fried rice, sushi and poke bowls.",
-    "id": "RB-WINS-00007",
     "is_chain": false,
     "lat": null,
     "lng": null,
@@ -342,23 +305,6 @@ const DATA = [
     "lat": null,
     "lng": null,
     "websiteUrl": "https://order.toasttab.com/online/relicroad-brewing-co"
-  },
-  {
-    "name": "Entre Restaurant",
-    "address": "1919 W Second St",
-    "city": "Winslow",
-    "state": "AZ",
-    "zip": "86047",
-    "cuisine": "Chinese",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Winslow · Downtown & Route 66",
-    "description": "A West Second Street restaurant with Chinese dishes such as chicken chow mein.",
-    "id": "RB-WINS-00009",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
   },
   {
     "name": "Mi Pueblo",
@@ -427,23 +373,6 @@ const DATA = [
     "lat": null,
     "lng": null,
     "websiteUrl": "https://mojocafe5.wixsite.com/website/menu"
-  },
-  {
-    "name": "Captain Tony’s Pizza & Pasta Emporium",
-    "address": "2217 N Park Dr",
-    "city": "Winslow",
-    "state": "AZ",
-    "zip": "86047",
-    "cuisine": "Pizza",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Winslow · Park Dr & Other",
-    "description": "A Winslow pizza and pasta restaurant on North Park Drive with pan pizza, a pizza bar, wings, steak subs, baked lasagna and chicken Alfredo.",
-    "id": "RB-WINS-00014",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://captaintonys.com/locations-new/"
   },
   {
     "name": "Tom’s Tavern",
@@ -616,23 +545,6 @@ const DATA = [
     "websiteUrl": "https://www.alibertos.com/locations/alibertos-holbrook"
   },
   {
-    "name": "Big Fella’s BBQ Lounge",
-    "address": "752 Navajo Blvd",
-    "city": "Holbrook",
-    "state": "AZ",
-    "zip": "86025",
-    "cuisine": "BBQ",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Holbrook · Navajo Blvd",
-    "description": "Barbecue lounge on Navajo Boulevard in Holbrook, with smoked meats, sides and house sauces on the menu.",
-    "id": "RB-WINS-00025",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
     "name": "Butterfield Stage Co. Steak House",
     "address": "609 W Hopi Dr",
     "city": "Holbrook",
@@ -729,23 +641,6 @@ const DATA = [
     "zone": "Holbrook · Hopi Dr & Downtown",
     "description": "A nostalgic Holbrook soda shop known for its Route 66 Special Burger, taco salad and sodas, and host of Wayside Wednesdays.",
     "id": "RB-WINS-00031",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": ""
-  },
-  {
-    "name": "Tom & Suzie’s Diner",
-    "address": "2001 Navajo Blvd",
-    "city": "Holbrook",
-    "state": "AZ",
-    "zip": "86025",
-    "cuisine": "American",
-    "chain_name": "",
-    "phone": "(928) 524-9700",
-    "zone": "Holbrook · Navajo Blvd",
-    "description": "A long-standing Navajo Boulevard diner serving American comfort food, from breakfast items and burgers to catfish, chicken-fried chicken, liver and onions, and homemade pies.",
-    "id": "RB-WINS-00032",
     "is_chain": false,
     "lat": null,
     "lng": null,
@@ -903,23 +798,6 @@ const DATA = [
     "lat": null,
     "lng": null,
     "websiteUrl": "https://www.bk.com/store-locator/store/15926"
-  },
-  {
-    "name": "Mr. G’s Pizza and Soda Shop",
-    "address": "4552 2nd North Ave",
-    "city": "Joseph City",
-    "state": "AZ",
-    "zip": "86032",
-    "cuisine": "Pizza",
-    "chain_name": "",
-    "phone": "",
-    "zone": "Joseph City",
-    "description": "A Joseph City pizza and soda shop on West Main Street, with pizza as its confirmed menu item and a gluten-free option reported by diners.",
-    "id": "RB-WINS-00042",
-    "is_chain": false,
-    "lat": null,
-    "lng": null,
-    "websiteUrl": "https://www.mrgspizzaandsodashop.com/"
   }
 ];
 
@@ -932,12 +810,9 @@ const ZONE_MAP = {
     "Holbrook · Navajo Blvd"
   ],
   "area3": [
-    "Joseph City"
-  ],
-  "area4": [
     "Winslow · Downtown & Route 66"
   ],
-  "area5": [
+  "area4": [
     "Winslow · Park Dr & Other"
   ]
 };

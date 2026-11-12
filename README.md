@@ -23,9 +23,9 @@ https://letseatout.ai
 | Globe & Miami, AZ | /globe | 31 |
 | Show Low & Snowflake, AZ | /show-low | 33 |
 | Kingman & Area, AZ | /kingman | 42 |
-| Winslow & Holbrook, AZ | /winslow | 42 |
+| Winslow & Holbrook, AZ | /winslow | 35 |
 
-**Network Total: 1,252 listings**
+**Network Total: 1,245 listings**
 
 ## Architecture
 

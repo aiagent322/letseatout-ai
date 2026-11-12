@@ -9,7 +9,7 @@ https://letseatout.ai
 
 | Market | URL | Listings |
 |--------|-----|----------|
-| Scottsdale, AZ | /scottsdale | 133 |
+| Scottsdale, AZ | /scottsdale | 124 |
 | Sedona Area, AZ | /sedona | 83 |
 | Prescott Area, AZ | /prescott | 182 |
 | Cave Creek · Carefree, AZ | /cave-creek | 50 |
@@ -25,7 +25,7 @@ https://letseatout.ai
 | Kingman & Area, AZ | /kingman | 42 |
 | Winslow & Holbrook, AZ | /winslow | 35 |
 
-**Network Total: 1,245 listings**
+**Network Total: 1,236 listings**
 
 ## Architecture
 

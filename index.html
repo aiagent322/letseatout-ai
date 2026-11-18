@@ -63,6 +63,7 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .hero-location:disabled{cursor:wait;opacity:.85;}
 .hero-location-status:not(:empty){margin:0 auto 14px;font-size:13px;color:#fff;}
 .hero-location-status a{color:#f3cd7c;}
+#near-me-city-status:not(:empty),#near-me-city-status a{color:var(--red-dark);}
 .nearby-section{padding:28px 0 0;}
 .nearby-section h2{margin-bottom:12px;}
 .nearby-section ol{list-style-position:inside;margin:0 0 16px;}
@@ -175,7 +176,7 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
 </script>
 <link rel="stylesheet" href="/assets/market-navigation.css">
 <script src="/assets/market-navigation.js" defer></script>
-<script src="/assets/home-near-me.js" defer></script>
+<script src="/assets/home-near-me.js?v=2" defer></script>
 </head>
 <body>
 
@@ -230,7 +231,7 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
 
 <div class="hero">
   <div class="container">
-    <button class="hero-location" id="near-me-search" type="button" aria-controls="near-me-results">NEAR ME SEARCH!</button>
+    <button class="hero-location" id="near-me-search" type="button" data-near-me aria-describedby="near-me-status" aria-controls="near-me-results">NEAR ME SEARCH!</button>
     <h1>Where to Eat</h1>
     <p class="hero-location-status" id="near-me-status" role="status"></p>
     <p class="hero-sub">A Wide Variety of Great Places To Eat!</p>
@@ -259,6 +260,8 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
 <div class="cities-section" id="cities">
   <div class="container">
     <div class="section-header">
+      <button class="hero-location" type="button" data-near-me aria-describedby="near-me-city-status" aria-controls="near-me-results">NEAR ME SEARCH!</button>
+      <p class="hero-location-status" id="near-me-city-status" role="status"></p>
       <h2>Choose Your City</h2>
       <span class="sh-sub">19 markets in Arizona and California</span>
     </div>

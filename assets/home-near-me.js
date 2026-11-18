@@ -1,6 +1,5 @@
 (() => {
-  const button = document.querySelector('#near-me-search');
-  const status = document.querySelector('#near-me-status');
+  const buttons = [...document.querySelectorAll('[data-near-me]')];
   const results = document.querySelector('#near-me-results');
   const resultTitle = document.querySelector('#near-me-title');
   const summary = document.querySelector('#near-me-summary');
@@ -64,7 +63,7 @@
     list.append(item);
   }
 
-  async function showResults({ coords: { latitude, longitude } }) {
+  async function showResults({ coords: { latitude, longitude } }, status) {
     status.textContent = 'Finding nearby restaurants…';
     const marketCards = [...document.querySelectorAll('a.city-card')];
     const nearestMarkets = marketCards.flatMap(card => {
@@ -114,28 +113,40 @@
     results.scrollIntoView({ block: 'start' });
   }
 
-  function reportError(message) {
+  function reportError(status, message) {
     const marketLink = document.createElement('a');
     marketLink.href = '#cities';
     marketLink.textContent = 'Choose a city';
     status.replaceChildren(`${message} `, marketLink);
-    button.disabled = false;
   }
 
-  button.addEventListener('click', () => {
-    if (!navigator.geolocation) {
-      reportError('Location search is unavailable in this browser.');
-      return;
-    }
-    button.disabled = true;
-    results.hidden = true;
-    status.textContent = 'Getting your location…';
-    navigator.geolocation.getCurrentPosition(
-      position => showResults(position)
-        .catch(() => reportError('Location search couldn’t load the listings.'))
-        .finally(() => { button.disabled = false; }),
-      error => reportError(error.code === 1 ? 'Location access is turned off.' : 'Your location couldn’t be determined.'),
-      { timeout: 8000, maximumAge: 60000 }
-    );
-  });
+  function setSearching(searching) {
+    for (const button of buttons) button.disabled = searching;
+  }
+
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      for (const trigger of buttons) {
+        document.getElementById(trigger.getAttribute('aria-describedby')).textContent = '';
+      }
+      const status = document.getElementById(button.getAttribute('aria-describedby'));
+      if (!navigator.geolocation) {
+        reportError(status, 'Location search is unavailable in this browser.');
+        return;
+      }
+      setSearching(true);
+      results.hidden = true;
+      status.textContent = 'Getting your location…';
+      navigator.geolocation.getCurrentPosition(
+        position => showResults(position, status)
+          .catch(() => reportError(status, 'Location search couldn’t load the listings.'))
+          .finally(() => setSearching(false)),
+        error => {
+          reportError(status, error.code === 1 ? 'Location access is turned off.' : 'Your location couldn’t be determined.');
+          setSearching(false);
+        },
+        { timeout: 8000, maximumAge: 60000 }
+      );
+    });
+  }
 })();

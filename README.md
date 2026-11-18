@@ -1,6 +1,6 @@
-# LetsEatOut.ai — Arizona Restaurant Directory Network
+# LetsEatOut.ai — Arizona and California Restaurant Directory
 
-Free restaurant directories for Arizona's best cities. No pay-to-play. No fake ratings. Just where to eat.
+Free restaurant directories for Arizona and California. No pay-to-play. No fake ratings. Just where to eat.
 
 ## Live Site
 https://letseatout.ai
@@ -25,8 +25,10 @@ https://letseatout.ai
 | Kingman & Area, AZ | /kingman | 42 |
 | Winslow & Holbrook, AZ | /winslow | 35 |
 | Grand Canyon Area, AZ | /grand-canyon | 30 |
+| Indio, CA | /indio | 118 |
+| Coachella, CA | /coachella | 55 |
 
-**Network Total: 1,264 listings**
+**Network Total: 1,437 listings**
 
 ## Architecture
 

@@ -57,9 +57,20 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 
 /* HERO */
 .hero{background:linear-gradient(135deg,#1a1a1a 0%,#1a0a00 50%,#2e1200 100%);color:white;padding:48px 0 40px;text-align:center;}
-.hero-eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:12px;}
+.hero-location{background:#f3cd7c;color:#2d1600;border:0;border-radius:24px;padding:12px 20px;margin-bottom:12px;font:800 14px "Plus Jakarta Sans",sans-serif;letter-spacing:.6px;cursor:pointer;}
+.hero-location:hover{background:#ffdf9a;}
+.hero-location:focus-visible{outline:3px solid white;outline-offset:3px;}
+.hero-location:disabled{cursor:wait;opacity:.85;}
+.hero-location-status:not(:empty){margin:0 auto 14px;font-size:13px;color:#fff;}
+.hero-location-status a{color:#f3cd7c;}
+.nearby-section{padding:28px 0 0;}
+.nearby-section h2{margin-bottom:12px;}
+.nearby-section ol{list-style-position:inside;margin:0 0 16px;}
+.nearby-section li{padding:6px 0;}
+.nearby-section a{color:var(--red-dark);font-weight:700;}
+.nearby-section nav ul{display:flex;flex-wrap:wrap;gap:8px 18px;list-style:none;}
+.nearby-address{display:block;color:var(--text-mid);font-size:13px;}
 .hero h1{font-family:'DM Serif Display',serif;font-size:36px;line-height:1.2;margin-bottom:8px;}
-.hero h1 em{font-style:normal;color:var(--gold);}
 .hero-sub{font-size:16px;font-weight:800;color:white;margin-bottom:16px;}
 .hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;color:white;margin-bottom:20px;}
 .hero-stats{display:flex;gap:32px;justify-content:center;}
@@ -164,6 +175,7 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
 </script>
 <link rel="stylesheet" href="/assets/market-navigation.css">
 <script src="/assets/market-navigation.js" defer></script>
+<script src="/assets/home-near-me.js" defer></script>
 </head>
 <body>
 
@@ -218,8 +230,9 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
 
 <div class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Local Restaurant Directory</div>
-    <h1>Where to Eat in <em>Arizona &amp; California</em></h1>
+    <button class="hero-location" id="near-me-search" type="button" aria-controls="near-me-results">NEAR ME SEARCH!</button>
+    <h1>Where to Eat</h1>
+    <p class="hero-location-status" id="near-me-status" role="status"></p>
     <p class="hero-sub">A Wide Variety of Great Places To Eat!</p>
     <div class="hero-promise">✦ No reviews · No pay-to-play · No fake ratings</div>
     <div class="hero-stats">
@@ -233,6 +246,15 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
     </div>
   </div>
 </div>
+
+<section class="nearby-section" id="near-me-results" aria-labelledby="near-me-title" hidden>
+  <div class="container">
+    <h2 id="near-me-title" tabindex="-1">Near Me Results</h2>
+    <p id="near-me-summary"></p>
+    <ol id="near-me-list"></ol>
+    <nav aria-label="Closest dining markets"><ul id="near-me-markets"></ul></nav>
+  </div>
+</section>
 
 <div class="cities-section" id="cities">
   <div class="container">

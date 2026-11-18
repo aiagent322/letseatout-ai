@@ -25,8 +25,8 @@ https://letseatout.ai
 | Kingman & Area, AZ | /kingman | 42 |
 | Winslow & Holbrook, AZ | /winslow | 35 |
 | Grand Canyon Area, AZ | /grand-canyon | 30 |
-| Indio, CA | /indio | 118 |
-| Coachella, CA | /coachella | 55 |
+| Indio, CA | /indio/ | 118 |
+| Coachella, CA | /coachella/ | 55 |
 
 **Network Total: 1,437 listings**
 

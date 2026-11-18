@@ -27,8 +27,9 @@ https://letseatout.ai
 | Grand Canyon Area, AZ | /grand-canyon | 30 |
 | Indio, CA | /indio/ | 118 |
 | Coachella, CA | /coachella/ | 55 |
+| Palm Desert, CA | /palm-desert/ | 220 |
 
-**Network Total: 1,437 listings**
+**Network Total: 1,657 listings**
 
 ## Architecture
 

@@ -80,6 +80,14 @@
   .market-navigation-row {
     padding-inline: 20px;
   }
+
+  .market-navigation-links {
+    gap: 1px;
+  }
+
+  .market-navigation-links a {
+    padding-inline: 4px;
+  }
 }
 
 @media (max-width: 420px) {

@@ -54,12 +54,15 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .header-right{display:flex;gap:16px;}
 .nav-link{font-size:13px;font-weight:700;color:var(--text-mid);text-decoration:none;}
 .nav-link:hover{color:var(--red);}
+.market-navigation-row:first-child{position:relative;}
+.market-swipe-cue{position:absolute;inset:0 0 0 auto;width:34px;display:grid;place-items:center;padding-left:9px;background:linear-gradient(90deg,transparent,var(--dark) 55%);color:#f3dbaf;font-size:23px;pointer-events:none;}
+.market-swipe-cue[hidden]{display:none;}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,#1a1a1a 0%,#1a0a00 50%,#2e1200 100%);color:white;padding:48px 0 40px;text-align:center;}
-.hero-location{background:#f3cd7c;color:#2d1600;border:0;border-radius:24px;padding:12px 20px;margin-bottom:12px;font:800 14px "Plus Jakarta Sans",sans-serif;letter-spacing:.6px;cursor:pointer;}
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#1a0a00 50%,#2e1200 100%);color:white;padding:22px 0 20px;text-align:center;}
+.hero-location{background:#f3cd7c;color:#2d1600;border:0;border-radius:24px;min-height:48px;padding:12px 20px;margin-bottom:8px;font:800 14px "Plus Jakarta Sans",sans-serif;letter-spacing:.6px;cursor:pointer;}
 .hero-location:hover{background:#ffdf9a;}
-.hero-location:focus-visible{outline:3px solid white;outline-offset:3px;}
+.hero-location:focus-visible{outline:3px solid var(--red-dark);outline-offset:3px;}
 .hero-location:disabled{cursor:wait;opacity:.85;}
 .hero-location-status:not(:empty){margin:0 auto 14px;font-size:13px;}
 #near-me-city-status:not(:empty),#near-me-city-status a{color:var(--red-dark);}
@@ -71,18 +74,16 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .nearby-section nav ul{display:flex;flex-wrap:wrap;gap:8px 18px;list-style:none;}
 .nearby-address{display:block;color:var(--text-mid);font-size:13px;}
 .hero h1{font-family:'DM Serif Display',serif;font-size:36px;line-height:1.2;margin-bottom:8px;}
-.hero-sub{font-size:16px;font-weight:800;color:white;margin-bottom:16px;}
-.hero-promise{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;color:white;margin-bottom:20px;}
-.hero-stats{display:flex;gap:32px;justify-content:center;}
-.hero-stat .num{font-family:'DM Serif Display',serif;font-size:36px;color:var(--gold);line-height:1.1;}
-.hero-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.5);font-weight:600;}
+.hero-promise{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:6px 12px;border-radius:20px;font-size:12px;font-weight:600;color:white;margin-bottom:10px;}
+.hero-stats{font-size:15px;font-weight:700;color:#f3cd7c;}
 .hero-banner-wrap{margin-top:16px;width:100%;}
 .hero-banner-wrap ins{display:block;max-width:610px;margin:0 auto;text-decoration:none;}
 .hero-banner-wrap ins img{display:block;max-width:100%;height:auto;}
 
 /* CITIES SECTION */
-.cities-section{padding:48px 0;}
+.cities-section{padding:20px 0 36px;}
 .section-header{text-align:center;margin-bottom:28px;}
+.cities-section .section-header{margin-bottom:20px;}
 .section-header h2{font-family:'DM Serif Display',serif;font-size:28px;color:var(--dark);margin-bottom:4px;}
 .sh-sub{font-size:13px;color:var(--text-light);font-weight:500;}
 .city-grid{display:flex;flex-direction:column;gap:12px;}
@@ -98,6 +99,19 @@ header{background:var(--white);border-bottom:3px solid var(--red);position:stick
 .live-badge{font-size:9px;font-weight:800;padding:4px 10px;background:var(--red);color:white;border-radius:10px;text-transform:uppercase;letter-spacing:.5px;}
 .city-card-arrow{font-size:20px;color:var(--text-light);transition:transform .2s;}
 .city-card:hover .city-card-arrow{transform:translateX(4px);color:var(--red);}
+@media(max-width:599px){
+  .city-grid{gap:8px;}
+  .city-card{align-items:flex-start;gap:10px;padding:12px 14px;}
+  .city-card-body{min-width:0;}
+  .city-card-body h3{font-size:16px;line-height:1.25;}
+  .city-meta{margin-bottom:0;color:var(--text-mid);line-height:1.4;}
+  .city-tags,.live-badge{display:none;}
+  .city-card-right{gap:8px;white-space:nowrap;}
+  .city-card-right > div{display:flex;align-items:baseline;gap:4px;}
+  .city-count{font-size:20px;}
+  .city-count-lbl{color:var(--text-mid);letter-spacing:.3px;}
+  .city-card-arrow{font-size:16px;}
+}
 
 /* FEATURE SECTION */
 .feature-section{background:var(--white);padding:48px 0;border-top:1px solid var(--border);}
@@ -216,6 +230,7 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
         <a href="/winslow">Winslow</a>
         <a href="/grand-canyon">Grand Canyon</a>
       </div>
+      <span class="market-swipe-cue" aria-hidden="true" hidden>›</span>
     </div>
     <div class="market-navigation-row">
       <span class="market-navigation-state" id="markets-california">California</span>
@@ -231,12 +246,8 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
 <div class="hero">
   <div class="container">
     <h1>Where to Eat</h1>
-    <p class="hero-sub">A Wide Variety of Great Places To Eat!</p>
     <div class="hero-promise">✦ No reviews · No pay-to-play · No fake ratings</div>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="num">19</div><div class="lbl">MARKETS</div></div>
-      <div class="hero-stat"><div class="num">1,657</div><div class="lbl">DINING LISTINGS</div></div>
-    </div>
+    <p class="hero-stats">19 markets · 1,657 dining listings</p>
     <div class="hero-banner-wrap">
       <!-- Revive Adserver Hosted edition Asynchronous JS Tag - Generated with Revive Adserver v6.0.6 -->
       <ins data-revive-zoneid="31809" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins>
@@ -578,5 +589,18 @@ footer{background:var(--dark);padding:32px 0;text-align:center;}
   </div>
 </footer>
 
+<script>
+(() => {
+  const links = document.querySelector('[aria-labelledby="markets-arizona"]');
+  const cue = document.querySelector('.market-swipe-cue');
+  const update = () => {
+    cue.hidden = links.scrollWidth - links.clientWidth - links.scrollLeft <= 1;
+  };
+  links.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  document.fonts?.ready.then(update);
+  update();
+})();
+</script>
 </body>
 </html>
